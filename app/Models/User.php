@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'last_name', 'email', 'password',
+        'email', 'password', 'nama_depan', 'nama_belakang', 'nik', 'negara', 'provinsi', 'alamat', 'telepon', 'role',
     ];
 
     /**
@@ -45,11 +45,11 @@ class User extends Authenticatable
      */
     public function getFullNameAttribute()
     {
-        if (is_null($this->last_name)) {
-            return "{$this->name}";
+        if (is_null($this->nama_belakang)) {
+            return "{$this->nama_depan}";
         }
 
-        return "{$this->name} {$this->last_name}";
+        return "{$this->nama_depan} {$this->nama_belakang}";
     }
 
     /**
@@ -61,5 +61,16 @@ class User extends Authenticatable
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = bcrypt($value);
+    }
+
+     /**
+     * Set the default role for the user.
+     *
+     * @param string $value
+     * @return void
+     */
+    public function setRoleAttribute($value)
+    {
+        $this->attributes['role'] = in_array($value, ['ADMIN', 'USER']) ? $value : 'USER';
     }
 }

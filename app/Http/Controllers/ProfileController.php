@@ -22,8 +22,8 @@ class ProfileController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'last_name' => 'nullable|string|max:255',
+            'nama_depan' => 'required|string|max:255',
+            'nama_belakang' => 'nullable|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,' . Auth::user()->id,
             'current_password' => 'nullable|required_with:new_password',
             'new_password' => 'nullable|min:8|max:12|required_with:current_password',
@@ -32,8 +32,8 @@ class ProfileController extends Controller
 
 
         $user = User::findOrFail(Auth::user()->id);
-        $user->name = $request->input('name');
-        $user->last_name = $request->input('last_name');
+        $user->nama_depan = $request->input('nama_depan');
+        $user->nama_belakang = $request->input('nama_belakang');
         $user->email = $request->input('email');
 
         if (!is_null($request->input('current_password'))) {
