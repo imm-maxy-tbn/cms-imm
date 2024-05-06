@@ -21,5 +21,4 @@ SB Admin 2 for Laravel v8.0
 - Rename or copy `.env.example` file to `.env`
 - Run `php artisan key:generate`
 - Set your database credentials in your `.env` file
-- `php artisan make:migration <migration_name>`
 - `php artisan migrate`
