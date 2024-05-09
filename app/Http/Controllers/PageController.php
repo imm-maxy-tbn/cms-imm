@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Page;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 class PageController extends Controller
 {
     /**
@@ -46,7 +46,7 @@ class PageController extends Controller
         if ($request->hasFile('imgupload')) {
             foreach ($request->file('imgupload') as $image) {
                 $originalName = $image->getClientOriginalName();
-                $path = $image->storeAs('public/img', $originalName);
+                $path = $image->storeAs('public/img/pages', $originalName);
                 $imagePaths[] = $path;
             }
         }
@@ -72,51 +72,58 @@ class PageController extends Controller
     }
 
     public function edit($id)
-{
-    $page = Page::findOrFail($id);
-    return view('pages.edit', compact('page'));
-}
-
-public function update(Request $request, $id)
-{
-    $page = Page::findOrFail($id);
-
-    $request->validate([
-        'name' => 'required',
-        'content' => 'required',
-        'imgupload.*' => 'nullable|image|max:5000',
-    ]);
-
-    $imagePaths = [];
-
-    if ($request->hasFile('imgupload')) {
-        foreach ($request->file('imgupload') as $image) {
-            $originalName = $image->getClientOriginalName();
-            $path = $image->storeAs('public/img', $originalName);
-            $imagePaths[] = $path;
-        }
-
-        // Update images only if new images are uploaded
-        $page->img = implode(';', $imagePaths);
+    {
+        $page = Page::findOrFail($id);
+        return view('pages.edit', compact('page'));
     }
 
-    // Update other fields
-    $page->name = $request->input('name');
-    $page->content = $request->input('content');
-    $page->save();
+    public function update(Request $request, $id)
+    {
+        $page = Page::findOrFail($id);
 
-    return redirect()->route('pages.index')->with('success', 'Page updated successfully.');
-}
+        $request->validate([
+            'name' => 'required',
+            'content' => 'required',
+            'imgupload.*' => 'nullable|image|max:5000',
+        ]);
+
+        $imagePaths = [];
+
+        if ($request->hasFile('imgupload')) {
+            foreach ($request->file('imgupload') as $image) {
+                $originalName = $image->getClientOriginalName();
+                $path = $image->storeAs('public/img/pages', $originalName);
+                $imagePaths[] = $path;
+            }
+
+            // Update images only if new images are uploaded
+            $page->img = implode(';', $imagePaths);
+        }
+
+        // Update other fields
+        $page->name = $request->input('name');
+        $page->content = $request->input('content');
+        $page->save();
+
+        return redirect()->route('pages.index')->with('success', 'Page updated successfully.');
+    }
 
 
 
 
-public function destroy($id)
-{
-    $page = Page::findOrFail($id);
-    $page->delete();
-    return redirect()->route('pages.index')->with('success', 'Page deleted successfully.');
-}
+    public function destroy($id)
+    {
+        $page = Page::findOrFail($id);
 
+        // Hapus gambar terkait jika ada
+        $imagePaths = explode(';', $page->img);
+        foreach ($imagePaths as $path) {
+            Storage::delete($path);
+        }
 
+        // Hapus halaman dari database
+        $page->delete();
+
+        return redirect()->route('pages.index')->with('success', 'Page deleted successfully.');
+    }
 }

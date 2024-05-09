@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class TagController extends Controller
 {
@@ -30,9 +31,9 @@ class TagController extends Controller
         $tag->nama = $request->input('nama');
 
         if ($request->hasFile('img')) {
-            $imageName = time() . '.' . $request->img->extension();
-            $request->img->move(public_path('images'), $imageName);
-            $tag->img = 'images/' . $imageName;
+            $originalName = $request->img->getClientOriginalName();
+            $path = $request->img->storeAs('public/img/tags', $originalName);
+            $tag->img = Storage::url($path);
         }
 
         $tag->save();
@@ -58,9 +59,9 @@ class TagController extends Controller
         $tag->nama = $request->input('nama');
 
         if ($request->hasFile('img')) {
-            $imageName = time() . '.' . $request->img->extension();
-            $request->img->move(public_path('images'), $imageName);
-            $tag->img = 'images/' . $imageName;
+            $originalName = $request->img->getClientOriginalName();
+            $path = $request->img->storeAs('public/img/tags', $originalName);
+            $tag->img = Storage::url($path);
         }
 
         $tag->save();
@@ -71,6 +72,9 @@ class TagController extends Controller
     public function destroy($id)
     {
         $tag = Tag::findOrFail($id);
+        if ($tag->img) {
+            Storage::delete($tag->img);
+        }
         $tag->delete();
         return redirect()->route('tags.index')->with('success', 'Tag deleted successfully.');
     }
