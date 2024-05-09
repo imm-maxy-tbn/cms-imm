@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,10 @@ Route::put('/profile', 'ProfileController@update')->name('profile.update');
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/pages/create', 'PageController@create')->name('pages.create');
+Route::post('/pages', 'PageController@store')->name('pages.store');
+Route::get('/pages', 'PageController@index')->name('pages.index');
+Route::get('pages/{id}/edit', 'PageController@edit')->name('pages.edit');
+Route::delete('pages/{id}', 'PageController@destroy')->name('pages.destroy');
+Route::put('pages/{id}', 'PageController@update')->name('pages.update');
