@@ -24,7 +24,7 @@ class Page extends Model
 
             foreach ($images as $image) {
                 // Assuming your images are stored in the 'public' directory
-                $imageUrls[] = asset('storage/' . $image);
+                $imageUrls[] = asset('storage/img/pages' . $image);
             }
 
             return $imageUrls;
