@@ -63,6 +63,14 @@
             </a>
         </li>
 
+        <!-- Nav Item - Users -->
+        <li class="nav-item {{ Nav::isRoute('users') }}">
+            <a class="nav-link" href="{{ route('users.index') }}">
+                <i class="fas fa-fw fa-users"></i>
+                <span>{{ __('Users') }}</span>
+            </a>
+        </li>
+
         <!-- Nav Item - Pages -->
         <li class="nav-item {{ Nav::isRoute('pages') }}">
             <a class="nav-link" href="{{ route('pages.index') }}">
