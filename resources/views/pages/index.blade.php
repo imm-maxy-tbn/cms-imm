@@ -23,14 +23,14 @@
                                     <th>Name</th>
                                     <th>Content</th>
                                     <th>Images</th>
-                                    <th>Actions</th> <!-- New column for actions -->
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($pages as $page)
                                     <tr>
                                         <td>{{ $page->name }}</td>
-                                        <td>{{ $page->content }}</td>
+                                        <td>{!! $page->content !!}</td>
                                         <td>
                                             @if ($page->img)
                                                 @foreach (explode(';', $page->img) as $image)

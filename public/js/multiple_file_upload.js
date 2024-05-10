@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         const formData = new FormData();
         const name = document.getElementById('name').value;
-        const content = document.getElementById('content').value;
+        const content = $('#summernote').code();
 
         formData.append('name', name);
         formData.append('content', content);

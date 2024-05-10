@@ -40,7 +40,7 @@
                 </div>
                 <div class="form-group">
                     <label for="content">Content:</label>
-                    <textarea class="form-control" id="content" name="content" rows="4" required></textarea>
+                    <textarea class="form-control" id="summernote" name="content" rows="4" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="imgupload">Images:</label>
@@ -60,5 +60,12 @@
 
 <!-- Link the JavaScript file -->
 <script src="{{ asset('js/multiple_file_upload.js') }}"></script>
+
+<script>
+    $('#summernote').summernote({
+        tabsize: 2,
+        height: 100
+    });
+</script>
 
 @endsection
