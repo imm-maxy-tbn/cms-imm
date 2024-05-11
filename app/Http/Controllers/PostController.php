@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Tag;
+use App\Models\User;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -19,7 +21,7 @@ class PostController extends Controller
         $posts = Post::all();
         $tags = Tag::all();
         $categories = Category::all();
-        return view('posts.index', compact('post', 'tags', 'categories'));
+        return view('posts.index', compact('posts', 'tags', 'categories'));
     }
 
     /**
@@ -31,7 +33,10 @@ class PostController extends Controller
     {
         $tags = Tag::all();
         $categories = Category::all();
-        return view('posts.create', compact('tags', 'categories'));
+        $users = User::all();
+        $currentUserId = Auth::id(); // Mendapatkan ID pengguna saat ini
+
+        return view('posts.create', compact('tags', 'categories', 'users', 'currentUserId'));
     }
 
     /**
@@ -49,7 +54,7 @@ class PostController extends Controller
             'user_id' => 'required|exists:users,id',
             'published_at' => 'nullable|date',
             'category_id' => 'required|exists:categories,id',
-            'tag_id' => 'required|exists:tags,id',
+            'tags.*' => 'required|exists:tags,id', // Menggunakan tags.* untuk menerima multiple values
             'imgupload.*' => 'nullable|image|max:5000',
         ]);
 
@@ -87,6 +92,7 @@ class PostController extends Controller
     {
         $tags = Tag::all();
         $categories = Category::all();
+        $currentUserId = Auth::id();
         return view('posts.edit', compact('post', 'tags', 'categories'));
     }
 
@@ -120,5 +126,20 @@ class PostController extends Controller
         }
 
         return redirect()->route('posts.index')->with('success', 'Post updated successfully.');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Post  $post
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $post = Post::findOrFail($id);
+        $post->delete();
+
+        return redirect()->route('posts.index')
+            ->with('success', 'Post deleted successfully.');
     }
 }
