@@ -53,3 +53,12 @@ Route::post('/users/store', [UserController::class, 'store'])->name('users.store
 Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
 Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+
+use App\Http\Controllers\CategoryController;
+
+Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+Route::post('/categories/store', [CategoryController::class, 'store'])->name('categories.store');
+Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
+Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
+Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');

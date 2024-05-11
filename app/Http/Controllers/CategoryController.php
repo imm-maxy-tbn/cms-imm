@@ -7,55 +7,100 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    // Menampilkan semua kategori
+    /**
+     * Display a listing of the categories.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $categories = Category::all();
         return view('categories.index', compact('categories'));
     }
 
+    /**
+     * Show the form for creating a new category.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         return view('categories.create');
     }
 
+    /**
+     * Store a newly created category in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
+        $request->validate([
             'name' => 'required|unique:categories|max:255',
         ]);
 
-        Category::create($validatedData);
+        Category::create($request->all());
 
         return redirect()->route('categories.index')
             ->with('success', 'Category created successfully.');
     }
+
+    /**
+     * Display the specified category.
+     *
+     * @param  \App\Models\Category  $category
+     * @return \Illuminate\Http\Response
+     */
     public function show(Category $category)
     {
         return view('categories.show', compact('category'));
     }
 
-    public function edit(Category $category)
+    /**
+     * Show the form for editing the specified category.
+     *
+     * @param  \App\Models\Category  $category
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
     {
+        $category = Category::findOrFail($id);
         return view('categories.edit', compact('category'));
     }
-    public function update(Request $request, Category $category)
+
+    /**
+     * Update the specified category in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Category  $category
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|unique:categories|max:255',
+        $category = Category::findOrFail($id);
+
+        $request->validate([
+            'name' => 'required|unique:categories,name,'.$id.'|max:255',
         ]);
 
-        $category->update($validatedData);
+        $category->name = $request->input('name');
+        $category->save();
 
-        return redirect()->route('categories.index')
-            ->with('success', 'Category updated successfully');
+        return redirect()->route('categories.index')->with('success', 'Category updated successfully.');
     }
 
+    /**
+     * Remove the specified category from storage.
+     *
+     * @param  \App\Models\Category  $category
+     * @return \Illuminate\Http\Response
+     */
     public function destroy(Category $category)
     {
         $category->delete();
 
         return redirect()->route('categories.index')
-            ->with('success', 'Category deleted successfully');
+            ->with('success', 'Category deleted successfully.');
     }
 }
