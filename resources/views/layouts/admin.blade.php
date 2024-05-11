@@ -47,7 +47,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">CMS <sup>IMM</sup></div>
             </a>
 
             <!-- Divider -->
@@ -100,13 +100,21 @@
                 </a>
             </li>
 
+            <!-- Nav Item - Categories -->
+            <li class="nav-item {{ Nav::isRoute('categories') }}">
+                <a class="nav-link" href="{{ route('categories.index') }}">
+                    <i class="fas fa-fw fa-sitemap"></i>
+                    <span>{{ __('Categories') }}</span>
+                </a>
+            </li>
+
             <!-- Nav Item - About -->
-            <li class="nav-item {{ Nav::isRoute('about') }}">
+            <!-- <li class="nav-item {{ Nav::isRoute('about') }}">
                 <a class="nav-link" href="{{ route('about') }}">
                     <i class="fas fa-fw fa-hands-helping"></i>
                     <span>{{ __('About') }}</span>
                 </a>
-            </li>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
