@@ -22,17 +22,18 @@
             <tr>
                 <td>{{ $tag->nama }}</td>
                 <td>
-                    @if ($tag->img)<img src="{{ asset($tag->img) }}" alt="{{ $tag->nama }}" style="max-width: 100px;">
-                    @else
-                    No images
-                    @endif
+                    <img src="{{ asset('images/' . $tag->img) }}" height="50" width="50">
+                    
                 </td>
                 <td>
-                    <a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                    <a href="{{ route('tags.view', $tag->id) }}" class="btn btn-sm btn-primary"><i class="fas fa-info-circle" style="color: #ffffff;"></i></a>
+                    <a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-sm btn-primary"><i class="fas fa-pencil-alt" style="color: #ffffff;"></i></a>
                     <form action="{{ route('tags.destroy', $tag->id) }}" method="POST" style="display: inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this tag?')">Delete</button>
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this tag?')">
+                            <i class="fas fa-trash" style="color: #ffffff;"></i>
+                        </button>
                     </form>
                 </td>
             </tr>

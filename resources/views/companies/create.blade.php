@@ -1,9 +1,8 @@
-<!-- resources/views/categories/create.blade.php -->
 @extends('layouts.admin')
 
 @section('main-content')
 <!-- Page Heading -->
-<h1 class="h3 mb-4 text-gray-800">{{ __('Company') }}</h1>
+<h1 class="h3 mb-4 text-gray-800">{{ __('Create New Page') }}</h1>
 
 @if (session('success'))
 <div class="alert alert-success border-left-success alert-dismissible fade show" role="alert">
@@ -27,40 +26,38 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Create New Company</h1>
+    <h1 class="h3 mb-4 text-gray-800">Create New Page</h1>
 
-    <!-- Form for creating a new category -->
+    <!-- Form for creating a new page -->
     <div class="card shadow mb-4">
         <div class="card-body">
-            <form action="{{ route('companies.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('pages.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="nama">Nama:</label>
-                    <input type="text" class="form-control" id="nama" name="nama" required>
-                    <label for="profile">Profile:</label>
-                    <input type="text" class="form-control" id="profile" name="profile" required>
-                    <label for="tipe">Tipe:</label>
-                    <input type="text" class="form-control" id="tipe" name="tipe" required>
-                    <label for="nama_pic">Nama PIC:</label>
-                    <input type="text" class="form-control" id="nama_pic" name="nama_pic" required>
-                    <label for="posisi_pic">Posisi PIC:</label>
-                    <input type="text" class="form-control" id="posisi_pic" name="posisi_pic" required>
-                    <label for="telepon">Telepon:</label>
-                    <input type="text" class="form-control" id="telepon" name="telepon" required>
-                    <label for="negara">Negara:</label>
-                    <input type="text" class="form-control" id="negara" name="negara" required>
-                    <label for="provinsi">Provinsi:</label>
-                    <input type="text" class="form-control" id="provinsi" name="provinsi" required>
-                    <label for="kabupaten">Kabupaten:</label>
-                    <input type="text" class="form-control" id="kabupaten" name="kabupaten" required>
-                    <label for="jumlah_karyawan">Jumlah Karyawan:</label>
-                    <input type="text" class="form-control" id="jumlah_karyawan" name="jumlah_karyawan" required>
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Create Company</button>
+                <div class="form-group">
+                    <label for="content">Content:</label>
+                    <textarea class="form-control" id="summernote" name="content" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="imgupload">Images:</label>
+                    <input type="file" class="form-control-file" id="imgupload" name="imgupload[]" multiple>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Page</button>
             </form>
         </div>
     </div>
 
 </div>
 
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            tabsize: 2,
+            height: 100
+        });
+    });
+</script>
 @endsection

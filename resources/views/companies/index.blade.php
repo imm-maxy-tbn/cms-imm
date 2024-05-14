@@ -56,7 +56,7 @@
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this company?')">
-                            <i class="fas fa-trash" style="color: #ffffff;"></i>    
+                            <i class="fas fa-trash" style="color: #ffffff;"></i>
                         </button>
                     </form>
                 </td>

@@ -43,8 +43,8 @@
                     <textarea class="form-control" id="summernote" name="content" rows="4" required></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="imgupload">Images:</label>
-                    <input type="file" class="form-control" id="imgupload" name="imgupload[]" multiple>
+                    <label for="img">Images:</label>
+                    <input type="file" name="img" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-primary">Create Page</button>
             </form>

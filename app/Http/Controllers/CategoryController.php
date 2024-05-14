@@ -28,6 +28,12 @@ class CategoryController extends Controller
         return view('categories.create');
     }
 
+    public function view($id)
+    {
+        $category = Category::findOrFail($id);
+        return view('categories.view', compact('category'));
+    }
+
     /**
      * Store a newly created category in storage.
      *
