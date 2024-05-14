@@ -63,6 +63,17 @@ Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('
 Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
 Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
+use App\Http\Controllers\CompanyController;
+
+Route::get('/companies', [CompanyController::class, 'index'])->name('companies.index');
+Route::get('/companies/create', [CompanyController::class, 'create'])->name('companies.create');
+Route::post('/companies/store', [CompanyController::class, 'store'])->name('companies.store');
+Route::get('/companies/{id}/edit', [CompanyController::class, 'edit'])->name('companies.edit');
+Route::put('/companies/{id}', [CompanyController::class, 'update'])->name('companies.update');
+Route::delete('/companies/{id}', [CompanyController::class, 'destroy'])->name('companies.destroy');
+Route::get('/companies/{id}/view', [CompanyController::class, 'view'])->name('companies.view');
+
+
 use App\Http\Controllers\PostController;
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
