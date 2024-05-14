@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- <link href="{{asset('vendor/summernote/summernote.css')}}" rel="stylesheet"> -->
-
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
@@ -107,7 +107,13 @@
                     <span>{{ __('Categories') }}</span>
                 </a>
             </li>
-
+            <!-- Nav Item - Companies -->
+            <li class="nav-item {{ Nav::isRoute('companies') }}">
+                <a class="nav-link" href="{{ route('companies.index') }}">
+                    <i class="fas fa-fw fa-users"></i>
+                        <span>{{ __('Companies') }}</span>
+                </a>
+            </li>
             <!-- Nav Item - About -->
             <!-- <li class="nav-item {{ Nav::isRoute('about') }}">
                 <a class="nav-link" href="{{ route('about') }}">
