@@ -21,6 +21,8 @@ class CreateSurveysTable extends Migration
             $table->enum('level', ['1', '2', '3'])->notNull();
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->integer('order')->nullable();
+            $table->timestamp('start_time')->nullable();
+            $table->timestamp('end_time')->nullable();
             $table->boolean('isOpen')->nullable();
             $table->timestamps();
 

@@ -16,6 +16,8 @@ class Survey extends Model
         'level',
         'parent_id',
         'order',
+        'start_time',
+        'end_time',
         'isOpen',
     ];
 
