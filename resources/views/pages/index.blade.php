@@ -32,21 +32,17 @@
                                         <td>{{ $page->name }}</td>
                                         <td>{!! $page->content !!}</td>
                                         <td>
-                                            @if ($page->img)
-                                                @foreach (explode(';', $page->img) as $image)
-                                                    <img src="{{ asset(str_replace('public/', 'storage/', $image)) }}"
-                                                        alt="Image" style="max-width: 100px; max-height: 100px;">
-                                                @endforeach
-                                            @else
-                                                No images
-                                            @endif
+                                            <img src="{{ asset('images/' . $page->img) }}" height="50" width="50">
                                         </td>
                                         <td>
-                                            <a href="{{ route('pages.edit', $page->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                            <a href="{{ route('pages.view', $page->id) }}" class="btn btn-sm btn-primary"><i class="fas fa-info-circle" style="color: #ffffff;"></i></a>
+                                            <a href="{{ route('pages.edit', $page->id) }}" class="btn btn-sm btn-primary"><i class="fas fa-pencil-alt" style="color: #ffffff;"></i></a>
                                             <form action="{{ route('pages.destroy', $page->id) }}" method="POST" style="display: inline;">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this company?')">
+                                                    <i class="fas fa-trash" style="color: #ffffff;"></i>
+                                                </button>
                                             </form>
                                         </td>
                                     </tr>

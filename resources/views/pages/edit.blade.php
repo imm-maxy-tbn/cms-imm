@@ -18,10 +18,10 @@
                     <textarea class="form-control" id="summernote" name="content" rows="4">{{ $page->content }}</textarea>
                 </div>
                 <div class="form-group">
-                    <label for="imgupload">Images:</label>
-                    <input type="file" class="form-control-file" id="imgupload" name="imgupload[]" multiple>
+                    <label for="img">Images:</label>
+                    <input type="file" class="form-control-file" name="img"> <!-- Add name attribute -->
                 </div>
-                <button type="submit" class="btn btn-primary">Update Page</button>
+                <button type="submit" class="btn btn-primary">Update Page</button> <!-- Change button type to submit -->
             </form>
         </div>
     </div>

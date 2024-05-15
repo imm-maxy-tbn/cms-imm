@@ -27,7 +27,11 @@ class UserController extends Controller
     {
         return view('users.create');
     }
-
+    public function view($id)
+    {
+        $user = User::findOrFail($id);
+        return view('users.view', compact('user'));
+    }
     /**
      * Store a newly created resource in storage.
      *

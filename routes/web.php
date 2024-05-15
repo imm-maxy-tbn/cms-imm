@@ -35,6 +35,8 @@ Route::get('/pages', 'PageController@index')->name('pages.index');
 Route::get('pages/{id}/edit', 'PageController@edit')->name('pages.edit');
 Route::delete('pages/{id}', 'PageController@destroy')->name('pages.destroy');
 Route::put('pages/{id}', 'PageController@update')->name('pages.update');
+Route::get('/pages/{id}/view', 'PageController@view')->name('pages.view');
+
 
 use App\Http\Controllers\TagController;
 
@@ -44,6 +46,8 @@ Route::post('/tags/store', [TagController::class, 'store'])->name('tags.store');
 Route::get('/tags/{id}/edit', [TagController::class, 'edit'])->name('tags.edit');
 Route::put('/tags/{id}', [TagController::class, 'update'])->name('tags.update');
 Route::delete('/tags/{id}', [TagController::class, 'destroy'])->name('tags.destroy');
+Route::get('/tags/{id}/view', [TagController::class, 'view'])->name('tags.view');
+
 
 use App\Http\Controllers\UserController;
 
@@ -53,6 +57,8 @@ Route::post('/users/store', [UserController::class, 'store'])->name('users.store
 Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
 Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+Route::get('/users/{id}/view', [UserController::class, 'view'])->name('users.view');
+
 
 use App\Http\Controllers\CategoryController;
 
@@ -62,6 +68,8 @@ Route::post('/categories/store', [CategoryController::class, 'store'])->name('ca
 Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
 Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
 Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+Route::get('/categories/{id}/view', [CategoryController::class, 'view'])->name('categories.view');
+
 
 use App\Http\Controllers\CompanyController;
 
