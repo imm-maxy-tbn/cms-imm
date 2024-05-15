@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-group">
                     <label for="content">Content:</label>
-                    <textarea class="form-control" id="content" name="content" rows="4" readonly>{{ $page->content }}</textarea>
+                    <textarea class="form-control" id="summernote" name="content" rows="4" readonly>{{ $page->content }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="img">Images:</label>
@@ -28,4 +28,7 @@
         </div>
     </div>
 </div>
+<script>
+    $('#summernote').summernote('disable');
+</script>
 @endsection
