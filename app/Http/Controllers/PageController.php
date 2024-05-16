@@ -39,7 +39,7 @@ class PageController extends Controller
         $request->validate([
             'name' => 'required',
             'content' => 'required',
-            'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000',
         ]);
 
         $imageName = time() . '.' . $request->img->extension();

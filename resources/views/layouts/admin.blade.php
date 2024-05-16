@@ -107,6 +107,15 @@
                     <span>{{ __('Categories') }}</span>
                 </a>
             </li>
+
+            <!-- Nav Item - Posts -->
+            <li class="nav-item {{ Nav::isRoute('posts') }}">
+                <a class="nav-link" href="{{ route('posts.index') }}">
+                    <i class="fas fa-fw fa-newspaper"></i>
+                    <span>{{ __('Posts') }}</span>
+                </a>
+            </li>
+
             <!-- Nav Item - Companies -->
             <li class="nav-item {{ Nav::isRoute('companies') }}">
                 <a class="nav-link" href="{{ route('companies.index') }}">

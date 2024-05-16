@@ -23,7 +23,7 @@
                         <p>{{ basename($page->img) }}</p>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="window.location='{{ route('pages.index') }}'">Back</button>
+                <a type="button" class="btn btn-primary" href='{{ route('pages.index') }}'>Back</a>
             </form>
         </div>
     </div>
