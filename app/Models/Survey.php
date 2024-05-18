@@ -16,6 +16,7 @@ class Survey extends Model
         'level',
         'parent_id',
         'order',
+        'score',
         'start_time',
         'end_time',
         'isOpen',

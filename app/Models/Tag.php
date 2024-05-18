@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-    protected $fillable = ['nama', 'img'];
+    protected $fillable = ['nama', 'img', 'level', 'parent_id'];
 
     public function projects()
     {
