@@ -15,43 +15,6 @@ class MetricsTableSeeder extends Seeder
     public function run()
     {
         $metrics = [
-            // [
-            //     'id' => 1,
-            //     'code' => 'PI6372',
-            //     'name' => 'Client Individuals: Smallholder',
-            //     'definition' => 'Number of unique smallholder farmer individuals who were clients during the reporting period.',
-            //     'calculation' => null,
-            //     'usage_guidance' =>
-            //         "This metric is intended to capture the number of unique smallholder farmer clients who received the organization's products or services during the reporting period. It is not a measure of foot traffic, nor is it intended to capture the number of client transactions. For example, a smallholder farmer customer who makes two purchases during a period should only be counted once. Organizations wishing to report on client purchases should refer to Client Transactions (PI5184). Since this metric is intended to capture the unique number of specific individuals serviced, organizations should not apply any household multipliers to their reports against this metric. If organizations consider entire households to be the customer/client, they can report against Client Households: Total (PI7954) and its associated submetrics. Organizations that rely on assumptions to report against this metric, including in the process for determining the number of client individuals, should footnote all assumptions used in their calculation process. For healthcare providers, “client individuals” refers to patients. For housing providers, “client individuals” refers to residents or tenants. This metric is multi-dimensional with regard to the five dimensions of impact. It may help describe the WHO dimension when the stakeholder group represented by the metric is the stakeholder group targeted by the investment or organization. It may also help measure the HOW MUCH Scale dimension, which helps estimate the number of the targeted stakeholders experiencing the outcome. For more on the alignment of IRIS metrics to the five dimensions of impact, see IRIS+ and the Five Dimensions of Impact (https://iris.thegiin.org/document/iris-and-the-five-dimensions/). No single metric is sufficient to understand an impact; rather, metrics are selected as a set across all dimensions of impact. When possible, the selection of metrics to measure and describe the five dimensions should be based on best practice and evidence.",
-            //     'social' => true,
-            //     'environmental' => true,
-            //     'section' => 'Product Impact',
-            //     'subsection' => 'Client Information',
-            //     'level_type' => 2,
-            //     'related_metrics_code' => 'PI4060',
-            //     'metric_level' => 'Product/Service, Organization',
-            //     'quantity_type' => 'Flow',
-            //     'reporting_format' => 'unit',
-            // ],
-            // [
-            //     'id' => 2,
-            //     'code' => 'PI9991',
-            //     'name' => 'Supplier Individuals: Smallholder',
-            //     'definition' => 'Number of smallholder farmer individuals who sold to the organization during the reporting period.',
-            //     'calculation' => null,
-            //     'usage_guidance' =>
-            //         'This metric is intended to capture the number of smallholder suppliers of the organization during the reporting period. This metric is intended for use by organizations that seek to support smallholder farmer individuals through their supply chains. This metric is multi-dimensional with regard to the five dimensions of impact: it may help describe the WHO dimension when the stakeholder group represented by the metric is the stakeholder group targeted by the investment or organization. It may also help measure the HOW MUCH Scale dimension, which helps estimate the number of the targeted stakeholders experiencing the outcome. For more on the alignment of IRIS metrics to the five dimensions of impact, see IRIS+ and the Five Dimensions of Impact (https://iris.thegiin.org/document/iris-and-the-five-dimensions/). No single metric is sufficient to understand an impact; rather, metrics are selected as a set across all dimensions of impact. When possible, the selection of metrics to measure and describe the five dimensions should be based on best practice and evidence.',
-            //     'social' => true,
-            //     'environmental' => true,
-            //     'section' => 'Product Impact',
-            //     'subsection' => 'Supplier Information',
-            //     'level_type' => 2,
-            //     'related_metrics_code' => 'PI5350',
-            //     'metric_level' => 'Product/Service, Organization',
-            //     'quantity_type' => 'Flow',
-            //     'reporting_format' => 'unit',
-            // ],
-            ///////
             [
                 'id' => 1,
                 'code' => "PI6372",
