@@ -2950,7 +2950,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 15
             ],
             [
-                "id" => 328,
+                "id" => 327,
                 "name" => "Progress towards national targets established in accordance with Aichi Biodiversity Target 2 of the Strategic Plan for Biodiversity 2011-2020",
                 "order" => "15.9.1",
                 "level" => 2,
@@ -2959,7 +2959,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 15
             ],
             [
-                "id" => 329,
+                "id" => 328,
                 "name" => "Official development assistance and public expenditure on conservation and sustainable use of biodiversity and ecosystems",
                 "order" => "15.a.1",
                 "level" => 2,
@@ -2968,7 +2968,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 15
             ],
             [
-                "id" => 330,
+                "id" => 329,
                 "name" => "Official development assistance and public expenditure on conservation and sustainable use of biodiversity and ecosystems",
                 "order" => "15.b.1",
                 "level" => 2,
@@ -2977,7 +2977,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 15
             ],
             [
-                "id" => 331,
+                "id" => 330,
                 "name" => "Proportion of traded wildlife that was poached or illicitly trafficked",
                 "order" => "15.c.1",
                 "level" => 2,
@@ -2986,7 +2986,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 15
             ],
             [
-                "id" => 332,
+                "id" => 331,
                 "name" => "Significantly reduce all forms of violence and related death rates everywhere",
                 "order" => "16.1",
                 "level" => 1,
@@ -2995,7 +2995,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 333,
+                "id" => 332,
                 "name" => "End abuse, exploitation, trafficking and all forms of violence against and torture of children",
                 "order" => "16.2",
                 "level" => 1,
@@ -3004,7 +3004,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 334,
+                "id" => 333,
                 "name" => "Promote the rule of law at the national and international levels and ensure equal access to justice for all",
                 "order" => "16.3",
                 "level" => 1,
@@ -3013,7 +3013,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 335,
+                "id" => 334,
                 "name" => "By 2030, significantly reduce illicit financial and arms flows, strengthen the recovery and return of stolen assets and combat all forms of organized crime",
                 "order" => "16.4",
                 "level" => 1,
@@ -3022,7 +3022,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 336,
+                "id" => 335,
                 "name" => "Substantially reduce corruption and bribery in all their forms",
                 "order" => "16.5",
                 "level" => 1,
@@ -3031,7 +3031,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 337,
+                "id" => 336,
                 "name" => "Develop effective, accountable and transparent institutions at all levels",
                 "order" => "16.6",
                 "level" => 1,
@@ -3040,7 +3040,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 338,
+                "id" => 337,
                 "name" => "Ensure responsive, inclusive, participatory and representative decision-making at all levels",
                 "order" => "16.7",
                 "level" => 1,
@@ -3049,7 +3049,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 339,
+                "id" => 338,
                 "name" => "Broaden and strengthen the participation of developing countries in the institutions of global governance",
                 "order" => "16.8",
                 "level" => 1,
@@ -3058,7 +3058,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 340,
+                "id" => 339,
                 "name" => "By 2030, provide legal identity for all, including birth registration",
                 "order" => "16.9",
                 "level" => 1,
@@ -3067,7 +3067,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 341,
+                "id" => 340,
                 "name" => "Ensure public access to information and protect fundamental freedoms, in accordance with national legislation and international agreements",
                 "order" => "16.10",
                 "level" => 1,
@@ -3076,7 +3076,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 342,
+                "id" => 341,
                 "name" => "Strengthen relevant national institutions, including through international cooperation, for building capacity at all levels, in particular in developing countries, to prevent violence and combat terrorism and crime",
                 "order" => "16.a",
                 "level" => 1,
@@ -3085,7 +3085,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 343,
+                "id" => 342,
                 "name" => "Promote and enforce non-discriminatory laws and policies for sustainable development",
                 "order" => "16.b",
                 "level" => 1,
@@ -3094,36 +3094,45 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 16
             ],
             [
-                "id" => 344,
+                "id" => 343,
                 "name" => "Number of victims of intentional homicide per 100,000 population, by sex and age",
                 "order" => "16.1.1",
                 "level" => 2,
-                "description" => 332,
+                "description" => 331,
+                "parent_indicator_id" => null,
+                "sdg_id" => 16
+            ],
+            [
+                "id" => 344,
+                "name" => "Conflict-related deaths per 100,000 population, by sex, age and cause",
+                "order" => "16.1.2",
+                "level" => 2,
+                "description" => 331,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 345,
-                "name" => "Conflict-related deaths per 100,000 population, by sex, age and cause",
-                "order" => "16.1.2",
+                "name" => "Proportion of population subjected to physical, psychological or sexual violence in the previous 12 months",
+                "order" => "16.1.3",
                 "level" => 2,
-                "description" => 332,
+                "description" => 331,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 346,
-                "name" => "Proportion of population subjected to physical, psychological or sexual violence in the previous 12 months",
-                "order" => "16.1.3",
+                "name" => "Proportion of population that feel safe walking alone around the area they live",
+                "order" => "16.1.4",
                 "level" => 2,
-                "description" => 332,
+                "description" => 331,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 347,
-                "name" => "Proportion of population that feel safe walking alone around the area they live",
-                "order" => "16.1.4",
+                "name" => "Proportion of children aged 1-17 years who experienced any physical punishment and/or psychological aggression by caregivers in the past month",
+                "order" => "16.2.1",
                 "level" => 2,
                 "description" => 332,
                 "parent_indicator_id" => null,
@@ -3131,26 +3140,26 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 348,
-                "name" => "Proportion of children aged 1-17 years who experienced any physical punishment and/or psychological aggression by caregivers in the past month",
-                "order" => "16.2.1",
+                "name" => "Number of victims of human trafficking per 100,000 population, by sex, age and form of exploitation",
+                "order" => "16.2.2",
                 "level" => 2,
-                "description" => 333,
+                "description" => 332,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 349,
-                "name" => "Number of victims of human trafficking per 100,000 population, by sex, age and form of exploitation",
-                "order" => "16.2.2",
+                "name" => "Proportion of young women and men aged 18-29 years who experienced sexual violence by age 18",
+                "order" => "16.2.3",
                 "level" => 2,
-                "description" => 333,
+                "description" => 332,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 350,
-                "name" => "Proportion of young women and men aged 18-29 years who experienced sexual violence by age 18",
-                "order" => "16.2.3",
+                "name" => "Proportion of victims of violence in the previous 12 months who reported their victimization to competent authorities or other officially recognized conflict resolution mechanisms",
+                "order" => "16.3.1",
                 "level" => 2,
                 "description" => 333,
                 "parent_indicator_id" => null,
@@ -3158,17 +3167,17 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 351,
-                "name" => "Proportion of victims of violence in the previous 12 months who reported their victimization to competent authorities or other officially recognized conflict resolution mechanisms",
-                "order" => "16.3.1",
+                "name" => "Unsentenced detainees as a proportion of overall prison population",
+                "order" => "16.3.2",
                 "level" => 2,
-                "description" => 334,
+                "description" => 333,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 352,
-                "name" => "Unsentenced detainees as a proportion of overall prison population",
-                "order" => "16.3.2",
+                "name" => "Total value of inward and outward illicit financial flows (in current United States dollars)",
+                "order" => "16.4.1",
                 "level" => 2,
                 "description" => 334,
                 "parent_indicator_id" => null,
@@ -3176,17 +3185,17 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 353,
-                "name" => "Total value of inward and outward illicit financial flows (in current United States dollars)",
-                "order" => "16.4.1",
+                "name" => "Proportion of seized small arms and light weapons that are recorded and traced, in accordance with international standards and legal instruments",
+                "order" => "16.4.2",
                 "level" => 2,
-                "description" => 335,
+                "description" => 334,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 354,
-                "name" => "Proportion of seized small arms and light weapons that are recorded and traced, in accordance with international standards and legal instruments",
-                "order" => "16.4.2",
+                "name" => "Proportion of persons who had at least one contact with a public official and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months",
+                "order" => "16.5.1",
                 "level" => 2,
                 "description" => 335,
                 "parent_indicator_id" => null,
@@ -3194,17 +3203,17 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 355,
-                "name" => "Proportion of persons who had at least one contact with a public official and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months",
-                "order" => "16.5.1",
+                "name" => "Proportion of businesses that had at least one contact with a public official and that paid a bribe to a public official, or were asked for a bribe by those public officials during the previous 12 months",
+                "order" => "16.5.2",
                 "level" => 2,
-                "description" => 336,
+                "description" => 335,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 356,
-                "name" => "Proportion of businesses that had at least one contact with a public official and that paid a bribe to a public official, or were asked for a bribe by those public officials during the previous 12 months",
-                "order" => "16.5.2",
+                "name" => "Primary government expenditures as a proportion of original approved budget, by sector (or by budget codes or similar)",
+                "order" => "16.6.1",
                 "level" => 2,
                 "description" => 336,
                 "parent_indicator_id" => null,
@@ -3212,17 +3221,17 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 357,
-                "name" => "Primary government expenditures as a proportion of original approved budget, by sector (or by budget codes or similar)",
-                "order" => "16.6.1",
+                "name" => "Proportion of the population satisfied with their last experience of public services",
+                "order" => "16.6.2",
                 "level" => 2,
-                "description" => 337,
+                "description" => 336,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 358,
-                "name" => "Proportion of the population satisfied with their last experience of public services",
-                "order" => "16.6.2",
+                "name" => "Proportions of positions (by sex, age, persons with disabilities and population groups) in public institutions (national and local legislatures, public service, and judiciary) compared to national distributions",
+                "order" => "16.7.1",
                 "level" => 2,
                 "description" => 337,
                 "parent_indicator_id" => null,
@@ -3230,17 +3239,17 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 359,
-                "name" => "Proportions of positions (by sex, age, persons with disabilities and population groups) in public institutions (national and local legislatures, public service, and judiciary) compared to national distributions",
-                "order" => "16.7.1",
+                "name" => "Proportion of population who believe decision making is inclusive and responsive, by sex, age, disability and population group",
+                "order" => "16.7.2",
                 "level" => 2,
-                "description" => 338,
+                "description" => 337,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 360,
-                "name" => "Proportion of population who believe decision making is inclusive and responsive, by sex, age, disability and population group",
-                "order" => "16.7.2",
+                "name" => "Proportion of members and voting rights of developing countries in international organizations",
+                "order" => "16.8.1",
                 "level" => 2,
                 "description" => 338,
                 "parent_indicator_id" => null,
@@ -3248,8 +3257,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 361,
-                "name" => "Proportion of members and voting rights of developing countries in international organizations",
-                "order" => "16.8.1",
+                "name" => "Proportion of children under 5 years of age whose births have been registered with a civil authority, by age",
+                "order" => "16.9.1",
                 "level" => 2,
                 "description" => 339,
                 "parent_indicator_id" => null,
@@ -3257,8 +3266,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 362,
-                "name" => "Proportion of children under 5 years of age whose births have been registered with a civil authority, by age",
-                "order" => "16.9.1",
+                "name" => "Number of verified cases of killing, kidnapping, enforced disappearance, arbitrary detention and torture of journalists, associated media personnel, trade unionists and human rights advocates in the previous 12 months",
+                "order" => "16.10.1",
                 "level" => 2,
                 "description" => 340,
                 "parent_indicator_id" => null,
@@ -3266,17 +3275,17 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 363,
-                "name" => "Number of verified cases of killing, kidnapping, enforced disappearance, arbitrary detention and torture of journalists, associated media personnel, trade unionists and human rights advocates in the previous 12 months",
-                "order" => "16.10.1",
+                "name" => "Number of countries that adopt and implement constitutional, statutory and/or policy guarantees for public access to information",
+                "order" => "16.10.2",
                 "level" => 2,
-                "description" => 341,
+                "description" => 340,
                 "parent_indicator_id" => null,
                 "sdg_id" => 16
             ],
             [
                 "id" => 364,
-                "name" => "Number of countries that adopt and implement constitutional, statutory and/or policy guarantees for public access to information",
-                "order" => "16.10.2",
+                "name" => "Existence of independent national human rights institutions in compliance with the Paris Principles",
+                "order" => "16.a.1",
                 "level" => 2,
                 "description" => 341,
                 "parent_indicator_id" => null,
@@ -3284,8 +3293,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 365,
-                "name" => "Existence of independent national human rights institutions in compliance with the Paris Principles",
-                "order" => "16.a.1",
+                "name" => "Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months on the basis of a ground of discrimination prohibited under international human rights law",
+                "order" => "16.b.1",
                 "level" => 2,
                 "description" => 342,
                 "parent_indicator_id" => null,
@@ -3293,15 +3302,6 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 366,
-                "name" => "Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months on the basis of a ground of discrimination prohibited under international human rights law",
-                "order" => "16.b.1",
-                "level" => 2,
-                "description" => 343,
-                "parent_indicator_id" => null,
-                "sdg_id" => 16
-            ],
-            [
-                "id" => 367,
                 "name" => "Strengthen domestic resource mobilization, including through international support to developing countries, to improve domestic capacity for tax and other revenue collection",
                 "order" => "17.1",
                 "level" => 1,
@@ -3310,8 +3310,8 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 368,
-                "name" => "Developed countries to implement fully their official development assistance commitments, including the commitment by many developed countries to achieve the target of 0.7 per cent of gross national income for official development assistance (ODA/GNI) to developing countries and 0.15 to 0.20 per cent of ODA/GNI to least developed countries; ODA providers are encouraged to consider setting a target to provide at least 0.20 per cent of ODA/GNI to least developed countries",
+                "id" => 367,
+                "name" => "Developed countries to implement fully their official development assistance commitments, including the commitment by many developed countries to achieve the target of 0.7 per cent of ODA/GNI to developing countries and 0.15 to 0.20 per cent of ODA/GNI to least developed countries, ODA providers are encouraged to consider setting a target to provide at least 0.20 per cent of ODA/GNI to least developed countries",
                 "order" => "17.2",
                 "level" => 1,
                 "description" => null,
@@ -3319,7 +3319,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 369,
+                "id" => 368,
                 "name" => "Mobilize additional financial resources for developing countries from multiple sources",
                 "order" => "17.3",
                 "level" => 1,
@@ -3328,7 +3328,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 370,
+                "id" => 369,
                 "name" => "Assist developing countries in attaining long-term debt sustainability through coordinated policies aimed at fostering debt financing, debt relief and debt restructuring, as appropriate, and address the external debt of highly indebted poor countries to reduce debt distress",
                 "order" => "17.4",
                 "level" => 1,
@@ -3337,7 +3337,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 371,
+                "id" => 370,
                 "name" => "Adopt and implement investment promotion regimes for least developed countries",
                 "order" => "17.5",
                 "level" => 1,
@@ -3346,8 +3346,8 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 372,
-                "name" => "Enhance North-South, South-South and triangular regional and international cooperation on and access to science, technology and innovation and enhance knowledge-sharing on mutually agreed terms, including through improved coordination among existing mechanisms, in particular at the United Nations level, and through a global technology facilitation mechanism",
+                "id" => 371,
+                "name" => "Enhance North-South, South-South and triangular regional and international cooperation on and access to science, technology and innovation and enhance knowledge sharing on mutually agreed terms, including through improved coordination among existing mechanisms, in particular at the United Nations level, and through a global technology facilitation mechanism",
                 "order" => "17.6",
                 "level" => 1,
                 "description" => null,
@@ -3355,7 +3355,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 373,
+                "id" => 372,
                 "name" => "Promote the development, transfer, dissemination and diffusion of environmentally sound technologies to developing countries on favourable terms, including on concessional and preferential terms, as mutually agreed",
                 "order" => "17.7",
                 "level" => 1,
@@ -3364,7 +3364,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 374,
+                "id" => 373,
                 "name" => "Fully operationalize the technology bank and science, technology and innovation capacity-building mechanism for least developed countries by 2017 and enhance the use of enabling technology, in particular information and communications technology",
                 "order" => "17.8",
                 "level" => 1,
@@ -3373,7 +3373,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 375,
+                "id" => 374,
                 "name" => "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation",
                 "order" => "17.9",
                 "level" => 1,
@@ -3382,7 +3382,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 376,
+                "id" => 375,
                 "name" => "Promote a universal, rules-based, open, non-discriminatory and equitable multilateral trading system under the World Trade Organization, including through the conclusion of negotiations under its Doha Development Agenda",
                 "order" => "17.10",
                 "level" => 1,
@@ -3391,8 +3391,8 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 377,
-                "name" => "Significantly increase the exports of developing countries, in particular with a view to doubling the least developed countries  share of global exports by 2020",
+                "id" => 376,
+                "name" => "Significantly increase the exports of developing countries, in particular with a view to doubling the least developed countries share of global exports by 2020",
                 "order" => "17.11",
                 "level" => 1,
                 "description" => null,
@@ -3400,7 +3400,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 378,
+                "id" => 377,
                 "name" => "Realize timely implementation of duty-free and quota-free market access on a lasting basis for all least developed countries, consistent with World Trade Organization decisions, including by ensuring that preferential rules of origin applicable to imports from least developed countries are transparent and simple, and contribute to facilitating market access",
                 "order" => "17.12",
                 "level" => 1,
@@ -3409,7 +3409,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 379,
+                "id" => 378,
                 "name" => "Enhance global macroeconomic stability, including through policy coordination and policy coherence",
                 "order" => "17.13",
                 "level" => 1,
@@ -3418,7 +3418,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 380,
+                "id" => 379,
                 "name" => "Enhance policy coherence for sustainable development",
                 "order" => "17.14",
                 "level" => 1,
@@ -3427,7 +3427,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 381,
+                "id" => 380,
                 "name" => "Respect each country s policy space and leadership to establish and implement policies for poverty eradication and sustainable development",
                 "order" => "17.15",
                 "level" => 1,
@@ -3436,8 +3436,8 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 382,
-                "name" => "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries",
+                "id" => 381,
+                "name" => "Enhance the global partnership for sustainable development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries",
                 "order" => "17.16",
                 "level" => 1,
                 "description" => null,
@@ -3445,7 +3445,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 383,
+                "id" => 382,
                 "name" => "Encourage and promote effective public, public-private and civil society partnerships, building on the experience and resourcing strategies of partnerships",
                 "order" => "17.17",
                 "level" => 1,
@@ -3454,7 +3454,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 384,
+                "id" => 383,
                 "name" => "By 2020, enhance capacity-building support to developing countries, including for least developed countries and small island developing States, to increase significantly the availability of high-quality, timely and reliable data disaggregated by income, gender, age, race, ethnicity, migratory status, disability, geographic location and other characteristics relevant in national contexts",
                 "order" => "17.18",
                 "level" => 1,
@@ -3463,7 +3463,7 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 385,
+                "id" => 384,
                 "name" => "By 2030, build on existing initiatives to develop measurements of progress on sustainable development that complement gross domestic product, and support statistical capacity-building in developing countries",
                 "order" => "17.19",
                 "level" => 1,
@@ -3472,18 +3472,27 @@ class IndicatorsTableSeeder extends Seeder
                 "sdg_id" => 17
             ],
             [
-                "id" => 386,
+                "id" => 385,
                 "name" => "Total government revenue as a proportion of GDP, by source",
                 "order" => "17.1.1",
                 "level" => 2,
-                "description" => 367,
+                "description" => 366,
+                "parent_indicator_id" => null,
+                "sdg_id" => 17
+            ],
+            [
+                "id" => 386,
+                "name" => "Proportion of domestic budget funded by domestic taxes",
+                "order" => "17.1.2",
+                "level" => 2,
+                "description" => 366,
                 "parent_indicator_id" => null,
                 "sdg_id" => 17
             ],
             [
                 "id" => 387,
-                "name" => "Proportion of domestic budget funded by domestic taxes",
-                "order" => "17.1.2",
+                "name" => "Net official development assistance, total and to least developed countries, as a proportion of OECD/DAC donors  gross national income",
+                "order" => "17.2.1",
                 "level" => 2,
                 "description" => 367,
                 "parent_indicator_id" => null,
@@ -3491,8 +3500,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 388,
-                "name" => "Net official development assistance, total and to least developed countries, as a proportion of the Organization for Economic Cooperation and Development (OECD) Development Assistance Committee donors  gross national income (GNI)",
-                "order" => "17.2.1",
+                "name" => "Foreign direct investments (FDI), official development assistance and South-South Cooperation as a proportion of total domestic budget",
+                "order" => "17.3.1",
                 "level" => 2,
                 "description" => 368,
                 "parent_indicator_id" => null,
@@ -3500,17 +3509,17 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 389,
-                "name" => "Foreign direct investments (FDI), official development assistance and South-South Cooperation as a proportion of total domestic budget",
-                "order" => "17.3.1",
+                "name" => "Volume of remittances (in United States dollars) as a proportion of total GDP",
+                "order" => "17.3.2",
                 "level" => 2,
-                "description" => 369,
+                "description" => 368,
                 "parent_indicator_id" => null,
                 "sdg_id" => 17
             ],
             [
                 "id" => 390,
-                "name" => "Volume of remittances (in United States dollars) as a proportion of total GDP",
-                "order" => "17.3.2",
+                "name" => "Debt service as a proportion of exports of goods and services",
+                "order" => "17.4.1",
                 "level" => 2,
                 "description" => 369,
                 "parent_indicator_id" => null,
@@ -3518,8 +3527,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 391,
-                "name" => "Debt service as a proportion of exports of goods and services",
-                "order" => "17.4.1",
+                "name" => "Number of countries that adopt and implement investment promotion regimes for least developed countries",
+                "order" => "17.5.1",
                 "level" => 2,
                 "description" => 370,
                 "parent_indicator_id" => null,
@@ -3527,8 +3536,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 392,
-                "name" => "Number of countries that adopt and implement investment promotion regimes for least developed countries",
-                "order" => "17.5.1",
+                "name" => "Number of science and/or technology cooperation agreements and programmes between countries, by type of cooperation",
+                "order" => "17.6.1",
                 "level" => 2,
                 "description" => 371,
                 "parent_indicator_id" => null,
@@ -3536,17 +3545,17 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 393,
-                "name" => "Number of science and/or technology cooperation agreements and programmes between countries, by type of cooperation",
-                "order" => "17.6.1",
+                "name" => "Fixed Internet broadband subscriptions per 100 inhabitants, by speed",
+                "order" => "17.6.2",
                 "level" => 2,
-                "description" => 372,
+                "description" => 371,
                 "parent_indicator_id" => null,
                 "sdg_id" => 17
             ],
             [
                 "id" => 394,
-                "name" => "Fixed Internet broadband subscriptions per 100 inhabitants, by speed",
-                "order" => "17.6.2",
+                "name" => "Total amount of approved funding for developing countries to promote the development, transfer, dissemination and diffusion of environmentally sound technologies",
+                "order" => "17.7.1",
                 "level" => 2,
                 "description" => 372,
                 "parent_indicator_id" => null,
@@ -3554,8 +3563,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 395,
-                "name" => "Total amount of approved funding for developing countries to promote the development, transfer, dissemination and diffusion of environmentally sound technologies",
-                "order" => "17.7.1",
+                "name" => "Proportion of individuals using the Internet",
+                "order" => "17.8.1",
                 "level" => 2,
                 "description" => 373,
                 "parent_indicator_id" => null,
@@ -3563,8 +3572,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 396,
-                "name" => "Proportion of individuals using the Internet",
-                "order" => "17.8.1",
+                "name" => "Dollar value of financial and technical assistance (including through North-South, South-South and triangular cooperation) committed to developing countries",
+                "order" => "17.9.1",
                 "level" => 2,
                 "description" => 374,
                 "parent_indicator_id" => null,
@@ -3572,8 +3581,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 397,
-                "name" => "Dollar value of financial and technical assistance (including through North-South, South-South and triangular cooperation) committed to developing countries",
-                "order" => "17.9.1",
+                "name" => "Worldwide weighted tariff-average",
+                "order" => "17.10.1",
                 "level" => 2,
                 "description" => 375,
                 "parent_indicator_id" => null,
@@ -3581,8 +3590,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 398,
-                "name" => "Worldwide weighted tariff-average",
-                "order" => "17.10.1",
+                "name" => "Developing countries  and least developed countries  share of global exports",
+                "order" => "17.11.1",
                 "level" => 2,
                 "description" => 376,
                 "parent_indicator_id" => null,
@@ -3590,8 +3599,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 399,
-                "name" => "Developing countries  and least developed countries  share of global exports",
-                "order" => "17.11.1",
+                "name" => "Average tariffs faced by developing countries, least developed countries and small island developing States",
+                "order" => "17.12.1",
                 "level" => 2,
                 "description" => 377,
                 "parent_indicator_id" => null,
@@ -3599,8 +3608,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 400,
-                "name" => "Average tariffs faced by developing countries, least developed countries and small island developing States",
-                "order" => "17.12.1",
+                "name" => "Macroeconomic Dashboard",
+                "order" => "17.13.1",
                 "level" => 2,
                 "description" => 378,
                 "parent_indicator_id" => null,
@@ -3608,8 +3617,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 401,
-                "name" => "Macroeconomic Dashboard",
-                "order" => "17.13.1",
+                "name" => "Number of countries with mechanisms in place to enhance policy coherence of sustainable development",
+                "order" => "17.14.1",
                 "level" => 2,
                 "description" => 379,
                 "parent_indicator_id" => null,
@@ -3617,8 +3626,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 402,
-                "name" => "Number of countries with mechanisms in place to enhance policy coherence of sustainable development",
-                "order" => "17.14.1",
+                "name" => "Extent of use of country-owned results frameworks and planning tools by providers of development cooperation",
+                "order" => "17.15.1",
                 "level" => 2,
                 "description" => 380,
                 "parent_indicator_id" => null,
@@ -3626,8 +3635,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 403,
-                "name" => "Extent of use of country-owned results frameworks and planning tools by providers of development cooperation",
-                "order" => "17.15.1",
+                "name" => "Number of countries reporting progress in multi-stakeholder development effectiveness monitoring frameworks that support the achievement of the sustainable development goals",
+                "order" => "17.16.1",
                 "level" => 2,
                 "description" => 381,
                 "parent_indicator_id" => null,
@@ -3635,8 +3644,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 404,
-                "name" => "Number of countries reporting progress in multi-stakeholder development effectiveness monitoring frameworks that support the achievement of the sustainable development goals",
-                "order" => "17.16.1",
+                "name" => "Amount of United States dollars committed to public-private and civil society partnerships",
+                "order" => "17.17.1",
                 "level" => 2,
                 "description" => 382,
                 "parent_indicator_id" => null,
@@ -3644,8 +3653,8 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 405,
-                "name" => "Amount of United States dollars committed to public-private and civil society partnerships",
-                "order" => "17.17.1",
+                "name" => "Proportion of sustainable development indicators produced at the national level with full disaggregation when relevant to the target, in accordance with the Fundamental Principles of Official Statistics",
+                "order" => "17.18.1",
                 "level" => 2,
                 "description" => 383,
                 "parent_indicator_id" => null,
@@ -3653,26 +3662,26 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 406,
-                "name" => "Proportion of sustainable development indicators produced at the national level with full disaggregation when relevant to the target, in accordance with the Fundamental Principles of Official Statistics",
-                "order" => "17.18.1",
+                "name" => "Number of countries that have national statistical legislation that complies with the Fundamental Principles of Official Statistics",
+                "order" => "17.18.2",
                 "level" => 2,
-                "description" => 384,
+                "description" => 383,
                 "parent_indicator_id" => null,
                 "sdg_id" => 17
             ],
             [
                 "id" => 407,
-                "name" => "Number of countries that have national statistical legislation that complies with the Fundamental Principles of Official Statistics",
-                "order" => "17.18.2",
+                "name" => "Number of countries with a national statistical plan that is fully funded and under implementation, by source of funding",
+                "order" => "17.18.3",
                 "level" => 2,
-                "description" => 384,
+                "description" => 383,
                 "parent_indicator_id" => null,
                 "sdg_id" => 17
             ],
             [
                 "id" => 408,
-                "name" => "Number of countries with a national statistical plan that is fully funded and under implementation, by source of funding",
-                "order" => "17.18.3",
+                "name" => "Dollar value of all resources made available to strengthen statistical capacity in developing countries",
+                "order" => "17.19.1",
                 "level" => 2,
                 "description" => 384,
                 "parent_indicator_id" => null,
@@ -3680,23 +3689,13 @@ class IndicatorsTableSeeder extends Seeder
             ],
             [
                 "id" => 409,
-                "name" => "Dollar value of all resources made available to strengthen statistical capacity in developing countries",
-                "order" => "17.19.1",
-                "level" => 2,
-                "description" => 385,
-                "parent_indicator_id" => null,
-                "sdg_id" => 17
-            ],
-            [
-                "id" => 410,
-                "name" => "Proportion of countries that (a) have conducted at least one population and housing census in the last 10 years; and (b) have achieved 100 per cent birth registration and 80 per cent death registration",
+                "name" => "Proportion of countries that (a) have conducted at least one population and housing census in the last 10 years, and (b) have achieved 100 per cent birth registration and 80 per cent death registration",
                 "order" => "17.19.2",
                 "level" => 2,
-                "description" => 385,
+                "description" => 384,
                 "parent_indicator_id" => null,
                 "sdg_id" => 17
             ],
-
         ];
 
         DB::table('indicators')->insert($indicators);

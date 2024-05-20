@@ -544,23 +544,6 @@ class MetricsTableSeeder extends Seeder
             ],
             [
                 'id' => 32,
-                'code' => "PI9151",
-                'name' => "Number of Threatened Species",
-                'definition' => "Number of threatened species present on land directly controlled by the organization during the reporting period.",
-                'calculation' => null,
-                'usage_guidance' => "This metric is intended to capture the number of threatened species present on land that is directly controlled by the organization, which is measured by Land Directly Controlled: Total (OI5408). Organizations should use this metric in conjunction with Species Conservation Status (PD6429), and, where relevant, the number of threatened species should be segmented by their conservation statuses.",
-                'social' => false,
-                'environmental' => true,
-                'section' => "Product Impact",
-                'subsection' => "Product/Service Information",
-                'level_type' => 1,
-                'related_metrics_code' => null,
-                'metric_level' => "Product/Service, Organization",
-                'quantity_type' => "Flow",
-                'reporting_format' => "Unit of Measure (PD1602",
-            ],
-            [
-                'id' => 33,
                 'code' => "PD6429",
                 'name' => "Species Conservation Status",
                 'definition' => "Describes the conservation status of species during the reporting period. \n\n\nChoose all that apply: \n\n- Least concern\n- Near threatened\n- Vulnerable\n- Endangered\n- Critically endangered\n- Extinct in the wild\n- Extinct\n- Data deficient\n- Not evaluated",
@@ -577,7 +560,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 34,
+                'id' => 33,
                 'code' => "PD2584",
                 'name' => "Species Area of Habitat",
                 'definition' => "Describes the area of habitat available to a species within that species' range during the reporting period.",
@@ -594,7 +577,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 35,
+                'id' => 34,
                 'code' => "PD6363",
                 'name' => "Species Extinction Threat",
                 'definition' => "Describes applicable threats to species during the reporting period. \n\nChoose all that apply: \n\nResidential & commercial development\n- Housing & urban areas\n- Commercial & industrial areas\n- Tourism & recreation areas\n\nAgriculture & aquaculture \n- Annual & perennial non-timber crops: Shifting agriculture\n- Annual & perennial non-timber crops: Smallholder farming\n- Annual & perennial non-timber crops: Agro-industry farming\n- Annual & perennial non-timber crops: Scale unknown/unrecorded\n- Wood & pulp plantations: \nSmall-holder plantations\n- Wood & pulp plantations: Agro-industry plantations\n- Wood & pulp plantations: Scale unknown/unrecorded\n- Livestock farming & ranching: Nomadic grazing\n- Livestock farming & ranching: Small-holder grazing, ranching or farming\n- Livestock farming & ranching: Agro-industry grazing, ranching or farming\n- Livestock farming & ranching: Scale unknown/unrecorded\n- Marine & freshwater aquaculture: Subsistence/artisanal aquaculture\n- Marine & freshwater aquaculture:  Industrial aquaculture\n- Marine & freshwater aquaculture: Scale unknown/unrecorded\n\nEnergy production & mining\n- Oil & gas drilling\n- Mining & quarrying\n- Renewable energy\n- Other energy production & mining (describe)\n\nTransportation & service corridors\n- Roads & railroads\n- Utility & service lines\n- Shipping lanes\n- Flight paths\n\nBiological resource use\n- Hunting & collecting terrestrial animals:  Intentional use (species being assessed is the target)\n- Hunting & collecting terrestrial animals: Unintentional effects (species being assessed is not the target)\n- Hunting & collecting terrestrial animals: Persecution/control\n- Hunting & collecting terrestrial animals: Motivation unknown/unrecorded\n- Gathering terrestrial plants:  Intentional use (species being assessed is the target)\n- Gathering terrestrial plants: Unintentional effects (species being assessed is not the target)\n- Gathering terrestrial plants: Persecution/control\n- Gathering terrestrial plants: Motivation unknown/unrecorded\n- Logging & wood harvesting:  Intentional use, subsistence/small scale (species being assessed is the target)\n- Logging & wood harvesting:  Intentional use, large scale (species being assessed is the target)\n- Logging & wood harvesting:  Unintentional effects, subsistence/small scale (species being assessed is not the target)\n- Logging & wood harvesting:  Unintentional effects, large scale (species being assessed is not the target)\n- Logging & wood harvesting: Motivation unknown/unrecorded\n- Fishing & harvesting aquatic resources:  Intentional use, subsistence/small scale (species being assessed is the target)\n- Fishing & harvesting aquatic resources:  Intentional use, large scale (species being assessed is the target)\n- Fishing & harvesting aquatic resources:  Unintentional effects, subsistence/small scale (species being assessed is not the target)\n- Fishing & harvesting aquatic resources:  Unintentional effects, large scale (species being assessed is not the target)\n- Fishing & harvesting aquatic resources: Persecution/control\n- Fishing & harvesting aquatic resources: Motivation unknown/unrecorded\n\nHuman intrusions & disturbance\n- Recreational activities\n- War, civil unrest, & military exercises\n- Work & other activities\n- Other human intrusions & disturbances (describe)\n\nNatural system modifications\n- Fire & fire suppression: Increase in fire frequency/intensity\n- Fire & fire suppression: Suppression in fire frequency/intensity\n- Fire & fire suppression: Trend unknown/unrecorded\n- Dams & water management/use: Abstraction of surface water (domestic use)\n- Dams & water management/use: Abstraction of surface water (commercial use)\n- Dams & water management/use: Abstraction of surface water (agricultural use)\n- Dams & water management/use: Abstraction of surface water (unknown use)\n- Dams & water management/use: Abstraction of groundwater (domestic use)\n- Dams & water management/use: Abstraction of groundwater (commercial use)\n- Dams & water management/use: Abstraction of groundwater (agricultural use)\n- Dams & water management/use: Abstraction of groundwater (unknown use)\n- Dams & water management/use: Small dams\n- Dams & water management/use: Large dams\n- Dams & water management/use: Dams (size unknown)\n- Other ecosystem modifications (describe)\n\nInvasive & other problematic species, genes, & diseases\n- Invasive non-native/alien species/diseases: Unspecified species\n- Invasive non-native/alien species/diseases: Named species\n- Problematic native species/diseases: Unspecified species\n- Problematic native species/diseases: Named species\n- Introduced genetic material\n- Problematic species/diseases of unknown origin: Unspecified species\n- Problematic species/diseases of unknown origin: Named species\n- Viral/prion-induced diseases: Unspecified “species” (disease)\n- Viral/prion-induced diseases: Named “species” (disease)\n- Diseases of unknown cause \n\nPollution\n- Domestic & urban wastewater: Sewage\n- Domestic & urban wastewater: Run-off\n- Domestic & urban wastewater: Type unknown/unrecorded\n- Industrial & military effluents: Oil spills\n- Industrial & military effluents: Seepage from mining\n- Industrial & military effluents: Type unknown/unrecorded\n- Agricultural & forestry effluents: Nutrient loads\n- Agricultural & forestry effluents: Soil erosion, sedimentation\n- Agricultural & forestry effluents: Herbicides & pesticides\n- Agricultural & forestry effluents: Type unknown/unrecorded\n- Garbage & solid waste\n- Air-borne pollutants: Acid rain\n- Air-borne pollutants: Smog\n- Air-borne pollutants: Ozone\n- Air-borne pollutants: Type unknown/unrecorded\n- Excess energy: Light pollution\n- Excess energy: Thermal pollution\n- Excess energy: Noise pollution\n- Excess energy: Type unknown/unrecorded\n\nGeological events\n- Volcanoes\n- Earthquakes/tsunamis\n- Avalanches/landslides\n- Other geological events (describe)\n\nClimate change & severe weather\n- Habitat shifting & alteration\n- Droughts\n- Temperature extremes\n- Storms & flooding\n- Other impacts (describe)\n\nOther options\n- Other threat (describe)",
@@ -611,7 +594,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 36,
+                'id' => 35,
                 'code' => "OI5929",
                 'name' => "Biodiversity Assessment",
                 'definition' => "Indicates whether the organization has undertaken biodiversity-related assessments to evaluate the biological diversity and ecosystem condition present on the land that is directly or indirectly controlled by the organization.",
@@ -628,7 +611,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 37,
+                'id' => 36,
                 'code' => "OI1618",
                 'name' => "Threatened Species Policy",
                 'definition' => "Indicates whether the organization implements policies to protect threatened species that reside in habitats affected by the organization's operations.",
@@ -645,7 +628,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 38,
+                'id' => 37,
                 'code' => "OI6041",
                 'name' => "Greenhouse Gas Types",
                 'definition' => "Describes the type(s) of greenhouse gases produced or mitigated by the organization during the reporting period.\n\nChoose all that apply: \n- Carbon dioxide (CO2)\n- Methane (CH4) \n- Nitrous oxide (N2O) \n- Hydrofluorocarbons (HFCs)\n- Perfluorocarbons (PFCs)\n- Sulfur hexafluoride (SF6)\n- Carbon dioxide (CO2) directly emitted from biologically sequestered carbon\n- Undisclosed",
@@ -662,7 +645,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 39,
+                'id' => 38,
                 'code' => "OI8237",
                 'name' => "Greenhouse Gas Emissions Strategy",
                 'definition' => "Indicates whether the organization implements a strategy to reduce greenhouse gas (GHG) emissions.",
@@ -679,7 +662,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 40,
+                'id' => 39,
                 'code' => "OI1479",
                 'name' => "Greenhouse Gas Emissions: Total",
                 'definition' => "Amount of greenhouse gases (GHG) emitted as a result of the organization's operations during the reporting period.",
@@ -696,7 +679,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 41,
+                'id' => 40,
                 'code' => "OI4112",
                 'name' => "Greenhouse Gas Emissions: Direct (Scope 1)",
                 'definition' => "Amount of greenhouse gases (GHG) emitted from direct emissions sources as a result of the organization's operations during the reporting period.",
@@ -713,7 +696,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 42,
+                'id' => 41,
                 'code' => "OI9604",
                 'name' => "Greenhouse Gas Emissions: Indirect (Scope 2)",
                 'definition' => "Amount of greenhouse gases (GHG) emitted from indirect emissions sources as a result of the organization's operations during the reporting period.",
@@ -730,7 +713,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 43,
+                'id' => 42,
                 'code' => "OI6774",
                 'name' => "Greenhouse Gas Emissions Avoided Due to Carbon Offsets Purchased",
                 'definition' => "Amount of greenhouse gas (GHG) emissions avoided through carbon offsets purchased during the reporting period.",
@@ -747,7 +730,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 44,
+                'id' => 43,
                 'code' => "OI2436",
                 'name' => "Value of Carbon Credits Purchased",
                 'definition' => "Value of carbon credits purchased by the organization during the reporting period.",
@@ -764,7 +747,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 45,
+                'id' => 44,
                 'code' => "PI2787",
                 'name' => "Greenhouse Gas Emissions Avoided Due to Carbon Offsets Sold",
                 'definition' => "Amount of greenhouse gas (GHG) emissions avoided through carbon credits sold during the reporting period.",
@@ -781,7 +764,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 46,
+                'id' => 45,
                 'code' => "PI7015",
                 'name' => "Greenhouse Gas Emissions of Energy Generated for Sale",
                 'definition' => "Amount of greenhouse gases (GHG) emitted through production of energy by the organization that was delivered to offtaker(s) during the reporting period.",
@@ -798,7 +781,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 47,
+                'id' => 46,
                 'code' => "PD9427",
                 'name' => "Greenhouse Gas Emissions of Product",
                 'definition' => "Amount of greenhouse gases (GHG) emitted by a product over its lifetime. Organizations should use Product Lifetime (PD4587) to capture the lifetime of the product.",
@@ -815,7 +798,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 48,
+                'id' => 47,
                 'code' => "PD2243",
                 'name' => "Greenhouse Gas Emissions of Product Replaced",
                 'definition' => "Amount of greenhouse gases (GHG) that would have been emitted by the replaced product during the lifetime of the organization's product. Organizations should use Product Lifetime (PD4587) to capture the lifetime of the product.",
@@ -832,7 +815,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 49,
+                'id' => 48,
                 'code' => "PI5376",
                 'name' => "Greenhouse Gas Reductions due to Products Sold",
                 'definition' => "Amount of reductions in greenhouse gas (GHG) emissions over the lifetimes of products sold during the reporting period.",
@@ -849,7 +832,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 50,
+                'id' => 49,
                 'code' => "OI5951",
                 'name' => "Greenhouse Gas Emissions Mitigated",
                 'definition' => "Amount of greenhouse gas (GHG) emissions mitigated by the organization during the reporting period, including GHG emissions reductions from both direct and indirect sources.",
@@ -866,7 +849,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 51,
+                'id' => 50,
                 'code' => "PI9878",
                 'name' => "Greenhouse Gas Emissions Sequestered",
                 'definition' => "Amount of greenhouse gas (GHG) emissions sequestered by the organization during the reporting period.",
@@ -883,7 +866,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 52,
+                'id' => 51,
                 'code' => "PI2764",
                 'name' => "Greenhouse Gas Emissions Avoided",
                 'definition' => "Amount of greenhouse gas (GHG) emissions avoided by the organization during the reporting period.",
@@ -900,24 +883,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 53,
-                'code' => "OI4862",
-                'name' => "Greenhouse Gas Emissions Reduced",
-                'definition' => "Amount of greenhouse gas (GHG) emissions reduced by the organization during the reporting period.",
-                'calculation' => null,
-                'usage_guidance' => "This metric is intended to capture the total amount of greenhouse gas emissions that were reduced by the organization during the reporting period. This metric should be used in combination with Greenhouse Gas Emissions Mitigation Types (OI9839) in order to disaggregate the types of greenhouse gas emissions reductions as relevant to the organization's activities. \n\nCalculating greenhouse gas emissions reductions is a technical process. In calculating this metric, organizations should align with an accepted standard, such as the American Carbon Registry or Greenhouse Gas (GHG) Protocol. \n\nThis metric is multi-dimensional with regard to the five dimensions of impact. In some contexts, this metric can serve as an indicator of whether the outcome being sought by an investor or organization is occurring (the WHAT dimension of impact). It may also help measure the HOW MUCH Scale dimension, which helps estimate the number of the targeted stakeholders experiencing the outcome. For more on the alignment of IRIS metrics to the five dimensions of impact, see specific guidance document. No single metric is sufficient to understand an impact; rather, metrics are selected as a set across all dimensions of impact. When possible, the selection of metrics to measure and describe the five dimensions should be based on best practice and evidence.",
-                'social' => false,
-                'environmental' => true,
-                'section' => "Operational Impact",
-                'subsection' => "Environmental Performance",
-                'level_type' => 1,
-                'related_metrics_code' => null,
-                'metric_level' => "Product/Service, Organization",
-                'quantity_type' => "Flow",
-                'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
-            ],
-            [
-                'id' => 54,
+                'id' => 52,
                 'code' => "OI5732",
                 'name' => "Greenhouse Gas Emissions Scopes",
                 'definition' => "Describes the applicable types of greenhouse gases (GHG) emitted as a result of the organization's operations during the reporting period.\n\nChoose all that apply: \n\n- Scope 1/Direct Emissions (emissions from owned or controlled sources)\n- Scope 2/Indirect Emissions (emissions from purchased energy)\n- Scope 3/Indirect and direct emissions across the organization’s value chain",
@@ -934,7 +900,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 55,
+                'id' => 53,
                 'code' => "OI9839",
                 'name' => "Greenhouse Gas Emissions Mitigation Types",
                 'definition' => "Describes types of greenhouse gas (GHG) emissions mitigation applied by the organization during the reporting period.\n\nChoose all that apply:\n\n- GHG emission reductions from fuel combustion\n- GHG emission reductions from industrial processes (non-combustion, chemical reaction, fugitive, other)\n- GHG emission reductions from land use, land use change, and forestry\n- GHG emissions reductions from livestock\n- GHG emissions reductions from waste handling and disposal\n- GHG emissions avoided from product replacements\n- GHG emissions avoided due to carbon offsets sold\n- GHG emissions avoided due to carbon offsets purchased\n- GHG emissions sequestered from land use, land use change, and forestry\n- GHG emissions sequestered from Carbon Capture and Storage\n- Other (describe)",
@@ -951,7 +917,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 56,
+                'id' => 54,
                 'code' => "PI4060",
                 'name' => "Client Individuals: Total",
                 'definition' => "Number of unique individuals who were clients of the organization during the reporting period.",
@@ -968,7 +934,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 57,
+                'id' => 55,
                 'code' => "PI8330",
                 'name' => "Client Individuals: Female",
                 'definition' => "Number of unique women who were clients of the organization during the reporting period.",
@@ -985,7 +951,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 58,
+                'id' => 56,
                 'code' => "PI3193",
                 'name' => "Client Individuals: Poor",
                 'definition' => "Number of unique poor individuals who were clients of the organization during the reporting period.",
@@ -1002,7 +968,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 59,
+                'id' => 57,
                 'code' => "PI9835",
                 'name' => "Client Individuals: Very Poor",
                 'definition' => "Number of unique very poor individuals who were clients of the organization during the reporting period.",
@@ -1019,7 +985,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 60,
+                'id' => 58,
                 'code' => "PI7098",
                 'name' => "Client Individuals: Low Income",
                 'definition' => "Number of unique low-income individuals who were clients of the organization during the reporting period.",
@@ -1036,7 +1002,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 61,
+                'id' => 59,
                 'code' => "PI6652",
                 'name' => "Client Individuals: Rural",
                 'definition' => "Number of unique individuals residing in rural areas who were clients of the organization during the reporting period.",
@@ -1053,7 +1019,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 62,
+                'id' => 60,
                 'code' => "PI6751",
                 'name' => "Client Individuals: Urban",
                 'definition' => "Number of unique individuals residing in urban areas who were clients of the organization during the reporting period.",
@@ -1070,7 +1036,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 63,
+                'id' => 61,
                 'code' => "PI3960",
                 'name' => "Client Individuals: Peri-urban",
                 'definition' => "Number of unique individuals residing in peri-urban areas who were clients of the organization during the reporting period.",
@@ -1087,7 +1053,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 64,
+                'id' => 62,
                 'code' => "PI6266",
                 'name' => "Client Individuals: People with Disabilities",
                 'definition' => "Number of unique individuals with disabilities who were clients of the organization during the reporting period.",
@@ -1104,7 +1070,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 65,
+                'id' => 63,
                 'code' => "PI4237",
                 'name' => "Client Individuals: Historically Marginalized",
                 'definition' => "Number of unique individuals who belong to groups historically marginalized on the basis of race and/or ethnicity who were clients of the organization during the reporting period.",
@@ -1121,7 +1087,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 66,
+                'id' => 64,
                 'code' => "PI1945",
                 'name' => "Client Individuals: Children/Adolescents",
                 'definition' => "Number of unique children and adolescents who were clients of the organization during the reporting period.",
@@ -1138,7 +1104,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 67,
+                'id' => 65,
                 'code' => "PI9327",
                 'name' => "Client Individuals: Active",
                 'definition' => "Number of unique individuals who were active clients of the organization as of the end of the reporting period.",
@@ -1155,7 +1121,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 68,
+                'id' => 66,
                 'code' => "PI8732",
                 'name' => "Client Individuals: New",
                 'definition' => "Number of unique individuals who were first-time clients of the organization during the reporting period.",
@@ -1172,7 +1138,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 69,
+                'id' => 67,
                 'code' => "PI2822",
                 'name' => "Client Individuals: Provided New Access",
                 'definition' => "Number of unique client individuals who were served by the organization and provided access, during the reporting period, to products/services they were unable to access prior to the reporting period.\n\nFor further clarification, organizations should reference New Access to Water, New Access to Energy, New Access to Education, New Access to Finance, or New Access to Healthcare in the glossary.",
@@ -1189,7 +1155,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 70,
+                'id' => 68,
                 'code' => "PI1807",
                 'name' => "Client Individuals: No Direct Payment",
                 'definition' => "Number of unique client individuals who received products/services during the reporting period, for which no direct payment was provided to the organization at the time of service but for which the organization expects to be reimbursed.",
@@ -1206,7 +1172,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 71,
+                'id' => 69,
                 'code' => "PI9622",
                 'name' => "Client Individuals: Receiving Free Products/Services",
                 'definition' => "Number of unique client individuals who received free products/services from the organization during the reporting period.",
@@ -1223,7 +1189,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 72,
+                'id' => 70,
                 'code' => "PI2185",
                 'name' => "Client Individuals: Referred",
                 'definition' => "Number of unique individual clients of the organization who were referred by other clients of the organization during the reporting period.",
@@ -1240,7 +1206,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 73,
+                'id' => 71,
                 'code' => "PI7954",
                 'name' => "Client Households: Total",
                 'definition' => "Number of unique households that were clients of the organization during the reporting period.",
@@ -1257,7 +1223,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 74,
+                'id' => 72,
                 'code' => "PI1726",
                 'name' => "Client Households: Poor",
                 'definition' => "Number of unique poor households that were clients of the organization during the reporting period.",
@@ -1274,7 +1240,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 75,
+                'id' => 73,
                 'code' => "PI6705",
                 'name' => "Client Households: Very Poor",
                 'definition' => "Number of unique very poor households that were clients of the organization during the reporting period.",
@@ -1291,7 +1257,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 76,
+                'id' => 74,
                 'code' => "PI7318",
                 'name' => "Client Households: Low Income",
                 'definition' => "Number of unique low-income households that were clients of the organization during the reporting period.",
@@ -1308,7 +1274,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 77,
+                'id' => 75,
                 'code' => "PI1417",
                 'name' => "Client Households: Urban",
                 'definition' => "Number of unique households in urban areas that were clients of the organization during the reporting period.",
@@ -1325,7 +1291,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 78,
+                'id' => 76,
                 'code' => "PI7952",
                 'name' => "Client Households: Peri-urban",
                 'definition' => "Number of unique households in peri-urban areas that were clients of the organization during the reporting period.",
@@ -1342,7 +1308,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 79,
+                'id' => 77,
                 'code' => "PI3268",
                 'name' => "Client Households: Historically Marginalized",
                 'definition' => "Number of unique households with at least one household member who belongs to a group historically marginalized on the basis of race and/or ethnicity and that were clients of the organization during the reporting period.",
@@ -1359,7 +1325,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 80,
+                'id' => 78,
                 'code' => "PI6991",
                 'name' => "Client Households: New",
                 'definition' => "Number of unique households who were first-time clients of the organization during the reporting period.",
@@ -1376,7 +1342,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 81,
+                'id' => 79,
                 'code' => "PI2845",
                 'name' => "Client Households: Provided New Access",
                 'definition' => "Number of unique households that were clients of the organization and provided access, during the reporting period, to products/services they were unable to access prior to the reporting period.\n\nFor further clarification, organizations should reference New Access to Water, New Access to Energy, New Access to Education, New Access to Finance, or New Access to Healthcare in the glossary.",
@@ -1393,7 +1359,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 82,
+                'id' => 80,
                 'code' => "PI2180",
                 'name' => "Client Households: No Direct Payment",
                 'definition' => "Number of unique client households that received products/services during the reporting period where no direct payment was provided to the organization at the time of service but for which the organization expects to be reimbursed.",
@@ -1410,7 +1376,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 83,
+                'id' => 81,
                 'code' => "PI1583",
                 'name' => "Client Households: Receiving Free Products/Services",
                 'definition' => "Number of unique client households who received free products/services from the organization during the reporting period.",
@@ -1427,7 +1393,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 84,
+                'id' => 82,
                 'code' => "PI4548",
                 'name' => "Client Household Size",
                 'definition' => "Average household size of clients of the organization during the reporting period, measured as number of individuals.",
@@ -1444,7 +1410,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 85,
+                'id' => 83,
                 'code' => "PI9652",
                 'name' => "Client Organizations: Total",
                 'definition' => "Number of enterprises that were clients of the organization during the reporting period.",
@@ -1461,7 +1427,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 86,
+                'id' => 84,
                 'code' => "PI6894",
                 'name' => "Client Organizations: New",
                 'definition' => "Number of enterprises that were first-time clients of the organization during the reporting period.",
@@ -1478,7 +1444,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 87,
+                'id' => 85,
                 'code' => "PI2575",
                 'name' => "Client Organizations: Provided New Access",
                 'definition' => "Number of enterprise clients that were served by the organization and provided access, during the reporting period, to products/services they were unable to access prior to the reporting period.\n\nFor further clarification, organizations should reference New Access to Water, New Access to Energy, New Access to Education, New Access to Finance, or New Access to Healthcare in the glossary.",
@@ -1495,7 +1461,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 88,
+                'id' => 86,
                 'code' => "PI8952",
                 'name' => "Client Organizations: No Direct Payment",
                 'definition' => "Number of enterprise clients that received products/services during the reporting period for which the organization was provided no direct payment at the time of service but for which the organization expects to be reimbursed.",
@@ -1512,7 +1478,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 89,
+                'id' => 87,
                 'code' => "PI6050",
                 'name' => "Client Organizations: Receiving Free Services",
                 'definition' => "Number of enterprise clients that received free products/services from the organization during the reporting period.",
@@ -1529,7 +1495,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 90,
+                'id' => 88,
                 'code' => "PI9713",
                 'name' => "Client Organizations: Microenterprises",
                 'definition' => "Number of microenterprises that were clients of the organization during the reporting period.",
@@ -1546,7 +1512,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 91,
+                'id' => 89,
                 'code' => "PI4940",
                 'name' => "Client Organizations: SME",
                 'definition' => "Number of small to medium-sized enterprises (SMEs) that were clients of the organization during the reporting period.",
@@ -1563,7 +1529,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 92,
+                'id' => 90,
                 'code' => "PI7869",
                 'name' => "Client Organizations Founded: Total",
                 'definition' => "Number of client organizations as of the end of the reporting period in which half or more of the lead founder(s) represent a specific group (for example, women).",
@@ -1580,7 +1546,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 93,
+                'id' => 91,
                 'code' => "PI5184",
                 'name' => "Client Transactions",
                 'definition' => "Number of sales or client transactions during the reporting period.",
@@ -1597,7 +1563,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 94,
+                'id' => 92,
                 'code' => "PI9319",
                 'name' => "Client Retention Rate",
                 'definition' => "Ratio of the number of the organization's active clients retained from as of the end of the reporting period compared to the number of active clients with which the organization began the reporting period.",
@@ -1614,7 +1580,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 95,
+                'id' => 93,
                 'code' => "PI9872",
                 'name' => "Client Dropout Reasons",
                 'definition' => "Describes main reasons clients drop out of a service or program (e.g., time constraints, financial constraints, disinterest).",
@@ -1631,7 +1597,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 96,
+                'id' => 94,
                 'code' => "PI1748",
                 'name' => "Client Savings Premium",
                 'definition' => "Percentage price savings the client obtains by purchasing a product or service from the organization and the average price that they would otherwise pay for a similar product or service in the local market.",
@@ -1648,7 +1614,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 97,
+                'id' => 95,
                 'code' => "PI9409",
                 'name' => "Client Income",
                 'definition' => "Disaggregates another metric in terms of client income. For example, Client Individuals (PI4060) disaggregated by this metric would yield the number of clients with increased, decreased, or no change in income. See usage guidance for further information.\n\nReport all:\n- Large increase in income (double or more)\n- Small increase in income (less than doubled)\n- Decrease in income\n- No change in income\n- Data not available\n- Other (write-in)",
@@ -1665,7 +1631,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 98,
+                'id' => 96,
                 'code' => "PI2476",
                 'name' => "Communities Served",
                 'definition' => "Number of communities where the organization's products and services were available during the reporting period.",
@@ -1682,7 +1648,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 99,
+                'id' => 97,
                 'code' => "OI8358",
                 'name' => "Employees with Written Contracts",
                 'definition' => "Number of employees (including both permanent and temporary workers) who had written contracts for their employment during the reporting period.",
@@ -1699,7 +1665,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 100,
+                'id' => 98,
                 'code' => "OI8869",
                 'name' => "Permanent Employees: Total",
                 'definition' => "Number of people in paid employment with the organization as of the end of the reporting period, whether they are full-time or part-time.",
@@ -1716,7 +1682,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 101,
+                'id' => 99,
                 'code' => "OI2444",
                 'name' => "Permanent Employees: Female",
                 'definition' => "Number of women in paid employment with the organization as of the end of the reporting period, whether they are full-time or part-time.",
@@ -1733,7 +1699,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 102,
+                'id' => 100,
                 'code' => "OI8266",
                 'name' => "Permanent Employees: Low-Income Areas",
                 'definition' => "Number of people in paid employment with the organization who reside in low-income areas as of the end of the reporting period, whether they are full-time or part-time.",
@@ -1750,7 +1716,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 103,
+                'id' => 101,
                 'code' => "OI4038",
                 'name' => "Permanent Employees: People with Disabilities",
                 'definition' => "Number of people with disabilities in paid employment with the organization as of the end of the reporting period, whether they are full-time or part-time.",
@@ -1767,7 +1733,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 104,
+                'id' => 102,
                 'code' => "OI3236",
                 'name' => "Permanent Employees: Historically Marginalized",
                 'definition' => "Number of people in paid employment with the organization who belong to groups historically marginalized on the basis of race and/or ethnicity as of the end of the reporting period, whether they are full-time or part-time.",
@@ -1784,7 +1750,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 105,
+                'id' => 103,
                 'code' => "OI3547",
                 'name' => "Permanent Employees: Hired",
                 'definition' => "Number of people hired by the organization during the reporting period, whether they are full-time or part-time.",
@@ -1801,7 +1767,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 106,
+                'id' => 104,
                 'code' => "OI6995",
                 'name' => "Employees Promoted: Total",
                 'definition' => "Number of permanent employees who were promoted from within the organization during the reporting period.",
@@ -1818,7 +1784,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 107,
+                'id' => 105,
                 'code' => "OI8646",
                 'name' => "Employees Promoted: Female",
                 'definition' => "Number of female employees who were promoted from within the organization during the reporting period.",
@@ -1835,7 +1801,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 108,
+                'id' => 106,
                 'code' => "OI3160",
                 'name' => "Full-time Employees: Total",
                 'definition' => "Number of paid full-time employees at the organization as of the end of the reporting period.",
@@ -1852,7 +1818,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 109,
+                'id' => 107,
                 'code' => "OI6213",
                 'name' => "Full-time Employees: Female",
                 'definition' => "Number of paid, full-time, female employees at the organization as of the end of the reporting period.",
@@ -1869,7 +1835,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 110,
+                'id' => 108,
                 'code' => "OI2003",
                 'name' => "Full-time Employees: People with Disabilities",
                 'definition' => "Number of paid, full-time employees at the organization with disabilities as of the end of the reporting period.",
@@ -1886,7 +1852,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 111,
+                'id' => 109,
                 'code' => "OI8147",
                 'name' => "Full-time Employees: Historically Marginalized",
                 'definition' => "Number of paid, full-time employees at the organization who belong to groups historically marginalized on the basis of race and/or ethnicity as of the end of the reporting period.",
@@ -1903,7 +1869,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 112,
+                'id' => 110,
                 'code' => "OI5479",
                 'name' => "Full-time Employees: Hired",
                 'definition' => "Number of paid, full-time employees hired by the organization during the reporting period.",
@@ -1920,7 +1886,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 113,
+                'id' => 111,
                 'code' => "OI8251",
                 'name' => "Full-time Employees: Managers",
                 'definition' => "Number of paid, full-time management employees (managers) at the organization as of the end of the reporting period.",
@@ -1937,7 +1903,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 114,
+                'id' => 112,
                 'code' => "OI1571",
                 'name' => "Full-time Employees: Female Managers",
                 'definition' => "Number of paid, full-time, female management employees (managers) at the organization as of the end of the reporting period.",
@@ -1954,7 +1920,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 115,
+                'id' => 113,
                 'code' => "OI8292",
                 'name' => "Full-time Employees: Managers with Disabilities",
                 'definition' => "Number of paid, full-time management employees (managers) with disabilities at the organization as of the end of the reporting period.",
@@ -1971,7 +1937,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 116,
+                'id' => 114,
                 'code' => "OI3140",
                 'name' => "Full-time Employees: Historically Marginalized Managers",
                 'definition' => "Number of paid, full-time management employees (managers) at the organization who belong to groups historically marginalized on the basis of race and/or ethnicity as of the end of the reporting period.",
@@ -1988,7 +1954,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 117,
+                'id' => 115,
                 'code' => "OI8864",
                 'name' => "Part-time Employees: Total",
                 'definition' => "Number of paid, part-time employees at the organization as of the end of the reporting period.",
@@ -2005,7 +1971,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 118,
+                'id' => 116,
                 'code' => "OI8838",
                 'name' => "Part-time Employees: Female",
                 'definition' => "Number of paid, part-time, female employees at the organization as of the end of the reporting period.",
@@ -2022,7 +1988,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 119,
+                'id' => 117,
                 'code' => "OI4571",
                 'name' => "Part-time Employees: Employees with Disabilities",
                 'definition' => "Number of paid, part-time employees with disabilities at the organization as of the end of the reporting period.",
@@ -2039,7 +2005,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 120,
+                'id' => 118,
                 'code' => "OI6508",
                 'name' => "Part-time Employees: Historically Marginalized",
                 'definition' => "Number of paid, part-time employees at the organization who belong to groups historically marginalized on the basis of race and/or ethnicity as of the end of the reporting period.",
@@ -2056,7 +2022,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 121,
+                'id' => 119,
                 'code' => "OI1903",
                 'name' => "Part-time Employees: Hired",
                 'definition' => "Number of paid, part-time employees hired by the organization during the reporting period.",
@@ -2073,7 +2039,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 122,
+                'id' => 120,
                 'code' => "OI3098",
                 'name' => "Part-time Employee Hours Worked",
                 'definition' => "Number of paid hours worked by part-time employees of the organization during the reporting period.",
@@ -2090,7 +2056,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 123,
+                'id' => 121,
                 'code' => "OI9028",
                 'name' => "Temporary Employees",
                 'definition' => "Number of temporary employees paid by the organization during the reporting period.",
@@ -2107,7 +2073,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 124,
+                'id' => 122,
                 'code' => "OI8408",
                 'name' => "Temporary Employees Hours Worked",
                 'definition' => "Number of paid hours worked by temporary employees of the organization during the reporting period.",
@@ -2124,7 +2090,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 125,
+                'id' => 123,
                 'code' => "OI4724",
                 'name' => "Employees Earning a Living Wage or Higher",
                 'definition' => "Number of full-time, part-time, and temporary employees of the organization who are earning a local living wage or higher as of the end of the reporting period.",
@@ -2141,7 +2107,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 126,
+                'id' => 124,
                 'code' => "OI5858",
                 'name' => "Employees Earning Minimum Wage",
                 'definition' => "Number of full-time, part-time, and temporary employees of the organization that are earning the local minimum wage as of the end of the reporting period.",
@@ -2158,7 +2124,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 127,
+                'id' => 125,
                 'code' => "OI8296",
                 'name' => "Employees Earning Lowest Wage",
                 'definition' => "Number of full-time, part-time, and temporary employees of the organization that are earning the lowest hourly wage (including bonuses, excluding benefits) paid by the organization as of the end of the reporting period. See usage guidance for further details.",
@@ -2175,7 +2141,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 128,
+                'id' => 126,
                 'code' => "OI8865",
                 'name' => "Employment Benefits Uptake",
                 'definition' => "Percentage of all employees using employee benefits provided by the organization as of the end of the reporting period.",
@@ -2192,7 +2158,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 129,
+                'id' => 127,
                 'code' => "OI4061",
                 'name' => "Healthcare Benefits Participants",
                 'definition' => "Number of employees who received healthcare benefits through the organization’s programs during the reporting period.",
@@ -2209,7 +2175,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 130,
+                'id' => 128,
                 'code' => "OI1166",
                 'name' => "Volunteer Hours",
                 'definition' => "Number of hours worked by non-employee volunteers who supported the organization during the reporting period.",
@@ -2226,7 +2192,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 131,
+                'id' => 129,
                 'code' => "OI8429",
                 'name' => "Community Service Hours Contributed",
                 'definition' => "Number of hours volunteered by full- and part-time employees of the organization during the reporting period.",
@@ -2243,7 +2209,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 132,
+                'id' => 130,
                 'code' => "OI4499",
                 'name' => "Departed Permanent Employees: Total",
                 'definition' => "Number of full- and part-time employees who departed the organization (for any reason) during the reporting period.",
@@ -2260,7 +2226,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 133,
+                'id' => 131,
                 'code' => "OI3653",
                 'name' => "Departed Permanent Employees: Full-time",
                 'definition' => "Number of full-time employees who departed the organization (for any reason) during the reporting period.",
@@ -2277,7 +2243,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 134,
+                'id' => 132,
                 'code' => "OI7225",
                 'name' => "Departed Permanent Employees: Involuntary",
                 'definition' => "Number of full- and part-time employees who departed the organization involuntarily during the reporting period.",
@@ -2294,7 +2260,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 135,
+                'id' => 133,
                 'code' => "OI8431",
                 'name' => "Departed Permanent Employees: Voluntary",
                 'definition' => "Number of full- and part-time employees who departed the organization voluntarily during the reporting period.",
@@ -2311,7 +2277,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 136,
+                'id' => 134,
                 'code' => "OI3989",
                 'name' => "Employee Involuntary Turnover Rate",
                 'definition' => "Ratio of the number of involuntarily departing permanent (full- and part-time) employees compared to the average number of permanent (full- and part-time) employees at the organization during the reporting period.",
@@ -2328,7 +2294,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 137,
+                'id' => 135,
                 'code' => "OI1638",
                 'name' => "Employee Voluntary Turnover Rate",
                 'definition' => "Ratio of the number of permanent (full- and part-time) employees who departed voluntarily compared to the average number of permanent (full- and part-time) employees at the organization during the reporting period.",
@@ -2345,7 +2311,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 138,
+                'id' => 136,
                 'code' => "OI2248",
                 'name' => "Average Employee Tenure",
                 'definition' => "Average tenure of employees of the organization as of the end of the reporting period.",
@@ -2362,7 +2328,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 139,
+                'id' => 137,
                 'code' => "OI6370",
                 'name' => "Employees Dedicated to Social and Environmental Performance",
                 'definition' => "Number of full-time equivalent employees dedicated to managing social and environmental performance during the reporting period.",
@@ -2379,7 +2345,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 140,
+                'id' => 138,
                 'code' => "OI9677",
                 'name' => "Permanent Employee Wages: Total",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all full- and part-time employees of the organization during the reporting period.",
@@ -2396,7 +2362,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 141,
+                'id' => 139,
                 'code' => "OI4559",
                 'name' => "Permanent Employee Wages: Female",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all female full- and part-time employees of the organization during the reporting period.",
@@ -2413,7 +2379,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 142,
+                'id' => 140,
                 'code' => "OI7064",
                 'name' => "Permanent Employee Wages: Low-Income Areas",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all full- and part-time employees of the organization who reside in low-income areas during the reporting period.",
@@ -2430,7 +2396,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 143,
+                'id' => 141,
                 'code' => "OI1682",
                 'name' => "Permanent Employee Wages: People with Disabilities",
                 'definition' => "Value of wages (including bonuses, excluding benefits) paid to all full- and part-time employees of the organization with disabilities during the reporting period.",
@@ -2447,7 +2413,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 144,
+                'id' => 142,
                 'code' => "OI1084",
                 'name' => "Permanent Employee Wages: Historically Marginalized",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all full- and part-time employees of the organization during the reporting period who belong to groups historically marginalized on the basis of race and/or ethnicity.",
@@ -2464,7 +2430,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 145,
+                'id' => 143,
                 'code' => "OI5887",
                 'name' => "Full-time Wages: Total",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all full-time employees of the organization during the reporting period.",
@@ -2481,7 +2447,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 146,
+                'id' => 144,
                 'code' => "OI8941",
                 'name' => "Full-time Wages: Female",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all female full-time employees of the organization during the reporting period.",
@@ -2498,7 +2464,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 147,
+                'id' => 145,
                 'code' => "OI1508",
                 'name' => "Full-time Wages: Historically Marginalized",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all full-time employees of the organization during the reporting period who belong to groups historically marginalized on the basis of race and/or ethnicity.",
@@ -2515,7 +2481,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 148,
+                'id' => 146,
                 'code' => "OI6069",
                 'name' => "Full-time Wages: Management",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all full-time management employees (managers) of the organization during the reporting period.",
@@ -2532,7 +2498,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 149,
+                'id' => 147,
                 'code' => "OI5247",
                 'name' => "Full-time Wages: Female Management",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all full-time female management employees (managers) of the organization during the reporting period.",
@@ -2549,7 +2515,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 150,
+                'id' => 148,
                 'code' => "OI3862",
                 'name' => "Full-time Wages: Historically Marginalized Management",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all full-time management employees (managers) of the organization during the reporting period who belong to groups historically marginalized on the basis of race and/or ethnicity.",
@@ -2566,7 +2532,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 151,
+                'id' => 149,
                 'code' => "OI9948",
                 'name' => "Part-time Wages: Total",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all part-time employees of the organization during the reporting period.",
@@ -2583,7 +2549,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 152,
+                'id' => 150,
                 'code' => "OI8725",
                 'name' => "Part-time Wages: Female",
                 'definition' => "Value of wages (including bonuses, excluding benefits) paid to all female part-time employees of the organization during the reporting period.",
@@ -2600,7 +2566,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 153,
+                'id' => 151,
                 'code' => "OI9956",
                 'name' => "Part-time Wages: Historically Marginalized",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all part-time employees of the organization during the reporting period who belong to groups historically marginalized on the basis of race and/or ethnicity.",
@@ -2617,7 +2583,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 154,
+                'id' => 152,
                 'code' => "OI4202",
                 'name' => "Temporary Employee Wages",
                 'definition' => "Value of wages (including bonuses and excluding benefits) paid to all temporary employees of the organization during the reporting period.",
@@ -2634,7 +2600,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 155,
+                'id' => 153,
                 'code' => "OI8791",
                 'name' => "Average Non-Salaried Wage",
                 'definition' => "Average wage paid to non-salaried and full-time, part-time, or temporary employees of the organization during the reporting period. Employees who are salaried should be excluded from this calculation.",
@@ -2651,7 +2617,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 156,
+                'id' => 154,
                 'code' => "OI3480",
                 'name' => "Median Non-Salaried Wage",
                 'definition' => "Median wage paid to non-salaried and full-time, part-time, or temporary employees of the organization during the reporting period. Employees who are salaried should be excluded from this calculation.",
@@ -2668,7 +2634,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 157,
+                'id' => 155,
                 'code' => "OI6176",
                 'name' => "Minimum Wage Multiple",
                 'definition' => "Ratio of the average wage of non-salaried, permanent (full- and part-time) employees of the organization during the reporting period compared to the local minimum wage as of the end of the reporting period.",
@@ -2685,7 +2651,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 158,
+                'id' => 156,
                 'code' => "OI1582",
                 'name' => "Wage Equity",
                 'definition' => "Ratio of the wages paid during the reporting period to the highest-compensated full-time employee (including bonus and excluding benefits) compared to the lowest-paid full-time employee.",
@@ -2702,7 +2668,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 159,
+                'id' => 157,
                 'code' => "OI1855",
                 'name' => "Gender Wage Equity",
                 'definition' => "Ratio of the average wage paid during the reporting period to female employees of the organization for a specified position compared to the average wage paid during the reporting period to male employees of the organization for the same position.",
@@ -2719,7 +2685,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 160,
+                'id' => 158,
                 'code' => "OI2362",
                 'name' => "Historically Marginalized Wage Equity",
                 'definition' => "Ratio of the average wage paid for a specified position to employees of the organization who belong to groups historically marginalized on the basis of race and/or ethnicity compared to the average wage paid to employees of the organization who do not belong to these groups but have the same position during the reporting period.",
@@ -2736,7 +2702,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 161,
+                'id' => 159,
                 'code' => "OI9767",
                 'name' => "Wage Premium",
                 'definition' => "Ratio of the additional average wage paid to employees of the organization compared to the average wage paid for a similar job in a similar industry or category and organization in the local market as of the end of the reporting period.",
@@ -2753,7 +2719,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 162,
+                'id' => 160,
                 'code' => "FP5293",
                 'name' => "Total Assets",
                 'definition' => "Value, as of the end of the reporting period, of all of the organization's assets.",
@@ -2770,7 +2736,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 163,
+                'id' => 161,
                 'code' => "FP9148",
                 'name' => "Fixed Assets",
                 'definition' => "Value, as of the end of the reporting period, of the organization's long-term tangible assets that the organization does not expect to convert into cash in the current or upcoming fiscal year.",
@@ -2787,7 +2753,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 164,
+                'id' => 162,
                 'code' => "FP6926",
                 'name' => "Current Assets",
                 'definition' => "Value, as of the end of the reporting period, of the organization's assets that the organization reasonably expects to convert into cash within one year in the normal course of business.",
@@ -2804,7 +2770,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 165,
+                'id' => 163,
                 'code' => "FP4649",
                 'name' => "Financial Assets",
                 'definition' => "Value, as of the end of the reporting period, of the organization's non-physical assets such as cash, bank accounts, or other investments.",
@@ -2821,7 +2787,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 166,
+                'id' => 164,
                 'code' => "FP5317",
                 'name' => "Equity or Net Assets",
                 'definition' => "Value of the residual interest, as of the end of the reporting period, in the assets of the organization after deducting all its liabilities.",
@@ -2838,7 +2804,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 167,
+                'id' => 165,
                 'code' => "FP8653",
                 'name' => "Retained Earnings",
                 'definition' => "Value of the sum of the organization's profits, cumulative from inception to the end of the reporting period, not paid out as dividends but retained by the organization for reinvestment in its core business or to pay down debt.",
@@ -2855,7 +2821,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 168,
+                'id' => 166,
                 'code' => "FP2852",
                 'name' => "Accounts Payable",
                 'definition' => "Value, as of the end of the reporting period, of all outstanding debts that must be paid by the organization within a given period of time in order to avoid default.",
@@ -2872,7 +2838,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 169,
+                'id' => 167,
                 'code' => "FP2213",
                 'name' => "Accounts Receivable",
                 'definition' => "Value, as of the end of the reporting period, of the organization’s outstanding debts from clients who received goods or services on credit.",
@@ -2889,7 +2855,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 170,
+                'id' => 168,
                 'code' => "FP1996",
                 'name' => "Total Liabilities",
                 'definition' => "Value of the organization’s liabilities as of the end of the reporting period.",
@@ -2906,7 +2872,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 171,
+                'id' => 169,
                 'code' => "FP2269",
                 'name' => "Current Liabilities",
                 'definition' => "Value, as of the end of the reporting period, of all liabilities that are expected to be settled within one year in the normal course of business.",
@@ -2923,7 +2889,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 172,
+                'id' => 170,
                 'code' => "FP6094",
                 'name' => "Long Term Financial Liabilities",
                 'definition' => "Value, as of the end of the reporting period, of an organization's long-term financial liabilities.",
@@ -2940,7 +2906,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 173,
+                'id' => 171,
                 'code' => "FP6750",
                 'name' => "Loans Payable",
                 'definition' => "Value of the remaining balance, as of the end of the reporting period, on all the organization's outstanding debt obligations carried on the balance sheet.",
@@ -2957,7 +2923,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 174,
+                'id' => 172,
                 'code' => "FP7264",
                 'name' => "Cash and Cash Equivalents: Period Start",
                 'definition' => "Value of the organization's cash equivalents as of the beginning of the reporting period.",
@@ -2974,7 +2940,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 175,
+                'id' => 173,
                 'code' => "FP1001",
                 'name' => "Operating Expenses",
                 'definition' => "Value of expenditures incurred by the organization as a result of performing its normal business operations during the reporting period.",
@@ -2991,7 +2957,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 176,
+                'id' => 174,
                 'code' => "FP3466",
                 'name' => "Cash Flow: Net Total",
                 'definition' => "Value of the organization’s net cash flow during the reporting period. Net cash flow equals inflows less outflows of cash and cash equivalents from operating, investing, financing, and other activities.",
@@ -3008,7 +2974,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 177,
+                'id' => 175,
                 'code' => "FP4812",
                 'name' => "Cash Flow: Operating Activities",
                 'definition' => "Value of the organization's cash flow during the reporting period related to operating activities.",
@@ -3025,7 +2991,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 178,
+                'id' => 176,
                 'code' => "FP9703",
                 'name' => "Cash Flow: Investing Activities",
                 'definition' => "Value of the organization's cash flow during the reporting period related to investing activities by the organization.",
@@ -3042,7 +3008,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 179,
+                'id' => 177,
                 'code' => "FP8244",
                 'name' => "Cash Flow: Financing Activities",
                 'definition' => "Value of the organization's cash flow during the reporting period related to its financing activities.",
@@ -3059,7 +3025,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 180,
+                'id' => 178,
                 'code' => "FP8293",
                 'name' => "New Investment Capital",
                 'definition' => "Value of funds invested in the organization (both loans and investments) during the reporting period.",
@@ -3076,7 +3042,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 181,
+                'id' => 179,
                 'code' => "FP1301",
                 'name' => "Net Income",
                 'definition' => "Value of the organization's net profit, calculated as total income minus total expenses, taxes, and cost of goods sold during the reporting period.",
@@ -3093,7 +3059,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 182,
+                'id' => 180,
                 'code' => "FP3274",
                 'name' => "Net Income Before Donations",
                 'definition' => "Value of the organization's net profit before donations, calculated as total income (excluding donations) minus total expenses during the reporting period.",
@@ -3110,7 +3076,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 183,
+                'id' => 181,
                 'code' => "FP3673",
                 'name' => "EBIT",
                 'definition' => "Value of the organization's net income before interest and taxes during the reporting period.\n\nEBIT signifies Earnings Before Interest and Taxes.",
@@ -3127,7 +3093,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 184,
+                'id' => 182,
                 'code' => "FP1657",
                 'name' => "EBITDA",
                 'definition' => "Value of the organization's net income before interest, taxes, depreciation, and amortization during the reporting period.\n\nEBITDA signifies Earnings Before Interest, Taxes, Depreciation, and Amortization.",
@@ -3144,7 +3110,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 185,
+                'id' => 183,
                 'code' => "FP6510",
                 'name' => "Total Revenue",
                 'definition' => "Value of all revenue received by the organization during the reporting period.",
@@ -3161,7 +3127,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 186,
+                'id' => 184,
                 'code' => "PI1775",
                 'name' => "Sales Revenue",
                 'definition' => "Value of revenue received during the reporting period from sales of the organization’s products/services.",
@@ -3178,7 +3144,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 187,
+                'id' => 185,
                 'code' => "FP8300",
                 'name' => "Sales Revenue: Collected Directly",
                 'definition' => "Value of revenue during the reporting period from sales of the organization’s products/services and collected directly from clients.",
@@ -3195,7 +3161,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 188,
+                'id' => 186,
                 'code' => "FP5624",
                 'name' => "Sales Revenue: Collected from Third Party Payers",
                 'definition' => "Value of revenue during the reporting period from sales of the organization’s products/services and collected from third-party (public or private) payers.",
@@ -3212,7 +3178,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 189,
+                'id' => 187,
                 'code' => "FP1012",
                 'name' => "Interest Expenses",
                 'definition' => "Value of expenditures incurred by the organization during the reporting period as a result of interest incurred on all liabilities, including any client deposit accounts held by the organization, borrowings, and subordinated debt.",
@@ -3229,7 +3195,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 190,
+                'id' => 188,
                 'code' => "FP1717",
                 'name' => "Impaired Assets",
                 'definition' => "Value of assets classified as impaired under regulatory or accounting rules and recorded by the organization during the reporting period.",
@@ -3246,7 +3212,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 191,
+                'id' => 189,
                 'code' => "FP2321",
                 'name' => "Total Expenses",
                 'definition' => "Value of all expenditures incurred by the organization during the reporting period.",
@@ -3263,7 +3229,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 192,
+                'id' => 190,
                 'code' => "FP2651",
                 'name' => "Return on Equity (ROE)",
                 'definition' => "Value of an organization’s net profit generated per dollar of shareholders’ equity during the reporting period.\n\nThis is a profitability ratio calculated as net income divided by average total equity or net assets.",
@@ -3280,7 +3246,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 193,
+                'id' => 191,
                 'code' => "FP3021",
                 'name' => "Revenue from Grants and Donations",
                 'definition' => "Value of revenue contributed as grants and donations during the reporting period.",
@@ -3297,7 +3263,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 194,
+                'id' => 192,
                 'code' => "FP3297",
                 'name' => "Income Growth",
                 'definition' => "Percentage growth in the value of the organization’s net income from one reporting period to another.",
@@ -3314,7 +3280,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 195,
+                'id' => 193,
                 'code' => "FP3774",
                 'name' => "Charitable Donations",
                 'definition' => "Value of all financial contributions and in-kind donations of goods and services made by the organization to charities, private foundations, non-profit organizations, or non-governmental organizations during the reporting period.",
@@ -3331,7 +3297,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 196,
+                'id' => 194,
                 'code' => "FP4224",
                 'name' => "Working Capital Ratio",
                 'definition' => "Ratio of the organization’s current assets compared to current liabilities as of the end of the reporting period.",
@@ -3348,7 +3314,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 197,
+                'id' => 195,
                 'code' => "FP4326",
                 'name' => "Return on Assets (ROA)",
                 'definition' => "Value of an organization’s net profit after taxes generated per dollar invested in total assets as of the end of the reporting period.\n\nThis is a profitability ratio calculated as net income less taxes, divided by average total assets.",
@@ -3365,7 +3331,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 198,
+                'id' => 196,
                 'code' => "FP4373",
                 'name' => "Gross Margin",
                 'definition' => "Percentage of revenue that the organization retains after incurring the direct costs associated with the production/delivery of its products/services during the reporting period.",
@@ -3382,7 +3348,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 199,
+                'id' => 197,
                 'code' => "FP4761",
                 'name' => "Revenue Growth",
                 'definition' => "Percentage growth in value of the organization's revenue from one reporting period to another.",
@@ -3399,7 +3365,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 200,
+                'id' => 198,
                 'code' => "FP4831",
                 'name' => "Personnel Expenses",
                 'definition' => "Value of expenditures related to personnel, including wages, benefits, trainings, and payroll taxes, incurred by the organization during the reporting period.",
@@ -3416,7 +3382,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 201,
+                'id' => 199,
                 'code' => "FP4849",
                 'name' => "Non-operating Revenue",
                 'definition' => "Value of revenue derived from activities not related to the organization's core operations during the reporting period.",
@@ -3433,7 +3399,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 202,
+                'id' => 200,
                 'code' => "FP5261",
                 'name' => "Payments to Government",
                 'definition' => "Value of all transfers to governments made by the organization during the reporting period.",
@@ -3450,7 +3416,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 203,
+                'id' => 201,
                 'code' => "FP6462",
                 'name' => "Cash and Cash Equivalents: Period End",
                 'definition' => "Value of the organization's cash equivalents as of the end of the reporting period.",
@@ -3467,7 +3433,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 204,
+                'id' => 202,
                 'code' => "FP6856",
                 'name' => "Working Capital",
                 'definition' => "Value of the organization's operating liquidity as of the end of the reporting period.",
@@ -3484,7 +3450,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 205,
+                'id' => 203,
                 'code' => "FP7629",
                 'name' => "Gross Profit",
                 'definition' => "Value of the organization's residual profit after incurring the direct costs associated with the production/delivery of products/services during the reporting period.",
@@ -3501,7 +3467,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 206,
+                'id' => 204,
                 'code' => "FP7897",
                 'name' => "Operating Profit Margin",
                 'definition' => "Percentage of the organization's revenue that remains after paying variable costs such as wages and raw materials during the reporting period.",
@@ -3518,7 +3484,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 207,
+                'id' => 205,
                 'code' => "FP8295",
                 'name' => "Personnel Efficiency",
                 'definition' => "Ratio of the organization's personnel expenses compared to its loans receivable as of the end of the reporting period.",
@@ -3535,7 +3501,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 208,
+                'id' => 206,
                 'code' => "FP8569",
                 'name' => "Operating Efficiency",
                 'definition' => "Ratio of the organization's operating expenses compared to its loans receivable as of the end of the reporting period.",
@@ -3552,7 +3518,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 209,
+                'id' => 207,
                 'code' => "FP9049",
                 'name' => "Cost of Goods Sold",
                 'definition' => "This metric is intended to capture the organization’s operating efficiency.\nValue of direct expenditures attributable to the production of goods sold by the organization during the reporting period.",
@@ -3569,7 +3535,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 210,
+                'id' => 208,
                 'code' => "FP9462",
                 'name' => "Depreciation and Amortization Expenses",
                 'definition' => "Value of expenses recorded by the organization during the reporting period for depreciation and amortization.",
@@ -3586,7 +3552,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 211,
+                'id' => 209,
                 'code' => "FP9649",
                 'name' => "Selling, General, and Administration Expenses",
                 'definition' => "This metric is intended to capture the costs the organization incurred during the reporting period for depreciation and amortization of assets on a defined schedule over time.",
@@ -3603,7 +3569,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 212,
+                'id' => 210,
                 'code' => "OD1777",
                 'name' => "Location of Organization's Operating Facilities",
                 'definition' => "Address of the organization's operating facilities.",
@@ -3620,7 +3586,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text (multiple entries possible)",
             ],
             [
-                'id' => 213,
+                'id' => 211,
                 'code' => "OD2735",
                 'name' => "Mission Statement",
                 'definition' => "Describes the mission statement of the organization.",
@@ -3637,7 +3603,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 214,
+                'id' => 212,
                 'code' => "OD2999",
                 'name' => "Legal Structure",
                 'definition' => "Describes the legal structure of the organization. Select one:\n\n- Benefit Corporation\n- Co-op\n- Corporation\n- Limited Liability Company\n- Nonprofit/Non-Governmental Organization\n- Partnership\n- Sole-proprietorship\n- Other",
@@ -3654,7 +3620,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 215,
+                'id' => 213,
                 'code' => "OD3292",
                 'name' => "Board of Directors Remuneration",
                 'definition' => "Describes the compensation practices for members of the board of directors or other governing body of the reporting organization.",
@@ -3671,7 +3637,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 216,
+                'id' => 214,
                 'code' => "OD3520",
                 'name' => "Year Founded",
                 'definition' => "Year the organization was founded.",
@@ -3688,7 +3654,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Date",
             ],
             [
-                'id' => 217,
+                'id' => 215,
                 'code' => "OD3725",
                 'name' => "IRIS ID",
                 'definition' => "IRIS ID of the organization reporting data.",
@@ -3705,7 +3671,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 218,
+                'id' => 216,
                 'code' => "OD4091",
                 'name' => "Social and Environmental Targets",
                 'definition' => "Describes the quantifiable social and environmental targets set by the organization.",
@@ -3722,7 +3688,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 219,
+                'id' => 217,
                 'code' => "OD4108",
                 'name' => "Environmental Impact Objectives",
                 'definition' => "Describes the environmental impact objectives pursued by the organization. Select all that apply:\n\nAgriculture—Food Security:\n\n- Increasing Access to Agricultural Training and Information\n- Increasing Access to and Use of Products and Services for Agricultural Risk Mitigation\n- Increasing Access to Better, Stable Pricing of Agricultural Products\n- Increasing Farm Profitability\n- Increasing Financial Health of Farmers\n- Increasing Food Security through Smallholder Farms\n- Mitigating Climate Change through Sustainable Agriculture\n\nAgriculture—Smallholder Agriculture:\n\n- Improving Agricultural Water Use Practices\n- Improving Rural Economies through Financial Inclusion\n- Increasing Access to Agricultural Training and Information\n- Increasing Access to and Use of Products and Services for Agricultural Risk Mitigation\n- Increasing Access to and Use of Quality Agricultural Inputs\n- Increasing Access to Better, Stable Pricing of Agricultural Products\n- Increasing Farm Profitability\n- Increasing Financial Health of Farmers\n- Increasing Food Security through Smallholder Farms\n- Increasing the Sustainability of Non-Wood Forest Products\n- Mitigating Climate Change through Sustainable Agriculture\n\nAgriculture—Sustainable Agriculture:\n\n- Conserving River Flows for Nature and People\n- Improving Agricultural Water Use Practices\n- Mitigating Climate Change through Sustainable Agriculture\n\nAgriculture—Other (describe)\n\nAir—Clean Air:\n\n- Mitigating Carbon Emissions from Forestry and Land Use\n- Mitigating Climate Change through Carbon Capture and Sequestration\n- Mitigating Climate Change through Clean Electricity and Heat Production\n- Mitigating Climate Change through Clean Mobility\n- Mitigating Climate Change through Sustainable Manufacturing\n\nAir—Other (describe)\n\nBiodiversity and Ecosystems—Biodiversity & Ecosystem Conservation:\n\n- Conserving River Flows for Nature and People\n- Improving Agricultural Water Use Practices\n- Improving Biodiversity by Reducing Impacts from Salt- and Freshwater Aquaculture and Fisheries\n- Improving Biodiversity through Marine Ecosystem Conservation and Restoration\n- Improving Biodiversity through Nature-Based Solutions and Green Infrastructure\n- Improving Biodiversity through Terrestrial Ecosystem Protection and Restoration\n- Improving Water Quality Through Source Water Protection\n- Increasing the Sustainability of Wood and Wood-Based Products\n\nBiodiversity and Ecosystems—Other (describe)\n\nClimate—Climate Change Mitigation:\n\n- Improving Sustainability of Industrial and Municipal Water Practices\n- Improving WASH through Water Infrastructure and Management\n- Increasing the Sustainability of Wood and Wood-Based Products\n- Mitigating Carbon Emissions from Forestry and Land Use\n- Mitigating Climate Change through Carbon Capture and Sequestration\n-  Mitigating Climate Change through Clean Electricity and Heat Production\n- Mitigating Climate Change through Clean Mobility\n- Mitigating Climate Change through Sustainable Agriculture\n- Mitigating Climate Change through Sustainable Manufacturing\n\nClimate—Climate Resilience and Adaptation:\n\n- Improving Job Skills for the Future\n- Improving WASH through Water Infrastructure and Management\n\nClimate—Other (describe)\n\nDiversity and Inclusion—Gender Lens:\n\n- Improving Earnings and Wealth Through Employment and Entrepreneurship (Particularly for Disadvantaged and Excluded Groups)\n- Improving Equitable Access to Education and Learning for All\n- Improving Rights, Respect, and Cooperation in the Workplace\n- Increasing Gender Equality through Financial Inclusion\n- Increasing Job Security and Stability for Workers in Precarious Employment\n- Reducing Gender Inequities in Governance, Leadership, and Ownership\n- Reducing Gender Inequities in Pay\n- Reducing Gender Inequities in Workplace Conditions\n- Reducing Gender Inequities through Tailored Products and Services\n\nDiversity and Inclusion—Racial Equity:\n\n- Improving Earnings and Wealth Through Employment and Entrepreneurship (Particularly for Disadvantaged and Excluded Groups)\n- Improving Rights, Respect, and Cooperation in the Workplace\n- Increasing Inclusive Capital to Create Equitable Outcomes for Communities of Color (Justice)\n- Increasing Job Security and Stability for Workers in Precarious Employment\n- Shifting Power by Addressing Racial Bias and Ensuring Equitable Representation and Decision-Making\n- Shifting the Perception of Risk through Equitable Deal Sourcing, Due Diligence, and Terms\n\nDiversity and Inclusion—Other (describe)\n\nEducation—Access to Quality Education:\n\n- Improving Access to Education for Children in Crisis and Conflict-Affected Environments\n- Improving Early Childhood Care and Education\n- Improving Equitable Access to Education and Learning for All\n- Improving Job Skills for the Future\n- Improving the Quality of Teaching and Learning Environments\n- Improving The Successful Transition of Youth into the Workforce and Society\n- Improving the Transparency and Accountability of Education Management Systems\n\nEducation—Other (describe)\n\nEmployment—Quality Jobs:\n\n- Improving Earnings and Wealth Through Employment and Entrepreneurship (Particularly for Disadvantaged and Excluded Groups)\n- Improving Health and Well-Being Across the Workforce\n- Improving Job Skills for the Future\n- Improving Rights, Respect, and Cooperation in the Workplace\n- Increasing Job Security and Stability for Workers in Precarious Employment\n\nEmployment—Other (describe)\n\nEnergy—Clean Energy:\n\n- Improving Access to Clean Energy for Underserved Communities\n- Increasing Availability of Clean Energy through Improved Transmission and Distribution Infrastructure\n- Increasing Clean Energy Generation through Low- and Zero-Carbon Alternatives\n- Increasing Clean Energy Storage Capacity through Improved Batteries and Other Technologies\n- Mitigating Climate Change through Clean Electricity and Heat Production\n- Mitigating Climate Change through Clean Mobility\n\nEnergy—Energy Access:\n\n- Improving Energy Alternatives for Cooking\n- Improving Energy Alternatives for Healthcare\n- Improving Energy for Connectivity\n- Improving Lighting for Business\n- Improving Lighting for Homes\n- Mitigating Climate Change through Clean Electricity and Heat Production - Reducing Harmful Emissions from Small-Scale Energy Sources\n\nEnergy—Energy Efficiency:\n\n- Improving Sustainability of Industrial and Municipal Water Practices\n- Mitigating Climate Change through Clean Electricity and Heat Production\n- Mitigating Climate Change through Clean Mobility\n- Mitigating Climate Change through Sustainable Manufacturing\n\nEnergy—Other (describe)\n\nFinancial Services—Financial Inclusion:\n\n- Improving Access to and Use of Responsible Financial Services for Historically Underserved Populations\n- Improving Access to WASH Through Affordable Household Financing\n- Improving Earnings and Wealth Through Employment and Entrepreneurship (Particularly for Disadvantaged and Excluded Groups)\n- Improving Financial Health\n- Improving Rural Economies through Financial Inclusion\n- Increasing Access to and Use of Products and Services for Agricultural Risk Mitigation\n- Increasing Access to Non-Sewered Sanitation Services\n- Increasing Access to Sewered Sanitation Services\n- Increasing Farm Profitability\n- Increasing Financial Health of Farmers\n- Increasing Gender Equality through Financial Inclusion\n- Supporting Decent Jobs and Fostering Economic Development\n\nFinancial Services—Other (describe)\n\nHealth—Access to Quality Health Care:\n\n- Improving Data for Health Systems Policy and Decision-Making\n- Improving Early Childhood Care and Education\n- Improving Energy Alternatives for Healthcare\n- Improving Health and Well-Being Across the Workforce\n- Improving WASH through Water Infrastructure and Management\n- Increasing Access to Essential Medicines, Medical Supplies, and Devices\n- Increasing Access to Medical Diagnostics\n- Increasing Consistent Supply of Essential Services and Products\n- Reducing Financial Barriers to Health Services\n\nHealth—Nutrition\n\nHealth—Other (describe)\n\nInfrastructure—Resilient Infrastructure:\n\n- Reducing Flood Risk and Stormwater Impacts through Green Infrastructure\n\nInfrastructure—Other (describe)\n\nLand—Natural Resources Conservation:\n\n- Improving Agricultural Water Use Practices\n- Improving Water Quality Through Source Water Protection\n\nLand—Sustainable Forestry:\n\n- Increasing the Sustainability of Local Economies and Communities through Forestry and Land Use\n- Increasing the Sustainability of Non-Wood Forest Products\n- Increasing the Sustainability of Wood and Wood-Based Products\n- Mitigating Carbon Emissions from Forestry and Land Use\n\nLand—Sustainable Land Management:\n\n- Improving Sustainability of Industrial and Municipal Water Practices\n\nLand—Other (describe)\n\nOceans & Coastal Zones—Marine Resource Conservation and Management:\n\n- Improving Water Quality Through Source Water Protection\n\nOceans & Coastal Zones—Other (describe)\n\nPollution—Pollution Prevention:\n\n- Improving Sustainability of Industrial and Municipal Water Practices\n- Mitigating Carbon Emissions from Forestry and Land Use\n- Reducing Harmful Emissions from Small-Scale Energy Sources\n\nPollution—Other (describe)\n\nReal Estate—Affordable Quality Housing:\n\n- Improving Housing Quality\n- Increasing Residential Stability\n- Increasing Housing Affordability\n- Increasing Access to Supportive Services through Housing\n\nReal Estate—Green Buildings\n\nReal Estate—Other (describe)\n\nWaste—Waste Management:\n\n- Improving Sustainability of Industrial and Municipal Water Practices\n\nWaste—Other (describe)\n\nWater—Sustainable Water Management:\n\n- Conserving River Flows for Nature and People\n- Improving Access to WASH Through Affordable Household Financing\n- Improving Agricultural Water Use Practices\n- Improving Sustainability of Industrial and Municipal Water Practices\n- Improving WASH through Water Infrastructure and Management\n- Improving Water Quality Through Source Water Protection\n- Increasing Access to Non-Sewered Sanitation Services\n- Increasing Access to Sewered Sanitation Services\n- Reducing Flood Risk and Stormwater Impacts Through Green Infrastructure\n\nWater—Water, Sanitation, and Hygiene (WASH):\n\n- Conserving River Flows for Nature and People\n- Improving Access to WASH in Schools and Healthcare Centers\n- Improving Access to WASH Through Affordable Household Financing\n- Improving Sustainability of Industrial and Municipal Water Practices\n- Improving WASH through Water Infrastructure and Management\n- Increasing Access to Non-Sewered Sanitation Services\n- Increasing Access to Sewered Sanitation Services\n\nWater—Other (describe)",
@@ -3739,7 +3705,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 220,
+                'id' => 218,
                 'code' => "OD5828",
                 'name' => "Name of Organization",
                 'definition' => "Name of the organization.",
@@ -3756,7 +3722,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 221,
+                'id' => 219,
                 'code' => "OD5990",
                 'name' => "Reporting Currency",
                 'definition' => "The national currency used to report currency figures in this IRIS report.\n\nIndicate based on the International Organization for Standardization (ISO) Currency List. Select from the options in the Reference List tab.",
@@ -3773,7 +3739,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection of 3 letter code",
             ],
             [
-                'id' => 222,
+                'id' => 220,
                 'code' => "OD6247",
                 'name' => "Social Impact Objectives",
                 'definition' => "Describes the social impact objectives pursued by the organization. Select all that apply:\n\nAgriculture—Food Security:\n\n- Increasing Access to Agricultural Training and Information\n- Increasing Access to and Use of Products and Services for Agricultural Risk Mitigation\n- Increasing Access to Better, Stable Pricing of Agricultural Products\n- Increasing Farm Profitability\n- Increasing Financial Health of Farmers\n- Increasing Food Security through Smallholder Farms\n- Mitigating Climate Change through Sustainable Agriculture\n\nAgriculture—Smallholder Agriculture:\n\n- Improving Agricultural Water Use Practices\n- Improving Rural Economies through Financial Inclusion\n- Increasing Access to Agricultural Training and Information\n- Increasing Access to and Use of Products and Services for Agricultural Risk Mitigation\n- Increasing Access to and Use of Quality Agricultural Inputs\n- Increasing Access to Better, Stable Pricing of Agricultural Products\n- Increasing Farm Profitability\n- Increasing Financial Health of Farmers\n- Increasing Food Security through Smallholder Farms\n- Increasing the Sustainability of Non-Wood Forest Products\n- Mitigating Climate Change through Sustainable Agriculture\n\nAgriculture—Sustainable Agriculture:\n\n- Conserving River Flows for Nature and People\n- Improving Agricultural Water Use Practices\n- Mitigating Climate Change through Sustainable Agriculture\n\nAgriculture—Other (describe)\n\nAir—Clean Air:\n\n- Mitigating Carbon Emissions from Forestry and Land Use\n- Mitigating Climate Change through Carbon Capture and Sequestration\n- Mitigating Climate Change through Clean Electricity and Heat Production\n- Mitigating Climate Change through Clean Mobility\n- Mitigating Climate Change through Sustainable Manufacturing\n\nAir—Other (describe)\n\nBiodiversity and Ecosystems—Biodiversity & Ecosystem Conservation:\n\n- Conserving River Flows for Nature and People\n- Improving Agricultural Water Use Practices\n- Improving Biodiversity by Reducing Impacts from Salt- and Freshwater Aquaculture and Fisheries\n- Improving Biodiversity through Marine Ecosystem Conservation and Restoration\n- Improving Biodiversity through Nature-Based Solutions and Green Infrastructure\n- Improving Biodiversity through Terrestrial Ecosystem Protection and Restoration\n- Improving Water Quality Through Source Water Protection\n- Increasing the Sustainability of Wood and Wood-Based Products\n\nBiodiversity and Ecosystems—Other (describe)\n\nClimate—Climate Change Mitigation:\n\n- Improving Sustainability of Industrial and Municipal Water Practices\n- Improving WASH through Water Infrastructure and Management\n- Increasing the Sustainability of Wood and Wood-Based Products\n- Mitigating Carbon Emissions from Forestry and Land Use\n- Mitigating Climate Change through Carbon Capture and Sequestration\n-  Mitigating Climate Change through Clean Electricity and Heat Production\n- Mitigating Climate Change through Clean Mobility\n- Mitigating Climate Change through Sustainable Agriculture\n- Mitigating Climate Change through Sustainable Manufacturing\n\nClimate—Climate Resilience and Adaptation:\n\n- Improving Job Skills for the Future\n- Improving WASH through Water Infrastructure and Management\n\nClimate—Other (describe)\n\nDiversity and Inclusion—Gender Lens:\n\n- Improving Earnings and Wealth Through Employment and Entrepreneurship (Particularly for Disadvantaged and Excluded Groups)\n- Improving Equitable Access to Education and Learning for All\n- Improving Rights, Respect, and Cooperation in the Workplace\n- Increasing Gender Equality through Financial Inclusion\n- Increasing Job Security and Stability for Workers in Precarious Employment\n- Reducing Gender Inequities in Governance, Leadership, and Ownership\n- Reducing Gender Inequities in Pay\n- Reducing Gender Inequities in Workplace Conditions\n- Reducing Gender Inequities through Tailored Products and Services\n\nDiversity and Inclusion—Racial Equity:\n\n- Improving Earnings and Wealth Through Employment and Entrepreneurship (Particularly for Disadvantaged and Excluded Groups)\n- Improving Rights, Respect, and Cooperation in the Workplace\n- Increasing Inclusive Capital to Create Equitable Outcomes for Communities of Color (Justice)\n- Increasing Job Security and Stability for Workers in Precarious Employment\n- Shifting Power by Addressing Racial Bias and Ensuring Equitable Representation and Decision-Making\n- Shifting the Perception of Risk through Equitable Deal Sourcing, Due Diligence, and Terms\n\nDiversity and Inclusion—Other (describe)\n\nEducation—Access to Quality Education:\n\n- Improving Access to Education for Children in Crisis and Conflict-Affected Environments\n- Improving Early Childhood Care and Education\n- Improving Equitable Access to Education and Learning for All\n- Improving Job Skills for the Future\n- Improving the Quality of Teaching and Learning Environments\n- Improving The Successful Transition of Youth into the Workforce and Society\n- Improving the Transparency and Accountability of Education Management Systems\n\nEducation—Other (describe)\n\nEmployment—Quality Jobs:\n\n- Improving Earnings and Wealth Through Employment and Entrepreneurship (Particularly for Disadvantaged and Excluded Groups)\n- Improving Health and Well-Being Across the Workforce\n- Improving Job Skills for the Future\n- Improving Rights, Respect, and Cooperation in the Workplace\n- Increasing Job Security and Stability for Workers in Precarious Employment\n\nEmployment—Other (describe)\n\nEnergy—Clean Energy:\n\n- Improving Access to Clean Energy for Underserved Communities\n- Increasing Availability of Clean Energy through Improved Transmission and Distribution Infrastructure\n- Increasing Clean Energy Generation through Low- and Zero-Carbon Alternatives\n- Increasing Clean Energy Storage Capacity through Improved Batteries and Other Technologies\n- Mitigating Climate Change through Clean Electricity and Heat Production\n- Mitigating Climate Change through Clean Mobility\n\nEnergy—Energy Access:\n\n- Improving Energy Alternatives for Cooking\n- Improving Energy Alternatives for Healthcare\n- Improving Energy for Connectivity\n- Improving Lighting for Business\n- Improving Lighting for Homes\n- Mitigating Climate Change through Clean Electricity and Heat Production - Reducing Harmful Emissions from Small-Scale Energy Sources\n\nEnergy—Energy Efficiency:\n\n- Improving Sustainability of Industrial and Municipal Water Practices\n- Mitigating Climate Change through Clean Electricity and Heat Production\n- Mitigating Climate Change through Clean Mobility\n- Mitigating Climate Change through Sustainable Manufacturing\n\nEnergy—Other (describe)\n\nFinancial Services—Financial Inclusion:\n\n- Improving Access to and Use of Responsible Financial Services for Historically Underserved Populations\n- Improving Access to WASH Through Affordable Household Financing\n- Improving Earnings and Wealth Through Employment and Entrepreneurship (Particularly for Disadvantaged and Excluded Groups)\n- Improving Financial Health\n- Improving Rural Economies through Financial Inclusion\n- Increasing Access to and Use of Products and Services for Agricultural Risk Mitigation\n- Increasing Access to Non-Sewered Sanitation Services\n- Increasing Access to Sewered Sanitation Services\n- Increasing Farm Profitability\n- Increasing Financial Health of Farmers\n- Increasing Gender Equality through Financial Inclusion\n- Supporting Decent Jobs and Fostering Economic Development\n\nFinancial Services—Other (describe)\n\nHealth—Access to Quality Health Care:\n\n- Improving Data for Health Systems Policy and Decision-Making\n- Improving Early Childhood Care and Education\n- Improving Energy Alternatives for Healthcare\n- Improving Health and Well-Being Across the Workforce\n- Improving WASH through Water Infrastructure and Management\n- Increasing Access to Essential Medicines, Medical Supplies, and Devices\n- Increasing Access to Medical Diagnostics\n- Increasing Consistent Supply of Essential Services and Products\n- Reducing Financial Barriers to Health Services\n\nHealth—Nutrition\n\nHealth—Other (describe)\n\nInfrastructure—Resilient Infrastructure:\n\n- Reducing Flood Risk and Stormwater Impacts through Green Infrastructure\n\nInfrastructure—Other (describe)\n\nLand—Natural Resources Conservation:\n\n- Improving Agricultural Water Use Practices\n- Improving Water Quality Through Source Water Protection\n\nLand—Sustainable Forestry:\n\n- Increasing the Sustainability of Local Economies and Communities through Forestry and Land Use\n- Increasing the Sustainability of Non-Wood Forest Products\n- Increasing the Sustainability of Wood and Wood-Based Products\n- Mitigating Carbon Emissions from Forestry and Land Use\n\nLand—Sustainable Land Management:\n\n- Improving Sustainability of Industrial and Municipal Water Practices\n\nLand—Other (describe)\n\nOceans & Coastal Zones—Marine Resource Conservation and Management:\n\n- Improving Water Quality Through Source Water Protection\n\nOceans & Coastal Zones—Other (describe)\n\nPollution—Pollution Prevention:\n\n- Improving Sustainability of Industrial and Municipal Water Practices\n- Mitigating Carbon Emissions from Forestry and Land Use\n- Reducing Harmful Emissions from Small-Scale Energy Sources\n\nPollution—Other (describe)\n\nReal Estate—Affordable Quality Housing:\n\n- Improving Housing Quality\n- Increasing Residential Stability\n- Increasing Housing Affordability\n- Increasing Access to Supportive Services through Housing\n\nReal Estate—Green Buildings\n\nReal Estate—Other (describe)\n\nWaste—Waste Management:\n\n- Improving Sustainability of Industrial and Municipal Water Practices\n\nWaste—Other (describe)\n\nWater—Sustainable Water Management:\n\n- Conserving River Flows for Nature and People\n- Improving Access to WASH Through Affordable Household Financing\n- Improving Agricultural Water Use Practices\n- Improving Sustainability of Industrial and Municipal Water Practices\n- Improving WASH through Water Infrastructure and Management\n- Improving Water Quality Through Source Water Protection\n- Increasing Access to Non-Sewered Sanitation Services\n- Increasing Access to Sewered Sanitation Services\n- Reducing Flood Risk and Stormwater Impacts Through Green Infrastructure\n\nWater—Water, Sanitation, and Hygiene (WASH):\n\n- Conserving River Flows for Nature and People\n- Improving Access to WASH in Schools and Healthcare Centers\n- Improving Access to WASH Through Affordable Household Financing\n- Improving Sustainability of Industrial and Municipal Water Practices\n- Improving WASH through Water Infrastructure and Management\n- Increasing Access to Non-Sewered Sanitation Services\n- Increasing Access to Sewered Sanitation Services\n\nWater—Other (describe)",
@@ -3790,7 +3756,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 223,
+                'id' => 221,
                 'code' => "OD6306",
                 'name' => "Operational Model",
                 'definition' => "Describes the operational model of the organization. Select all that apply:\n\n- Production/Manufacturing: Production and/or manufacturing of goods (e.g., farming, construction, manufacturing)\n- Processing/Packaging: Processing and/or packaging of goods (can include both raw materials, such as wheat, and secondary materials/goods, such as baked bread)\n- Distribution: Delivery of goods or services to target customers, whether by traditional transport (e.g., vehicle, rail, air) or infrastructure (e.g., electric grid operator)\n- Wholesale/Retail: Intermediary organization that purchases goods and sells them to new target customers\n- Services: Services such as education, health, communications, transportation, and social services, excluding financial services\n- Financial Services: Financial products and services\n- Other (write-in)",
@@ -3807,7 +3773,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 224,
+                'id' => 222,
                 'code' => "OD6350",
                 'name' => "Theory of Change",
                 'definition' => "Describes the theory of change of the organization.",
@@ -3824,7 +3790,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 225,
+                'id' => 223,
                 'code' => "OD6855",
                 'name' => "Location of Organization's Headquarters",
                 'definition' => "Address of the organization's legally incorporated headquarters.",
@@ -3841,7 +3807,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 226,
+                'id' => 224,
                 'code' => "OD6951",
                 'name' => "Report Start Date",
                 'definition' => "Start date of the reporting period for which the organization is providing data.",
@@ -3858,7 +3824,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Date",
             ],
             [
-                'id' => 227,
+                'id' => 225,
                 'code' => "OD7111",
                 'name' => "Report End Date",
                 'definition' => "End date of the reporting period for which the organization is providing data.",
@@ -3875,7 +3841,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Date",
             ],
             [
-                'id' => 228,
+                'id' => 226,
                 'code' => "OD7212",
                 'name' => "Target Stakeholders",
                 'definition' => "Describes which entities the organization seeks to benefit through its products, services, and operations as of the end of the reporting period. \n\nChoose all that apply: \n- Planet\n- Suppliers\n- Employees\n- Distributors\n- Clients (for example, students, patients, residents, or smallholders)\n- Microenterprises\n- Small and medium-sized enterprises (SMEs)\n- Other",
@@ -3892,7 +3858,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 229,
+                'id' => 227,
                 'code' => "OD7796",
                 'name' => "Organization Web Address",
                 'definition' => "Web address (URL) of the organization.",
@@ -3909,7 +3875,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 230,
+                'id' => 228,
                 'code' => "OD7900",
                 'name' => "Relationship to Target Stakeholders",
                 'definition' => "Describes the relationship between the organization and its target stakeholders.",
@@ -3926,7 +3892,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 231,
+                'id' => 229,
                 'code' => "OD8350",
                 'name' => "Client Model",
                 'definition' => "Describes the client model of the organization. Select all that apply:\n\n- Business-to-Business (B2B)\n- Business-to-Consumer (B2C)\n- Business-to-Government (B2G)\n- Peer-to-Peer (P2P)",
@@ -3943,7 +3909,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 232,
+                'id' => 230,
                 'code' => "OI1075",
                 'name' => "Board of Directors: Total",
                 'definition' => "Number of members of the organization's board of directors or other governing body as of the end of the reporting period.",
@@ -3960,7 +3926,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 233,
+                'id' => 231,
                 'code' => "OI1120",
                 'name' => "Operational Certifications",
                 'definition' => "Describes the third-party, business process- and practice-related certifications that the organization holds as of the end of the reporting period. See usage guidance for further information.",
@@ -3977,7 +3943,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 234,
+                'id' => 232,
                 'code' => "OI1150",
                 'name' => "Fair Hiring/Recruiting Policy",
                 'definition' => "Indicates whether the organization has a written employment policy to recruit employees fairly and equally and a system to monitor compliance with this policy.",
@@ -3994,7 +3960,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 235,
+                'id' => 233,
                 'code' => "OI1254",
                 'name' => "Environmental Management System",
                 'definition' => "Indicates whether the organization has an environmental management system in place.",
@@ -4011,7 +3977,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 236,
+                'id' => 234,
                 'code' => "OI1495",
                 'name' => "Energy Generated for Use: Non-Renewable",
                 'definition' => "Amount of energy both generated and consumed by the organization from non-renewable sources during the reporting period.",
@@ -4028,7 +3994,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 237,
+                'id' => 235,
                 'code' => "OI1496",
                 'name' => "Energy Purchased: Non-Renewable",
                 'definition' => "Amount of purchased energy consumed by the organization from non-renewable sources during the reporting period.",
@@ -4045,7 +4011,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 238,
+                'id' => 236,
                 'code' => "OI1503",
                 'name' => "Healthcare Benefits Premium Covered",
                 'definition' => "Percentage of a full-time employee's healthcare premium that is covered by the organization or third parties, based on benefits available to full-time employees as of the end of the reporting period.",
@@ -4062,7 +4028,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 239,
+                'id' => 237,
                 'code' => "OI1984",
                 'name' => "Social and Environmental Board Committee",
                 'definition' => "Indicates whether the organization has a formal board of directors or governing body committee dedicated to social and environmental performance.",
@@ -4079,7 +4045,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 240,
+                'id' => 238,
                 'code' => "OI2092",
                 'name' => "Climate Resilience Strategy",
                 'definition' => "Indicates whether the organization implements a strategy to address the effects of climate change on the organization's operations.",
@@ -4096,7 +4062,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 241,
+                'id' => 239,
                 'code' => "OI2165",
                 'name' => "Number of Legal and Regulatory Complaints",
                 'definition' => "Number of formal legal and regulatory complaints received by the organization during the last reporting period.",
@@ -4113,7 +4079,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 242,
+                'id' => 240,
                 'code' => "OI2209",
                 'name' => "Founders: Total",
                 'definition' => "Number of the organization's founders who retain an active role in the company as of the end of the reporting period.",
@@ -4130,7 +4096,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 243,
+                'id' => 241,
                 'code' => "OI2319",
                 'name' => "Community Engagement Strategy",
                 'definition' => "Indicates whether the organization implements a strategy to manage its interactions with local communities that are affected by its operations.",
@@ -4147,7 +4113,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 244,
+                'id' => 242,
                 'code' => "OI2330",
                 'name' => "Governance Policies",
                 'definition' => "Indicates whether the organization has written corporate governance policies that have been communicated to stakeholders.",
@@ -4164,7 +4130,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 245,
+                'id' => 243,
                 'code' => "OI2496",
                 'name' => "Energy Generated for Use: Renewable",
                 'definition' => "Amount of energy both generated and consumed by the organization from renewable sources during the reporting period.",
@@ -4181,7 +4147,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 246,
+                'id' => 244,
                 'code' => "OI2596",
                 'name' => "Conflict of Interest Policy",
                 'definition' => "Indicates whether the organization has a written policy to monitor and disclose any potential conflicts of interest between the organization and its board members, owners, or material investors.",
@@ -4198,7 +4164,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 247,
+                'id' => 245,
                 'code' => "OI2742",
                 'name' => "Employment Benefits",
                 'definition' => "Describes the benefits that are provided to full-time employees of the organization during the reporting period. Select all that apply:\n\n- Health insurance\n- Dental insurance \n- Unemployment insurance \n- Disability coverage/insurance\n- Life insurance\n- Paid time off: Maternity/birth parent leave\n- Paid time off: Paternity/supporting parent leave\n- Paid time off: Vacation/holiday\n- Paid time off: Sick leave\n- Flexible work arrangements\n- Childcare support (on-site, vouchers, or reimbursement)\n- Transportation support (provided by company, vouchers, or reimbursement)\n- Retirement provisions \n- Stock ownership\n- Profit-sharing\n- Other (please describe)",
@@ -4215,7 +4181,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 248,
+                'id' => 246,
                 'code' => "OI3703",
                 'name' => "Employees Covered by Collective Bargaining Agreements",
                 'definition' => "Number of employees (including both permanent and temporary workers) who are covered by collective bargaining agreements as of the end of the reporting period.",
@@ -4232,7 +4198,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 249,
+                'id' => 247,
                 'code' => "OI5660",
                 'name' => "Percent Employee Ownership",
                 'definition' => "Percentage of the organization that is owned by individuals who are employed by the organization (full- or part-time) as of the end of the reporting period.",
@@ -4249,7 +4215,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 250,
+                'id' => 248,
                 'code' => "OI2840",
                 'name' => "Percent Female/Gender Non-Binary Ownership",
                 'definition' => "Percentage of the organization that is owned by female or non-binary individuals as of the end of the reporting period.",
@@ -4266,7 +4232,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 251,
+                'id' => 249,
                 'code' => "OI3324",
                 'name' => "Energy Purchased: Renewable",
                 'definition' => "Amount of purchased energy consumed by the organization from renewable sources during the reporting period.",
@@ -4283,7 +4249,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 252,
+                'id' => 250,
                 'code' => "OI3601",
                 'name' => "Employee Feedback and Grievance System",
                 'definition' => "Indicates whether the organization has in place a grievance mechanism to receive formal employee complaints and provide remedies, as well as an established procedure and/or committee to receive and handle employee feedback.",
@@ -4300,7 +4266,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 253,
+                'id' => 251,
                 'code' => "OI1042",
                 'name' => "Number of Employee Grievances Registered",
                 'definition' => "Number of formal grievances registered by employees of the organization during the reporting period.",
@@ -4317,7 +4283,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 254,
+                'id' => 252,
                 'code' => "OI9077",
                 'name' => "Number of Employee Grievances Resolved",
                 'definition' => "Number of formal grievances registered by employees of the organization that were resolved during the reporting period.",
@@ -4334,7 +4300,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 255,
+                'id' => 253,
                 'code' => "OI3630",
                 'name' => "Meeting Frequency of Board of Directors",
                 'definition' => "Number of times the organization's board of directors or governing body met during the reporting period.",
@@ -4351,7 +4317,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 256,
+                'id' => 254,
                 'code' => "OI3757",
                 'name' => "Occupational Injuries",
                 'definition' => "Number of occupational injuries which affected any full-time, part-time, and temporary employees of the organization during the reporting period.",
@@ -4368,7 +4334,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 257,
+                'id' => 255,
                 'code' => "PI7161",
                 'name' => "Target Stakeholder Injuries",
                 'definition' => "Number of injuries of the organization's target stakeholders during the reporting period.",
@@ -4385,7 +4351,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 258,
+                'id' => 256,
                 'code' => "OI7060",
                 'name' => "Occupational Illnesses",
                 'definition' => "Number of occupational illnesses which affected any full-time, part-time, or temporary employees of the organization during the reporting period.",
@@ -4402,7 +4368,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 259,
+                'id' => 257,
                 'code' => "OI3819",
                 'name' => "Fair Compensation Policy",
                 'definition' => "Indicates whether the organization has a written policy regarding fair and equitable compensation for employees and a system to monitor compliance with this policy.",
@@ -4419,7 +4385,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 260,
+                'id' => 258,
                 'code' => "OI3943",
                 'name' => "Social and Environmental Performance Staff Training",
                 'definition' => "Indicates whether any of the organization's employees participated in training sessions related to any aspect of managing environmental or social performance during the reporting period.",
@@ -4436,7 +4402,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 261,
+                'id' => 259,
                 'code' => "OI4070",
                 'name' => "Board of Directors: Independent",
                 'definition' => "Number of independent members of the organization's board of directors or governing body as of the end of the reporting period.",
@@ -4453,7 +4419,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 262,
+                'id' => 260,
                 'code' => "OI4136",
                 'name' => "Social and Environmental Performance Management Training",
                 'definition' => "Indicates whether any member of the organization's board of directors participated in training sessions related to any aspect of managing environmental or social performance during the reporting period.",
@@ -4470,7 +4436,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 263,
+                'id' => 261,
                 'code' => "OI4194",
                 'name' => "Traceability System",
                 'definition' => "Indicates whether the organization implements a traceability system for its raw materials.",
@@ -4487,7 +4453,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 264,
+                'id' => 262,
                 'code' => "OI4229",
                 'name' => "Employees Trained",
                 'definition' => "Number of employees (full-time, part-time, or temporary) who were trained through programs provided by the organization (both internally and externally) during the reporting period.",
@@ -4504,7 +4470,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 265,
+                'id' => 263,
                 'code' => "OI4324",
                 'name' => "Community Service Policy",
                 'definition' => "Indicates whether the organization implements a community service policy.",
@@ -4521,7 +4487,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 266,
+                'id' => 264,
                 'code' => "OI4364",
                 'name' => "Worker Freedom of Association Policy",
                 'definition' => "Indicates whether the organization has a written policy to monitor, evaluate, and ensure its workers' freedom of association.",
@@ -4538,7 +4504,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 267,
+                'id' => 265,
                 'code' => "OI4432",
                 'name' => "Forced Labor Policy: Child Labor",
                 'definition' => "Indicates whether the organization has a written policy against child labor and a system to monitor compliance with this policy.",
@@ -4555,7 +4521,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 268,
+                'id' => 266,
                 'code' => "OI4531",
                 'name' => "Energy Conservation Strategy",
                 'definition' => "Indicates whether the organization implements an energy conservation strategy to reduce its operational energy usage.",
@@ -4572,7 +4538,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 269,
+                'id' => 267,
                 'code' => "OI4732",
                 'name' => "Social and Environmental Performance Reporting",
                 'definition' => "Indicates whether the organization reports its social and environmental performance to relevant stakeholders.",
@@ -4589,7 +4555,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 270,
+                'id' => 268,
                 'code' => "OI4739",
                 'name' => "Supplier Screening Policy",
                 'definition' => "Indicates whether the organization has a written policy of evaluating supplier organizations based on their social and environmental performance and a system to monitor compliance with this policy.",
@@ -4606,7 +4572,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 271,
+                'id' => 269,
                 'code' => "OI4753",
                 'name' => "Client Protection Policy",
                 'definition' => "Indicates whether the organization has a written policy for client protection and a system to monitor compliance with this policy.",
@@ -4623,7 +4589,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 272,
+                'id' => 270,
                 'code' => "OI4884",
                 'name' => "Fair Career Advancement Policy",
                 'definition' => "Indicates whether the organization has a written policy to support the fair and equitable progression and promotion of employees and a system to monitor compliance with this policy.",
@@ -4640,7 +4606,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 273,
+                'id' => 271,
                 'code' => "OI4972",
                 'name' => "Working Hour Policy",
                 'definition' => "Indicates whether the organization has policies in place to monitor, evaluate, and ensure appropriate working hours of employees, as well as a system to monitor compliance.",
@@ -4657,7 +4623,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 274,
+                'id' => 272,
                 'code' => "OI5049",
                 'name' => "Client Feedback System",
                 'definition' => "Indicates whether the organization implements a feedback system to solicit client feedback and has an established procedure and/or committee to receive and handle client feedback.",
@@ -4674,7 +4640,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 275,
+                'id' => 273,
                 'code' => "OI5102",
                 'name' => "Employee Policy Documentation",
                 'definition' => "Describes the types of policy documentation that are provided to employees of the organization.",
@@ -4691,7 +4657,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 276,
+                'id' => 274,
                 'code' => "OI5164",
                 'name' => "Financial Statement Review",
                 'definition' => "Indicates whether it is the organization's policy to produce financial statements that are verified annually by a certified independent auditor.",
@@ -4708,7 +4674,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 277,
+                'id' => 275,
                 'code' => "OI5495",
                 'name' => "Importance of Outcome to Stakeholders",
                 'definition' => "Describes the value or importance of the outcome being sought by the intervention or investment from the perspective of those affected during the reporting period.\n\nChoose all that apply:\n- Very important\n- Somewhat important\n- Neutral\n- Not important \n- Do not know",
@@ -4725,7 +4691,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 278,
+                'id' => 276,
                 'code' => "OI5552",
                 'name' => "Percent Charitable Donations",
                 'definition' => "Percentage of the organization's revenue that was given as charitable donations during the reporting period.",
@@ -4742,7 +4708,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 279,
+                'id' => 277,
                 'code' => "OI6286",
                 'name' => "Recycling Policy",
                 'definition' => "Indicates whether the organization implements a recycling policy in its operating facilities.",
@@ -4759,7 +4725,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 280,
+                'id' => 278,
                 'code' => "OI6525",
                 'name' => "Occupational Fatalities",
                 'definition' => "Indicates the number of occupational fatalities of full-time, part-time, and temporary employees of the organization during the reporting period.",
@@ -4776,7 +4742,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 281,
+                'id' => 279,
                 'code' => "PI8145",
                 'name' => "Target Stakeholder Fatalities",
                 'definition' => "Number of fatalities of the organization's target stakeholders during the reporting period.",
@@ -4793,7 +4759,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 282,
+                'id' => 280,
                 'code' => "OI6696",
                 'name' => "Board of Directors: Historically Marginalized",
                 'definition' => "Number of members of the board of directors or other governing body as of the end of the reporting period who belong to groups historically marginalized on the basis of race and/or ethnicity.",
@@ -4810,7 +4776,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 283,
+                'id' => 281,
                 'code' => "OI6697",
                 'name' => "Energy Conserved",
                 'definition' => "Amount of reduction in energy consumption achieved as a direct result of energy conservation and efficiency initiatives undertaken by the organization during the reporting period.",
@@ -4827,7 +4793,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 284,
+                'id' => 282,
                 'code' => "OI6765",
                 'name' => "Green Building Practices",
                 'definition' => "Indicates whether the organization employs green building practices.",
@@ -4844,7 +4810,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 285,
+                'id' => 283,
                 'code' => "OI7194",
                 'name' => "Percent Ownership by Historically Marginalized Groups",
                 'definition' => "Percentage of the organization that is owned, as of the end of the reporting period, by individuals who belong to groups historically marginalized due to race and/or ethnicity.",
@@ -4861,7 +4827,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 286,
+                'id' => 284,
                 'code' => "OI7390",
                 'name' => "Employee Training Costs",
                 'definition' => "Value of the costs incurred by the organization as a result of training provided to employees (full-time, part-time, or temporary) during the reporting period.",
@@ -4878,7 +4844,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 287,
+                'id' => 285,
                 'code' => "OI7421",
                 'name' => "Charitable Practices",
                 'definition' => "Indicates whether the organization employs charitable practices in its operations.",
@@ -4895,7 +4861,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 288,
+                'id' => 286,
                 'code' => "OI7639",
                 'name' => "Value of Fines and Settlements",
                 'definition' => "Value of payments made by the organization as legal or regulatory fines and settlements during the reporting period.",
@@ -4912,7 +4878,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 289,
+                'id' => 287,
                 'code' => "OI7829",
                 'name' => "Investment Committee Members: Total",
                 'definition' => "Number of members of the organization's investment committee as of the end of the reporting period.",
@@ -4929,7 +4895,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 290,
+                'id' => 288,
                 'code' => "OI7877",
                 'name' => "Employee Training Hours",
                 'definition' => "Number of training hours provided for employees (full-time, part-time, or temporary) during the reporting period.",
@@ -4946,7 +4912,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 291,
+                'id' => 289,
                 'code' => "OI3368",
                 'name' => "Employee Training and Transition Programs Offered",
                 'definition' => "Describes the type and scope of programs implemented and assistance provided during the reporting period to upgrade employee skills.",
@@ -4963,7 +4929,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 292,
+                'id' => 290,
                 'code' => "OI0112",
                 'name' => "Employees Receiving Regular Performance and Career Development Reviews",
                 'definition' => "Number of permanent and temporary workers who received a routine and regular performance and career development review during the reporting period.",
@@ -4980,7 +4946,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 293,
+                'id' => 291,
                 'code' => "OI7914",
                 'name' => "Stakeholder Engagement",
                 'definition' => "Describes the mechanisms in place to gather input from stakeholders on product/service design, development, and delivery. Select all that apply: \n\n- Identify community need(s), if any, in collaboration with target stakeholders\n- Consult with target stakeholders about their needs when developing strategy\n- Collect impact data from stakeholders via interviews and/or surveys\n- Work with investees to reflect target stakeholders' perspectives in product/service offerings\n- Monitor target stakeholder satisfaction\n- None\n- Other (describe)",
@@ -4997,7 +4963,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 294,
+                'id' => 292,
                 'code' => "OI7983",
                 'name' => "Flexible Work Arrangements",
                 'definition' => "Indicates whether the organization offers flexible work arrangements to full-time, part-time, or temporary employees of the organization.",
@@ -5014,7 +4980,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 295,
+                'id' => 293,
                 'code' => "OI8001",
                 'name' => "Worker Safety Policy",
                 'definition' => "Indicates whether the organization has policies in place to monitor, evaluate, and ensure worker safety.",
@@ -5031,7 +4997,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 296,
+                'id' => 294,
                 'code' => "OI8113",
                 'name' => "Market Research on Clients",
                 'definition' => "Indicates whether the organization uses market research to identify the needs of clients and potential clients.",
@@ -5048,7 +5014,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 297,
+                'id' => 295,
                 'code' => "OI8118",
                 'name' => "Board of Directors: Female",
                 'definition' => "Number of female members of the organization's board of directors or other governing body as of the end of the reporting period.",
@@ -5065,7 +5031,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 298,
+                'id' => 296,
                 'code' => "OI8670",
                 'name' => "Strikes and Lockouts",
                 'definition' => "Number of employees' strikes and lockouts at the organization during the reporting period.",
@@ -5082,7 +5048,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 299,
+                'id' => 297,
                 'code' => "OI8825",
                 'name' => "Energy Purchased: Total",
                 'definition' => "Amount of purchased energy consumed by the organization during the reporting period.",
@@ -5099,7 +5065,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 300,
+                'id' => 298,
                 'code' => "OI9088",
                 'name' => "Sexual Harassment Policy",
                 'definition' => "Indicates whether the organization has a written policy to combat and prevent the sexual harassment of employees and a system to monitor compliance with this policy.",
@@ -5116,7 +5082,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 301,
+                'id' => 299,
                 'code' => "OI9106",
                 'name' => "Social and Environmental Performance Risk Assessment",
                 'definition' => "Indicates whether the organization assessed social and environmental risks during the reporting period.",
@@ -5133,7 +5099,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 302,
+                'id' => 300,
                 'code' => "OI9326",
                 'name' => "Water Conservation Strategy",
                 'definition' => "Indicates whether the organization implements a conservation strategy to reduce its water usage.",
@@ -5150,7 +5116,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 303,
+                'id' => 301,
                 'code' => "OI9331",
                 'name' => "Anti-Discrimination Policy",
                 'definition' => "This metric is intended to capture detailed information on the organization’s water conservation strategy in place but does not evaluate the success with which that strategy is implemented.\n\nWater conservation encompasses efforts made to reduce the amount of water needed to execute current processes or tasks. This metric is not intended to capture overall reduced water consumption due to reduced organizational activities (e.g., partial outsourcing of production).\n\nDetails of water conservation efforts to footnote include organizational or technological innovations that allow a defined process or task to consume water more efficiently. These may include improved water-management practices, process redesign, the conversion and retrofitting of equipment (e.g., water-efficient equipment), or the elimination of unnecessary water use through changes in behavior. Organizations’ water-reduction strategies could also include seeking alternative water sources such as gray water or rainwater capture systems. Organizations should footnote which efforts are components of their strategy.\n\nMismanagement of water can pose risks to operational elements including brand, credibility, credit rating, insurance, and operating costs. Organizations should footnote their analysis of such risks and how they are being addressed.\n\nOrganizations are encouraged to report the amount of water conserved using Water Conserved (OI4015) and Water Used: Total (OI1697), plus its related submetrics.",
@@ -5167,7 +5133,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 304,
+                'id' => 302,
                 'code' => "OI9379",
                 'name' => "Local Compliance",
                 'definition' => "Indicates whether the organization has been identified as out of compliance with any local labor, tax, or environmental regulations during the reporting period.",
@@ -5184,7 +5150,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 305,
+                'id' => 303,
                 'code' => "OI9478",
                 'name' => "Fair Dismissal Policy",
                 'definition' => "Indicates whether the organization has a written policy and practice of ensuring fair dismissal of employees and a system to monitor compliance with this policy.",
@@ -5201,7 +5167,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 306,
+                'id' => 304,
                 'code' => "OI9485",
                 'name' => "Diverse Representation Policy",
                 'definition' => "Indicates whether the company has a written policy on diverse representation and a system to monitor compliance with this policy.",
@@ -5218,7 +5184,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 307,
+                'id' => 305,
                 'code' => "OI9624",
                 'name' => "Energy Generated for Use: Total",
                 'definition' => "Amount of energy generated and consumed by the organization during the reporting period.",
@@ -5235,7 +5201,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 308,
+                'id' => 306,
                 'code' => "OI9650",
                 'name' => "Forced Labor Policy",
                 'definition' => "Indicates whether the organization has a written policy against forced labor and a system to monitor compliance of this policy.",
@@ -5252,7 +5218,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 309,
+                'id' => 307,
                 'code' => "PD1516",
                 'name' => "Product/Service Detailed Type",
                 'definition' => "Describes the type of product or service provided by the organization in detail. Select from the options in the Reference List tab.",
@@ -5269,7 +5235,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 310,
+                'id' => 308,
                 'code' => "PD5205",
                 'name' => "Service Level Type",
                 'definition' => "Describes the level of access to services provided to households or individuals as a result of the organization's activities as of the end the reporting period.\n\nChoose all that apply within the appropriate sector or service: \n\nDrinking Water\n- Safely managed\n- Basic\n- Limited\n- Unimproved\n- Surface water\n\nSanitation\n- Safely managed\n- Basic\n- Limited\n- Unimproved\n- Open defecation\n\nHygiene\n- Basic\n- Limited\n- No facility\n\nElectricity\n- Tier 5 (advanced access)\n- Tier 4\n- Tier 3\n- Tier 2\n- Tier 1\n- Tier 0 (no access)",
@@ -5286,7 +5252,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 311,
+                'id' => 309,
                 'code' => "PI5683",
                 'name' => "Service Hours Provided",
                 'definition' => "Number of hours of service provided during the reporting period.",
@@ -5303,7 +5269,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 312,
+                'id' => 310,
                 'code' => "PI2230",
                 'name' => "Service Hours Interrupted",
                 'definition' => "Number of hours-of-service interruptions during the reporting period.",
@@ -5320,7 +5286,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 313,
+                'id' => 311,
                 'code' => "PI3720",
                 'name' => "Service Interruptions",
                 'definition' => "Number of service interruptions experienced by clients during the reporting period.",
@@ -5337,7 +5303,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 314,
+                'id' => 312,
                 'code' => "PI6686",
                 'name' => "Service Area Population",
                 'definition' => "Number of individuals within the organization's service area (municipality, administrative region, or other geographic boundary) as of the end of the reporting period.",
@@ -5354,7 +5320,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 315,
+                'id' => 313,
                 'code' => "PD8501",
                 'name' => "Meter Type",
                 'definition' => "Describes the type of meter provided to households or individuals with utility connections as a result of the organization's activities during the reporting period.\n\nChoose all that apply:\n\n- Operating meter\n- Non-operating/broken meter\n- No meter\n- Undisclosed",
@@ -5371,7 +5337,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 316,
+                'id' => 314,
                 'code' => "PD1602",
                 'name' => "Unit of Measure",
                 'definition' => "Describes the unit of measure for reporting products or services sold, produced, exported, or installed by the organization. \n\nSelect one:\n- British thermal units (Btu)\n- Gigawatt hours (GWh)\n- Hectares\n- Hours\n- Joules\n- Kilograms\n- Kilometers (Km)\n- Kilowatt-hours (kWh)\n- Licenses\n- Liters\n- Pounds\n- Quintiles\n- Square feet\n- Square meters\n- Tons\n- Other\n\nNote: Several metrics are reported in conjunction with this metric, such as Units/Volume Sold: Total (PI1263).",
@@ -5388,7 +5354,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 317,
+                'id' => 315,
                 'code' => "PD1928",
                 'name' => "Compulsory Insurance Products",
                 'definition' => "Describes compulsory insurance products required by the organization.",
@@ -5405,7 +5371,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 318,
+                'id' => 316,
                 'code' => "PD2541",
                 'name' => "Target Stakeholder Socioeconomics",
                 'definition' => "Describes the socioeconomic groups of stakeholders targeted by the organization as of the end of the reporting period.\n\nChoose all that apply:\n\n- Lower-income\n- Lower middle-income\n- Upper middle-income\n- Other (describe)",
@@ -5422,24 +5388,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 319,
-                'code' => "PD2587",
-                'name' => "Client Locations",
-                'definition' => "NOTE: This metric has been discontinued. Previous definition: Countries where the organization's products/services are purchased/used. Select from the options in the Reference List tab.",
-                'calculation' => null,
-                'usage_guidance' => "This metric is intended to capture the countries where the organization’s products and services are purchased or used.",
-                'social' => true,
-                'environmental' => true,
-                'section' => "Product Description",
-                'subsection' => "Target Stakeholders",
-                'level_type' => 1,
-                'related_metrics_code' => null,
-                'metric_level' => "Organization",
-                'quantity_type' => "Stock",
-                'reporting_format' => "Selection",
-            ],
-            [
-                'id' => 320,
+                'id' => 317,
                 'code' => "PD2756",
                 'name' => "Product/Service Certifications",
                 'definition' => "Describes third-party certifications for products/services sold by the organization that are valid as of the end of the reporting period.",
@@ -5456,7 +5405,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 321,
+                'id' => 318,
                 'code' => "PD3017",
                 'name' => "Product/Service Type",
                 'definition' => "Describes the categories of economic activity that define the organization's operations.\n\nSelect all that apply:\n\nA. Agriculture, forestry, and fishing\nB. Mining and quarrying\nC. Manufacturing\nD. Electricity, gas, steam, and air conditioning supply\nE. Water supply; sewerage, waste management, and remediation activities\nF. Construction\nG. Wholesale and retail trade; repair of motor vehicles and motorcycles\nH. Transportation and storage\nI. Accommodation and food service activities\nJ. Information and communication\nK. Financial and insurance activities\nL. Real estate activities\nM. Professional, scientific, and technical activities\nN. Administrative and support service activities\nO. Public administration and defense; compulsory social security\nP. Education\nQ. Human health and social work activities\nR. Arts, entertainment, and recreation\nS. Other service activities\nT. Activities of households as employers; undifferentiated goods and services producing activities of households for own use\nU. Activities of extraterritorial organizations and bodies\nV. Other (describe)",
@@ -5473,7 +5422,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 322,
+                'id' => 319,
                 'code' => "PD3569",
                 'name' => "Poverty Assessment",
                 'definition' => "Indicates whether the organization assesses the poverty levels of its intended stakeholders.",
@@ -5490,7 +5439,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 323,
+                'id' => 320,
                 'code' => "PD4565",
                 'name' => "Supplier Locations",
                 'definition' => "Countries where the organization's suppliers are located. Select from the options in the Reference List tab.",
@@ -5507,7 +5456,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 324,
+                'id' => 321,
                 'code' => "PD4587",
                 'name' => "Product Lifetime",
                 'definition' => "Number of years of useful life of the product provided by the organization (based on reasonable use).",
@@ -5524,7 +5473,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 325,
+                'id' => 322,
                 'code' => "PD4861",
                 'name' => "Product/Service Replaced Description",
                 'definition' => "Describes the product or service replaced for clients, households, or businesses by the products or services provided by the organization.",
@@ -5541,7 +5490,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 326,
+                'id' => 323,
                 'code' => "PD5752",
                 'name' => "Target Stakeholder Demographic",
                 'definition' => "Describes the demographic groups of stakeholders targeted by the organization. Select all that apply:\n\nAge group:\n- Children (younger than 10 years old)\n- Adolescents (10 years of age or older but younger than 19)\n- Adults (19+ years old)\n- Elderly/older adults\n\nGender:\n- Female\n- Male\n- Gender Non-Binary\n- Undisclosed\n- Other (describe)\n\nDisability Status:\n- Persons with disabilities\n- Persons without disabilities\n- Undisclosed\n\nRace/Ethnicity/Minority Status:\n- Historically marginalized groups\n- Dominant culture populations\n- Undisclosed\n\nOther target populations:\n- Other (describe)",
@@ -5558,7 +5507,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 327,
+                'id' => 324,
                 'code' => "PD6384",
                 'name' => "Target Stakeholder Setting",
                 'definition' => "Describes the setting of the groups of stakeholders targeted by the organization. Select all that apply:\n\n- Rural\n- Urban\n- Peri-urban",
@@ -5575,7 +5524,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 328,
+                'id' => 325,
                 'code' => "PD6424",
                 'name' => "Target Stakeholder Geography",
                 'definition' => "Describes the geography of stakeholders targeted by the organization, expressed by country, as of the end of the reporting period. \n\nChoose all that apply: \n\n- Afghanistan\n- Albania\n- Algeria\n- Andorra\n- Angola\n- Anguilla\n- Antigua & Barbuda\n- Argentina\n- Armenia\n- Australia\n- Austria\n- Azerbaijan\n- Bahamas\n- Bahrain\n- Bangladesh\n- Barbados\n- Belarus\n- Belgium\n- Belize\n- Benin\n- Bermuda\n- Bhutan\n- Bolivia\n- Bosnia & Herzegovina\n- Botswana\n- Brazil\n- Brunei Darussalam\n- Bulgaria\n- Burkina Faso\n- Myanmar (Burma)\n- Burundi\n- Cambodia\n- Cameroon\n- Canada\n- Cape Verde\n- Cayman Islands\n- Central African Republic\n- Chad\n- Chile\n- China\n- Colombia\n- Comoros\n- Costa Rica\n- Croatia\n- Cuba\n- Cyprus\n- Czech Republic\n- Democratic Republic of the Congo\n- Denmark\n- Djibouti\n- Dominica\n- Dominican Republic\n- Ecuador\n- Egypt \n- El Salvador\n- Equatorial Guinea\n- Eritrea\n- Estonia\n- Ethiopia\n- Fiji\n- Finland\n- France\n- French Guiana\n- Gabon\n- Gambia\n- Georgia\n- Germany\n- Ghana\n- Great Britain\n- Greece\n- Grenada\n- Guadeloupe\n- Guatemala\n- Guinea\n- Guinea-Bissau\n- Guyana\n- Haiti\n- Honduras\n- Hungary\n- Iceland\n- India\n- Indonesia\n- Iran\n- Iraq\n- Israel and the Occupied Territories\n- Italy\n- Ivory Coast (Côte d'Ivoire)\n- Jamaica\n- Japan\n- Jordan\n- Kazakhstan\n- Kenya\n- Kosovo\n- Kuwait\n- Kyrgyzstan\n- Laos\n- Latvia\n- Lebanon\n- Lesotho\n- Liberia\n- Libya\n- Liechtenstein\n- Lithuania\n- Luxembourg\n- Republic of Macedonia\n- Madagascar\n- Malawi\n- Malaysia\n- Maldives\n- Mali\n- Malta\n- Martinique\n- Mauritania\n- Mauritius\n- Mayotte\n- Mexico\n- Moldova\n- Monaco\n- Mongolia\n- Montenegro\n- Montserrat\n- Morocco\n- Mozambique\n- Namibia\n- Nepal\n- Netherlands\n- New Zealand\n- Nicaragua\n- Niger\n- Nigeria\n- North Korea\n- Norway\n- Oman\n- Pacific Islands\n- Pakistan\n- Panama\n- Papua New Guinea\n- Paraguay\n- Peru\n- Philippines\n- Poland\n- Portugal\n- Puerto Rico\n- Qatar\n- Réunion\n- Romania\n- Russian Federation\n- Rwanda\n- Saint Kitts and Nevis\n- Saint Lucia\n- Saint Vincent & the Grenadines\n- Samoa\n- São Tomê and Príncipe\n- Saudi Arabia\n- Senegal\n- Serbia\n- Seychelles\n- Sierra Leone\n- Singapore\n- Slovakia\n- Slovenia\n- Solomon Islands\n- Somalia\n- South Africa\n- South Korea\n- South Sudan\n- Spain\n- Sri Lanka\n- Sudan\n- Suriname\n- Swaziland\n- Sweden\n- Switzerland\n- Syria\n- Tajikistan\n- Tanzania\n- Thailand\n- Timor Leste\n- Togo\n- Trinidad & Tobago\n- Tunisia\n- Turkey\n- Turkmenistan\n- Turks & Caicos Islands\n- Uganda\n- Ukraine\n- United Arab Emirates\n- United States of America\n- Uruguay\n- Uzbekistan\n- Venezuela\n- Vietnam\n- Virgin Islands (UK)\n- Virgin Islands (U.S.)\n- Yemen\n- Zambia\n- Zimbabwe",
@@ -5592,7 +5541,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 329,
+                'id' => 326,
                 'code' => "PD6806",
                 'name' => "Client State/Province/Region",
                 'definition' => "States or provinces where the organization's products/services are purchased/used.",
@@ -5609,7 +5558,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 330,
+                'id' => 327,
                 'code' => "PD7899",
                 'name' => "Product/Service Description",
                 'definition' => "Describes (qualitatively) the product or service provided by the organization.",
@@ -5626,7 +5575,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 331,
+                'id' => 328,
                 'code' => "PD7993",
                 'name' => "Client Type",
                 'definition' => "Describes the types of entities that are buyers or recipients of the organization's products/services. Select all that apply:\n\n- Individuals\n- Households \n- Microenterprises \n- Small and Medium-Sized Enterprises \n- Large Enterprises \n- Nonprofit/Non-Governmental Organizations\n- Governmental Organizations\n- Other",
@@ -5643,7 +5592,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 332,
+                'id' => 329,
                 'code' => "PD8808",
                 'name' => "Sector of Operations",
                 'definition' => "Describes the sector(s) in which the organization focuses its operations. Select all that apply:\nA. Agriculture, forestry, and fishing\nB. Mining and quarrying\nC. Manufacturing\nD. Electricity, gas, steam, and air conditioning supply\nE. Water supply; sewerage, waste management, and remediation activities\nF. Construction\nG. Wholesale and retail trade; repair of motor vehicles and motorcycles\nH. Transportation and storage\nI. Accommodation and food service activities\nJ. Information and communication\nK. Financial and insurance activities\nL. Real estate activities\nM. Professional, scientific, and technical activities\nN. Administrative and support service activities\nO. Public administration and defense; compulsory social security\nP. Education\nQ. Human health and social work activities\nR. Arts, entertainment, and recreation\nS. Other service activities\nT. Activities of households as employers; undifferentiated goods and services producing activities of households for own use\nU. Activities of extraterritorial organizations and bodies\nV. Other (describe)",
@@ -5660,7 +5609,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 333,
+                'id' => 330,
                 'code' => "PI1060",
                 'name' => "Distributor Organizations: Total",
                 'definition' => "Number of enterprises that served as distributors of the organization's products/services during the reporting period.",
@@ -5677,7 +5626,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 334,
+                'id' => 331,
                 'code' => "PI1160",
                 'name' => "Distributor Individuals: Disabilities",
                 'definition' => "Number of individuals with disabilities who served as distributors of the organization’s products/services during the reporting period.",
@@ -5694,7 +5643,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 335,
+                'id' => 332,
                 'code' => "PI1263",
                 'name' => "Units/Volume Sold: Total",
                 'definition' => "Amount of the product/service sold by the organization during the reporting period.",
@@ -5711,7 +5660,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 336,
+                'id' => 333,
                 'code' => "PI1290",
                 'name' => "Units/Volume Produced",
                 'definition' => "Amount of the product/service produced by the organization during the reporting period.",
@@ -5728,7 +5677,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 337,
+                'id' => 334,
                 'code' => "PI1492",
                 'name' => "Payments to Supplier Individuals: Total",
                 'definition' => "Value of payments made by the organization to individuals who sold to the organization during the reporting period.",
@@ -5745,7 +5694,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 338,
+                'id' => 335,
                 'code' => "PI1728",
                 'name' => "Supplier Individuals: Female",
                 'definition' => "Number of female individuals who sold goods or services to the organization during the reporting period.",
@@ -5762,7 +5711,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 339,
+                'id' => 336,
                 'code' => "PI1849",
                 'name' => "Payments to Supplier Organizations: Local",
                 'definition' => "Value of payments made to local enterprises that sold goods or services to the organization during the reporting period.",
@@ -5779,7 +5728,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 340,
+                'id' => 337,
                 'code' => "PI1997",
                 'name' => "Purchase Price of Product or Service Replaced",
                 'definition' => "Indicates the average price paid in the local market by clients for a product/service that is similar to the product/service sold by the organization.",
@@ -5796,7 +5745,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 341,
+                'id' => 338,
                 'code' => "PI2125",
                 'name' => "Distributor Individuals: Low Income",
                 'definition' => "Number of low-income individuals who served as distributors of the organization's products/services during the reporting period.",
@@ -5813,7 +5762,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 342,
+                'id' => 339,
                 'code' => "PI2242",
                 'name' => "Supplier Individuals: Poor",
                 'definition' => "Number of poor individuals who sold goods or services to the organization during the reporting period.",
@@ -5830,7 +5779,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 343,
+                'id' => 340,
                 'code' => "OD0660",
                 'name' => "Jobs Type",
                 'definition' => "Describes the type of jobs supported, created, maintained, or lost during the reporting period.\n\nChoose all that apply:\n\nPermanence: \n- Permanent \n- Temporary (seasonal or repeated) \n- Temporary (one-time) \n- Other\n\nHiring: \n- Jobs hired through organization itself \n- Jobs hired/supported through a third-party and directly related to the organization’s operations and maintenance \n- Jobs hired/supported through a third-party but not directly related to the organization’s operations and maintenance \n- Other\n\nFull-Time/Part-Time: \n- Full-time \n- Part-time\n- Other",
@@ -5847,7 +5796,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 344,
+                'id' => 341,
                 'code' => "PI2251",
                 'name' => "Jobs Created at Directly Supported/Financed Enterprises: Low-Income Areas",
                 'definition' => "Net number of new, full-time equivalent employees living in low-income areas and working for enterprises directly financed or supported by the organization during the reporting period.\n\nMany organizations select the beginning of the reporting period as the time when the organization began its support or investment.",
@@ -5864,7 +5813,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 345,
+                'id' => 342,
                 'code' => "PI2302",
                 'name' => "Payments to Supplier Individuals: Female",
                 'definition' => "Value of payments made by the organization to female individuals who sold goods or services to the organization during the reporting period.",
@@ -5881,7 +5830,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 346,
+                'id' => 343,
                 'code' => "PI2551",
                 'name' => "Earnings of Distributor Individuals: Female",
                 'definition' => "Earnings of female individual distributors as a result of selling the organization’s products/services during the reporting period.",
@@ -5898,7 +5847,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 347,
+                'id' => 344,
                 'code' => "PI2566",
                 'name' => "Supplier Individuals: Rural",
                 'definition' => "Number of individuals residing in rural areas who sold goods or services to the organization during the reporting period.",
@@ -5915,7 +5864,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 348,
+                'id' => 345,
                 'code' => "PI2594",
                 'name' => "Earnings of Distributor Individuals: Low Income",
                 'definition' => "Earnings of low-income individual distributors as a result of selling the organization’s products/services during the reporting period.",
@@ -5932,7 +5881,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 349,
+                'id' => 346,
                 'code' => "PI2688",
                 'name' => "Jobs Maintained at Directly Supported/Financed Enterprises: Low-Income Areas",
                 'definition' => "Number of full-time equivalent employees who reside in low-income areas and work for enterprises directly financed or supported by the organization at the beginning of the reporting period and who remain at the organization as of the end of the reporting period.\n\nMany organizations select the beginning of the reporting period as the time when the organization began its support or investment.",
@@ -5949,7 +5898,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 350,
+                'id' => 347,
                 'code' => "PI2758",
                 'name' => "Distributor Individuals: Total",
                 'definition' => "Number of individuals who served as distributors of the organization’s products/services during the reporting period.",
@@ -5966,7 +5915,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 351,
+                'id' => 348,
                 'code' => "PI2888",
                 'name' => "Earnings of Distributor Organizations: SME",
                 'definition' => "Earnings of distributors that are small and medium-sized enterprises (SME) as a result of selling the organization’s products/services during the reporting period.",
@@ -5983,7 +5932,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 352,
+                'id' => 349,
                 'code' => "PI2998",
                 'name' => "Individuals Trained: Total",
                 'definition' => "Number of individuals who received training offered by the organization during the reporting period.",
@@ -6000,7 +5949,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 353,
+                'id' => 350,
                 'code' => "PI3016",
                 'name' => "Supplier Screening Ratio",
                 'definition' => "Percentage of supplier organizations during the reporting period that were screened using social and/or environmental criteria.",
@@ -6017,7 +5966,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 354,
+                'id' => 351,
                 'code' => "PI3180",
                 'name' => "Revenue Generated at Directly Supported/Financed Enterprises",
                 'definition' => "Revenue of enterprises financed or supported by the organization during the reporting period.",
@@ -6034,7 +5983,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 355,
+                'id' => 352,
                 'code' => "PI3406",
                 'name' => "Payments to Supplier Individuals: Urban",
                 'definition' => "Value of payments made by the organization to individuals residing in urban areas who sold goods or services to the organization during the reporting period.",
@@ -6051,7 +6000,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 356,
+                'id' => 353,
                 'code' => "PI3527",
                 'name' => "Job Placement Rate",
                 'definition' => "Percentage of the organization’s clients who were placed in part-time, full-time, temporary, or permanent jobs during the reporting period.",
@@ -6068,7 +6017,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 357,
+                'id' => 354,
                 'code' => "PI3687",
                 'name' => "Jobs Created at Directly Supported/Financed Enterprises: Total",
                 'definition' => "Net number of new, full-time equivalent employees working for enterprises financed or supported by the organization during the reporting period.\n\nMany organizations select the beginning of the reporting period as the time when the organization began its support or investment.",
@@ -6085,7 +6034,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 358,
+                'id' => 355,
                 'code' => "PI3962",
                 'name' => "Earnings of Distributor Individuals: Poor",
                 'definition' => "Earnings of poor individual distributors as a result of selling the organization’s products/services during the reporting period.",
@@ -6102,7 +6051,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 359,
+                'id' => 356,
                 'code' => "PI3972",
                 'name' => "Distributor Individuals: Rural",
                 'definition' => "Number of individuals residing in rural areas who served as distributors of the organization’s products/services during the reporting period.",
@@ -6119,7 +6068,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 360,
+                'id' => 357,
                 'code' => "PI3995",
                 'name' => "Distributor Individuals: Peri-urban",
                 'definition' => "Number of individuals residing in peri-urban areas who served as distributors of the organization’s products/services during the reporting period.",
@@ -6136,7 +6085,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 361,
+                'id' => 358,
                 'code' => "PI4096",
                 'name' => "Payments to Supplier Individuals: Rural",
                 'definition' => "Value of payments made by the organization to individuals residing in rural areas who sold goods or services to the organization during the reporting period.",
@@ -6153,7 +6102,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 362,
+                'id' => 359,
                 'code' => "PI4128",
                 'name' => "Products Recalled",
                 'definition' => "Number of recalls of the organization’s products during the last reporting period.",
@@ -6170,7 +6119,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 363,
+                'id' => 360,
                 'code' => "PI4180",
                 'name' => "After-sale Client Support",
                 'definition' => "Indicates whether the organization provides support to its clients after a sale of its product/service.",
@@ -6187,7 +6136,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 364,
+                'id' => 361,
                 'code' => "PI4341",
                 'name' => "Earnings of Distributor Individuals: People with Disabilities",
                 'definition' => "Earnings of individual distributors with disabilities as a result of selling the organization’s products/services during the reporting period.",
@@ -6204,7 +6153,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 365,
+                'id' => 362,
                 'code' => "PI4874",
                 'name' => "Jobs in Directly Supported/Financed Enterprises",
                 'definition' => "Number of full-time equivalent employees working for enterprises financed or supported by the organization as of the end of the reporting period.",
@@ -6221,7 +6170,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 366,
+                'id' => 363,
                 'code' => "PI4881",
                 'name' => "Earnings of Distributor Individuals: Total",
                 'definition' => "Earnings of individual distributors as a result of selling the organization’s products/services during the reporting period.",
@@ -6238,7 +6187,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 367,
+                'id' => 364,
                 'code' => "PI5350",
                 'name' => "Supplier Individuals: Total",
                 'definition' => "Number of individuals who sold goods or services to the organization during the reporting period.",
@@ -6255,7 +6204,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 368,
+                'id' => 365,
                 'code' => "PI5352",
                 'name' => "Individuals Trained: Advisory Services",
                 'definition' => "Number of individuals who received one-on-one advisory services (sometimes called technical assistance) from the organization during the reporting period.",
@@ -6272,7 +6221,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 369,
+                'id' => 366,
                 'code' => "PI5391",
                 'name' => "Earnings of Distributor Individuals: Very Poor",
                 'definition' => "Earnings of very poor individual distributors as a result of selling the organization’s products/services during the reporting period.",
@@ -6289,7 +6238,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 370,
+                'id' => 367,
                 'code' => "PI5478",
                 'name' => "Payments to Supplier Organizations: Total",
                 'definition' => "Value of payments made to enterprises that sold goods or services to the organization during the reporting period.",
@@ -6306,7 +6255,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 371,
+                'id' => 368,
                 'code' => "PI5691",
                 'name' => "Jobs Maintained at Directly Supported/Financed Enterprises: Total",
                 'definition' => "Number of full-time equivalent employees working for enterprises financed or supported by the organization as of the end of the reporting period.",
@@ -6323,7 +6272,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 372,
+                'id' => 369,
                 'code' => "PI5920",
                 'name' => "Sales Revenue: Exports",
                 'definition' => "Value of the revenue from sales of exports of the product/service during the reporting period.",
@@ -6340,7 +6289,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 373,
+                'id' => 370,
                 'code' => "PI6065",
                 'name' => "Organizations Trained",
                 'definition' => "Number of organizations that received training from the organization during the reporting period.",
@@ -6357,7 +6306,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 374,
+                'id' => 371,
                 'code' => "PI6085",
                 'name' => "Supplier Individuals: Peri-urban",
                 'definition' => "Number of individuals residing in peri-urban areas who sold goods or services to the organization during the reporting period.",
@@ -6374,7 +6323,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 375,
+                'id' => 372,
                 'code' => "PI6179",
                 'name' => "Supplier Individuals: Urban",
                 'definition' => "Number of individuals residing in urban areas who sold goods or services to the organization during the reporting period.",
@@ -6391,7 +6340,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 376,
+                'id' => 373,
                 'code' => "PI6189",
                 'name' => "Supplier Individuals: People with Disabilities",
                 'definition' => "Number of individuals with disabilities who sold goods or services to the organization during the reporting period.",
@@ -6408,7 +6357,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 377,
+                'id' => 374,
                 'code' => "PI6218",
                 'name' => "Earnings of Distributor Organizations: Total",
                 'definition' => "Earnings of distributor enterprises as a result of selling the organization’s products/services during the reporting period.",
@@ -6425,7 +6374,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 378,
+                'id' => 375,
                 'code' => "PI6385",
                 'name' => "Supplier Organizations: Local",
                 'definition' => "Number of local enterprises that sold goods or services to the organization during the reporting period.",
@@ -6442,7 +6391,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 379,
+                'id' => 376,
                 'code' => "PI6659",
                 'name' => "Distributor Individuals: Female",
                 'definition' => "Number of female individuals who served as distributors of the organization’s products/services during the reporting period.",
@@ -6459,7 +6408,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 380,
+                'id' => 377,
                 'code' => "PI6858",
                 'name' => "Payments to Supplier Individuals: People with Disabilities",
                 'definition' => "Value of payments made by the organization to individuals with disabilities who sold goods or services to the organization during the reporting period.",
@@ -6476,7 +6425,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 381,
+                'id' => 378,
                 'code' => "PI6941",
                 'name' => "Cost Transparency",
                 'definition' => "Indicates whether the organization fully discloses all pricing and cost information for its products and services to its clients.",
@@ -6493,7 +6442,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 382,
+                'id' => 379,
                 'code' => "PI7163",
                 'name' => "Target Stakeholder Satisfaction Ratio",
                 'definition' => "Score reflecting the percentage of the organization’s target stakeholders who are likely to recommend the organization’s product or service as of the end of the reporting period, compared with the percentage who are unlikely to recommend it.",
@@ -6510,7 +6459,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 383,
+                'id' => 380,
                 'code' => "PI3291",
                 'name' => "Client Time Savings",
                 'definition' => "Number of hours saved by clients as a result of the organization’s products and services during the reporting period.",
@@ -6527,7 +6476,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 384,
+                'id' => 381,
                 'code' => "PI7289",
                 'name' => "Units/Volume Sold: Certified",
                 'definition' => "Amount of the product/service sold by the organization as certified during the reporting period.",
@@ -6544,7 +6493,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 385,
+                'id' => 382,
                 'code' => "PI7321",
                 'name' => "Sales Revenue: Certified",
                 'definition' => "Value of revenue received from sales of the organization’s certified products during the reporting period.",
@@ -6561,7 +6510,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 386,
+                'id' => 383,
                 'code' => "PI7643",
                 'name' => "Purchase Price of Product or Service Sold",
                 'definition' => "Value of the purchase price paid by clients for a product or service sold by the organization.",
@@ -6578,7 +6527,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 387,
+                'id' => 384,
                 'code' => "PI7814",
                 'name' => "Payments to Supplier Individuals: Historically Marginalized",
                 'definition' => "Value of payments made by the organization to individuals who belong to groups historically marginalized on the basis of race and/or ethnicity and who sold goods or services to the organization during the reporting period.",
@@ -6595,7 +6544,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 388,
+                'id' => 385,
                 'code' => "PI7815",
                 'name' => "Payments to Supplier Individuals: Poor",
                 'definition' => "Value of payments made by the organization to poor individuals who sold goods or services to the organization during the reporting period.",
@@ -6612,7 +6561,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 389,
+                'id' => 386,
                 'code' => "PI7834",
                 'name' => "Product/Service Warranty",
                 'definition' => "Indicates whether the organization provides a warranty for its product or service.",
@@ -6629,7 +6578,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 390,
+                'id' => 387,
                 'code' => "PI7867",
                 'name' => "Payments to Supplier Organizations: SME",
                 'definition' => "Value of payments to small and medium-sized enterprises (SMEs) that sold goods or services to the organization during the reporting period.",
@@ -6646,7 +6595,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 391,
+                'id' => 388,
                 'code' => "PI7997",
                 'name' => "Individuals Trained: Group-Based Training",
                 'definition' => "Number of individuals who received group-based training from the organization during the reporting period.",
@@ -6663,7 +6612,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 392,
+                'id' => 389,
                 'code' => "PI8021",
                 'name' => "Earnings of Distributor Organizations: Microenterprises",
                 'definition' => "Earnings of microenterprise distributors as a result of selling the organization’s products/services during the reporting period.",
@@ -6680,7 +6629,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 393,
+                'id' => 390,
                 'code' => "PI8163",
                 'name' => "Client Households: Rural",
                 'definition' => "Number of unique households in rural areas that were clients of the organization during the reporting period.",
@@ -6697,7 +6646,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 394,
+                'id' => 391,
                 'code' => "PI8168",
                 'name' => "Percent Revenue Generated from Social/Environmental Products and Services",
                 'definition' => "Percentage of revenue that the organization earns from projects and services designed to deliver a specific social or environmental benefit during the reporting period.",
@@ -6714,7 +6663,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 395,
+                'id' => 392,
                 'code' => "PI8329",
                 'name' => "Units/Volume Sold: Free",
                 'definition' => "Amount of the product/service provided by the organization for free during the reporting period.",
@@ -6731,7 +6680,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 396,
+                'id' => 393,
                 'code' => "PI8337",
                 'name' => "Supplier Individuals: Very Poor",
                 'definition' => "Number of very poor individuals who sold goods or services to the organization during the reporting period.",
@@ -6748,7 +6697,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 397,
+                'id' => 394,
                 'code' => "PI8415",
                 'name' => "Distributor Organizations: Microenterprises",
                 'definition' => "Number of microenterprises that served as distributors of the organization’s products/services during the reporting period.",
@@ -6765,7 +6714,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 398,
+                'id' => 395,
                 'code' => "PI8454",
                 'name' => "Units/Volume Sold: No Direct Payment",
                 'definition' => "Amount of the product/service sold during the reporting period for which no direct payment was provided to the organization at the time of service but for which the organization expects to be reimbursed.",
@@ -6782,7 +6731,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 399,
+                'id' => 396,
                 'code' => "PI8470",
                 'name' => "Distributor Individuals: Historically Marginalized",
                 'definition' => "Number of individuals who belong to groups historically marginalized on the basis of race and/or ethnicity and who served as distributors of the organization’s products/services during the reporting period.",
@@ -6799,7 +6748,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 400,
+                'id' => 397,
                 'code' => "PI8785",
                 'name' => "Number of Insurance Policies",
                 'definition' => "Number of insurance policies managed by the organization as of the end of the reporting period.",
@@ -6816,7 +6765,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 401,
+                'id' => 398,
                 'code' => "PI8819",
                 'name' => "Supplier Individuals: Low Income",
                 'definition' => "Number of low-income individuals who sold goods or services to the organization during the reporting period.",
@@ -6833,7 +6782,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 402,
+                'id' => 399,
                 'code' => "PI8943",
                 'name' => "Earnings of Distributor Individuals: Rural",
                 'definition' => "Earnings of individual distributors residing in rural areas as a result of selling the organization’s products/services during the reporting period.",
@@ -6850,7 +6799,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 403,
+                'id' => 400,
                 'code' => "PI8982",
                 'name' => "Distributor Individuals: Urban",
                 'definition' => "Number of individuals residing in urban areas who served as distributors of the organization’s products/services during the reporting period.",
@@ -6867,7 +6816,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 404,
+                'id' => 401,
                 'code' => "PI8999",
                 'name' => "Payments to Supplier Individuals: Low Income",
                 'definition' => "Value of payments made by the organization to low-income individuals who sold goods or services to the organization during the reporting period.",
@@ -6884,7 +6833,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 405,
+                'id' => 402,
                 'code' => "PI9029",
                 'name' => "Units/Volume Sold: Exported",
                 'definition' => "Amount of the product/service exported by the organization during the reporting period.",
@@ -6901,7 +6850,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 406,
+                'id' => 403,
                 'code' => "PI9048",
                 'name' => "Payments to Supplier Individuals: Very Poor",
                 'definition' => "Value of payments made by the organization to very poor individuals who sold goods or services to the organization during the reporting period.",
@@ -6918,7 +6867,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 407,
+                'id' => 404,
                 'code' => "PI9113",
                 'name' => "Distributor Individuals: Very Poor",
                 'definition' => "Number of very poor individuals who served as distributors of the organization’s products/services during the reporting period.",
@@ -6935,7 +6884,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 408,
+                'id' => 405,
                 'code' => "PI9261",
                 'name' => "Supplier Individuals: Historically Marginalized",
                 'definition' => "Number of individuals who belong to groups historically marginalized on the basis of race and/or ethnicity and who sold goods or services to the organization during the reporting period.",
@@ -6952,7 +6901,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 409,
+                'id' => 406,
                 'code' => "PI9401",
                 'name' => "Distributor Organizations: SME",
                 'definition' => "Number of small and medium-sized enterprises (SMEs) that served as distributors of the organization’s products/services during the reporting period.",
@@ -6969,7 +6918,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 410,
+                'id' => 407,
                 'code' => "PI9435",
                 'name' => "Client Complaint Tracking System",
                 'definition' => "Indicates whether the organization has a system in place to receive and resolve client complaints.",
@@ -6986,7 +6935,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 411,
+                'id' => 408,
                 'code' => "PI9467",
                 'name' => "Gender Ratio of Promotions",
                 'definition' => "Ratio between the number of female employees promoted from within the organization and the number of non-female employees promoted from within the organization during the reporting period.",
@@ -7003,7 +6952,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 412,
+                'id' => 409,
                 'code' => "PI9495",
                 'name' => "Supplier Organizations: SME",
                 'definition' => "Number of small and medium-sized enterprises (SMEs) that sold goods or services to the organization during the reporting period.",
@@ -7020,7 +6969,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 413,
+                'id' => 410,
                 'code' => "PI9516",
                 'name' => "Distributor Individuals: Poor",
                 'definition' => "Number of poor individuals who served as distributors of the organization’s products/services during the reporting period.",
@@ -7037,7 +6986,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 414,
+                'id' => 411,
                 'code' => "PI9566",
                 'name' => "Supplier Organizations: Total",
                 'definition' => "Number of enterprises that sold goods or services to the organization during the reporting period.",
@@ -7054,7 +7003,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 415,
+                'id' => 412,
                 'code' => "PI9626",
                 'name' => "Target Stakeholder Spending: Total",
                 'definition' => "Average amount of money spent by target stakeholders during the reporting period.",
@@ -7071,7 +7020,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 416,
+                'id' => 413,
                 'code' => "PI9654",
                 'name' => "Earnings of Distributor Individuals: Historically Marginalized",
                 'definition' => "Earnings of individuals who belong to groups historically marginalized due to race and/or ethnicity as a result of selling the organization’s products/services during the reporting period.",
@@ -7088,7 +7037,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 417,
+                'id' => 414,
                 'code' => "PI9676",
                 'name' => "Earnings of Distributor Individuals: Urban",
                 'definition' => "Earnings of individual distributors residing in urban areas as a result of selling the organization’s products/services during the reporting period.",
@@ -7105,7 +7054,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 418,
+                'id' => 415,
                 'code' => "PI9850",
                 'name' => "Payments to Supplier Individuals: Peri-Urban",
                 'definition' => "Value of payments made by the organization to individuals residing in peri-urban areas who sold goods or services to the organization during the reporting period.",
@@ -7122,7 +7071,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 419,
+                'id' => 416,
                 'code' => "PI9973",
                 'name' => "Earnings of Distributor Individuals: Peri-urban",
                 'definition' => "Value of payments made by the organization to individuals residing in peri-urban areas who sold goods or services to the organization during the reporting period.",
@@ -7139,7 +7088,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 420,
+                'id' => 417,
                 'code' => "PI5297",
                 'name' => "Client Individuals: Forcibly Displaced",
                 'definition' => "Number of unique individuals who were forcibly displaced and were clients of the organization during the reporting period.",
@@ -7156,7 +7105,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 421,
+                'id' => 418,
                 'code' => "PI1297",
                 'name' => "Individuals Displaced: Total",
                 'definition' => "Number of individuals displaced as a result of projects supported/financed by the organization during the reporting period.",
@@ -7173,7 +7122,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 422,
+                'id' => 419,
                 'code' => "PI3009",
                 'name' => "Individuals Displaced: Compensated",
                 'definition' => "Number of individuals displaced as a result of projects supported/financed by the organization who were compensated for their displacement during the reporting period. Organizations should include type and amount of compensation in footnotes.",
@@ -7190,7 +7139,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 423,
+                'id' => 420,
                 'code' => "OI1619",
                 'name' => "Value of Community Development Contributions",
                 'definition' => "Value of payments made by the organization during the reporting period towards activities that benefit local communities.",
@@ -7207,7 +7156,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 424,
+                'id' => 421,
                 'code' => "OI3441",
                 'name' => "New Market Entered",
                 'definition' => "Describes whether the organization entered a new market during the reporting period.",
@@ -7224,7 +7173,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 425,
+                'id' => 422,
                 'code' => "OI4211",
                 'name' => "Market Share Increased",
                 'definition' => "Describes whether the organization expanded operations and increased market share during the reporting period in a concentrated market in which the organization was not a dominant player.",
@@ -7241,7 +7190,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 426,
+                'id' => 423,
                 'code' => "OI4718",
                 'name' => "Business Innovation",
                 'definition' => "Describes whether the organization adopted or operationalized a product, internal process, technology, or financing structure that was new or not widely used in the operating geography and sector during the reporting period.\n\nIn order to contextualize the innovation, specify whether it was previously available in the operating geography and sector, by Impact Category:\n\nFinancial Services:\n- Yes, by non-predatory informal alternatives such as family, friends, and community savings groups\n- Yes, by predatory informal alternatives such as loan sharks\n- Yes, there are a few other formal alternatives, but the market is young and not saturated\n- Yes, it is a mature market with several other formal alternatives, but the market is not saturated\n- Yes, there are several other formal alternatives and the market presents high saturation risk\n- None, our investee is the sole provider\n\nClean Energy:\n- Yes, there are several other clean, on-grid alternatives and the market presents high saturation risk\n- Yes, it is a mature market with several alternatives (both clean and dirty; on- and off-grid), but the market is not saturated\n- Yes, there are a few other clean energy alternatives, but the market is young and not saturated\n- Yes, by informal alternatives which tend to be non-renewable and off-grid\n- None, our investee is the sole provider\n\n\nOther:\n- Other (write-in)",
@@ -7258,7 +7207,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 427,
+                'id' => 424,
                 'code' => "OI0685",
                 'name' => "Market Linkages Improved or Expanded",
                 'definition' => "Describes whether the organization improved existing market linkages or engaged new or additional forward or backward market linkages, including through its own integration, during the reporting period.",
@@ -7275,7 +7224,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 428,
+                'id' => 425,
                 'code' => "OI3141",
                 'name' => "New Firms Entered",
                 'definition' => "Describes whether additional private sector firms entered the market in which the organization operates during the reporting period.",
@@ -7292,7 +7241,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 429,
+                'id' => 426,
                 'code' => "PD2854",
                 'name' => "Target Area Ecoregion",
                 'definition' => "Describes the ecoregions the organization seeks to benefit as of the end of the reporting period. \n\nChoose all that apply: \n\nTerrestrial Ecoregions\n- Deserts and xeric shrublands\n- Tropical and subtropical moist broadleaf forests\n- Tropical and subtropical dry broadleaf forests\n- Tropical and subtropical coniferous forests\n- Temperate broadleaf and mixed forests\n- Temperate coniferous forest\n- Boreal forests/Taiga\n- Tropical and subtropical grasslands, savannas and shrublands\n- Temperate grasslands, savannas and shrublands\n- Flooded grasslands and savannas\n- Montane grasslands and shrublands\n- Tundra\n- Mediterranean forests, woodlands, and scrubs\n- Mangroves\n- Other terrestrial ecoregion (describe)\n\nFreshwater Ecoregions \n- Large river ecosystems\n- Large river headwater ecosystems\n- Large river delta ecosystems\n- Small river ecosystems\n- Large lake ecosystems\n- Small lake ecosystems\n- Xeric basin ecosystems\n- Other freshwater ecoregion (describe)\n\nMarine Ecoregions\n- Polar ecoregions\n- Temperate shelf and seas ecoregions\n- Temperate upwellings\n- Tropical upwellings\n- Tropical coral\n- Other marine ecoregion (describe)",
@@ -7309,7 +7258,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 430,
+                'id' => 427,
                 'code' => "PD1676",
                 'name' => "Target Area Protected Status",
                 'definition' => "Describes the protected status of the land the organization seeks to benefit during the reporting period.\n\nChoose all that apply:\n\n- Strict Nature Reserve (IUCN Category 1a)\n- Wilderness Area (IUCN Category Ib)\n- National Park (IUCN Category II)\n- Natural Monument or Feature (IUCN Category III)\n- Habitat/Species Management Area (IUCN Category IV)\n- Protected Landscape/Seascape (IUCN Category V)\n- Protected Area with Sustainable Use of Natural Resources (Category VI)\n- No Current Protections\n- Other (describe)",
@@ -7326,7 +7275,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 431,
+                'id' => 428,
                 'code' => "OI6978",
                 'name' => "Temporary Employees: Female",
                 'definition' => "Number of female temporary employees paid by the organization during the reporting period.",
@@ -7343,7 +7292,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 432,
+                'id' => 429,
                 'code' => "OI2767",
                 'name' => "Protected Area Connectedness Assessment",
                 'definition' => "Describes whether the organization has evaluated the continuity of natural habitats in protected areas as of the end of the reporting period.",
@@ -7360,7 +7309,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 433,
+                'id' => 430,
                 'code' => "OD4232",
                 'name' => "Women's Career Advancement Initiative",
                 'definition' => "Indicates whether the organization has an initiative in place to advance women in their workforce.",
@@ -7377,7 +7326,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 434,
+                'id' => 431,
                 'code' => "OI8197",
                 'name' => "Founders: Female",
                 'definition' => "Number of the organization’s founders who are female and retain an active role in the company as of the end of the reporting period.",
@@ -7394,7 +7343,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 435,
+                'id' => 432,
                 'code' => "OI8709",
                 'name' => "Investment Committee Members: Female",
                 'definition' => "Number of female members of the organization’s investment committee as of the end of the reporting period.",
@@ -7411,7 +7360,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 436,
+                'id' => 433,
                 'code' => "PD5677",
                 'name' => "Product Targeted to Women",
                 'definition' => "Indicates whether the organization offers a product or service that disproportionately benefits women.",
@@ -7428,7 +7377,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 437,
+                'id' => 434,
                 'code' => "PI8069",
                 'name' => "School Enrollment: Urban",
                 'definition' => "Number of students residing in urban areas enrolled as of the end of the reporting period, both full- and part-time, with each discrete student counted once regardless of their number of courses.",
@@ -7445,7 +7394,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 438,
+                'id' => 435,
                 'code' => "OI5896",
                 'name' => "Teachers Employed",
                 'definition' => "Number of full- and part-time teachers employed by the organization as of the end of the reporting period.",
@@ -7462,24 +7411,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 439,
-                'code' => "PD1392",
-                'name' => "Parent/Community-Teacher Engagement",
-                'definition' => "NOTE: this metric has been discontinued.",
-                'calculation' => null,
-                'usage_guidance' => "This metric is intended to capture context on the relationship between teachers and parents of students or the broader community.\n\nOrganizations are encouraged to report the frequency and nature of parental and community engagement with teachers in their annual or impact reports. For example, the National Parent Teacher Association in the United States discloses the number and nature of teacher and parental activities every year.",
-                'social' => true,
-                'environmental' => false,
-                'section' => "Product Description",
-                'subsection' => "Product/Service Information",
-                'level_type' => 1,
-                'related_metrics_code' => null,
-                'metric_level' => "Product/Service, Organization",
-                'quantity_type' => "Stock",
-                'reporting_format' => "Text",
-            ],
-            [
-                'id' => 440,
+                'id' => 436,
                 'code' => "PD4120",
                 'name' => "Hours of School Offered per Week",
                 'definition' => "Number of classroom hours offered to a representative student each week during the reporting period.",
@@ -7496,7 +7428,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 441,
+                'id' => 437,
                 'code' => "PD8635",
                 'name' => "Days of School Offered per Year",
                 'definition' => "Number of days of school offered by the organization each year.",
@@ -7513,7 +7445,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 442,
+                'id' => 438,
                 'code' => "PD9759",
                 'name' => "Extracurricular Programs Offered",
                 'definition' => "Describes the extracurricular activities that the organization offers to students.",
@@ -7530,7 +7462,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 443,
+                'id' => 439,
                 'code' => "PI1081",
                 'name' => "School Enrollment: Female",
                 'definition' => "Number of female students enrolled as of the end of the reporting period, both full- and part-time, with each discrete student counted once regardless of their number of courses.",
@@ -7547,7 +7479,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 444,
+                'id' => 440,
                 'code' => "PI1136",
                 'name' => "Student Transportation",
                 'definition' => "Indicates if the organization provided transportation to students that needed or requested it during the reporting period.",
@@ -7564,7 +7496,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 445,
+                'id' => 441,
                 'code' => "PI1902",
                 'name' => "Teachers Qualified",
                 'definition' => "Number of teachers at the organizations as of the end of the reporting period who have obtained training or have qualifications that meet or exceed the minimum requirements of the local area.",
@@ -7581,7 +7513,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 446,
+                'id' => 442,
                 'code' => "PI2173",
                 'name' => "School Enrollment: Low Income",
                 'definition' => "Number of low-income students enrolled as of the end of the reporting period, both full- and part-time, with each discrete student counted once regardless of their number of courses.",
@@ -7598,7 +7530,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 447,
+                'id' => 443,
                 'code' => "PI2389",
                 'name' => "School Enrollment: Total",
                 'definition' => "Number of students enrolled as of the end of the reporting period, both full- and part-time, with each discrete student counted once regardless of their number of courses.",
@@ -7615,7 +7547,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 448,
+                'id' => 444,
                 'code' => "PI2718",
                 'name' => "School Fees",
                 'definition' => "Average school fees per student per month during the reporting period.",
@@ -7632,7 +7564,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 449,
+                'id' => 445,
                 'code' => "PI3337",
                 'name' => "School Enrollment: Peri-urban",
                 'definition' => "Number of students residing in peri-urban areas enrolled as of the end of the reporting period, both full- and part-time, with each discrete student counted once regardless of their number of courses.",
@@ -7649,7 +7581,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 450,
+                'id' => 446,
                 'code' => "PI3499",
                 'name' => "Students Provided Partial Scholarship",
                 'definition' => "Number of students receiving partial scholarships during the reporting period.",
@@ -7666,7 +7598,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 451,
+                'id' => 447,
                 'code' => "PI3651",
                 'name' => "Teacher Attendance Rate",
                 'definition' => "Rate of teacher attendance during the reporting period.",
@@ -7683,7 +7615,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 452,
+                'id' => 448,
                 'code' => "PI3786",
                 'name' => "Student Attendance Rate",
                 'definition' => "Rate of student attendance during the reporting period.",
@@ -7700,7 +7632,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 453,
+                'id' => 449,
                 'code' => "PI4243",
                 'name' => "Student to Toilet Ratio",
                 'definition' => "Number of students per functioning toilet during the reporting period.",
@@ -7717,7 +7649,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 454,
+                'id' => 450,
                 'code' => "PI4279",
                 'name' => "Educational Resource to Student Ratio",
                 'definition' => "Number of textbooks or digital educational resources per student provided by the organization during the reporting period.",
@@ -7734,7 +7666,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 455,
+                'id' => 451,
                 'code' => "PI4509",
                 'name' => "Students Provided Full Scholarship",
                 'definition' => "Number of students receiving full scholarship during the reporting period.",
@@ -7751,7 +7683,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 456,
+                'id' => 452,
                 'code' => "PI4554",
                 'name' => "Value of New Education Facility Materials",
                 'definition' => "Value of new educational facility materials provided to students by the organization during the reporting period.",
@@ -7768,7 +7700,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 457,
+                'id' => 453,
                 'code' => "PI4555",
                 'name' => "Percent Students Receiving Free and Subsidized School Meals",
                 'definition' => "Percentage of students receiving free and subsidized school meals as of the end of the reporting period.",
@@ -7785,7 +7717,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 458,
+                'id' => 454,
                 'code' => "PI4924",
                 'name' => "Student Promotion Rate",
                 'definition' => "Percentage of students advancing from one grade of schooling to the next during the reporting period.",
@@ -7802,7 +7734,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 459,
+                'id' => 455,
                 'code' => "PI5110",
                 'name' => "Student to Teacher Ratio",
                 'definition' => "Number of students per teacher during the reporting period.",
@@ -7819,7 +7751,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 460,
+                'id' => 456,
                 'code' => "PI5380",
                 'name' => "Classroom Area per Student",
                 'definition' => "Area of classroom space per student during the reporting period.",
@@ -7836,7 +7768,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 461,
+                'id' => 457,
                 'code' => "PI5501",
                 'name' => "Student to Classroom Ratio",
                 'definition' => "Number of students per classroom during the reporting period.",
@@ -7853,7 +7785,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 462,
+                'id' => 458,
                 'code' => "PI5583",
                 'name' => "School Enrollment: Very Poor",
                 'definition' => "Number of very poor students enrolled as of the end of the reporting period, both full- and part-time, with each discrete student counted once regardless of their number of courses.",
@@ -7870,7 +7802,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 463,
+                'id' => 459,
                 'code' => "PI5736",
                 'name' => "Value of New Education Instructional Materials",
                 'definition' => "Value of new educational instructional materials provided to students by the organization during the reporting period.",
@@ -7887,7 +7819,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 464,
+                'id' => 460,
                 'code' => "PI5954",
                 'name' => "School Enrollment: People with Disabilities",
                 'definition' => "Number of students with disabilities enrolled as of the end of the reporting period, both full- and part-time, with each discrete student counted once regardless of their number of courses.",
@@ -7904,7 +7836,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 465,
+                'id' => 461,
                 'code' => "PI6569",
                 'name' => "School Enrollment: Rural",
                 'definition' => "Number of students residing in rural areas enrolled as of the end of the reporting period, both full- and part-time, with each discrete student counted once regardless of their number of courses.",
@@ -7921,7 +7853,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 466,
+                'id' => 462,
                 'code' => "PI6971",
                 'name' => "School Meals",
                 'definition' => "Number of free or subsidized meals provided by the organization during the reporting period.",
@@ -7938,7 +7870,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 467,
+                'id' => 463,
                 'code' => "PI7254",
                 'name' => "School Enrollment: Poor",
                 'definition' => "Number of poor students enrolled as of the end of the reporting period, both full- and part-time, with each discrete student counted once regardless of their number of courses.",
@@ -7955,7 +7887,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 468,
+                'id' => 464,
                 'code' => "PI7268",
                 'name' => "Classroom Space New/Improved",
                 'definition' => "Area of classroom space built, converted, or expanded for use within educational facilities during the reporting period. Report only space completed during the reporting period.",
@@ -7972,7 +7904,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 469,
+                'id' => 465,
                 'code' => "PI7774",
                 'name' => "School Enrollment: Historically Marginalized",
                 'definition' => "Number of students who belong to groups historically marginalized due to race and/or ethnicity and who are enrolled as of the end of the reporting period, both full- and part-time, with each discrete student counted once regardless of their number of courses.",
@@ -7989,7 +7921,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 470,
+                'id' => 466,
                 'code' => "PI7871",
                 'name' => "Teaching Experience",
                 'definition' => "Average number of years of formal education for teachers and instructors as of the end of the reporting period.",
@@ -8006,7 +7938,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 471,
+                'id' => 467,
                 'code' => "PI8372",
                 'name' => "Student Tests Pass Rate",
                 'definition' => "Percentage of students at a school passing standardized tests offered by a regional governance body during the reporting period.",
@@ -8023,7 +7955,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 472,
+                'id' => 468,
                 'code' => "PI8836",
                 'name' => "Vocational/Technical Training",
                 'definition' => "Number of students receiving vocational or technical training during the reporting period.",
@@ -8040,7 +7972,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 473,
+                'id' => 469,
                 'code' => "PI9910",
                 'name' => "Student Dropout Rate",
                 'definition' => "Percentage of students who were attending school at the beginning of the reporting period but who dropped out during the reporting period.",
@@ -8057,7 +7989,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 474,
+                'id' => 470,
                 'code' => "PI2250",
                 'name' => "Schooling Status",
                 'definition' => "Describes the schooling status of students served by the organization during the reporting period.\n\nChoose all that apply:\n\nEnrollment status:\n- Enrolled\n- Not enrolled\n- Other (describe)\n\nGrade promotion:\n- Promoted to next year of schooling\n- Repeated year of schooling\n- Dropped out\n- Graduated \n- Other (describe)",
@@ -8074,7 +8006,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 475,
+                'id' => 471,
                 'code' => "PI0045",
                 'name' => "Developmental Status",
                 'definition' => "Describes the developmental status of children served by the organization as of the end of the reporting period. \n\nChoose all that apply: \n- Developmentally on track overall\n- Developmentally on track in language\n- Developmentally on track in executive function\n- Developmentally on track in health\n- Developmentally on track in social and behavioral skills\n- Developmentally delayed\n- Other (describe)",
@@ -8091,7 +8023,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 476,
+                'id' => 472,
                 'code' => "PD0754",
                 'name' => "Learning Environment Quality Assessment",
                 'definition' => "Describes whether the organization has assessed the quality of the learning environment for children or learners who used the organization's products/services as of the end of the reporting period.",
@@ -8108,7 +8040,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 477,
+                'id' => 473,
                 'code' => "PD9911",
                 'name' => "Child Developmental Assessment",
                 'definition' => "Describes whether the organization has screened children who are using the organization's products/services for developmental progress and delays as of the end of the reporting period.",
@@ -8125,7 +8057,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 478,
+                'id' => 474,
                 'code' => "OI3115",
                 'name' => "Caregivers Employed: Responsive",
                 'definition' => "Number of caregivers who are responsive to children's needs and who are employed by the organization as of the end of the reporting period.",
@@ -8142,7 +8074,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 479,
+                'id' => 475,
                 'code' => "PD9173",
                 'name' => "Learning Hours Provided: Type",
                 'definition' => "Describes the type of learning time provided through the organization's products/services during the reporting period.\n\nChoose all that apply (see usage guidance for definitions): \n- School time\n- Instructional time\n- Engaged time/time-on-task\n- Supportive learning time\n- Other (describe)",
@@ -8159,7 +8091,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 480,
+                'id' => 476,
                 'code' => "PI9024",
                 'name' => "Average Student Test Score",
                 'definition' => "Average test score (as a percentage of a perfect score) earned by students served by the organization during the reporting period.",
@@ -8176,7 +8108,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 481,
+                'id' => 477,
                 'code' => "PI1836",
                 'name' => "Learning Hours",
                 'definition' => "Number of learning hours provided to students during the reporting period.",
@@ -8193,7 +8125,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 482,
+                'id' => 478,
                 'code' => "PI9465",
                 'name' => "Job Placements",
                 'definition' => "Number of the organization's clients who were placed in part-time, full-time, temporary, or permanent jobs during the reporting period.",
@@ -8210,7 +8142,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of reference within metric",
             ],
             [
-                'id' => 483,
+                'id' => 479,
                 'code' => "OI4564",
                 'name' => "Units/Volume Replaced",
                 'definition' => "Number of status-quo products that were replaced by products sold during the reporting period.",
@@ -8227,7 +8159,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 484,
+                'id' => 480,
                 'code' => "PI1509",
                 'name' => "Units/Volume Sold: Lost/Leaked",
                 'definition' => "Amount of the product/service provided by the organization for free as a result of loss or leakage during the reporting period.",
@@ -8244,7 +8176,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 485,
+                'id' => 481,
                 'code' => "OI5657",
                 'name' => "Total Personal Connectivity Devices",
                 'definition' => "Average number of connectivity devices utilized in each client household during the reporting period.",
@@ -8261,7 +8193,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 486,
+                'id' => 482,
                 'code' => "OI9206",
                 'name' => "Renewable Energy Expenditures",
                 'definition' => "Amount of money spent by the organization for renewable energy infrastructure and technology to produce energy intended for consumption at the organization's operating facilities during the reporting period.",
@@ -8278,7 +8210,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 487,
+                'id' => 483,
                 'code' => "PD1504",
                 'name' => "Energy Capacity of Products Sold",
                 'definition' => "Amount of energy potentially generated over the lifetime of products sold by the organization during the reporting period.",
@@ -8295,7 +8227,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 488,
+                'id' => 484,
                 'code' => "PD2713",
                 'name' => "Energy Capacity of Product",
                 'definition' => "Amount of energy potentially generated over the lifetime of a product based on its planned operation and context.",
@@ -8312,7 +8244,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 489,
+                'id' => 485,
                 'code' => "PD4927",
                 'name' => "Energy Savings from Services Sold",
                 'definition' => "Amount of energy savings due to the organization's services that were sold during the reporting period.",
@@ -8329,7 +8261,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 490,
+                'id' => 486,
                 'code' => "PD5578",
                 'name' => "Energy Consumption of Product Replaced",
                 'definition' => "Amount of energy that would have been consumed by the replaced product during the lifetime of the organization's product.",
@@ -8346,7 +8278,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 491,
+                'id' => 487,
                 'code' => "PD6596",
                 'name' => "Energy Consumption of Product",
                 'definition' => "Amount of energy consumed by the product during its lifetime.",
@@ -8363,7 +8295,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 492,
+                'id' => 488,
                 'code' => "PI2111",
                 'name' => "Target Stakeholder Spending: Connectivity",
                 'definition' => "Amount of money spent by an average target stakeholder on connectivity costs during the reporting period.",
@@ -8380,7 +8312,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 493,
+                'id' => 489,
                 'code' => "PI2210",
                 'name' => "Energy Generated for Sale: Non-Renewable",
                 'definition' => "Amount of non-renewable energy generated and sold to offtaker(s) during the reporting period.",
@@ -8397,7 +8329,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 494,
+                'id' => 490,
                 'code' => "PI3486",
                 'name' => "Product Hours of Light Available",
                 'definition' => "Number of hours of light available from the product during the reporting period.",
@@ -8414,7 +8346,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 495,
+                'id' => 491,
                 'code' => "PI5489",
                 'name' => "Target Stakeholder Spending: Energy",
                 'definition' => "Amount of money spent by the average target stakeholder on sources of energy during the reporting period.",
@@ -8431,7 +8363,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 496,
+                'id' => 492,
                 'code' => "PI5842",
                 'name' => "Energy Generated for Sale: Renewable",
                 'definition' => "Amount of renewable energy generated and sold to offtaker(s) during the reporting period.",
@@ -8448,7 +8380,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 497,
+                'id' => 493,
                 'code' => "PI7623",
                 'name' => "Energy Savings from Products Sold",
                 'definition' => "Amount of energy savings over the lifetime of products sold by the organization during the reporting period.",
@@ -8465,7 +8397,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 498,
+                'id' => 494,
                 'code' => "PI8706",
                 'name' => "Energy Generated for Sale: Total",
                 'definition' => "Amount of energy generated and sold to offtaker(s) during the reporting period.",
@@ -8482,7 +8414,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 499,
+                'id' => 495,
                 'code' => "FP1129",
                 'name' => "Loans Receivable Net",
                 'definition' => "Net value of the organization's loans receivable as of the end of the reporting period.",
@@ -8499,7 +8431,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 500,
+                'id' => 496,
                 'code' => "FP1192",
                 'name' => "Loan to Deposit (LTD) Ratio",
                 'definition' => "Ratio between the organization's loans receivable gross and its total deposits as of the end of the reporting period, used to assess an organization's liquidity.",
@@ -8516,7 +8448,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 501,
+                'id' => 497,
                 'code' => "FP1307",
                 'name' => "Capital Available: Total",
                 'definition' => "Value of capital available to the organization for lending and investing as of the end of the reporting period.",
@@ -8533,7 +8465,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 502,
+                'id' => 498,
                 'code' => "FP9573",
                 'name' => "Capital Expenditure (CapEx)",
                 'definition' => "Value of funds used by a company to acquire, upgrade, and maintain physical assets such as property, plants, buildings, technology, or equipment during the reporting period.",
@@ -8550,7 +8482,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 503,
+                'id' => 499,
                 'code' => "FP2392",
                 'name' => "Impairment Loss Allowance",
                 'definition' => "Value of the organization’s contra asset account set up as a provision for a potential future loss of capital that has been lent out by the organization as of the end of the reporting period.",
@@ -8567,7 +8499,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 504,
+                'id' => 500,
                 'code' => "FP2460",
                 'name' => "Gross Incurred Claims",
                 'definition' => "Value of the organization’s gross incurred claims as of the end of the reporting period.",
@@ -8584,7 +8516,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 505,
+                'id' => 501,
                 'code' => "FP2553",
                 'name' => "Financial Expenses",
                 'definition' => "Value of expenditures incurred by the organization during the reporting period to settle interest, fees, and commissions incurred on the organization’s financial liabilities—including, among others, any client deposit accounts held by the organization, borrowings, and subordinated debt.",
@@ -8601,7 +8533,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 506,
+                'id' => 502,
                 'code' => "FP2630",
                 'name' => "Loans Receivable Gross",
                 'definition' => "Value of outstanding principal for all of the organization’s outstanding loans due from clients as of the end of the reporting period.",
@@ -8618,7 +8550,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 507,
+                'id' => 503,
                 'code' => "FP2635",
                 'name' => "Non-Performing Loans (Portfolio at Risk): 30 Days",
                 'definition' => "Value of the organization’s loans outstanding, as of the end of the reporting period, with one or more installments of principal past due for more than 30 days.",
@@ -8635,7 +8567,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 508,
+                'id' => 504,
                 'code' => "FP2638",
                 'name' => "Capital Available: Borrowed Funds",
                 'definition' => "Value of capital available to the organization for lending and investing as of the end of the reporting period that is attributed to debt obligations on the organization’s balance sheet.",
@@ -8652,7 +8584,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 509,
+                'id' => 505,
                 'code' => "FP3939",
                 'name' => "Loans Recovered",
                 'definition' => "Value of loans collected by the organization during the reporting period that had previously been written off.",
@@ -8669,7 +8601,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 510,
+                'id' => 506,
                 'code' => "FP5662",
                 'name' => "Capital Available: Equity Capital",
                 'definition' => "Value of capital available to the organization for lending and investing at the end of the reporting period that is attributed to equity contributions.",
@@ -8686,7 +8618,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 511,
+                'id' => 507,
                 'code' => "FP5979",
                 'name' => "Number of Loans Fully Repaid on Time",
                 'definition' => "Number of the organization’s loans due for complete payback during the reporting period (but disbursed at any time) that were repaid no later than their due dates.",
@@ -8703,7 +8635,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 512,
+                'id' => 508,
                 'code' => "FP6152",
                 'name' => "Solvency Ratio",
                 'definition' => "Ratio of an organization’s admitted assets to liabilities, per their statutory accounts, as of the end of the reporting period.",
@@ -8720,7 +8652,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 513,
+                'id' => 509,
                 'code' => "FP6354",
                 'name' => "Non-Performing Loans (Portfolio at Risk): 60 Days",
                 'definition' => "Value of the organization’s loans outstanding, as of the end of the reporting period, with one or more installments of principal past due for more than 60 days.",
@@ -8737,7 +8669,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 514,
+                'id' => 510,
                 'code' => "FP6373",
                 'name' => "Non-Performing Loans (Portfolio at Risk): 90 Days",
                 'definition' => "Value of the organization’s loans outstanding, as of the end of the reporting period, with one or more installments of principal past due for more than 90 days.",
@@ -8754,7 +8686,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 515,
+                'id' => 511,
                 'code' => "FP8478",
                 'name' => "Incurred Claims Ratio",
                 'definition' => "Percentage of gross incurred claims during the reporting period relative to gross earned premiums during the same reporting period.",
@@ -8771,7 +8703,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 516,
+                'id' => 512,
                 'code' => "FP9083",
                 'name' => "Total Deposits",
                 'definition' => "Value of the organization’s customer deposits, whether voluntary, compulsory, demand, or term, as well as all other liabilities from customers as of the end of the reporting period.",
@@ -8788,7 +8720,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 517,
+                'id' => 513,
                 'code' => "FP9717",
                 'name' => "Loan Write-Offs",
                 'definition' => "Value of loans written off by the organization during the reporting period.",
@@ -8805,7 +8737,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 518,
+                'id' => 514,
                 'code' => "FP9954",
                 'name' => "Value of Loans Fully Repaid on Time",
                 'definition' => "Value of the organization’s loans due for complete payback during the reporting period (but disbursed at any time) that were repaid no later than their due dates.",
@@ -8822,7 +8754,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 519,
+                'id' => 515,
                 'code' => "OD9109",
                 'name' => "Type of Financial Institution",
                 'definition' => "Describes what type of financial institution the organization is, if applicable. Select all that apply:\n\n- Community Action Agency (CAA)\n- Community Development Financial Institution (CDFI)\n- Credit Union/Cooperative\n- Loan Fund, including microenterprise fund or Multibank Community Development Corporation (CDC)\n- Non-Banking Financial Institution/Non-Banking Financial Corporation (NBFI/NBFC)\n- Non-Profit/Non-Governmental Organization, including Community Development Corporation (CDCs)\n- Rural Bank\n- Thrift, Bank, Bank Holding Company\n- Venture Capital Fund\n- Other",
@@ -8839,7 +8771,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 520,
+                'id' => 516,
                 'code' => "OI2818",
                 'name' => "Loan Officers Employed",
                 'definition' => "Number of loan officers employed by the organization as of the end of the reporting period.",
@@ -8856,7 +8788,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 521,
+                'id' => 517,
                 'code' => "OI4953",
                 'name' => "Social and Environmental Performance Incentives",
                 'definition' => "Indicates whether the organization implemented any employee incentive schemes related to social and/or environmental performance goals during the reporting period.",
@@ -8873,7 +8805,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 522,
+                'id' => 518,
                 'code' => "OI5803",
                 'name' => "Loan Officer Wages",
                 'definition' => "Value of wages (including bonuses) paid to loan officers during the reporting period.",
@@ -8890,7 +8822,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 523,
+                'id' => 519,
                 'code' => "OI7783",
                 'name' => "Social Responsibility Client Policies",
                 'definition' => "Indicates whether the organization implements policies to protect its clients.",
@@ -8907,7 +8839,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 524,
+                'id' => 520,
                 'code' => "PD2691",
                 'name' => "Interest Rate Method",
                 'definition' => "Describes the method(s) used by the organization to state the interest rate of its products. Select all that apply:\n\n- Declining balance method\n- Flat interest method",
@@ -8924,7 +8856,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 525,
+                'id' => 521,
                 'code' => "PD3079",
                 'name' => "Weighted Average Tenor of Loans Outstanding",
                 'definition' => "Weighted average tenor of loans outstanding on the organization’s balance sheet as of the end of the reporting period, measured in months.",
@@ -8941,7 +8873,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 526,
+                'id' => 522,
                 'code' => "PD5098",
                 'name' => "Other Financial Services Offered",
                 'definition' => "Describes the types of financial services the organization offers in addition to core credit, savings, and insurance products.",
@@ -8958,7 +8890,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 527,
+                'id' => 523,
                 'code' => "PD6343",
                 'name' => "Savings Account Incentives",
                 'definition' => "Describes the types of incentives the organization offers to clients to establish savings accounts.",
@@ -8975,7 +8907,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 528,
+                'id' => 524,
                 'code' => "PD7356",
                 'name' => "Microfinance Delivery Methodology",
                 'definition' => "Describes the methodologies the organization uses to deliver financial services. Select all that apply:\n\n- Individual lending\n- Solidarity group lending\n- Village/self-help group lending\n- Digital financial services\n- Agency banking\n- Licensed agents working on behalf of the financial service provider\n- Roving staff/mobile branches\n- ATMs\n- Mobile banking\n- Internet-based services\n- Merchant POS or network\n- Other",
@@ -8992,7 +8924,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 529,
+                'id' => 525,
                 'code' => "PD7932",
                 'name' => "Environmental Policies for Financial Services Clients",
                 'definition' => "Indicates whether the organization implements environmental policies associated with the organization’s financing practices.",
@@ -9009,7 +8941,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 530,
+                'id' => 526,
                 'code' => "PD9337",
                 'name' => "Compulsory Deposits",
                 'definition' => "Indicates whether the organization requires clients to establish savings accounts.",
@@ -9026,7 +8958,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 531,
+                'id' => 527,
                 'code' => "PD9681",
                 'name' => "Non-financial Support Offered",
                 'definition' => "Describes the type of non-financial support the organization offers to clients, if applicable.",
@@ -9043,7 +8975,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 532,
+                'id' => 528,
                 'code' => "PI1275",
                 'name' => "Renewal Ratio",
                 'definition' => "Percentage of the organization’s clients that stay enrolled in policies after their coverage term expires during the reporting period.",
@@ -9060,7 +8992,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 533,
+                'id' => 529,
                 'code' => "PI1478",
                 'name' => "Number of Loans Outstanding",
                 'definition' => "Number of disbursed loans remaining on the organization’s balance sheet as of the end of the reporting period.",
@@ -9077,7 +9009,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 534,
+                'id' => 530,
                 'code' => "PI1914",
                 'name' => "Number of Equity Investments Outstanding",
                 'definition' => "Number of equity investments on the organization’s balance sheet as of the end of the reporting period.",
@@ -9094,7 +9026,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 535,
+                'id' => 531,
                 'code' => "PI1934",
                 'name' => "Average Insurance Premium",
                 'definition' => "Average annualized insurance premium charged for a particular insurance product provided by the organization during the reporting period.",
@@ -9111,7 +9043,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 536,
+                'id' => 532,
                 'code' => "PI2025",
                 'name' => "Gross Earned Premium",
                 'definition' => "Value of premium earned by the organization as of the end of the reporting period, without any deductions for commissions or other expenses.",
@@ -9128,7 +9060,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 537,
+                'id' => 533,
                 'code' => "PI2070",
                 'name' => "Promptness of Claims Submission",
                 'definition' => "Average number of days elapsed between the occurrence of an insured incident and the submission of a complete claim by the stakeholder (client of the organization) for all claims settled during the reporting period.",
@@ -9145,7 +9077,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 538,
+                'id' => 534,
                 'code' => "PI2197",
                 'name' => "Number of Complaints Registered",
                 'definition' => "Number of complaints registered by clients of the organization during the reporting period.",
@@ -9162,7 +9094,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 539,
+                'id' => 535,
                 'code' => "PI3069",
                 'name' => "Number of Potential Renewals",
                 'definition' => "Number of policies belonging to the organization’s clients that could have been renewed during the reporting period.",
@@ -9179,7 +9111,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 540,
+                'id' => 536,
                 'code' => "PI3212",
                 'name' => "Number of Renewals",
                 'definition' => "Number of policies belonging to the organization’s clients that were renewed during the reporting period after the coverage term expired.",
@@ -9196,7 +9128,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 541,
+                'id' => 537,
                 'code' => "PI3240",
                 'name' => "Value of Voluntary Savings Accounts",
                 'definition' => "Value of voluntary savings accounts managed by the organization, including demand deposits and time deposits, as of the end of the reporting period.",
@@ -9213,7 +9145,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 542,
+                'id' => 538,
                 'code' => "PI3383",
                 'name' => "Claims Rejected",
                 'definition' => "Number of claims submitted to the organization that were rejected during the reporting period.",
@@ -9230,7 +9162,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 543,
+                'id' => 539,
                 'code' => "PI3734",
                 'name' => "Minimum Insurance Premium",
                 'definition' => "Minimum annualized insurance premium offered for the insurance product provided by the organization during the reporting period.",
@@ -9247,7 +9179,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 544,
+                'id' => 540,
                 'code' => "PI4142",
                 'name' => "Value of Equity Investments Closed",
                 'definition' => "Value of equity investments closed by the organization during the reporting period.",
@@ -9264,7 +9196,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 545,
+                'id' => 541,
                 'code' => "PI4583",
                 'name' => "New Businesses Created: Total",
                 'definition' => "Number of new businesses created as a result of investments made by the organization during the reporting period.",
@@ -9281,7 +9213,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 546,
+                'id' => 542,
                 'code' => "PI4733",
                 'name' => "Repayment Capacity Analysis",
                 'definition' => "Indicates whether the organization conducts repayment capacity analyses for its clients.",
@@ -9298,7 +9230,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 547,
+                'id' => 543,
                 'code' => "PI5066",
                 'name' => "Number of Equity Investments Closed",
                 'definition' => "Number of equity investments closed by the organization during the reporting period.",
@@ -9315,7 +9247,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 548,
+                'id' => 544,
                 'code' => "PI5160",
                 'name' => "Average Loan Size Disbursed",
                 'definition' => "Average loan size disbursed by the organization during the reporting period.",
@@ -9332,7 +9264,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 549,
+                'id' => 545,
                 'code' => "PI5216",
                 'name' => "Complaints Ratio",
                 'definition' => "Number of complaints registered per client of the reporting organization during the reporting period.",
@@ -9349,7 +9281,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 550,
+                'id' => 546,
                 'code' => "PI5476",
                 'name' => "Value of Loans Disbursed",
                 'definition' => "Value of loans disbursed by the organization during the reporting period.",
@@ -9366,7 +9298,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 551,
+                'id' => 547,
                 'code' => "PI6414",
                 'name' => "New Businesses Created: Low Income Areas",
                 'definition' => "Number of new businesses created in low-income areas as a result of investments made by the organization during the reporting period.",
@@ -9383,7 +9315,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 552,
+                'id' => 548,
                 'code' => "PI6439",
                 'name' => "Number of Voluntary Savings Accounts",
                 'definition' => "Number of voluntary savings accounts managed by the organization, including demand deposits and time deposits, as of the end of the reporting period.",
@@ -9400,7 +9332,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 553,
+                'id' => 549,
                 'code' => "PI7467",
                 'name' => "Effective Interest Rate (EIR)",
                 'definition' => "Value of the effective interest rate (EIR) for the organization’s most representative loan product during the reporting period.",
@@ -9417,7 +9349,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 554,
+                'id' => 550,
                 'code' => "PI7569",
                 'name' => "Value of Loans Outstanding",
                 'definition' => "Value of disbursed loans remaining on the organization's balance sheet at the end of the reporting period.",
@@ -9434,7 +9366,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 555,
+                'id' => 551,
                 'code' => "PI7902",
                 'name' => "Claims Rejection Ratio",
                 'definition' => "Percentage of claims made by clients of the organization that were rejected during the reporting period relative to the total claims submitted to the organization during the reporting period.",
@@ -9451,7 +9383,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 556,
+                'id' => 552,
                 'code' => "PI7940",
                 'name' => "Value of Equity Investments Outstanding",
                 'definition' => "Value of equity investments on the organization's balance sheet at the end of the reporting period.",
@@ -9468,7 +9400,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 557,
+                'id' => 553,
                 'code' => "PI8018",
                 'name' => "Claims Submitted",
                 'definition' => "Number of claims submitted to the organization during the reporting period.",
@@ -9485,7 +9417,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 558,
+                'id' => 554,
                 'code' => "PI8381",
                 'name' => "Number of Loans Disbursed",
                 'definition' => "Number of loans disbursed by the organization during the reporting period.",
@@ -9502,7 +9434,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 559,
+                'id' => 555,
                 'code' => "PI8919",
                 'name' => "Promptness of Claims Processing",
                 'definition' => "Average number of days elapsed between the submission of a completed claim by a stakeholder (client of the organization) and their receipt of payment or claim denial, for all claims settled during the reporting period.",
@@ -9519,7 +9451,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 560,
+                'id' => 556,
                 'code' => "PI9250",
                 'name' => "Active Borrowers per Loan Officer",
                 'definition' => "Number of active borrowers (clients) per loan officer at the organization as of the end of the reporting period.",
@@ -9536,7 +9468,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 561,
+                'id' => 557,
                 'code' => "PI9897",
                 'name' => "Promptness of Claims Settlement",
                 'definition' => "Average number of days elapsed between the occurrence of an insured incident and the receipt of payment or claim denial by the stakeholder (client of the organization), for all claims settled (or rejected) during the reporting period.",
@@ -9553,7 +9485,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 562,
+                'id' => 558,
                 'code' => "OI1804",
                 'name' => "Records System",
                 'definition' => "Describes the system used by a facility or service for record keeping, including whether it is paper-based or electronic, as of the end of the reporting period.",
@@ -9570,7 +9502,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Text",
             ],
             [
-                'id' => 563,
+                'id' => 559,
                 'code' => "OI4919",
                 'name' => "Caregivers Employed: Professionals",
                 'definition' => "Number of caregiver professionals with current licenses or certifications, based on local requirements, employed by the organization as of the end of the reporting period.",
@@ -9587,7 +9519,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 564,
+                'id' => 560,
                 'code' => "OI5323",
                 'name' => "Caregivers Employed: Total",
                 'definition' => "Number of caregivers with current licenses, certifications, or trainings, based on local requirements, employed by the organization as of the end of the reporting period.",
@@ -9604,7 +9536,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 565,
+                'id' => 561,
                 'code' => "PI1017",
                 'name' => "Healthcare Facilities",
                 'definition' => "Number of healthcare units/facilities under the organization's management as of the end of the reporting period.",
@@ -9621,7 +9553,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 566,
+                'id' => 562,
                 'code' => "PI1533",
                 'name' => "Disease/Condition Addressed",
                 'definition' => "Describes the diseases or conditions addressed by the organization's products or services provided during the reporting period. Select all that apply:\n\n- 01 Certain infectious or parasitic diseases\n- 02 Neoplasms\n- 03 Diseases of the blood or blood-forming organs\n- 04 Diseases of the immune system\n- 05 Endocrine, nutritional, or metabolic diseases\n- 06 Mental, behavioural or neurodevelopmental disorders\n- 07 Sleep-wake disorders\n- 08 Diseases of the nervous system\n- 09 Diseases of the visual system\n- 10 Diseases of the ear or mastoid process\n- 11 Diseases of the circulatory system\n- 12 Diseases of the respiratory system\n- 13 Diseases of the digestive system\n- 14 Diseases of the skin\n- 15 Diseases of the musculoskeletal system or connective tissue\n- 16 Diseases of the genitourinary system\n- 17 Conditions related to sexual health\n- 18 Pregnancy, childbirth, or the puerperium\n- 19 Certain conditions originating in the perinatal period\n- 20 Developmental anomalies\n- 21 Symptoms, signs or clinical findings, not elsewhere classified\n- 22 Injury, poisoning or certain other consequences of external causes\n- 23 External causes of morbidity or mortality\n- 24 Factors influencing health status or contact with health services\n- 25 Codes for special purposes\n- 26 Supplementary Chapter Traditional Medicine Conditions - Module I",
@@ -9638,7 +9570,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 567,
+                'id' => 563,
                 'code' => "PI3863",
                 'name' => "Quality Assurance Mechanism",
                 'definition' => "Describes the quality assurance mechanisms that were in place at the organization during the reporting period. Select all that apply:\n\n- Peer review/supervision\n- Audit and feedback\n- Checklists and logs\n- Electronic monitoring systems\n- Communication and education strategies\n- Guidelines, protocols, and registries\n- Other",
@@ -9655,7 +9587,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 568,
+                'id' => 564,
                 'code' => "PI3902",
                 'name' => "Healthcare Crude Coverage",
                 'definition' => "Percentage of the organization's clients (patients) who received necessary health intervention(s) during the reporting period.",
@@ -9672,7 +9604,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 569,
+                'id' => 565,
                 'code' => "PI5060",
                 'name' => "Patients Completing Treatment",
                 'definition' => "Number of patients who successfully completed the clinically recommended course of a health intervention during the reporting period.",
@@ -9689,7 +9621,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 570,
+                'id' => 566,
                 'code' => "PI5743",
                 'name' => "Critical Equipment/Facility Utilization Rate",
                 'definition' => "Utilization rate of an identified critical piece of equipment or facility during the reporting period.",
@@ -9706,7 +9638,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 571,
+                'id' => 567,
                 'code' => "PI6845",
                 'name' => "Patients Screened",
                 'definition' => "Number of patients screened for medical conditions, illnesses, or risk factors during the reporting period.",
@@ -9723,7 +9655,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 572,
+                'id' => 568,
                 'code' => "PI7395",
                 'name' => "Target Stakeholder Spending: Health",
                 'definition' => "Describes a target stakeholder's health spending as a share of their income or expenditures, or disaggregates another metric in terms of health spending as a share of income or expenditures. Select one: \n- Below 10%\n- 10–25%\n- Greater than 25%",
@@ -9740,7 +9672,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 573,
+                'id' => 569,
                 'code' => "PI3594",
                 'name' => "Child Stunting Prevalence",
                 'definition' => "Ratio of children within the area served by the organization who experienced stunting as of the end of the reporting period.",
@@ -9757,7 +9689,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 574,
+                'id' => 570,
                 'code' => "OI7065",
                 'name' => "Number of Containers Handled",
                 'definition' => "Number twenty-foot equivalent units (TEUs) of cargo containers transported by a road, railway, port, or airport during the reporting period.",
@@ -9774,7 +9706,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of reference within metric",
             ],
             [
-                'id' => 575,
+                'id' => 571,
                 'code' => "OI5490",
                 'name' => "Bulk Cargo Handled",
                 'definition' => "Volume of bulk cargo transported through a road, railway, port, or airport during the reporting period.",
@@ -9791,7 +9723,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 576,
+                'id' => 572,
                 'code' => "PI1422",
                 'name' => "Packaging Weight",
                 'definition' => "Weight of packaging used by the organization during the reporting period.",
@@ -9808,7 +9740,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 577,
+                'id' => 573,
                 'code' => "PD2285",
                 'name' => "Packaging Type",
                 'definition' => "Type of packaging used by the organization during the reporting period. Select all that apply:\n\n- Recycled materials\n- Non-recycled compostable or renewable materials\n- Non-recycled, non-compostable, non-renewable materials",
@@ -9825,7 +9757,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 578,
+                'id' => 574,
                 'code' => "PI6504",
                 'name' => "Number of Routes Served",
                 'definition' => "Number of directly connected port pairs or routes served during the reporting period.",
@@ -9842,7 +9774,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 579,
+                'id' => 575,
                 'code' => "OI1010",
                 'name' => "Vehicle/Container Inactive Hours",
                 'definition' => "Average number of hours spent inactive or waiting (inclusive of turnaround and dwell time) by a vehicle or container during the reporting period.",
@@ -9859,7 +9791,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 580,
+                'id' => 576,
                 'code' => "PI2112",
                 'name' => "Vehicle Distance Traveled",
                 'definition' => "Distance traveled by vehicles owned, operated, or sold by the organization during the reporting period.",
@@ -9876,7 +9808,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 581,
+                'id' => 577,
                 'code' => "PI5776",
                 'name' => "Percent Baggage Damaged or Lost",
                 'definition' => "Percentage of baggage handled by the organization that is damaged, or that has contents damaged or lost, during the reporting period.",
@@ -9893,7 +9825,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 582,
+                'id' => 578,
                 'code' => "PI8394",
                 'name' => "Space Per Passenger",
                 'definition' => "Amount of space per passenger (in an airport, passenger port, or vehicle) during the reporting period.",
@@ -9910,7 +9842,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 583,
+                'id' => 579,
                 'code' => "PI5587",
                 'name' => "Length of Road Built or Improved",
                 'definition' => "Length of road built or improved by the organization during the reporting period.",
@@ -9927,7 +9859,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 584,
+                'id' => 580,
                 'code' => "PI6471",
                 'name' => "Average Vehicle Speed",
                 'definition' => "Average speed of vehicles on roads, waterways, or in flight during the reporting period.",
@@ -9944,7 +9876,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 585,
+                'id' => 581,
                 'code' => "OI0659",
                 'name' => "Average Daily Traffic",
                 'definition' => "Average number of vehicles per day using an urban road over the course of a year.",
@@ -9961,7 +9893,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 586,
+                'id' => 582,
                 'code' => "OI2622",
                 'name' => "Forest Management Plan",
                 'definition' => "Indicates whether the organization implements a forest management plan.",
@@ -9978,7 +9910,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 587,
+                'id' => 583,
                 'code' => "PD3922",
                 'name' => "Type of Land Area",
                 'definition' => "Describes the type(s) of land present on hectares directly or indirectly controlled by the organization. Report for hectares controlled at any point during the reporting period. \nChoose all that apply: \n- Urban/built-up land\n- Agricultural land \n- Rangeland \n- Forest land \n- Water areas \n- Wetland \n- Barren land \n- Tundra \n- Perennial snow or ice",
@@ -9995,7 +9927,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 588,
+                'id' => 584,
                 'code' => "PD8494",
                 'name' => "Ecosystem Services Provided",
                 'definition' => "Describes the ecosystem services—that is, the societal benefits of nature—provided by the ecosystem on land or marine area directly or indirectly controlled by the organization during the reporting period. Select all that apply:\n\nProvisioning Values/Services\n\n- Food\n- Biological raw materials\n- Biomass fuel\n- Freshwater\n- Genetic resources\n- Biochemicals, natural medicines, pharmaceuticals\n\nRegulating Values/Services\n\n- Maintenance of air quality\n- Regulation of climate\n- Regulation of water timing and flows\n- Erosion control\n- Water purification and waste treatment\n- Disease mitigation\n- Maintenance of soil quality\n- Pest mitigation\n- Pollination\n- Natural hazard mitigation\n\nSupporting Values/Services\n\n- Habitat\n- Nutrient cycling\n- Primary production\n- Water cycling\n\nCultural Values/Services\n\n- Recreation and ecotourism\n- Ethical and spiritual values\n- Educational and inspirational values",
@@ -10012,7 +9944,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 589,
+                'id' => 585,
                 'code' => "PD9009",
                 'name' => "Conservation Priority Characteristics",
                 'definition' => "Length of protected land boundary shared with the organization's protected land as of the end of the reporting period.",
@@ -10029,7 +9961,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 590,
+                'id' => 586,
                 'code' => "PI1489",
                 'name' => "Area of Land Deforested",
                 'definition' => "Area of land deforested by the organization during the reporting period.",
@@ -10046,7 +9978,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 591,
+                'id' => 587,
                 'code' => "PI2135",
                 'name' => "Length of Adjacent Protected Land",
                 'definition' => "Length of protected land boundary shared with the organization's protected land as of the end of the reporting period.",
@@ -10063,7 +9995,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 592,
+                'id' => 588,
                 'code' => "PI2538",
                 'name' => "Length of Coastline Restored",
                 'definition' => "Length of marine or freshwater coastline under management for ecological restoration on protected land, land under sustainable stewardship, or land under sustainable cultivation during the reporting period.",
@@ -10080,7 +10012,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 593,
+                'id' => 589,
                 'code' => "PI3239",
                 'name' => "Length of Streams Present",
                 'definition' => "Length of freshwater streams present during the reporting period on protected land, land under sustainable stewardship, or land under sustainable cultivation.",
@@ -10097,7 +10029,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 594,
+                'id' => 590,
                 'code' => "PI3848",
                 'name' => "Area of Trees Planted: Native Species",
                 'definition' => "Area of land on which the organization planted native species of trees during the reporting period.",
@@ -10114,7 +10046,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 595,
+                'id' => 591,
                 'code' => "PI3924",
                 'name' => "Protected Land Area: Permanent",
                 'definition' => "Area of land with permanently protected status as of the end of the reporting period.",
@@ -10131,7 +10063,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 596,
+                'id' => 592,
                 'code' => "PI4127",
                 'name' => "Area of Trees Planted: Total",
                 'definition' => "Area of land on which the organization planted trees during the reporting period.",
@@ -10148,7 +10080,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 597,
+                'id' => 593,
                 'code' => "PI4716",
                 'name' => "Protected Land Area: Total",
                 'definition' => "Area of land with protected land status as of the end of the reporting period.",
@@ -10165,7 +10097,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 598,
+                'id' => 594,
                 'code' => "PI4907",
                 'name' => "Area of Land Reforested",
                 'definition' => "Area of land that the organization reforested during the reporting period.",
@@ -10182,7 +10114,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 599,
+                'id' => 595,
                 'code' => "PI5750",
                 'name' => "Area of Adjacent Protected Land",
                 'definition' => "Area of protected land that shares a boundary with the organization's protected land as of the end of the reporting period.",
@@ -10199,7 +10131,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 600,
+                'id' => 596,
                 'code' => "PI5840",
                 'name' => "Length of Coastline Present",
                 'definition' => "Length of marine or freshwater coastline present during the reporting period on protected land, land under sustainable stewardship, or land under sustainable cultivation.",
@@ -10216,7 +10148,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 601,
+                'id' => 597,
                 'code' => "PI6885",
                 'name' => "Length of Streams Restored",
                 'definition' => "Length of freshwater streams under management for ecological restoration on protected land, land under sustainable stewardship, or land under sustainable cultivation during the reporting period.",
@@ -10233,7 +10165,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 602,
+                'id' => 598,
                 'code' => "PI7170",
                 'name' => "Area of Fresh Water Bodies Present",
                 'definition' => "Surface area of freshwater bodies present during the reporting period on protected land, land under sustainable stewardship, or land under sustainable cultivation.",
@@ -10250,7 +10182,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 603,
+                'id' => 599,
                 'code' => "PI9556",
                 'name' => "Ecological Restoration Management Area",
                 'definition' => "Area of land under management for ecological restoration during the reporting period, whether directly or indirectly controlled by the organization.",
@@ -10267,7 +10199,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 604,
+                'id' => 600,
                 'code' => "OI5942",
                 'name' => "Toxic Materials",
                 'definition' => "Amount of toxic materials used in the organization's manufacturing processes during the reporting period.",
@@ -10284,7 +10216,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 605,
+                'id' => 601,
                 'code' => "PD1007",
                 'name' => "Setting of Housing/Community Facilities",
                 'definition' => "Describes the setting of community development facilities or housing units projected to be constructed or preserved as a result of investments made by the organization during the reporting period.\n\nChoose all that apply:\n\n- Urban\n- Rural\n- Peri-urban\n- Other",
@@ -10301,7 +10233,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 606,
+                'id' => 602,
                 'code' => "PD3668",
                 'name' => "WASH Facilities Type",
                 'definition' => "Describes the type of water, sanitation, and hygiene (WASH) facilities available on-site as a result of the organization's activities during the reporting period.\n\nChoose all that apply: \n- Drinking water facilities\n- Handwashing facilities\n- Menstrual hygiene waste disposal\n- Sanitation facilities\n- Other (describe)",
@@ -10318,7 +10250,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 607,
+                'id' => 603,
                 'code' => "PI0617",
                 'name' => "Availability of Basic Services/Facilities",
                 'definition' => "Indicates whether basic services are present onsite, along with a system in place to maintain them, as of the end of the reporting period.",
@@ -10335,7 +10267,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 608,
+                'id' => 604,
                 'code' => "PI3218",
                 'name' => "Public Water Point Coverage",
                 'definition' => "Number of individuals within a coverage region (defined by a municipality, district, or designated service area) who have primary water access through a public tap as of the end of the reporting period.",
@@ -10352,7 +10284,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 609,
+                'id' => 605,
                 'code' => "PD2532",
                 'name' => "Housing Type",
                 'definition' => "Describes the type of housing units projected to be constructed or preserved as a result of investments made by the organization during the reporting period.\n\nChoose all that apply:\n\nRent or Sale: \n- Rent\n- Sale\n\nNumber of bedrooms: \n- Studio\n- 1-Bedroom\n- 2-Bedroom\n- 3-Bedroom\n- 4-Bedroom\n- 5-Bedroom\n- Other",
@@ -10369,7 +10301,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 610,
+                'id' => 606,
                 'code' => "PD5833",
                 'name' => "Percent Affordable Housing",
                 'definition' => "Percentage of the housing units projected to be constructed or preserved as a result of investments made by the organization during the reporting period that are considered affordable housing.",
@@ -10386,7 +10318,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 611,
+                'id' => 607,
                 'code' => "PD7557",
                 'name' => "Community Facilities Type",
                 'definition' => "Describes the type of community development facilities projected to be built, renovated, or purchased as a result of investments made by the organization during the reporting period.\n\nChoose all that apply:\n\n- Childcare\n- Education\n- Healthcare\n- Other",
@@ -10403,7 +10335,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 612,
+                'id' => 608,
                 'code' => "PI1409",
                 'name' => "Target Stakeholder Spending: Housing",
                 'definition' => "Amount of money spent by the average target stakeholder on housing costs during the reporting period.",
@@ -10420,7 +10352,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 613,
+                'id' => 609,
                 'code' => "PI1586",
                 'name' => "Building Area of Energy Efficiency Improvements",
                 'definition' => "Area of buildings projected to receive energy-efficiency improvements as a result of investments made by the organization during the reporting period.",
@@ -10437,7 +10369,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 614,
+                'id' => 610,
                 'code' => "PI2410",
                 'name' => "Value of Community Facilities Financed",
                 'definition' => "Value of community facilities projected to be built, renovated, or purchased as a result of investments made by the organization during the reporting period.",
@@ -10454,7 +10386,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 615,
+                'id' => 611,
                 'code' => "PI2491",
                 'name' => "Number of Housing Units Constructed",
                 'definition' => "Number of housing units constructed by the organization during the reporting period.",
@@ -10471,7 +10403,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 616,
+                'id' => 612,
                 'code' => "PI2640",
                 'name' => "Individuals Housed",
                 'definition' => "Number of individuals projected to be housed in single- or multi-family dwellings as a result of new construction, loans, repairs, or remodeling resulting from investments made by the organization during the reporting period.",
@@ -10488,7 +10420,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 617,
+                'id' => 613,
                 'code' => "PI4765",
                 'name' => "Area of Community Facilities Financed",
                 'definition' => "Area of community facilities projected to be constructed or preserved as a result of investments made by the organization during the reporting period.",
@@ -10505,7 +10437,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 618,
+                'id' => 614,
                 'code' => "PI5965",
                 'name' => "Number of Housing Units Financed",
                 'definition' => "Number of housing units projected to be constructed or preserved as a result of investments made by the organization during the reporting period.",
@@ -10522,7 +10454,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 619,
+                'id' => 615,
                 'code' => "PI5983",
                 'name' => "Value of Commercial or Retail Infrastructure Financed",
                 'definition' => "Value of commercial or retail infrastructure projected to be built or renovated as a result of investments made by the organization during the reporting period.",
@@ -10539,7 +10471,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 620,
+                'id' => 616,
                 'code' => "PI6058",
                 'name' => "Number of Housing Units Improved",
                 'definition' => "Number of housing units improved or refurbished by the organization during the reporting period.",
@@ -10556,7 +10488,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 621,
+                'id' => 617,
                 'code' => "PI6303",
                 'name' => "Eviction Rate",
                 'definition' => "Percentage of permanent tenants involuntarily removed from housing units during the reporting period.",
@@ -10573,7 +10505,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 622,
+                'id' => 618,
                 'code' => "PI7233",
                 'name' => "Value of Housing Units Financed",
                 'definition' => "Value of housing projected to be constructed or preserved as a result of investments made by the organization during the reporting period.",
@@ -10590,7 +10522,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 623,
+                'id' => 619,
                 'code' => "PI8007",
                 'name' => "Number of Community Facilities Financed",
                 'definition' => "Number of community facilities projected to be built, renovated, or purchased as a result of investments made by the organization during the reporting period.",
@@ -10607,24 +10539,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 624,
-                'code' => "PI8768",
-                'name' => "Client Housing Quality Satisfaction",
-                'definition' => "NOTE: This metric has been discontinued. Please use Target Stakeholder Satisfaction Score (PI7163).",
-                'calculation' => null,
-                'usage_guidance' => "NOTE: This metric has been discontinued. \n\nThis metric is intended to capture resident satisfaction with the housing units they occupy. Organizations should not measure client satisfaction with housing options beyond the unit occupied. Organizations should report both the total number of resident responses that are \"somewhat satisfied\" or \"very satisfied\" and this count as a percentage of total responses.\n\nIn some contexts, this metric can serve as an indicator of whether the outcome being sought by an investor or organization is occurring (the WHAT dimension of impact). For more on the alignment of IRIS metrics to the five dimensions of impact, see IRIS+ and the Five Dimensions of Impact (https://iris.thegiin.org/document/iris-and-the-five-dimensions/). No single metric is sufficient to understand an impact; rather, metrics are selected as a set across all dimensions of impact. When possible, the selection of metrics to measure and describe the five dimensions should be based on best practice and evidence.",
-                'social' => true,
-                'environmental' => false,
-                'section' => "Product Impact",
-                'subsection' => "Quality & Performance",
-                'level_type' => 1,
-                'related_metrics_code' => null,
-                'metric_level' => "Product/Service",
-                'quantity_type' => "Flow",
-                'reporting_format' => "Text",
-            ],
-            [
-                'id' => 625,
+                'id' => 620,
                 'code' => "PI9170",
                 'name' => "Area of Buildings Reused",
                 'definition' => "Area of buildings projected to be renovated or remodeled for building reuse as a result of investments made by the organization during the reporting period.",
@@ -10641,7 +10556,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 626,
+                'id' => 621,
                 'code' => "OI1346",
                 'name' => "Waste Produced: Hazardous Waste",
                 'definition' => "Amount of hazardous waste created by the organization's operations during the reporting period.",
@@ -10658,7 +10573,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 627,
+                'id' => 622,
                 'code' => "OI2535",
                 'name' => "Waste Disposed: Recycled/Reused",
                 'definition' => "Amount of waste disposed by the organization through reuse and recycling during the reporting period.",
@@ -10675,7 +10590,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 628,
+                'id' => 623,
                 'code' => "OI4328",
                 'name' => "Recycled Materials",
                 'definition' => "Amount of recycled material used in the organization's products (including packaging) during the reporting period.",
@@ -10692,7 +10607,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 629,
+                'id' => 624,
                 'code' => "OI4483",
                 'name' => "Waste Disposed: Landfill",
                 'definition' => "Amount of waste disposed by the organization in landfills during the reporting period.",
@@ -10709,7 +10624,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 630,
+                'id' => 625,
                 'code' => "OI5101",
                 'name' => "Biodegradable Materials",
                 'definition' => "Amount of biodegradable materials used in the organization’s products (including packaging) during the reporting period.",
@@ -10726,7 +10641,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 631,
+                'id' => 626,
                 'code' => "OI6192",
                 'name' => "Waste Disposed: Total",
                 'definition' => "Amount of waste disposed by the organization during the reporting period.",
@@ -10743,7 +10658,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 632,
+                'id' => 627,
                 'code' => "OI6209",
                 'name' => "Product Lifecycle Management Practices",
                 'definition' => "Indicates whether the organization has practices in place to manage products over their life beyond the point of sale.",
@@ -10760,7 +10675,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 633,
+                'id' => 628,
                 'code' => "OI6709",
                 'name' => "Waste Produced: Total",
                 'definition' => "Amount of waste created by the organization's operations during the reporting period.",
@@ -10777,7 +10692,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 634,
+                'id' => 629,
                 'code' => "OI7442",
                 'name' => "Waste Produced: Non-Hazardous Waste",
                 'definition' => "Amount of non-hazardous waste created by the organization's operations during the reporting period.",
@@ -10794,7 +10709,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 635,
+                'id' => 630,
                 'code' => "OI7920",
                 'name' => "Waste Reduced",
                 'definition' => "Amount of waste reduced by the organization during the reporting period through programs for substitution, recycling, or recovery.",
@@ -10811,7 +10726,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 636,
+                'id' => 631,
                 'code' => "OI8357",
                 'name' => "Waste Disposed: Incinerated",
                 'definition' => "Amount of waste disposed by the organization through incineration during the reporting period.",
@@ -10828,7 +10743,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 637,
+                'id' => 632,
                 'code' => "OI8843",
                 'name' => "Waste Disposed: Other",
                 'definition' => "Amount of waste disposed by the organization through other means during the reporting period.",
@@ -10845,7 +10760,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 638,
+                'id' => 633,
                 'code' => "OI9847",
                 'name' => "Waste Disposed: Composted",
                 'definition' => "Amount of waste disposed by the organization through composting during the reporting period.",
@@ -10862,7 +10777,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 639,
+                'id' => 634,
                 'code' => "PD9364",
                 'name' => "Percent Recycled Materials",
                 'definition' => "Percentage of recycled materials used to manufacture the organization's products (including packaging) during the reporting period.",
@@ -10879,7 +10794,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 640,
+                'id' => 635,
                 'code' => "PI2073",
                 'name' => "Hazardous Waste Avoided",
                 'definition' => "Amount of hazardous waste avoided through refurbishing, reusing, and recycling as part of delivering or developing the organization's products and services during the reporting period.",
@@ -10896,7 +10811,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 641,
+                'id' => 636,
                 'code' => "PI5678",
                 'name' => "Waste Reductions from Services Sold",
                 'definition' => "Amount of waste reduced during the reporting period as a result of the organization's services.",
@@ -10913,7 +10828,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 642,
+                'id' => 637,
                 'code' => "PI5926",
                 'name' => "Waste Reductions from Products Sold",
                 'definition' => "Amount of waste reduced over the lifetime of products sold by the organization during the reporting period.",
@@ -10930,7 +10845,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 643,
+                'id' => 638,
                 'code' => "PI8177",
                 'name' => "Non-hazardous Waste Avoided",
                 'definition' => "Amount of non-hazardous waste disposal avoided through refurbishing, reusing, and recycling as part of delivering or developing the organization's products and services during the reporting period.",
@@ -10947,7 +10862,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 644,
+                'id' => 639,
                 'code' => "OI1697",
                 'name' => "Water Consumed: Total",
                 'definition' => "Volume of water used for the organization's operations during the reporting period.",
@@ -10964,7 +10879,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 645,
+                'id' => 640,
                 'code' => "OI1927",
                 'name' => "Water Consumed: Recycled",
                 'definition' => "Volume of recycled water used for the organization's operations during the reporting period.",
@@ -10981,7 +10896,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 646,
+                'id' => 641,
                 'code' => "OI3031",
                 'name' => "Water Consumed: Municipal",
                 'definition' => "Volume of water drawn from municipal water sources used for the organization's operations during the reporting period.",
@@ -10998,7 +10913,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 647,
+                'id' => 642,
                 'code' => "OI3637",
                 'name' => "Water Consumed: Regions with High Water Stress",
                 'definition' => "Volume of water used from regions with high or extremely high baseline water stress during the reporting period.",
@@ -11015,7 +10930,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 648,
+                'id' => 643,
                 'code' => "OI4015",
                 'name' => "Water Conserved",
                 'definition' => "Volume of water usage reduced as a result of the organization's water conservation efforts during the reporting period.",
@@ -11032,7 +10947,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 649,
+                'id' => 644,
                 'code' => "OI4467",
                 'name' => "Water Consumed: Groundwater",
                 'definition' => "Volume of groundwater used for the organization's operations during the reporting period.",
@@ -11049,7 +10964,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 650,
+                'id' => 645,
                 'code' => "OI6721",
                 'name' => "Water Consumed: Rainwater",
                 'definition' => "Volume of rainwater used for the organization's operations during the reporting period.",
@@ -11066,7 +10981,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 651,
+                'id' => 646,
                 'code' => "PI0478",
                 'name' => "Water Quality Standards Pass Rate",
                 'definition' => "Percent of water samples at distribution or network sampling points that meet national standards for chemical water quality, residual chlorine, and microbiological contamination during the reporting period.",
@@ -11083,7 +10998,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 652,
+                'id' => 647,
                 'code' => "OI7365",
                 'name' => "Water Quality Practices",
                 'definition' => "Indicates whether the organization employs management practices to protect water quality.",
@@ -11100,7 +11015,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 653,
+                'id' => 648,
                 'code' => "OI7860",
                 'name' => "Wastewater Treatment Compliance",
                 'definition' => "Indicates whether the organization's practices related to the discharge of wastewater comply with local legal requirements.",
@@ -11117,7 +11032,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 654,
+                'id' => 649,
                 'code' => "OI8060",
                 'name' => "Water Consumed: Surface Water",
                 'definition' => "Volume of surface water used for the organization's operations during the reporting period.",
@@ -11134,7 +11049,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 655,
+                'id' => 650,
                 'code' => "OI8828",
                 'name' => "Water Consumed: Wastewater",
                 'definition' => "Volume of wastewater used for the organization's operations during the reporting period.",
@@ -11151,7 +11066,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 656,
+                'id' => 651,
                 'code' => "OI9412",
                 'name' => "Wastewater Treated",
                 'definition' => "Volume of wastewater treated by the organization during the reporting period.",
@@ -11168,7 +11083,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 657,
+                'id' => 652,
                 'code' => "OI1054",
                 'name' => "Wastewater Removed",
                 'definition' => "Volume of wastewater safely removed from client premises by the organization during the reporting period.",
@@ -11185,7 +11100,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 658,
+                'id' => 653,
                 'code' => "PD1403",
                 'name' => "Water Provision Capacity of Products Sold: Potable",
                 'definition' => "Volume of potential potable water provided over the lifetimes of all products sold during the reporting period.",
@@ -11202,7 +11117,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 659,
+                'id' => 654,
                 'code' => "PD2020",
                 'name' => "Water Provision Capacity of Products Sold: Total",
                 'definition' => "Volume of potential water provided over the lifetimes of all products sold during the reporting period.",
@@ -11219,7 +11134,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 660,
+                'id' => 655,
                 'code' => "PD3523",
                 'name' => "Water Treatment Capacity of Products Sold",
                 'definition' => "Volume of potential water treated over the lifetimes of all products sold during the reporting period.",
@@ -11236,7 +11151,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 661,
+                'id' => 656,
                 'code' => "PD3931",
                 'name' => "Water Consumption of Product",
                 'definition' => "Volume of water used (consumed) over the lifetime of a product or system operated according to planned capacity.",
@@ -11253,7 +11168,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 662,
+                'id' => 657,
                 'code' => "PD5087",
                 'name' => "Water Treatment Capacity of Product: Potable",
                 'definition' => "Volume of water treated to become potable over the lifetime of a product or system operated according to planned capacity.",
@@ -11270,7 +11185,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 663,
+                'id' => 658,
                 'code' => "PD5786",
                 'name' => "Water Savings from Products Sold",
                 'definition' => "Volume of water saved over the lifetimes of all products sold during the reporting period.",
@@ -11287,7 +11202,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 664,
+                'id' => 659,
                 'code' => "PD6052",
                 'name' => "Water Provision Capacity of Product: Total",
                 'definition' => "Volume of water provided over the lifetime of a product or system operated according to planned capacity.",
@@ -11304,7 +11219,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 665,
+                'id' => 660,
                 'code' => "PD6929",
                 'name' => "Water Provision Capacity of Product: Potable",
                 'definition' => "Volume of potable water provided over the lifetime of a product or system operated according to planned capacity.",
@@ -11321,7 +11236,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 666,
+                'id' => 661,
                 'code' => "PD7621",
                 'name' => "Water Consumption of Product Replaced",
                 'definition' => "Average volume of water that would have been consumed by the replaced product during the lifetime of the organization's product.",
@@ -11338,7 +11253,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 667,
+                'id' => 662,
                 'code' => "PD8586",
                 'name' => "Water Treatment Capacity of Product: Total",
                 'definition' => "Volume of water treated over the lifetime of a product or system operated according to planned capacity.",
@@ -11355,7 +11270,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 668,
+                'id' => 663,
                 'code' => "PI2884",
                 'name' => "Water Savings from Services Sold",
                 'definition' => "Volume of water saved during the reporting period as a result of the organization's services sold.",
@@ -11372,7 +11287,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 669,
+                'id' => 664,
                 'code' => "PI8043",
                 'name' => "Water Provided for Sale: Potable",
                 'definition' => "Volume of potable water provided and delivered to offtaker(s) during the reporting period.",
@@ -11389,7 +11304,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 670,
+                'id' => 665,
                 'code' => "PI9468",
                 'name' => "Water Provided for Sale: Total",
                 'definition' => "Volume of water provided and delivered to offtaker(s) during the reporting period.",
@@ -11406,7 +11321,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 671,
+                'id' => 666,
                 'code' => "OI2799",
                 'name' => "Level of Water Stress",
                 'definition' => "Level of baseline water stress on land directly or indirectly managed by the organization as of the end of the reporting period.\n\nChoose all that apply: \n- Low (<10%)\n- Low-medium (10–19.9%)\n- Medium-high (20–39.9%)\n- High (40–80%)\n- Extremely high (>80%)\n- Arid and low water use\n- No data",
@@ -11423,7 +11338,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 672,
+                'id' => 667,
                 'code' => "OI0263",
                 'name' => "Water Withdrawn",
                 'definition' => "Volume of all water drawn from surface water, groundwater, seawater, or a third party for any use by the organization during the reporting period.",
@@ -11440,7 +11355,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 673,
+                'id' => 668,
                 'code' => "OI0386",
                 'name' => "Water Discharged",
                 'definition' => "Volume of effluents, used water, and unused water released, during the reporting period, to surface water, groundwater, seawater, or a third party and for which the organization has no further use.",
@@ -11457,7 +11372,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 674,
+                'id' => 669,
                 'code' => "OD7536",
                 'name' => "Water Type",
                 'definition' => "Describes the type of water withdrawn, consumed, or discharged as a result of investments made by the organization during the reporting period.\n\nChoose all that apply:\n- Rainwater\n- Recycled Water\n- Groundwater\n- Surface Water \n- Seawater\n- Third Party: Municipal\n- Third Party: Wastewater\n- Other (describe)",
@@ -11474,7 +11389,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 675,
+                'id' => 670,
                 'code' => "OI9202",
                 'name' => "Streamflow Rate",
                 'definition' => "Rate of flowing water in a stream or river on land directly or indirectly managed by the organization as of the end of the reporting period.",
@@ -11491,7 +11406,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 676,
+                'id' => 671,
                 'code' => "OI8541",
                 'name' => "Peak Flow Rate",
                 'definition' => "Rate of maximum flow of water through a stream or river on land directly or indirectly managed by the organization as of the end of the reporting period.",
@@ -11508,7 +11423,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 677,
+                'id' => 672,
                 'code' => "OI3798",
                 'name' => "Stream Nutrient Levels Assessment",
                 'definition' => "Indicates whether the organization has assessed nitrogen and phosphorus levels in streams on directly or indirectly controlled land as of the end of the reporting period.",
@@ -11525,7 +11440,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 678,
+                'id' => 673,
                 'code' => "OI3979",
                 'name' => "Stream Turbidity Level",
                 'definition' => "Level of turbidity (in Nephelometric Turbidity Units, or NTU) observed in streams or rivers on land directly or indirectly managed by the organization as of the end of the reporting period.",
@@ -11542,7 +11457,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 679,
+                'id' => 674,
                 'code' => "OI7560",
                 'name' => "Land Directly Controlled: Impervious Surfaces",
                 'definition' => "Area of land directly controlled by the organization that is impervious to water during the reporting period.",
@@ -11559,7 +11474,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 680,
+                'id' => 675,
                 'code' => "PI3113",
                 'name' => "Level of Stream Connectivity",
                 'definition' => "Describes the level of fragmentation of streams—the extent to which streams and rivers are fragmented into unconnected parts—present on land directly or indirectly controlled by the organization as of the end of the reporting period. Report for hectares controlled at any point during the reporting period.\n\nChoose one:\n- Very low fragmentation\n- Low fragmentation\n- Moderate fragmentation\n- High fragmentation\n- Very high fragmentation\n- No data",
@@ -11576,7 +11491,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 681,
+                'id' => 676,
                 'code' => "OI9278",
                 'name' => "Water Treatment Level",
                 'definition' => "Describes the level of treatment that discharged water received during the reporting period.\n\nChoose all that apply: \n- Primary treatment\n- Secondary treatment\n- Tertiary treatment\n- No treatment",
@@ -11593,7 +11508,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 682,
+                'id' => 677,
                 'code' => "PD1310",
                 'name' => "Connection Type",
                 'definition' => "Describes the type of connection provided to households or individuals as a result of the organization's activities during the reporting period. \n\nChoose all that apply:\n- Piped water\n- Sewer\n- Grid electricity\n- Off-grid electricity\n- Internet\n- Phone: Mobile\n- Phone: Landline\n- Other (describe)",
@@ -11610,7 +11525,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 683,
+                'id' => 678,
                 'code' => "OD6737",
                 'name' => "Stormwater Runoff",
                 'definition' => "Volume of water generated from rain and snowmelt flowing over (that is, without soaking into the ground) land indirectly or directly controlled by the organization during the reporting period.",
@@ -11627,7 +11542,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 684,
+                'id' => 679,
                 'code' => "PI8053",
                 'name' => "Number of Household and Business Connections",
                 'definition' => "Number of residential and commercial connections to utilities and services provided by the organization as of the end of the reporting period.",
@@ -11644,7 +11559,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 685,
+                'id' => 680,
                 'code' => "PI3317",
                 'name' => "Number of Individual Connections",
                 'definition' => "Number of connections to utilities and services provided to individuals by the organization as of the end of the reporting period.",
@@ -11661,7 +11576,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 686,
+                'id' => 681,
                 'code' => "PI1022",
                 'name' => "Energy Discharge Rate",
                 'definition' => "Average discharge rate of the organization’s storage product , measured as the energy storage capacity divided by the discharge time, during the reporting period.",
@@ -11678,7 +11593,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "format",
             ],
             [
-                'id' => 687,
+                'id' => 682,
                 'code' => "PI1595",
                 'name' => "Energy Discharged",
                 'definition' => "Amount of energy discharged (MWh or MJ) from the organization’s energy storage product during the reporting period.",
@@ -11695,7 +11610,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 688,
+                'id' => 683,
                 'code' => "PI0915",
                 'name' => "Energy Storage Capacity",
                 'definition' => "Maximum amount of energy that can be stored in the organization’s energy storage product (in MWh or MJ) as of the end of the reporting period.",
@@ -11712,7 +11627,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 689,
+                'id' => 684,
                 'code' => "PD4577",
                 'name' => "Energy Storage Device Cycle Life",
                 'definition' => "Number of cycles that the organization’s energy storage product can be charged and discharged over its lifetime as of the end of the reporting period, measured as cumulative energy (MWh or MJ).",
@@ -11729,7 +11644,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 690,
+                'id' => 685,
                 'code' => "PD3764",
                 'name' => "Energy Capacity",
                 'definition' => "Maximum amount of energy that the organization’s system can transmit (measured in kV) as of the end of the reporting period.",
@@ -11746,7 +11661,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 691,
+                'id' => 686,
                 'code' => "PI9448",
                 'name' => "Energy Capacity Added",
                 'definition' => "Amount of new energy capacity connected to the grid during the reporting period, measured in MW.",
@@ -11763,7 +11678,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 692,
+                'id' => 687,
                 'code' => "PI5193",
                 'name' => "Energy Transmitted: Total",
                 'definition' => "Amount of energy transmitted by the organization during the reporting period (in MWh).",
@@ -11780,7 +11695,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 693,
+                'id' => 688,
                 'code' => "PI1435",
                 'name' => "Energy Stored",
                 'definition' => "Amount of energy stored by the organization during the reporting period.",
@@ -11797,7 +11712,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 694,
+                'id' => 689,
                 'code' => "PI1845",
                 'name' => "Energy Demand Hours Type",
                 'definition' => "Describes the time frame in which the organization operated during the reporting period.\n\nChoose all that apply: \n- Peak \n- Off-Peak \n- Undisclosed \n- Other (describe)",
@@ -11814,7 +11729,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 695,
+                'id' => 690,
                 'code' => "PI4515",
                 'name' => "Length of Transmission Lines Built or Improved",
                 'definition' => "Length of transmission lines built or improved by the organization during the reporting period.",
@@ -11831,7 +11746,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 696,
+                'id' => 691,
                 'code' => "PI7728",
                 'name' => "Species: Total",
                 'definition' => "Indicates the number of different species (species richness) present within the area managed directly or indirectly by the organization as of the end of the reporting period.",
@@ -11848,7 +11763,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 697,
+                'id' => 692,
                 'code' => "PI6887",
                 'name' => "Biodiversity Footprint",
                 'definition' => "Describes the organization’s biodiversity footprint -- a measure of ecosystem intactness – on area directly or indirectly controlled by the organization as of the end of the reporting period.",
@@ -11865,7 +11780,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 698,
+                'id' => 693,
                 'code' => "PI8027",
                 'name' => "Species Abundance",
                 'definition' => "Indicates the number of individuals of a particular species that are present on area directly or indirectly controlled by the organization as of the end of the reporting period.",
@@ -11882,7 +11797,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 699,
+                'id' => 694,
                 'code' => "OI3846",
                 'name' => "Critical Marine Habitats",
                 'definition' => "Indicates whether the marine and coastal spaces directly controlled, indirectly controlled, or used (such as for transport) by the organization include important marine habitats for species.",
@@ -11899,7 +11814,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 700,
+                'id' => 695,
                 'code' => "OI7876",
                 'name' => "Marine Area Directly Controlled: Total",
                 'definition' => "Area of marine environment directly controlled by the organization during the reporting period.",
@@ -11916,7 +11831,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 701,
+                'id' => 696,
                 'code' => "OI1047",
                 'name' => "Soil Health Practices",
                 'definition' => "Indicates which sustainable agriculture best practices the organization implemented to maintain and enhance soil health of agricultural lands during the reporting period.\n\nSelect all that apply:\n\n- Application of regionally appropriate soil health improvement practices to maintain or enhance soil fertility and the physical and biological characteristics of soil\n- Monitoring of those soil health characteristics, including nutrients from different sources, that are necessary to maintain or enhance appropriate nutrient balance and soil health\n- Development and maintenance of an up-to-date nutrient management program that efficiently uses nutrient inputs and nutrients in the soil and crops to create optimum conditions for production and avoids nutrient loss to water and air\n- Other (describe)\n- Undisclosed",
@@ -11933,7 +11848,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 702,
+                'id' => 697,
                 'code' => "OI6381",
                 'name' => "Soil Conservation Practices",
                 'definition' => "Indicates which soil conservation practices the organization implemented during the reporting period.\n\nSelect all that apply:\n\n- Application of regionally appropriate practices to minimize disturbance of and physical damage to soil, cropland, and pasturelands\n- Prevention of soil erosion, acidification, salinization, and accumulation of adverse compounds not otherwise specified\n- Other (describe)",
@@ -11950,7 +11865,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 703,
+                'id' => 698,
                 'code' => "OI9417",
                 'name' => "Community Health Resilience and Improvement Strategy",
                 'definition' => "Indicates whether the organization implemented a community health resilience and improvement strategy during the reporting period to improve health outcomes and increase the resilience of target stakeholder populations.",
@@ -11967,7 +11882,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602) selection per Hectare",
             ],
             [
-                'id' => 704,
+                'id' => 699,
                 'code' => "ID9608",
                 'name' => "Assets Under Management: Total",
                 'definition' => "Value of the investing organization's total assets under management as of the end of the reporting period.",
@@ -11984,7 +11899,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602) selection per Hectare",
             ],
             [
-                'id' => 705,
+                'id' => 700,
                 'code' => "II6610",
                 'name' => "Value of Investments in Communities Historically Marginalized Due to Race and/or Ethnicity",
                 'definition' => "Value of the investing organization's assets under management deployed to communities that are predominantly populated by groups historically marginalized due to race and/or ethnicity as of the end of the reporting period.",
@@ -12001,7 +11916,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 706,
+                'id' => 701,
                 'code' => "II4910",
                 'name' => "Assets Under Management: Managed by Fund Managers from Historically Marginalized Groups",
                 'definition' => "Value of the investing organization's assets under management (AUM) invested with fund managers from groups historically marginalized due to race and/or ethnicity as of the end of the reporting period.",
@@ -12018,7 +11933,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 707,
+                'id' => 702,
                 'code' => "II9005",
                 'name' => "Value of Investments in Company: Total",
                 'definition' => "Value of the investing organization's investment in a company as of the beginning of the investment.",
@@ -12035,7 +11950,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 708,
+                'id' => 703,
                 'code' => "II8480",
                 'name' => "Value of Investments in Company: Outstanding",
                 'definition' => "Value of the investing organization's outstanding investment in a company as of the end of the reporting period. See usage guidance for details.",
@@ -12052,7 +11967,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 709,
+                'id' => 704,
                 'code' => "II0324",
                 'name' => "Value of Capacity Building and Advisory Services Provided",
                 'definition' => "Value of the investing organization's support for capacity-building efforts at investee companies as of the end of the reporting period.",
@@ -12069,7 +11984,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 710,
+                'id' => 705,
                 'code' => "II5889",
                 'name' => "Fund Managers: Total",
                 'definition' => "Number of unique individuals affiliated with the organization who were managing client assets via funds and/or separate accounts as of the end of the reporting period.",
@@ -12086,7 +12001,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 711,
+                'id' => 706,
                 'code' => "II2107",
                 'name' => "Fund Managers: Considered for Investment",
                 'definition' => "Number of unique individuals affiliated with the organization who were candidates to manage client assets via funds and/or separate accounts during the reporting period.",
@@ -12103,7 +12018,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 712,
+                'id' => 707,
                 'code' => "PI5576",
                 'name' => "Client Organizations Led: Total",
                 'definition' => "Number of client organizations as of the end of the reporting period in which the leader (or half or more of the leaders, if there are multiple) represents a specific group (for example, women or historically marginalized groups).",
@@ -12120,7 +12035,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 713,
+                'id' => 708,
                 'code' => "II5202",
                 'name' => "Companies Considered for Investment: Total",
                 'definition' => "Number of companies the organization considered for investment—that is, in the pipeline—during the reporting period.",
@@ -12137,7 +12052,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 714,
+                'id' => 709,
                 'code' => "II8439",
                 'name' => "Companies Considered for Investment: Led by Founders from Historically Marginalized Groups due to Race and/or Ethnicity",
                 'definition' => "Number of companies the organization considered for investment—that is, in the pipeline—during the reporting period that were led by founders from groups historically marginalized due to race and/or ethnicity.",
@@ -12154,7 +12069,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit Referenced within Metric Definition",
             ],
             [
-                'id' => 715,
+                'id' => 710,
                 'code' => "ID9449",
                 'name' => "Racial Equity Strategy",
                 'definition' => "Indicates whether the organization implements a strategy to set targets, drive progress toward, and report on racial equity goals.",
@@ -12171,7 +12086,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602) selection per Hectare",
             ],
             [
-                'id' => 716,
+                'id' => 711,
                 'code' => "ID1046",
                 'name' => "Racial Equity Audit",
                 'definition' => "Indicates whether the organization completed a racial equity audit during the reporting period.",
@@ -12188,7 +12103,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602) selection per Hectare",
             ],
             [
-                'id' => 717,
+                'id' => 712,
                 'code' => "OD0482",
                 'name' => "Racial Equity Transparency Practice",
                 'definition' => "Indicates whether the organization has a formalized and ongoing practice of sharing publicly its positions, practices, progress, and advocacy related to racial equity as a mechanism to build trust and ensure adherence.",
@@ -12205,7 +12120,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Decimal",
             ],
             [
-                'id' => 718,
+                'id' => 713,
                 'code' => "OD2311",
                 'name' => "Racial Equity Advocacy Strategy",
                 'definition' => "Indicates whether the organization has an advocacy strategy in place to support racial equity and justice efforts at local and national levels as of the end of the reporting period.",
@@ -12222,7 +12137,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602",
             ],
             [
-                'id' => 719,
+                'id' => 714,
                 'code' => "ID0120",
                 'name' => "Racial Equity Negative Screen",
                 'definition' => "Indicates whether the investing organization applied a racial equity–focused negative screen to all investments during the reporting period, including at least an analysis of potential harmful effects on communities historically marginalized due to race and/or ethnicity.",
@@ -12239,7 +12154,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 720,
+                'id' => 715,
                 'code' => "OI5044",
                 'name' => "Training Type",
                 'definition' => "Describes the types of trainings completed by individuals as a result of the organization's activities during the reporting period.\n\nChoose all that apply:\n - Enterprise or business development training\n - Vocational or technical training\n - Anti-harassment training\n - Racial equity training\n - General social and environmental performance training\n - Undisclosed",
@@ -12256,7 +12171,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Unit of Measure (PD1602)",
             ],
             [
-                'id' => 721,
+                'id' => 716,
                 'code' => "ID8539",
                 'name' => "Bias-Reducing Investment Practices",
                 'definition' => "Describes practices the investing organization implemented during the reporting period to reduce biases in investment criteria, policies, and processes that have disproportionately negative effects on entrepreneurs who are from groups historically marginalized due to race and/or ethnicity. See usage guidance for specific practices to address.",
@@ -12273,7 +12188,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 722,
+                'id' => 717,
                 'code' => "PI7985",
                 'name' => "Active Use",
                 'definition' => "Disaggregates another metric in terms of active use. For example, Client Individuals (PI4060) disaggregated by this metric, option \"active,\" would yield Active Users in many contexts. See usage guidance for further information.\n\nSelect one:\n- Active\n- Inactive\n- Data not available\n- Other (write-in)",
@@ -12290,7 +12205,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 723,
+                'id' => 718,
                 'code' => "PI1209",
                 'name' => "Responsible Financial Products/Services Offered",
                 'definition' => "Indicates whether the organization offers responsible financial products and services. See usage guidance for further information.",
@@ -12307,7 +12222,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 724,
+                'id' => 719,
                 'code' => "PI8255",
                 'name' => "Responsible Financial Products/Services Offered",
                 'definition' => "Describes the use of the financial product/service provided by the organization, or disaggregates another metric in terms of one or more financial product or service. For loans, this is often called \"loan type.\"\n\nSelect any that apply:\n\nBasic Services\n- Mortgage\n- Home equity\n- Education\n- Green financing\n- Lease financing\n- Emergency\n- Group lending\n- Other (write-in)\n\nBusiness\n- Working capital\n- Asset financing\n- Term loans\n- Invoice financing\n- Other (write-in)\n\nOther (write-in)",
@@ -12324,7 +12239,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Selection",
             ],
             [
-                'id' => 725,
+                'id' => 720,
                 'code' => "PI1653",
                 'name' => "Account Value",
                 'definition' => "Disaggregates a metric representing accounts in terms of the direction of their change in value during the reporting period.\n\nSelect any that apply:\n- Increased in value during the reporting period\n- Decreased in value or stayed the same value during the reporting period\n- Other (write-in)",
@@ -12341,7 +12256,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Yes/No",
             ],
             [
-                'id' => 726,
+                'id' => 721,
                 'code' => "PD5694",
                 'name' => "Green Product/Service Type",
                 'definition' => "Describes how a product/service provided by the organization contributes to a more environmentally sustainable economy, or disaggregates another metric in terms of how the related product or service contributes to a more environmentally sustainable economy.\n\nSelect all that apply:\n- Climate change mitigation\n- Climate change adaptation\n- The sustainable use and protection of water and marine resources \n- The transition to a circular economy\n- Pollution prevention and control\n- The protection and restoration of biodiversity and ecosystems\n- Product/service does not contribute to a more environmentally sustainable economy\n- Other (write-in)",
@@ -12358,7 +12273,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 727,
+                'id' => 722,
                 'code' => "OI8115",
                 'name' => "Gross Written Premium",
                 'definition' => "Amount of total insurance premium written or sold by the organization during the reporting period.",
@@ -12375,7 +12290,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 728,
+                'id' => 723,
                 'code' => "OI3781",
                 'name' => "Primary Energy Source",
                 'definition' => "Describes the primary source(s) for energy produced, sold, or purchased by the organization during the reporting period, or disaggregates another metric in terms of the primary source of the related amount of energy.\n\nSelect all that apply:\n\nNon-renewable sources:\n- Coal\n- Crude oil derivatives\n- Natural gas\n- Other (write-in)\n\nRenewable sources:\n- Biomass\n- Geothermal\n- Hydro energy\n- Nuclear\n- Solar\n- Wind\n- Other (write-in)\n\nOther (write-in)",
@@ -12392,7 +12307,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 729,
+                'id' => 724,
                 'code' => "PI9996",
                 'name' => "Provided New Access",
                 'definition' => "Describes the type of prior access in a market available to an organization's clients, or disaggregates another metric in terms of type of prior access available in a market.\n\nSelect any that apply by impact theme:\n\nClean Energy\n- Previously accessed ‘dirty’ energy\n- Previously lacked any energy access\n- Previously accessed less efficient energy\n- Did not previously lack clean energy access\n- Other (write-in)\n\nOther\n- Write-in",
@@ -12409,7 +12324,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 730,
+                'id' => 725,
                 'code' => "OI0667",
                 'name' => "Leadership Demographics",
                 'definition' => "Describes the demographic groups in leadership of the organization, or disaggregates another metric in terms of one or more demographic groups in leadership. Particular thresholds apply to consider an organization \"led\" by members of a demographic group; see usage guidance for further information. Select all that apply:\n\nGender:\n- 30% of Greater Female or Gender Non-Binary\n- Undisclosed\n- Other\n\nDisability Status:\n- Persons with disabilities\n- Persons without disabilities\n- Undisclosed\n- Other\n\nRace/Ethnicity/Minority Status:\n- Historically marginalized groups\n- Dominant culture populations\n- Undisclosed\n- Other\n\nOther target populations:\n- Other (describe)",
@@ -12426,7 +12341,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Reporting Currency (OD5990)",
             ],
             [
-                'id' => 731,
+                'id' => 726,
                 'code' => "OI4221",
                 'name' => "Ownership Demographics",
                 'definition' => "Describes the demographics of the ownership of the organization, or disaggregates another metric in terms of one or more demographic groups of ownership. Particular thresholds apply to consider an organization \"owned\" by members of a demographic group; see usage guidance for further information. Select all that apply:\n\nGender:\n- 51% or Greater Female or Gender Non-Binary\n- Undisclosed\n- Other\n\nDisability Status:\n- Persons with disabilities\n- Persons without disabilities\n- Undisclosed\n- Other\n\nRace/Ethnicity/Minority Status:\n- Historically marginalized groups\n- Dominant culture populations\n- Undisclosed\n\nOther target populations:\n- Other (describe)",
@@ -12443,7 +12358,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 732,
+                'id' => 727,
                 'code' => "OI0933",
                 'name' => "Founder Demographics",
                 'definition' => "Describes the demographic groups among founders of the organization, or disaggregates another metric in terms of one or more founder demographic groups. Particular thresholds apply to consider an organization \"founded\" by members of a demographic group; see usage guidance for further information. Select all that apply:\n\nGender:\n- 50% or More Female or Gender Non-Binary\n- Undisclosed\n- Other\n\nDisability Status:\n- Persons with disabilities\n- Persons without disabilities\n- Undisclosed\n- Other\n\nRace/Ethnicity/Minority Status:\n- 50% or More from Historically Marginalized Groups\n- Undisclosed\n- Other\n\nOther target populations:\n- Other (describe)",
@@ -12460,7 +12375,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 733,
+                'id' => 728,
                 'code' => "PI7191",
                 'name' => "Healthcare Effective Coverage",
                 'definition' => "Percentage of the organization's clients (patients) who received necessary health intervention(s) during the reporting period.",
@@ -12477,7 +12392,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 734,
+                'id' => 729,
                 'code' => "OI7394",
                 'name' => "Pesticide Hazard Classification Type",
                 'definition' => "Describes the pesticide hazard classification for pesticides used by the organization, or disaggregates another metric in terms of pesticide hazard classification. Select all that apply:\n\n- Class Ia Extremely hazardous\n- Class Ib Highly hazardous \n- Class II Moderately hazardous \n- Class III Slightly hazardous \n- Class U Unlikely to present acute hazard",
@@ -12494,7 +12409,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 735,
+                'id' => 730,
                 'code' => "OI6482",
                 'name' => "Indigenous Rights and Stewardship Practices",
                 'definition' => "Describes the practices used by the organization to acknowledge and support the traditional knowledge, innovations, and practices of local Indigenous communities and enable their customary use of biological resources on land, freshwater, and marine areas managed directly and indirectly by the organization.",
@@ -12511,7 +12426,7 @@ class MetricsTableSeeder extends Seeder
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
             [
-                'id' => 736,
+                'id' => 731,
                 'code' => "PI2771",
                 'name' => "Food Insecurity Experience",
                 'definition' => "Score describing the experienced severity of food security among a set of stakeholders defined by another metric or set. See usage guidance for further detail and resources.",
@@ -12527,6 +12442,7 @@ class MetricsTableSeeder extends Seeder
                 'quantity_type' => "Flow",
                 'reporting_format' => "Number of Metric Tons of CO2 Equivalent",
             ],
+
 
         ];
 
