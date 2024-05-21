@@ -123,6 +123,14 @@
                         <span>{{ __('Companies') }}</span>
                 </a>
             </li>
+
+            <!-- Nav Item - SDG -->
+            <li class="nav-item {{ Nav::isRoute('sdgs') }}">
+                <a class="nav-link" href="{{ route('sdgs.index') }}">
+                    <i class="fas fa-fw fa-sitemap"></i>
+                    <span>{{ __('SDGs') }}</span>
+                </a>
+            </li>
             <!-- Nav Item - About -->
             <!-- <li class="nav-item {{ Nav::isRoute('about') }}">
                 <a class="nav-link" href="{{ route('about') }}">
