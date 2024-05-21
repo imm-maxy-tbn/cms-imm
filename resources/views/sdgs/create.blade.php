@@ -34,7 +34,7 @@
             <form action="{{ route('sdgs.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="nama">Name:</label>
+                    <label for="name">Name:</label>
                     <input type="text" class="form-control" id="name" name="name" required>
                     <label for="order">Order:</label>
                     <input type="number" class="form-control" id="order" name="order" required>

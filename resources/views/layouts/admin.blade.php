@@ -131,6 +131,14 @@
                     <span>{{ __('SDGs') }}</span>
                 </a>
             </li>
+
+            <!-- Nav Item - Indicator -->
+            <li class="nav-item {{ Nav::isRoute('indicators') }}">
+                <a class="nav-link" href="{{ route('indicators.index') }}">
+                    <i class="fas fa-fw fa-sitemap"></i>
+                    <span>{{ __('Indicators') }}</span>
+                </a>
+            </li>
             <!-- Nav Item - About -->
             <!-- <li class="nav-item {{ Nav::isRoute('about') }}">
                 <a class="nav-link" href="{{ route('about') }}">

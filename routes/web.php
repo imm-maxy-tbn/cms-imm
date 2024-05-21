@@ -102,3 +102,13 @@ Route::get('/sdgs/{id}/edit', [SdgController::class, 'edit'])->name('sdgs.edit')
 Route::put('/sdgs/{id}', [SdgController::class, 'update'])->name('sdgs.update');
 Route::delete('/sdgs/{id}', [SdgController::class, 'destroy'])->name('sdgs.destroy');
 Route::get('/sdgs/{id}/view', [SdgController::class, 'view'])->name('sdgs.view');
+
+use App\Http\Controllers\IndicatorController;
+
+Route::get('/indicators', [IndicatorController::class, 'index'])->name('indicators.index');
+Route::get('/indicators/create', [IndicatorController::class, 'create'])->name('indicators.create');
+Route::post('/indicators/store', [IndicatorController::class, 'store'])->name('indicators.store');
+Route::get('/indicators/{id}/edit', [IndicatorController::class, 'edit'])->name('indicators.edit');
+Route::put('/indicators/{id}', [IndicatorController::class, 'update'])->name('indicators.update');
+Route::delete('/indicators/{id}', [IndicatorController::class, 'destroy'])->name('indicators.destroy');
+Route::get('/indicators/{id}/view', [IndicatorController::class, 'view'])->name('indicators.view');
