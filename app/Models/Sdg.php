@@ -17,6 +17,6 @@ class Sdg extends Model
 
     public function indicators()
     {
-        return $this->belongsToMany(Indicator::class);
+        return $this->hasMany(Indicator::class);
     }
 }

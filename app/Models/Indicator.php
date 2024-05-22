@@ -22,13 +22,13 @@ class Indicator extends Model
         return $this->hasMany(Indicator::class, 'parent_indicator_id');
     }
 
-    // Relationship with SDGs (many-to-many)
+    // Relationship with SDGs (many-to-one)
     public function sdgs()
     {
-        return $this->belongsToMany(Sdg::class);
+        return $this->belongsTo(Sdg::class);
     }
 
-    //Optional Relationship with Metrics (many-to-many)
+    // Relationship with Metrics (many-to-many)
     public function metrics()
     {
         return $this->belongsToMany(Metric::class);
