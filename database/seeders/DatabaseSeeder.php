@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SdgsTableSeeder::class);
         $this->call(IndicatorsTableSeeder::class);
         $this->call(MetricTagTableSeeder::class);
+        $this->call(MetricIndicatorTableSeeder::class);
     }
 }
