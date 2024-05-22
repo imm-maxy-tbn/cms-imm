@@ -92,3 +92,23 @@ Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 Route::get('/posts/{id}/view', [PostController::class, 'view'])->name('posts.view');
 Route::post('/posts/image/upload', [PostController::class, 'uploadImage'])->name('posts.uploadImage');
+
+use App\Http\Controllers\SdgController;
+
+Route::get('/sdgs', [SdgController::class, 'index'])->name('sdgs.index');
+Route::get('/sdgs/create', [SdgController::class, 'create'])->name('sdgs.create');
+Route::post('/sdgs/store', [SdgController::class, 'store'])->name('sdgs.store');
+Route::get('/sdgs/{id}/edit', [SdgController::class, 'edit'])->name('sdgs.edit');
+Route::put('/sdgs/{id}', [SdgController::class, 'update'])->name('sdgs.update');
+Route::delete('/sdgs/{id}', [SdgController::class, 'destroy'])->name('sdgs.destroy');
+Route::get('/sdgs/{id}/view', [SdgController::class, 'view'])->name('sdgs.view');
+
+use App\Http\Controllers\IndicatorController;
+
+Route::get('/indicators', [IndicatorController::class, 'index'])->name('indicators.index');
+Route::get('/indicators/create', [IndicatorController::class, 'create'])->name('indicators.create');
+Route::post('/indicators/store', [IndicatorController::class, 'store'])->name('indicators.store');
+Route::get('/indicators/{id}/edit', [IndicatorController::class, 'edit'])->name('indicators.edit');
+Route::put('/indicators/{id}', [IndicatorController::class, 'update'])->name('indicators.update');
+Route::delete('/indicators/{id}', [IndicatorController::class, 'destroy'])->name('indicators.destroy');
+Route::get('/indicators/{id}/view', [IndicatorController::class, 'view'])->name('indicators.view');
