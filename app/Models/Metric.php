@@ -24,11 +24,11 @@ class Metric extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsToMany(Tag::class, 'metric_tag');
     }
 
     public function indicators()
     {
-        return $this->belongsToMany(Indicator::class);
+        return $this->belongsToMany(Indicator::class, 'metric_indicator');
     }
 }

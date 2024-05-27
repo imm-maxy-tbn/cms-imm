@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Metric;
+use App\Models\Tag;
+use App\Models\Indicator;
 use Illuminate\Http\Request;
 
 class MetricController extends Controller
@@ -15,9 +17,12 @@ class MetricController extends Controller
 
     public function create()
     {
-        // Load any data needed for the form (e.g., options for tags and indicators)
-        return view('metrics.create');
+        $tags = Tag::all();
+        $indicators = Indicator::all();
+
+        return view('metrics.create', compact('tags', 'indicators'));
     }
+
 
     public function store(Request $request)
     {
@@ -30,18 +35,22 @@ class MetricController extends Controller
         return redirect()->route('metrics.index')->with('success', 'Metric created successfully');
     }
 
-    public function show($id)
-    {
-        $metric = Metric::with('tags', 'indicators', 'relatedMetrics')->findOrFail($id);
-        return view('metrics.show', compact('metric'));
-    }
+    public function view($id)
+{
+    $metric = Metric::with('tags', 'indicators')->findOrFail($id);
+    return view('metrics.view', compact('metric'));
+}
+
 
     public function edit($id)
-    {
-        $metric = Metric::with('tags', 'indicators')->findOrFail($id);
-        // Load data needed for the form (e.g., available tags, indicators)
-        return view('metrics.edit', compact('metric'));
-    }
+{
+    $metric = Metric::with('tags', 'indicators')->findOrFail($id);
+    $tags = Tag::all();
+    $indicators = Indicator::all();
+
+    return view('metrics.edit', compact('metric', 'tags', 'indicators'));
+}
+
 
     public function update(Request $request, $id)
     {
