@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
-    protected $fillable = ['nama', 'deskripsi', 'tujuan', 'start_date', 'end_date', 'jumlah_pendanaan', 'company_id'];
+    protected $fillable = ['nama', 'deskripsi', 'tujuan', 'start_date', 'end_date', 'provinsi', 'kota', 'gmaps', 'jumlah_pendanaan', 'jenis_dana', 'dana_lain', 'deskripsi_pelanggan', 'company_id'];
 
     public function company()
     {
@@ -21,6 +21,10 @@ class Project extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
+    }
+        public function targetPelanggan()
+    {
+        return $this->hasMany(TargetPelanggan::class);
     }
 }
 
