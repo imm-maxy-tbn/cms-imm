@@ -139,6 +139,23 @@
                     <span>{{ __('Indicators') }}</span>
                 </a>
             </li>
+
+            <!-- Nav Item - Metric -->
+            <li class="nav-item {{ Nav::isRoute('metrics') }}">
+                <a class="nav-link" href="{{ route('metrics.index') }}">
+                    <i class="fas fa-fw fa-sitemap"></i>
+                    <span>{{ __('Metrics') }}</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Project -->
+            <li class="nav-item {{ Nav::isRoute('projects') }}">
+                <a class="nav-link" href="{{ route('projects.index') }}">
+                    <i class="fas fa-fw fa-sitemap"></i>
+                    <span>{{ __('Projects') }}</span>
+                </a>
+            </li>
+
             <!-- Nav Item - About -->
             <!-- <li class="nav-item {{ Nav::isRoute('about') }}">
                 <a class="nav-link" href="{{ route('about') }}">

@@ -112,3 +112,23 @@ Route::get('/indicators/{id}/edit', [IndicatorController::class, 'edit'])->name(
 Route::put('/indicators/{id}', [IndicatorController::class, 'update'])->name('indicators.update');
 Route::delete('/indicators/{id}', [IndicatorController::class, 'destroy'])->name('indicators.destroy');
 Route::get('/indicators/{id}/view', [IndicatorController::class, 'view'])->name('indicators.view');
+
+use App\Http\Controllers\MetricController;
+
+Route::get('/metrics', [MetricController::class, 'index'])->name('metrics.index');
+Route::get('/metrics/create', [MetricController::class, 'create'])->name('metrics.create');
+Route::post('/metrics/store', [MetricController::class, 'store'])->name('metrics.store');
+Route::get('/metrics/{id}/edit', [MetricController::class, 'edit'])->name('metrics.edit');
+Route::put('/metrics/{id}', [MetricController::class, 'update'])->name('metrics.update');
+Route::delete('/metrics/{id}', [MetricController::class, 'destroy'])->name('metrics.destroy');
+Route::get('/metrics/{id}/view', [MetricController::class, 'view'])->name('metrics.view');
+
+use App\Http\Controllers\ProjectController;
+
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
+Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
+Route::post('/projects/store', [ProjectController::class, 'store'])->name('projects.store');
+Route::get('/projects/{id}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
+Route::put('/projects/{id}', [ProjectController::class, 'update'])->name('projects.update');
+Route::delete('/projects/{id}', [ProjectController::class, 'destroy'])->name('projects.destroy');
+Route::get('/projects/{id}/view', [ProjectController::class, 'view'])->name('projects.view');

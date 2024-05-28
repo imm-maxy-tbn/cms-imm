@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class TargetPelanggan extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'status',
+        'rentang_usia',
+        'deskripsi_pelanggan',
+        'project_id',
+    ];
+
+    public function project()
+    {
+        return $this->belongsTo(Project::class, 'project_id');
+    }
 }
+
