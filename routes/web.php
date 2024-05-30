@@ -132,3 +132,4 @@ Route::get('/projects/{id}/edit', [ProjectController::class, 'edit'])->name('pro
 Route::put('/projects/{id}', [ProjectController::class, 'update'])->name('projects.update');
 Route::delete('/projects/{id}', [ProjectController::class, 'destroy'])->name('projects.destroy');
 Route::get('/projects/{id}/view', [ProjectController::class, 'view'])->name('projects.view');
+

@@ -41,5 +41,9 @@ class Project extends Model
     {
         return $this->hasMany(TargetPelanggan::class);
     }
+    public function dana()
+    {
+        return $this->hasMany(Dana::class);
+    }
 }
 

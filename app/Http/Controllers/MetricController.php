@@ -14,7 +14,7 @@ class MetricController extends Controller
         $metrics = Metric::with('tags', 'indicators')->get();
         return view('metrics.index', compact('metrics'));
     }
-
+    
     public function create()
     {
         $tags = Tag::all();

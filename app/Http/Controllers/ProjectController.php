@@ -9,13 +9,14 @@ use App\Models\Sdg;
 use App\Models\Indicator;
 use App\Models\Metric;
 use App\Models\TargetPelanggan;
+use App\Models\Dana;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
     public function index()
     {
-        $projects = Project::with('tags', 'sdgs', 'indicators', 'metrics', 'targetPelanggan')->get();
+        $projects = Project::with('tags', 'sdgs', 'indicators', 'metrics', 'targetPelanggan', 'dana')->get();
         return view('projects.index', compact('projects'));
     }
 
@@ -27,8 +28,9 @@ class ProjectController extends Controller
         $indicators = Indicator::all();
         $metrics = Metric::all();
         $targetPelanggan = TargetPelanggan::all();
+        $dana = Dana::all();
 
-        return view('projects.create', compact('companies', 'tags', 'sdgs', 'indicators', 'metrics', 'targetPelanggan'));
+        return view('projects.create', compact('companies', 'tags', 'sdgs', 'indicators', 'metrics', 'targetPelanggan', 'dana'));
     }
 
     public function store(Request $request)
@@ -44,8 +46,9 @@ class ProjectController extends Controller
             'kota' => 'required|string',
             'gmaps' => 'required|string',
             'jumlah_pendanaan' => 'required|numeric',
-            'jenis_dana' => 'required|string',
-            'dana_lain' => 'required|numeric',
+            'dana' => 'required|array',
+            'dana.*.jenis_dana' => 'required|string',
+            'dana.*.nominal' => 'required|numeric',
             'company_id' => 'required|exists:companies,id',
             'tag_ids' => 'array',
             'tag_ids.*' => 'exists:tags,id',
@@ -66,12 +69,22 @@ class ProjectController extends Controller
             $request->img->move(public_path('images'), $imageName);
             $validatedData['img'] = $imageName;
         }
+        
         $project = Project::create($validatedData);
         
         $project->tags()->attach($request->input('tag_ids'));
         $project->sdgs()->attach($request->input('sdg_ids'));
         $project->indicators()->attach($request->input('indicator_ids'));
         $project->metrics()->attach($request->input('metric_ids'));
+
+        if ($request->has('dana')) {
+            foreach ($request->dana as $dana) {
+                $project->dana()->create([
+                    'jenis_dana' => $dana['jenis_dana'],
+                    'nominal' => $dana['nominal'],
+                ]);
+            }
+        }
 
         if ($request->has('target_pelanggans')) {
             foreach ($request->target_pelanggans as $target) {
@@ -82,14 +95,13 @@ class ProjectController extends Controller
                 ]);
             }
         }
-        
 
         return redirect()->route('projects.index')->with('success', 'Project created successfully');
     }
 
     public function edit($id)
     {
-        $project = Project::with(['tags', 'sdgs', 'metrics', 'targetPelanggan'])->findOrFail($id);
+        $project = Project::with(['tags', 'sdgs', 'metrics', 'targetPelanggan', 'dana'])->findOrFail($id);
         $companies = Company::all();
         $tags = Tag::all();
         $sdgs = SDG::with('indicators')->get();
@@ -121,8 +133,9 @@ class ProjectController extends Controller
             'kota' => 'required|string',
             'gmaps' => 'required|string',
             'jumlah_pendanaan' => 'required|numeric',
-            'jenis_dana' => 'required|string',
-            'dana_lain' => 'required|numeric',
+            'dana' => 'required|array',
+            'dana.*.jenis_dana' => 'required|string',
+            'dana.*.nominal' => 'required|numeric',
             'company_id' => 'required|exists:companies,id',
             'tag_ids' => 'array',
             'tag_ids.*' => 'exists:tags,id',
@@ -149,6 +162,16 @@ class ProjectController extends Controller
         $project->sdgs()->sync($request->input('sdg_ids', []));
         $project->indicators()->sync($request->input('indicator_ids', []));
         $project->metrics()->sync($request->input('metric_ids', []));
+
+        if ($request->has('dana')) {
+            $project->dana()->delete();
+            foreach ($request->dana as $dana) {
+                $project->dana()->create([
+                    'jenis_dana' => $dana['jenis_dana'],
+                    'nominal' => $dana['nominal'],
+                ]);
+            }
+        }
 
         if ($request->has('target_pelanggans')) {
             $project->targetPelanggan()->delete();

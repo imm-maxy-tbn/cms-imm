@@ -75,24 +75,41 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="jumlah_pendanaan">Jumlah Dana:</label>
+                    <label for="jumlah_pendanaan">Jumlah Dana Keseluruhan:</label>
                     <input type="number" class="form-control" id="jumlah_pendanaan" name="jumlah_pendanaan" required>
                 </div>
-                <h3>Pendanaan Lainnya</h3>
-                <div class="form-group">
-                    <label for="jenis_dana">Jenis Dana:</label>
-                    <select class="form-control" id="jenis_dana" name="jenis_dana" required>
-                        <option value="Hibah">Hibah</option>
-                        <option value="Investasi">Investasi</option>
-                        <option value="Pinjaman">Pinjaman</option>
-                    </select>
-                </div>
+
+                <h3>Spesifikasi Pendanaan
+                    <button type="button" class="btn btn-primary btn-add-dana"><i class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                </h3>
 
                 <div class="form-group">
-                    <label for="dana_lain">Dana Lainnya:</label>
-                    <input type="text" class="form-control" id="dana_lain" name="dana_lain" required>
+                    <div class="spesifikasi-pendanaan">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Jenis Dana</th>
+                                    <th>Nominal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <select class="form-control" name="dana[0][jenis_dana]" required>
+                                            <option value="Hibah">Hibah</option>
+                                            <option value="Investasi">Investasi</option>
+                                            <option value="Pinjaman">Pinjaman</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control" name="dana[0][nominal]" required>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-
                 <div class="form-group">
                     <label for="company_id">Company:</label>
                     <select class="form-control" id="company_id" name="company_id" required>
@@ -107,43 +124,40 @@
                     <label for="tags">Tags:</label>
                     <select multiple class="form-control" id="tags" name="tag_ids[]">
                         @foreach ($tags as $tag)
-                            <option value="{{ $tag->id }}">{{ $tag->nama }}</option>
+                        <option value="{{ $tag->id }}">{{ $tag->nama }}</option>
                         @endforeach
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="sdgs">SDGs:</label>
-                    <select multiple class="form-control" id="sdgs" name="sdg_ids[]">
+                    <select class="form-control" id="sdgs" name="sdg_ids[]" multiple>
                         @foreach($sdgs as $sdg)
-                        <option value="{{ $sdg->id }}">{{ $sdg->order }}. {{ $sdg->name }}</option>
+                            <option value="{{ $sdg->id }}">{{ $sdg->order }}. {{ $sdg->name }}</option>
                         @endforeach
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="indicators">Indicators:</label>
-                    <select multiple class="form-control" id="indicators" name="indicator_ids[]">
-                        @foreach ($indicators as $indicator)
-                            <option value="{{ $indicator->id }}">{{ $indicator->order }} {{ $indicator->name }}</option>
-                        @endforeach
+                    <select class="form-control" id="indicators" name="indicator_ids[]" multiple>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="metrics">Metrics:</label>
-                    <select multiple class="form-control" id="metrics" name="metric_ids[]">
+                    <select class="form-control" id="metrics" name="metric_ids[]" multiple>
                         @foreach ($metrics as $metric)
                             <option value="{{ $metric->id }}">({{ $metric->code }}) {{ $metric->name }}</option>
                         @endforeach
                     </select>
                 </div>
                 
+                
                 <h4>Target Pelanggan
-                    <button type="button" class="btn btn-primary btn-add"><i class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                    <button type="button" class="btn btn-primary btn-add-pelanggan"><i class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
                 </h4>
                 <div class="form-group">
-                    <label for="target_pelanggans">Target Pelanggan:</label>
                     <div class="target-pelanggan">
                         <table class="table">
                             <thead>
@@ -176,20 +190,77 @@
 </div>
 
 <script>
-$(document).ready(function () {
-    var index = 1;
-    $(".btn-add").click(function () {
-        var newRow = '<tr>' +
-            '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][status]" required></td>' +
-            '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][rentang_usia]"></td>' +
-            '<td><textarea class="form-control" name="target_pelanggans[' + index + '][deskripsi_pelanggan]"></textarea></td>' +
-            '</tr>';
-        $('.target-pelanggan tbody').append(newRow);
-        index++;
+    $(document).ready(function () {
+        var index = 1;
+        $(".btn-add-pelanggan").click(function () {
+            var newRow = '<tr>' +
+                '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][status]" required></td>' +
+                '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][rentang_usia]"></td>' +
+                '<td><textarea class="form-control" name="target_pelanggans[' + index + '][deskripsi_pelanggan]"></textarea></td>' +
+                '<td><button type="button" class="btn btn-danger btn-remove-pelanggan"><i class="fa-solid fa-minus" style="color: #ffffff;"></i></button></td>'+
+                '</tr>';
+            $('.target-pelanggan tbody').append(newRow);
+            index++;
+        });
+    
+        document.querySelector('.target-pelanggan').addEventListener('click', function (e) {
+            if (e.target.classList.contains('btn-remove-pelanggan')) {
+                e.target.closest('tr').remove();
+            }
+        });
+    
+        var indexDana = 1;
+        $(".btn-add-dana").click(function () {
+            var selectedOptions = $('.spesifikasi-pendanaan select').map(function() {
+                return $(this).val();
+            }).get();
+            var options = ['Hibah', 'Investasi', 'Pinjaman', 'Lainnya'];
+            var availableOptions = options.filter(function(option) {
+                return !selectedOptions.includes(option);
+            });
+            var optionsHtml = availableOptions.map(function(option) {
+                return '<option value="' + option + '">' + option + '</option>';
+            }).join('');
+            var newRow = '<tr>' +
+                '<td><select class="form-control" name="dana[' + indexDana + '][jenis_dana]" required>' +
+                optionsHtml +
+                '</select></td>' +
+                '<td><input type="number" class="form-control" name="dana[' + indexDana + '][nominal]" required></td>' +
+                '<td><button type="button" class="btn btn-danger btn-remove-dana"><i class="fa-solid fa-minus" style="color: #ffffff;"></i></button></td>'+ 
+                '</tr>';
+            $('.spesifikasi-pendanaan tbody').append(newRow);
+            indexDana++;
+            
+            // Disable the button if no more options are available
+            if (availableOptions.length === 1) {
+                $(".btn-add-dana").prop('disabled', true);
+            }
+        });
+    
+        document.querySelector('.spesifikasi-pendanaan').addEventListener('click', function (e) {
+            if (e.target.classList.contains('btn-remove-dana')) {
+                e.target.closest('tr').remove();
+                // Enable the button again after removing a row
+                $(".btn-add-dana").prop('disabled', false);
+            }
+        });
+    
+        $('#sdgs').change(function() {
+            var selectedSdg = $(this).val();
+            $('#indicators').empty();
+            @foreach ($sdgs as $sdg)
+                @foreach ($sdg->indicators as $indicator)
+                    @if($indicator->level == 1)
+                        if (selectedSdg.includes('{{ $sdg->id }}')) {
+                            $('#indicators').append('<option value="{{ $indicator->id }}">{{ $indicator->order }} {{ $indicator->name }}</option>');
+                        }
+                    @endif
+                @endforeach
+            @endforeach
+        });
     });
-});
 
-</script>
+    </script>
+    
 
 @endsection
-

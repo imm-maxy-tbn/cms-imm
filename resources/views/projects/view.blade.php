@@ -65,18 +65,37 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="jumlah_pendanaan">Jumlah Dana:</label>
+                    <label for="jumlah_pendanaan">Jumlah Dana Keseluruhan:</label>
                     <input type="number" class="form-control" id="jumlah_pendanaan" value="{{ $project->jumlah_pendanaan }}" readonly>
                 </div>
 
                 <div class="form-group">
-                    <label for="jenis_dana">Jenis Dana:</label>
-                    <input type="text" class="form-control" id="jenis_dana" value="{{ $project->jenis_dana }}" readonly>
-                </div>
-
-                <div class="form-group">
-                    <label for="dana_lain">Dana Lainnya:</label>
-                    <input type="text" class="form-control" id="dana_lain" value="{{ $project->dana_lain }}" readonly>
+                    <div class="spesifikasi-pendanaan">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Jenis Dana</th>
+                                    <th>Nominal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($project->dana as $index => $dana)
+                                    <tr>
+                                        <td>
+                                            <select class="form-control" name="dana[{{ $index }}][jenis_dana]" readonly disabled>
+                                                <option value="Hibah" {{ $dana->jenis_dana == 'Hibah' ? 'selected' : '' }}>Hibah</option>
+                                                <option value="Investasi" {{ $dana->jenis_dana == 'Investasi' ? 'selected' : '' }}>Investasi</option>
+                                                <option value="Pinjaman" {{ $dana->jenis_dana == 'Pinjaman' ? 'selected' : '' }}>Pinjaman</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" name="dana[{{ $index }}][nominal]" value="{{ $dana->nominal }}" readonly>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="form-group">

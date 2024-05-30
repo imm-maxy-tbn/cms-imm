@@ -12,19 +12,16 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Purpose</th>
+                        <th>Gambar Project</th>
+                        <th>Nama Project</th>
+                        <th>Deskripsi</th>
+                        <th>Tujuan</th>
                         <th>Start Date</th>
                         <th>End Date</th>
-                        <th>Province</th>
-                        <th>City</th>
-                        <th>Google Maps</th>
-                        <th>Funding Amount</th>
-                        <th>Funding Type</th>
-                        <th>Other Funding</th>
-                        <th>Customer Description</th>
+                        <th>Provinsi</th>
+                        <th>Kota</th>
+                        <th>URL Google Maps</th>
+                        <th>Jumlah Dana Keseluruhan:</th>
                         <th>Tags</th>
                         <th>SDGs</th>
                         <th>Indicators</th>
@@ -56,9 +53,6 @@
                             <td>{{ $project->kota }}</td>
                             <td>{{ $project->gmaps }}</td>
                             <td>{{ $project->jumlah_pendanaan }}</td>
-                            <td>{{ $project->jenis_dana }}</td>
-                            <td>{{ $project->dana_lain }}</td>
-                            <td>{{ $project->deskripsi_pelanggan }}</td>
                             <td>
                                 <div style="max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                     @foreach($project->tags as $tag)
@@ -69,21 +63,21 @@
                             <td>
                                 <div style="max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                     @foreach($project->sdgs as $sdg)
-                                        {{ $sdg->name }}{{ !$loop->last ? ', ' : '' }}
+                                        {{ $sdg->order }}. {{ $sdg->name }}{{ !$loop->last ? ', ' : '' }}
                                     @endforeach
                                 </div>
                             </td>
                             <td>
                                 <div style="max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                     @foreach($project->indicators as $indicator)
-                                        {{ $indicator->name }}{{ !$loop->last ? ', ' : '' }}
+                                        {{ $indicator->order }}. {{ $indicator->name }}{{ !$loop->last ? ', ' : '' }}
                                     @endforeach
                                 </div>
                             </td>
                             <td>
                                 <div style="max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                     @foreach($project->metrics as $metric)
-                                        {{ $metric->name }}{{ !$loop->last ? ', ' : '' }}
+                                        ({{ $metric->code }}) {{ $metric->name }}{{ !$loop->last ? ', ' : '' }}
                                     @endforeach
                                 </div>
                             </td>

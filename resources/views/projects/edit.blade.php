@@ -78,22 +78,42 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="jumlah_pendanaan">Jumlah Dana:</label>
+                    <label for="jumlah_pendanaan">Jumlah Dana Keseluruhan:</label>
                     <input type="number" class="form-control" id="jumlah_pendanaan" name="jumlah_pendanaan" value="{{ $project->jumlah_pendanaan }}" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="jenis_dana">Jenis Dana:</label>
-                    <select class="form-control" id="jenis_dana" name="jenis_dana" required>
-                        <option value="Hibah" {{ $project->jenis_dana == 'Hibah' ? 'selected' : '' }}>Hibah</option>
-                        <option value="Investasi" {{ $project->jenis_dana == 'Investasi' ? 'selected' : '' }}>Investasi</option>
-                        <option value="Pinjaman" {{ $project->jenis_dana == 'Pinjaman' ? 'selected' : '' }}>Pinjaman</option>
-                    </select>
-                </div>
+                <h3>Spesifikasi Pendanaan
+                    <button type="button" class="btn btn-primary btn-add-dana"><i class="fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                </h3>
 
                 <div class="form-group">
-                    <label for="dana_lain">Dana Lainnya:</label>
-                    <input type="text" class="form-control" id="dana_lain" name="dana_lain" value="{{ $project->dana_lain }}" required>
+                    <div class="spesifikasi-pendanaan">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Jenis Dana</th>
+                                    <th>Nominal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($project->dana as $index => $dana)
+                                    <tr>
+                                        <td>
+                                            <select class="form-control" name="dana[{{ $index }}][jenis_dana]" required>
+                                                <option value="{{ $dana->jenis_dana }}" selected>{{ $dana->jenis_dana }}</option>
+                                                <option value="Investasi">Investasi</option>
+                                                <option value="Pinjaman">Pinjaman</option>
+                                                <option value="Lainnya">Lainnya</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" name="dana[{{ $index }}][nominal]" value="{{ $dana->nominal }}" required>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>                            
+                        </table>
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -183,18 +203,59 @@
 
 <script>
 $(document).ready(function () {
-    var index = {{ count($project->targetPelanggan) }};
-    $(".btn-add").click(function () {
-        var newRow = '<tr>' +
-            '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][status]" required></td>' +
-            '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][rentang_usia]"></td>' +
-            '<td><textarea class="form-control" name="target_pelanggans[' + index + '][deskripsi_pelanggan]"></textarea></td>' +
-            '</tr>';
-        $('.target-pelanggan tbody').append(newRow);
-        index++;
-    });
-});
-
+        var index = 1;
+        $(".btn-add-pelanggan").click(function () {
+            var newRow = '<tr>' +
+                '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][status]" required></td>' +
+                '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][rentang_usia]"></td>' +
+                '<td><textarea class="form-control" name="target_pelanggans[' + index + '][deskripsi_pelanggan]"></textarea></td>' +
+                '<td><button type="button" class="btn btn-danger btn-remove-pelanggan"><i class="fa-solid fa-minus" style="color: #ffffff;"></i></button></td>'+
+                '</tr>';
+            $('.target-pelanggan tbody').append(newRow);
+            index++;
+        });
+    
+        document.querySelector('.target-pelanggan').addEventListener('click', function (e) {
+            if (e.target.classList.contains('btn-remove-pelanggan')) {
+                e.target.closest('tr').remove();
+            }
+        });
+    
+        var indexDana = 1;
+        $(".btn-add-dana").click(function () {
+            var selectedOptions = $('.spesifikasi-pendanaan select').map(function() {
+                return $(this).val();
+            }).get();
+            var options = ['Hibah', 'Investasi', 'Pinjaman', 'Lainnya'];
+            var availableOptions = options.filter(function(option) {
+                return !selectedOptions.includes(option);
+            });
+            var optionsHtml = availableOptions.map(function(option) {
+                return '<option value="' + option + '">' + option + '</option>';
+            }).join('');
+            var newRow = '<tr>' +
+                '<td><select class="form-control" name="dana[' + indexDana + '][jenis_dana]" required>' +
+                optionsHtml +
+                '</select></td>' +
+                '<td><input type="number" class="form-control" name="dana[' + indexDana + '][nominal]" required></td>' +
+                '<td><button type="button" class="btn btn-danger btn-remove-dana"><i class="fa-solid fa-minus" style="color: #ffffff;"></i></button></td>'+ 
+                '</tr>';
+            $('.spesifikasi-pendanaan tbody').append(newRow);
+            indexDana++;
+            
+            // Disable the button if no more options are available
+            if (availableOptions.length === 1) {
+                $(".btn-add-dana").prop('disabled', true);
+            }
+        });
+    
+        document.querySelector('.spesifikasi-pendanaan').addEventListener('click', function (e) {
+            if (e.target.classList.contains('btn-remove-dana')) {
+                e.target.closest('tr').remove();
+                // Enable the button again after removing a row
+                $(".btn-add-dana").prop('disabled', false);
+            }
+        });
 </script>
 
 @endsection
