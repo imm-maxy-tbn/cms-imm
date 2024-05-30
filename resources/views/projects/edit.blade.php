@@ -111,7 +111,8 @@
                                         </td>
                                     </tr>
                                 @endforeach
-                            </tbody>                            
+                            </tbody>
+                            
                         </table>
                     </div>
                 </div>
@@ -256,6 +257,7 @@ $(document).ready(function () {
                 $(".btn-add-dana").prop('disabled', false);
             }
         });
+    });
 </script>
 
 @endsection
