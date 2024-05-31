@@ -122,3 +122,15 @@ Route::get('/metrics/{id}/edit', [MetricController::class, 'edit'])->name('metri
 Route::put('/metrics/{id}', [MetricController::class, 'update'])->name('metrics.update');
 Route::delete('/metrics/{id}', [MetricController::class, 'destroy'])->name('metrics.destroy');
 Route::get('/metrics/{id}/view', [MetricController::class, 'view'])->name('metrics.view');
+
+use App\Http\Controllers\SurveyController;
+
+Route::get('surveys', [SurveyController::class, 'index'])->name('surveys.index');
+Route::get('surveys/create', [SurveyController::class, 'create'])->name('surveys.create');
+Route::post('surveys', [SurveyController::class, 'store'])->name('surveys.store');
+Route::get('surveys/{survey}', [SurveyController::class, 'view'])->name('surveys.view');
+Route::get('surveys/{survey}/edit', [SurveyController::class, 'edit'])->name('surveys.edit');
+Route::put('surveys/{survey}', [SurveyController::class, 'update'])->name('surveys.update');
+Route::delete('surveys/{survey}', [SurveyController::class, 'destroy'])->name('surveys.destroy');
+Route::get('surveys/{survey}/submit', [SurveyController::class, 'createEntry'])->name('surveys.entry');
+Route::post('surveys/{survey}', [SurveyController::class, 'submit'])->name('surveys.submit');

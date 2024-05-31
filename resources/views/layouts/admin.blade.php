@@ -124,6 +124,14 @@
                 </a>
             </li>
 
+            <!-- Nav Item - Surveys -->
+            <li class="nav-item {{ Nav::isRoute('surveys') }}">
+                <a class="nav-link" href="{{ route('surveys.index') }}">
+                    <i class="fas fa-fw fa-poll"></i>
+                    <span>{{ __('Surveys') }}</span>
+                </a>
+            </li>
+
             <!-- Nav Item - SDG -->
             <li class="nav-item {{ Nav::isRoute('sdgs') }}">
                 <a class="nav-link" href="{{ route('sdgs.index') }}">
