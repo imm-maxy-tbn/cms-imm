@@ -245,22 +245,55 @@
             }
         });
     
+        function updateMetrics() {
+    var selectedTags = $('#tags').val();
+    var selectedIndicators = $('#indicators').val();
+    $.ajax({
+        url: '{{ route('projects.filterMetrics') }}',
+        method: 'POST',
+        data: {
+            _token: '{{ csrf_token() }}',
+            tag_ids: selectedTags,
+            indicator_ids: selectedIndicators
+        },
+        success: function(response) {
+            $('#metrics').empty();
+            $.each(response, function(index, metric) {
+                var optionHtml = '<option value="' + metric.id + '">(' + metric.code + ') ' + metric.name + '</option>';
+                // Check if the metric has related metrics
+                if (metric.related_metrics.length > 0) {
+                    // Append the related metrics
+                    $.each(metric.related_metrics, function(index, relatedMetric) {
+                        optionHtml += '<option value="' + relatedMetric.id + '">&nbsp;&nbsp;&nbsp;&nbsp;(' + relatedMetric.code + ') ' + relatedMetric.name + '</option>';
+                    });
+                }
+                $('#metrics').append(optionHtml);
+            });
+        }
+    });
+}
+
+
+        $('#tags, #indicators').change(function() {
+            updateMetrics();
+        });
+
+        // Load initial indicators based on selected SDGs
         $('#sdgs').change(function() {
             var selectedSdg = $(this).val();
             $('#indicators').empty();
             @foreach ($sdgs as $sdg)
                 @foreach ($sdg->indicators as $indicator)
-                    @if($indicator->level == 1)
-                        if (selectedSdg.includes('{{ $sdg->id }}')) {
-                            $('#indicators').append('<option value="{{ $indicator->id }}">{{ $indicator->order }} {{ $indicator->name }}</option>');
-                        }
-                    @endif
+                    if (selectedSdg.includes('{{ $sdg->id }}')) {
+                        $('#indicators').append('<option value="{{ $indicator->id }}">{{ $indicator->order }}. {{ $indicator->name }}</option>');
+                    }
                 @endforeach
             @endforeach
         });
-    });
 
-    </script>
-    
+        // Initial call to update metrics
+        updateMetrics();
+    });
+</script>
 
 @endsection

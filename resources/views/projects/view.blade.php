@@ -116,18 +116,18 @@
                         <span class="badge badge-secondary" style="font-size: 0.80vw;">{{ $sdg->order }}. {{ $sdg->name }}</span>
                     @endforeach
                 </div>
+                
+                <div class="form-group">
+                    <label for="indicators">Indicators:</label><br>
+                    @foreach ($project->indicators->sortBy('order') as $indicator)
+                        <span class="badge badge-warning" style="font-size: 0.80vw;">{{ $indicator->order }} {{ $indicator->name }}</span>
+                    @endforeach
+                </div>
 
                 <div class="form-group">
                     <label for="metrics">Metrics:</label><br>
                     @foreach ($project->metrics->sortBy('code') as $metric)
                         <span class="badge badge-info" style="font-size: 0.80vw;">({{ $metric->code }}) {{ $metric->name }}</span>
-                    @endforeach
-                </div>
-
-                <div class="form-group">
-                    <label for="indicators">Indicators:</label><br>
-                    @foreach ($project->indicators->sortBy('order') as $indicator)
-                        <span class="badge badge-warning" style="font-size: 0.80vw;">{{ $indicator->order }} {{ $indicator->name }}</span>
                     @endforeach
                 </div>
 
