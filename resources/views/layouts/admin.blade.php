@@ -163,6 +163,7 @@
                     <span>{{ __('Projects') }}</span>
                 </a>
             </li>
+            
 
             <!-- Nav Item - About -->
             <!-- <li class="nav-item {{ Nav::isRoute('about') }}">

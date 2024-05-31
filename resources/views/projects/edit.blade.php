@@ -93,6 +93,7 @@
                                 <tr>
                                     <th>Jenis Dana</th>
                                     <th>Nominal</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -108,6 +109,9 @@
                                         </td>
                                         <td>
                                             <input type="number" class="form-control" name="dana[{{ $index }}][nominal]" value="{{ $dana->nominal }}" required>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-remove-dana"><i class="fa-solid fa-minus" style="color: #ffffff;"></i></button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -175,6 +179,7 @@
                                     <th>Status Pekerjaan</th>
                                     <th>Rentang Usia</th>
                                     <th>Deskripsi Pelanggan</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -188,6 +193,9 @@
                                         </td>
                                         <td>
                                             <textarea class="form-control" name="target_pelanggans[{{ $index }}][deskripsi_pelanggan]">{{ $target->deskripsi_pelanggan }}</textarea>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-remove-pelanggan"><i class="fa-solid fa-minus" style="color: #ffffff;"></i></button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -204,60 +212,60 @@
 
 <script>
 $(document).ready(function () {
-        var index = 1;
-        $(".btn-add-pelanggan").click(function () {
-            var newRow = '<tr>' +
-                '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][status]" required></td>' +
-                '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][rentang_usia]"></td>' +
-                '<td><textarea class="form-control" name="target_pelanggans[' + index + '][deskripsi_pelanggan]"></textarea></td>' +
-                '<td><button type="button" class="btn btn-danger btn-remove-pelanggan"><i class="fa-solid fa-minus" style="color: #ffffff;"></i></button></td>'+
-                '</tr>';
-            $('.target-pelanggan tbody').append(newRow);
-            index++;
-        });
-    
-        document.querySelector('.target-pelanggan').addEventListener('click', function (e) {
-            if (e.target.classList.contains('btn-remove-pelanggan')) {
-                e.target.closest('tr').remove();
-            }
-        });
-    
-        var indexDana = 1;
-        $(".btn-add-dana").click(function () {
-            var selectedOptions = $('.spesifikasi-pendanaan select').map(function() {
-                return $(this).val();
-            }).get();
-            var options = ['Hibah', 'Investasi', 'Pinjaman', 'Lainnya'];
-            var availableOptions = options.filter(function(option) {
-                return !selectedOptions.includes(option);
-            });
-            var optionsHtml = availableOptions.map(function(option) {
-                return '<option value="' + option + '">' + option + '</option>';
-            }).join('');
-            var newRow = '<tr>' +
-                '<td><select class="form-control" name="dana[' + indexDana + '][jenis_dana]" required>' +
-                optionsHtml +
-                '</select></td>' +
-                '<td><input type="number" class="form-control" name="dana[' + indexDana + '][nominal]" required></td>' +
-                '<td><button type="button" class="btn btn-danger btn-remove-dana"><i class="fa-solid fa-minus" style="color: #ffffff;"></i></button></td>'+ 
-                '</tr>';
-            $('.spesifikasi-pendanaan tbody').append(newRow);
-            indexDana++;
-            
-            // Disable the button if no more options are available
-            if (availableOptions.length === 1) {
-                $(".btn-add-dana").prop('disabled', true);
-            }
-        });
-    
-        document.querySelector('.spesifikasi-pendanaan').addEventListener('click', function (e) {
-            if (e.target.classList.contains('btn-remove-dana')) {
-                e.target.closest('tr').remove();
-                // Enable the button again after removing a row
-                $(".btn-add-dana").prop('disabled', false);
-            }
-        });
+    var index = {{ count($project->targetPelanggan) }};
+    $(".btn-add").click(function () {
+        var newRow = '<tr>' +
+            '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][status]" required></td>' +
+            '<td><input type="text" class="form-control" name="target_pelanggans[' + index + '][rentang_usia]"></td>' +
+            '<td><textarea class="form-control" name="target_pelanggans[' + index + '][deskripsi_pelanggan]"></textarea></td>' +
+            '<td><button type="button" class="btn btn-danger btn-remove-pelanggan"><i class="fa-solid fa-minus" style="color: #ffffff;"></i></button></td>'+
+            '</tr>';
+        $('.target-pelanggan tbody').append(newRow);
+        index++;
     });
+
+    document.querySelector('.target-pelanggan').addEventListener('click', function (e) {
+        if (e.target.classList.contains('btn-remove-pelanggan')) {
+            e.target.closest('tr').remove();
+        }
+    });
+
+    var indexDana = {{ count($project->dana) }};
+    $(".btn-add-dana").click(function () {
+        var selectedOptions = $('.spesifikasi-pendanaan select').map(function() {
+            return $(this).val();
+        }).get();
+        var options = ['Hibah', 'Investasi', 'Pinjaman', 'Lainnya'];
+        var availableOptions = options.filter(function(option) {
+            return !selectedOptions.includes(option);
+        });
+        var optionsHtml = availableOptions.map(function(option) {
+            return '<option value="' + option + '">' + option + '</option>';
+        }).join('');
+        var newRow = '<tr>' +
+            '<td><select class="form-control" name="dana[' + indexDana + '][jenis_dana]" required>' +
+            optionsHtml +
+            '</select></td>' +
+            '<td><input type="number" class="form-control" name="dana[' + indexDana + '][nominal]" required></td>' +
+            '<td><button type="button" class="btn btn-danger btn-remove-dana"><i class="fa-solid fa-minus" style="color: #ffffff;"></i></button></td>'+ 
+            '</tr>';
+        $('.spesifikasi-pendanaan tbody').append(newRow);
+        indexDana++;
+        
+        // Disable the button if no more options are available
+        if (availableOptions.length === 1) {
+            $(".btn-add-dana").prop('disabled', true);
+        }
+    });
+
+    document.querySelector('.spesifikasi-pendanaan').addEventListener('click', function (e) {
+        if (e.target.classList.contains('btn-remove-dana')) {
+            e.target.closest('tr').remove();
+            // Enable the button again after removing a row
+            $(".btn-add-dana").prop('disabled', false);
+        }
+    });
+});
 </script>
 
 @endsection
