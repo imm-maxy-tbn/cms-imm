@@ -123,6 +123,18 @@ Route::put('/metrics/{id}', [MetricController::class, 'update'])->name('metrics.
 Route::delete('/metrics/{id}', [MetricController::class, 'destroy'])->name('metrics.destroy');
 Route::get('/metrics/{id}/view', [MetricController::class, 'view'])->name('metrics.view');
 
+use App\Http\Controllers\ProjectController;
+
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
+Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
+Route::post('/projects/store', [ProjectController::class, 'store'])->name('projects.store');
+Route::get('/projects/{id}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
+Route::put('/projects/{id}', [ProjectController::class, 'update'])->name('projects.update');
+Route::delete('/projects/{id}', [ProjectController::class, 'destroy'])->name('projects.destroy');
+Route::get('/projects/{id}/view', [ProjectController::class, 'view'])->name('projects.view');
+Route::post('/projects/filter-metrics', [ProjectController::class, 'filterMetrics'])->name('projects.filterMetrics');
+
+
 use App\Http\Controllers\SurveyController;
 
 Route::get('surveys', [SurveyController::class, 'index'])->name('surveys.index');
