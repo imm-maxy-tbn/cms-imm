@@ -231,7 +231,6 @@
             $('.spesifikasi-pendanaan tbody').append(newRow);
             indexDana++;
             
-            // Disable the button if no more options are available
             if (availableOptions.length === 1) {
                 $(".btn-add-dana").prop('disabled', true);
             }
@@ -240,7 +239,6 @@
         document.querySelector('.spesifikasi-pendanaan').addEventListener('click', function (e) {
             if (e.target.classList.contains('btn-remove-dana')) {
                 e.target.closest('tr').remove();
-                // Enable the button again after removing a row
                 $(".btn-add-dana").prop('disabled', false);
             }
         });
@@ -260,9 +258,7 @@
             $('#metrics').empty();
             $.each(response, function(index, metric) {
                 var optionHtml = '<option value="' + metric.id + '">(' + metric.code + ') ' + metric.name + '</option>';
-                // Check if the metric has related metrics
                 if (metric.related_metrics.length > 0) {
-                    // Append the related metrics
                     $.each(metric.related_metrics, function(index, relatedMetric) {
                         optionHtml += '<option value="' + relatedMetric.id + '">&nbsp;&nbsp;&nbsp;&nbsp;(' + relatedMetric.code + ') ' + relatedMetric.name + '</option>';
                     });
@@ -278,7 +274,6 @@
             updateMetrics();
         });
 
-        // Load initial indicators based on selected SDGs
         $('#sdgs').change(function() {
             var selectedSdg = $(this).val();
             $('#indicators').empty();
@@ -291,7 +286,6 @@
             @endforeach
         });
 
-        // Initial call to update metrics
         updateMetrics();
     });
 </script>

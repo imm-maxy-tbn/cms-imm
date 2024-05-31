@@ -33,15 +33,14 @@ class ProjectController extends Controller
         return view('projects.create', compact('companies', 'tags', 'sdgs', 'indicators', 'metrics', 'targetPelanggan', 'dana'));
     }
 
-    // New method to filter metrics based on selected tags and indicators
     public function filterMetrics(Request $request)
     {
         $tagIds = $request->input('tag_ids', []);
         $indicatorIds = $request->input('indicator_ids', []);
         
-        $metrics = Metric::whereHas('tags', function($query) use ($tagIds) {
+        $metrics = Metric::orWhereHas('tags', function($query) use ($tagIds) {
             $query->whereIn('tags.id', $tagIds);
-        })->whereHas('indicators', function($query) use ($indicatorIds) {
+        })->orWhereHas('indicators', function($query) use ($indicatorIds) {
             $query->whereIn('indicators.id', $indicatorIds);
         })->with('relatedMetrics')->get();
         
