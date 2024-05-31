@@ -133,3 +133,14 @@ Route::put('/projects/{id}', [ProjectController::class, 'update'])->name('projec
 Route::delete('/projects/{id}', [ProjectController::class, 'destroy'])->name('projects.destroy');
 Route::get('/projects/{id}/view', [ProjectController::class, 'view'])->name('projects.view');
 
+use App\Http\Controllers\SurveyController;
+
+Route::get('surveys', [SurveyController::class, 'index'])->name('surveys.index');
+Route::get('surveys/create', [SurveyController::class, 'create'])->name('surveys.create');
+Route::post('surveys', [SurveyController::class, 'store'])->name('surveys.store');
+Route::get('surveys/{survey}', [SurveyController::class, 'view'])->name('surveys.view');
+Route::get('surveys/{survey}/edit', [SurveyController::class, 'edit'])->name('surveys.edit');
+Route::put('surveys/{survey}', [SurveyController::class, 'update'])->name('surveys.update');
+Route::delete('surveys/{survey}', [SurveyController::class, 'destroy'])->name('surveys.destroy');
+Route::get('surveys/{survey}/submit', [SurveyController::class, 'createEntry'])->name('surveys.entry');
+Route::post('surveys/{survey}', [SurveyController::class, 'submit'])->name('surveys.submit');
