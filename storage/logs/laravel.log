@@ -1,0 +1,8 @@
+[2024-06-02 08:56:03] local.ERROR: Cannot declare class CreateSurveysTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateSurveysTable, because the name is already in use at C:\\xampp\\htdocs\\cms-imm\\database\\migrations\\2024_05_27_171620_create_surveys_table.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2024-06-02 08:56:11] local.ERROR: Cannot declare class CreateSurveysTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateSurveysTable, because the name is already in use at C:\\xampp\\htdocs\\cms-imm\\database\\migrations\\2024_05_27_171620_create_surveys_table.php:7)
+[stacktrace]
+#0 {main}
+"} 

@@ -73,4 +73,9 @@ class User extends Authenticatable
     {
         $this->attributes['role'] = in_array($value, ['ADMIN', 'USER']) ? $value : 'USER';
     }
+
+    public function companies()
+    {
+        return $this->hasMany(Company::class);
+    }
 }

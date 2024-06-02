@@ -19,5 +19,11 @@ class Company extends Model
         'provinsi',
         'kabupaten',
         'jumlah_karyawan',
+        'user_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Company;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CompanyController extends Controller
 {
@@ -41,7 +42,7 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'nama' => 'required',
             'profile' => 'required',
             'tipe' => 'required',
@@ -54,7 +55,9 @@ class CompanyController extends Controller
             'jumlah_karyawan' => 'required',
         ]);
 
-        Company::create($request->all());
+        $validated['user_id'] = Auth::id();
+
+        Company::create($validated);
 
         return redirect()->route('companies.index')
             ->with('success', 'Company created successfully.');
@@ -104,13 +107,13 @@ class CompanyController extends Controller
             'kabupaten' => 'required',
             'jumlah_karyawan' => 'required',
         ]);
-    
+
         $company = Company::findOrFail($id);
         $company->update($request->all());
-    
+
         return redirect()->route('companies.index')->with('success', 'Company updated successfully.');
     }
-    
+
 
     /**
      * Remove the specified Company from storage.
