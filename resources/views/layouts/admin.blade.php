@@ -156,6 +156,15 @@
                 </a>
             </li>
 
+            <!-- Nav Item - Project -->
+            <li class="nav-item {{ Nav::isRoute('projects') }}">
+                <a class="nav-link" href="{{ route('projects.index') }}">
+                    <i class="fas fa-fw fa-sitemap"></i>
+                    <span>{{ __('Projects') }}</span>
+                </a>
+            </li>
+            
+
             <!-- Nav Item - About -->
             <!-- <li class="nav-item {{ Nav::isRoute('about') }}">
                 <a class="nav-link" href="{{ route('about') }}">

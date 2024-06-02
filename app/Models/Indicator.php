@@ -10,25 +10,21 @@ class Indicator extends Model
         'name', 'order', 'level', 'parent_indicator_id', 'sdg_id', 'description'
     ];
 
-    // Relationship with parent indicator (self-referencing)
     public function parentIndicator()
     {
         return $this->belongsTo(Indicator::class, 'parent_indicator_id');
     }
 
-    // Relationship with child indicators (inverse of the above)
     public function childIndicators()
     {
         return $this->hasMany(Indicator::class, 'parent_indicator_id');
     }
 
-    // Relationship with SDGs (many-to-one)
     public function sdgs()
     {
         return $this->belongsTo(Sdg::class);
     }
 
-    // Relationship with Metrics (many-to-many)
     public function metrics()
     {
         return $this->belongsToMany(Metric::class);
