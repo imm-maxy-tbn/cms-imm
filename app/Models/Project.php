@@ -29,7 +29,7 @@ class Project extends Model
 
     public function metrics()
     {
-        return $this->belongsToMany(Metric::class);
+        return $this->belongsToMany(Metric::class)->withPivot('id', 'value', 'report_month', 'report_year', 'metric_project_id', 'created_at', 'updated_at')->using(MetricProject::class);
     }
 
     public function indicators()
@@ -44,6 +44,11 @@ class Project extends Model
     public function dana()
     {
         return $this->hasMany(Dana::class);
+    }
+
+    public function metricProjects()
+    {
+        return $this->hasMany(MetricProject::class);
     }
 }
 

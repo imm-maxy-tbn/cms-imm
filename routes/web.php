@@ -134,6 +134,12 @@ Route::delete('/projects/{id}', [ProjectController::class, 'destroy'])->name('pr
 Route::get('/projects/{id}/view', [ProjectController::class, 'view'])->name('projects.view');
 Route::post('/projects/filter-metrics', [ProjectController::class, 'filterMetrics'])->name('projects.filterMetrics');
 
+use App\Http\Controllers\MetricProjectController;
+Route::prefix('projects/{project}')->group(function() {
+    Route::resource('metric-projects', MetricProjectController::class)->parameters(['metric-projects' => 'id']);
+    Route::get('metric-projects/{id}/add-report', [MetricProjectController::class, 'addReport'])->name('metric-projects.add-report');
+    Route::post('metric-projects/{id}/store-report', [MetricProjectController::class, 'storeReport'])->name('metric-projects.store-report');
+});
 
 use App\Http\Controllers\SurveyController;
 

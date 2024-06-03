@@ -31,4 +31,9 @@ class Metric extends Model
     {
         return $this->belongsToMany(Indicator::class, 'metric_indicator');
     }
+
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class)->withPivot('id', 'value', 'report_month', 'report_year', 'metric_project_id', 'created_at', 'updated_at')->using(MetricProject::class);
+    }
 }
