@@ -132,6 +132,22 @@
                 </a>
             </li>
 
+            <!-- Nav Item - Project -->
+            <li class="nav-item {{ Nav::isRoute('projects') }}">
+                <a class="nav-link" href="{{ route('projects.index') }}">
+                    <i class="fas fa-fw fa-sitemap"></i>
+                    <span>{{ __('Projects') }}</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Reporting Metric Projects -->
+            <li class="nav-item {{ Nav::isRoute('metric-projects') }}">
+                <a class="nav-link" href="{{ route('metric-projects.select-project') }}">
+                    <i class="fas fa-fw fa-sitemap"></i>
+                    <span>{{ __('Reporting Metric Projects') }}</span>
+                </a>
+            </li>
+
             <!-- Nav Item - SDG -->
             <li class="nav-item {{ Nav::isRoute('sdgs') }}">
                 <a class="nav-link" href="{{ route('sdgs.index') }}">
@@ -156,14 +172,6 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Project -->
-            <li class="nav-item {{ Nav::isRoute('projects') }}">
-                <a class="nav-link" href="{{ route('projects.index') }}">
-                    <i class="fas fa-fw fa-sitemap"></i>
-                    <span>{{ __('Projects') }}</span>
-                </a>
-            </li>
-            
 
             <!-- Nav Item - About -->
             <!-- <li class="nav-item {{ Nav::isRoute('about') }}">

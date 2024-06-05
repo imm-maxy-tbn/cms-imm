@@ -134,12 +134,38 @@ Route::delete('/projects/{id}', [ProjectController::class, 'destroy'])->name('pr
 Route::get('/projects/{id}/view', [ProjectController::class, 'view'])->name('projects.view');
 Route::post('/projects/filter-metrics', [ProjectController::class, 'filterMetrics'])->name('projects.filterMetrics');
 
+// use App\Http\Controllers\MetricProjectController;
+
+// Route::get('/metric-projects/select-project', [MetricProjectController::class, 'selectProject'])->name('metric-projects.select-project');
+// Route::get('/metric-projects/{id}', [MetricProjectController::class, 'index'])->name('metric-projects.index');
+// Route::get('/metric-projects/{id}/create', [MetricProjectController::class, 'create'])->name('metric-projects.create');
+// Route::post('/metric-projects/{id}', [MetricProjectController::class, 'store'])->name('metric-projects.store');
+// Route::post('/metric-projects/{id}', [MetricProjectController::class, 'destroy'])->name('metric-projects.destroy');
+// Route::get('/metric-projects/{projectId}/{metricProjectId}/edit', [MetricProjectController::class, 'edit'])->name('metric-projects.edit');
+// Route::put('/metric-projects/{projectId}/{metricProjectId}', [MetricProjectController::class, 'update'])->name('metric-projects.update');
+// Route::get('/metric-projects/{metricProject}/add-report', [MetricProjectController::class, 'addReport'])->name('metric-projects.add-report');
+// Route::post('/metric-projects/{metricProject}/store-report', [MetricProjectController::class, 'storeReport'])->name('metric-projects.storeReport');
+
 use App\Http\Controllers\MetricProjectController;
+
+// Route for selecting a project
+Route::get('metric-projects/select', [MetricProjectController::class, 'selectProject'])->name('metric-projects.select-project');
+
+// Routes for metric projects
 Route::prefix('projects/{project}')->group(function() {
-    Route::resource('metric-projects', MetricProjectController::class)->parameters(['metric-projects' => 'id']);
-    Route::get('metric-projects/{id}/add-report', [MetricProjectController::class, 'addReport'])->name('metric-projects.add-report');
-    Route::post('metric-projects/{id}/store-report', [MetricProjectController::class, 'storeReport'])->name('metric-projects.store-report');
+    Route::get('metric-projects/select', [MetricProjectController::class, 'selectProject'])->name('metric-projects.selectProject');
+    Route::get('metric-projects', [MetricProjectController::class, 'index'])->name('metric-projects.index');
+    Route::get('metric-projects/create', [MetricProjectController::class, 'create'])->name('metric-projects.create');
+    Route::post('metric-projects', [MetricProjectController::class, 'store'])->name('metric-projects.store');
+    Route::get('metric-projects/{metricProject}/edit', [MetricProjectController::class, 'edit'])->name('metric-projects.edit');
+    Route::put('metric-projects/{metricProject}', [MetricProjectController::class, 'update'])->name('metric-projects.update');
+    Route::delete('metric-projects/{metricProject}', [MetricProjectController::class, 'destroy'])->name('metric-projects.destroy');
+    Route::get('metric-projects/{metricProject}/add-report', [MetricProjectController::class, 'addReport'])->name('metric-projects.addReport');
+    Route::post('metric-projects/{metricProject}/store-report', [MetricProjectController::class, 'storeReport'])->name('metric-projects.storeReport');
 });
+
+
+
 
 use App\Http\Controllers\SurveyController;
 
