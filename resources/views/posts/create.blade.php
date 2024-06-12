@@ -37,6 +37,10 @@
                     <input type="text" class="form-control" id="title" name="title" required>
                 </div>
                 <div class="form-group">
+                    <label for="img">Images:</label>
+                    <input type="file" name="img" class="form-control">
+                </div>
+                <div class="form-group">
                     <label for="content">Content:</label>
                     <textarea class="form-control" id="summernote" name="content" rows="4" required></textarea>
                 </div>

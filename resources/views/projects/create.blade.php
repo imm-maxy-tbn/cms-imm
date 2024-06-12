@@ -243,7 +243,7 @@
             }
         });
     
-        function updateMetrics() {
+    function updateMetrics() {
     var selectedTags = $('#tags').val();
     var selectedIndicators = $('#indicators').val();
     $.ajax({

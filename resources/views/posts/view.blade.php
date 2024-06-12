@@ -35,6 +35,13 @@
                     <input type="text" class="form-control" id="title" name="title" value="{{ $post->title }}" readonly>
                 </div>
                 <div class="form-group">
+                    <label for="img">Images:</label>
+                    <div id="img">
+                        <img src="{{ asset('images/' . $post->img) }}" height="50" width="50">
+                        <p>{{ basename($post->img) }}</p>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="content">Content:</label>
                     <textarea class="form-control" id="summernote" name="content" rows="4" readonly>{{ $post->content }}</textarea>
                 </div>
@@ -55,6 +62,7 @@
                     </div>
                     @endforeach
                 </div>
+                
                 <a type="button" class="btn btn-primary" href='{{ route('posts.index') }}'>Back</a>
             </form>
         </div>

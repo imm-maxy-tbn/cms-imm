@@ -1,98 +1,110 @@
 @extends('layouts.admin')
 
 @section('main-content')
-    <form action="{{ route('surveys.update', $survey->id) }}" method="POST">
-        @csrf
-        @method('PUT')
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">Edit Post</h1>
 
-        <div class="form-group">
-            <label for="name">Survey Name</label>
-            <input type="text" name="name" class="form-control" id="name" value="{{ $survey->name }}" required>
-        </div>
+    @if (session('success'))
+    <div class="alert alert-success border-left-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @endif
 
-        <div id="questions-container">
-            @foreach($survey->questions as $index => $question)
-                <div class="form-group question-group" data-index="{{ $index }}">
-                    <label for="question-{{ $index }}">Question {{ $index + 1 }}</label>
-                    <input type="hidden" name="questions[{{ $index }}][id]" value="{{ $question->id }}">
-                    <input type="text" name="questions[{{ $index }}][content]" class="form-control" id="question-{{ $index }}" value="{{ $question->content }}" required>
-                    <select name="questions[{{ $index }}][type]" class="form-control" onchange="updateQuestionOptions(this, {{ $index }})">
-                        <option value="text" {{ $question->type == 'text' ? 'selected' : '' }}>Text</option>
-                        <option value="number" {{ $question->type == 'number' ? 'selected' : '' }}>Number</option>
-                        <option value="radio" {{ $question->type == 'radio' ? 'selected' : '' }}>Radio</option>
-                        <option value="multiselect" {{ $question->type == 'multiselect' ? 'selected' : '' }}>Multiselect</option>
-                    </select>
-                    <div class="options-container">
-                        @if($question->type == 'radio' || $question->type == 'multiselect')
-                            @foreach($question->options as $optionIndex => $option)
-                                <div class="form-group option-group">
-                                    <input type="text" name="questions[{{ $index }}][options][]" class="form-control" value="{{ $option }}" required>
-                                    <button type="button" class="btn btn-danger btn-sm" onclick="removeOption(this)">Remove</button>
-                                </div>
-                            @endforeach
-                            <button type="button" class="btn btn-secondary" onclick="addOption({{ $index }})">Add Option</button>
-                        @endif
-                    </div>
-                </div>
+    @if ($errors->any())
+    <div class="alert alert-danger border-left-danger" role="alert">
+        <ul class="pl-4 my-2">
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
             @endforeach
+        </ul>
+    </div>
+    @endif
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" name="title" value="{{ $post->title }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="img">Images:</label>
+                    <input type="file" class="form-control-file" name="img"> <!-- Add name attribute -->
+                </div>
+                <div class="form-group">
+                    <label for="content">Content:</label>
+                    <textarea class="form-control" id="summernote" name="content" rows="4" required>{{ $post->content }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="user_id">Author:</label>
+                    <select class="form-control" id="user_id" name="user_id" required>
+                        @foreach ($users as $user)
+                        <option value="{{ $user->id }}" @if($post->user_id==$user->id) selected @endif>{{ $user->full_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="category_id">Category:</label>
+                    <select class="form-control" id="category_id" name="category_id" required>
+                        @foreach ($categories as $category)
+                        <option value="{{ $category->id }}" @if($post->category_id==$category->id) selected @endif>{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Tags:</label><br>
+                    @foreach ($tags as $tag)
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="tag{{ $tag->id }}" value="{{ $tag->id }}" name="tags[]" @if(in_array($tag->id, $post->tags->pluck('id')->toArray())) checked @endif>
+                        <label class="form-check-label" for="tag{{ $tag->id }}">{{ $tag->nama }}</label>
+                    </div>
+                    @endforeach
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Update Post</button>
+            </form>
         </div>
+    </div>
+</div>
 
-        <button type="button" class="btn btn-secondary" onclick="addQuestion()">Add Question</button>
-        <button type="submit" class="btn btn-primary">Update Survey</button>
-    </form>
+<!-- Pass CSRF token as JavaScript variable -->
+<script>
+    window.csrfToken = '{{ csrf_token() }}';
+</script>
 
-    <script>
-        let questionIndex = {{ $survey->questions->count() }};
+<!-- Link the Summernote JavaScript file -->
+<script src="{{ asset('js/summernote.min.js') }}"></script>
 
-        function addQuestion() {
-            const container = document.getElementById('questions-container');
-            const questionDiv = document.createElement('div');
-            questionDiv.classList.add('form-group', 'question-group');
-            questionDiv.setAttribute('data-index', questionIndex);
-            questionDiv.innerHTML = `
-                <label for="question-${questionIndex}">Question ${questionIndex + 1}</label>
-                <input type="text" name="questions[${questionIndex}][content]" class="form-control" id="question-${questionIndex}" required>
-                <select name="questions[${questionIndex}][type]" class="form-control" onchange="updateQuestionOptions(this, ${questionIndex})">
-                    <option value="text">Text</option>
-                    <option value="number">Number</option>
-                    <option value="radio">Radio</option>
-                    <option value="multiselect">Multiselect</option>
-                </select>
-                <div class="options-container"></div>
-            `;
-            container.appendChild(questionDiv);
-            questionIndex++;
-        }
-
-        function updateQuestionOptions(selectElement, index) {
-            const questionGroup = selectElement.closest('.question-group');
-            const optionsContainer = questionGroup.querySelector('.options-container');
-            optionsContainer.innerHTML = '';
-
-            if (selectElement.value === 'radio' || selectElement.value === 'multiselect') {
-                const addButton = document.createElement('button');
-                addButton.type = 'button';
-                addButton.classList.add('btn', 'btn-secondary');
-                addButton.innerText = 'Add Option';
-                addButton.onclick = () => addOption(index);
-                optionsContainer.appendChild(addButton);
+<script>
+    $('#summernote').summernote({
+        placeholder: 'Content',
+        tabsize: 2,
+        height: 300,
+        callbacks: {
+            onImageUpload: function(files) {
+                var formData = new FormData();
+                formData.append('imgupload', files[0]);
+                formData.append('_token', window.csrfToken);
+                $.ajax({
+                    url: "{{ route('posts.uploadImage') }}",
+                    method: "POST",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(data) {
+                        $('#summernote').summernote('insertImage', data.url);
+                    },
+                    error: function(data) {
+                        console.log(data);
+                    }
+                });
             }
         }
-
-        function addOption(index) {
-            const questionGroup = document.querySelector(`.question-group[data-index="${index}"]`);
-            const optionsContainer = questionGroup.querySelector('.options-container');
-            const optionDiv = document.createElement('div');
-            optionDiv.classList.add('form-group', 'option-group');
-            optionDiv.innerHTML = `
-                <input type="text" name="questions[${index}][options][]" class="form-control" required>
-                <button type="button" class="btn btn-danger btn-sm" onclick="removeOption(this)">Remove</button>
-            `;
-            optionsContainer.insertBefore(optionDiv, optionsContainer.querySelector('button'));
-        }
-
-        function removeOption(button) {
-            button.closest('.option-group').remove();
-        }
-    </script>
+    });
+</script>
 @endsection
