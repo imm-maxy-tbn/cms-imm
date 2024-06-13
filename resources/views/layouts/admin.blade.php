@@ -108,11 +108,19 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Posts -->
+            <!-- Nav Item - Blogs -->
             <li class="nav-item {{ Nav::isRoute('posts') }}">
                 <a class="nav-link" href="{{ route('posts.index') }}">
                     <i class="fas fa-fw fa-newspaper"></i>
-                    <span>{{ __('Posts') }}</span>
+                    <span>{{ __('Blogs') }}</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Events -->
+            <li class="nav-item {{ Nav::isRoute('events') }}">
+                <a class="nav-link" href="{{ route('events.index') }}">
+                    <i class="fas fa-fw fa-calendar"></i>
+                    <span>{{ __('Events') }}</span>
                 </a>
             </li>
 
