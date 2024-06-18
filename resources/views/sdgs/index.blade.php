@@ -10,6 +10,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Image</th>
                 <th>Name</th>
                 <th>Order</th>
                 <th>Description</th>
@@ -19,6 +20,9 @@
         <tbody>
             @foreach ($sdgs as $sdg)
             <tr>
+                <td>
+                    <img src="{{ asset('images/' . $sdg->img) }}" height="50" width="50">
+                </td>
                 <td style="width:70%;">{{ $sdg->name }}</td>
                 <td>{{ $sdg->order }}</td>
                 <td>{{ $sdg->description }}</td>

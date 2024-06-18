@@ -10,6 +10,8 @@
                 @csrf
                 @method('PUT')
                 <div class="form-group">
+                    <label for="img">Images:</label>
+                    <input type="file" class="form-control-file" name="img">
                     <label for="name">Name:</label>
                     <input type="text" class="form-control" id="name" name="name" value="{{ $sdg->name }}" required>
                     <label for="order">Order:</label>

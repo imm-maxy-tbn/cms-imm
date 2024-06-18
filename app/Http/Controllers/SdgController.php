@@ -43,12 +43,21 @@ class SdgController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000',
             'name' => 'required|string|max:255',
             'order' => 'required|integer',
             'description' => 'nullable|string',
         ]);
 
-        Sdg::create($request->all());
+        $imageName = time() . '.' . $request->img->extension();
+        $request->img->move(public_path('images'), $imageName);
+
+        $sdg = Sdg::create([
+            'img' => $imageName, 
+            'name' => $request->input('name'),
+            'order' => $request->input('order'),
+            'description' => $request->input('description'),
+        ]);
 
         return redirect()->route('sdgs.index')
             ->with('success', 'SDG created successfully.');
@@ -89,12 +98,29 @@ class SdgController extends Controller
         $sdg = Sdg::findOrFail($id);
 
         $request->validate([
+            'img' => 'image|mimes:jpeg,png,jpg,gif|max:10000',
             'name' => 'required|string|max:255',
             'order' => 'required|integer',
             'description' => 'nullable|string',
         ]);
 
-        $sdg->update($request->all());
+        // Update the fields that are provided
+        $sdg->name = $request->input('name');
+        $sdg->order = $request->input('order');
+        $sdg->description = $request->input('description');
+
+        // Handle image update if new image is provided
+        if ($request->hasFile('img')) {
+            $request->validate([
+                'img' => 'image|mimes:jpeg,png,jpg,gif|max:10000',
+            ]);
+
+            $imageName = time() . '.' . $request->img->extension();
+            $request->img->move(public_path('images'), $imageName);
+            $sdg->img = $imageName;
+        }
+
+        $sdg->save();
 
         return redirect()->route('sdgs.index')->with('success', 'SDG updated successfully.');
     }

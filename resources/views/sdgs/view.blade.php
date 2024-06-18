@@ -7,6 +7,11 @@
     <div class="card shadow mb-4">
         <div class="card-body">
                 <div class="form-group">
+                    <label for="img">Images:</label>
+                    <div id="img">
+                        <img src="{{ asset('images/' . $sdg->img) }}" height="50" width="50">
+                        <p>{{ basename($sdg->img) }}</p>
+                    </div>
                     <label for="name">Name:</label>
                     <input type="text" class="form-control" id="name" name="name" value="{{ $sdg->name }}" readonly>
                     <label for="order">Order:</label>

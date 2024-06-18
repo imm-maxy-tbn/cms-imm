@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 'password', 'nama_depan', 'nama_belakang', 'nik', 'negara', 'provinsi', 'alamat', 'telepon', 'role',
+        'email', 'password', 'nama_depan', 'nama_belakang', 'nik', 'negara', 'provinsi', 'alamat', 'telepon', 'role', 'pekerjaan', 'instansi',
     ];
 
     /**
@@ -77,5 +77,10 @@ class User extends Authenticatable
     public function companies()
     {
         return $this->hasMany(Company::class);
+    }
+
+    public function events()
+    {
+        return $this->belongsToMany(Event::class);
     }
 }

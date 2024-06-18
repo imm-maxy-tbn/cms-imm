@@ -34,6 +34,8 @@
             <form action="{{ route('sdgs.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
+                    <label for="img">Images:</label>
+                    <input type="file" name="img" class="form-control">
                     <label for="name">Name:</label>
                     <input type="text" class="form-control" id="name" name="name" required>
                     <label for="order">Order:</label>

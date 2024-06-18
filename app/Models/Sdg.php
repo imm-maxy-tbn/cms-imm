@@ -12,7 +12,7 @@ class Sdg extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'order', 'description'
+        'img','name', 'order', 'description'
     ];
 
     public function indicators()
