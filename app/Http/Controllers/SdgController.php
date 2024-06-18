@@ -131,8 +131,10 @@ class SdgController extends Controller
      * @param  \App\Models\Sdg  $sdg
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sdg $sdg)
+    public function destroy($id)
     {
+        $sdg = Sdg::findOrFail($id);
+
         $sdg->delete();
 
         return redirect()->route('sdgs.index')
