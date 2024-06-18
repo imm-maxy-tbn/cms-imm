@@ -9,9 +9,6 @@ class Event extends Model
 {
     use HasFactory;
 
-    protected $keyType = 'string';
-    public $incrementing = false;
-
     protected $fillable = [
         'title',
         'description',
@@ -20,6 +17,7 @@ class Event extends Model
         'start',
         'end',
         'deadline',
+        'img',
     ];
 
     public function users()
