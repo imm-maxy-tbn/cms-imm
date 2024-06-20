@@ -33,6 +33,8 @@
 
     <!-- Favicon -->
     <link href="{{ asset('img/favicon.png') }}" rel="icon" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -456,7 +458,10 @@
         height: 100
       });
     });
+    
 </script>
+@yield('scripts')
+
 </body>
 
 </html>
