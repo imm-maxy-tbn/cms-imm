@@ -103,20 +103,23 @@ class SurveyController extends Controller
                 ]
             ]);
 
-            // Clear Existing Sections and Questions
-            $survey->sections()->delete();
-
-            // Recreate Sections and Questions
+            // Loop through each section in the request
             foreach ($request->sections as $sectionData) {
-                $section = $survey->sections()->create(['name' => $sectionData['name']]);
+                $section = $survey->sections()->updateOrCreate(
+                    ['name' => $sectionData['name']], // Find or create the section by name
+                    ['name' => $sectionData['name']] // Update the section's name
+                );
 
+                // Loop through each question in the section
                 foreach ($sectionData['questions'] as $questionData) {
-                    $section->questions()->create([
-                        'content' => $questionData['content'],
-                        'type' => $questionData['type'],
-                        'rules' => isset($questionData['rules']) ? explode(',', $questionData['rules']) : [],
-                        'options' => isset($questionData['options']) ? explode(',', $questionData['options']) : null,
-                    ]);
+                    $question = $section->questions()->updateOrCreate(
+                        ['content' => $questionData['content']], // Find or create the question by content
+                        [
+                            'type' => $questionData['type'], // Update the question's type
+                            'rules' => isset($questionData['rules']) ? explode(',', $questionData['rules']) : [], // Update the question's rules
+                            'options' => isset($questionData['options']) ? explode(',', $questionData['options']) : null, // Update the question's options
+                        ]
+                    );
                 }
             }
 
@@ -126,6 +129,8 @@ class SurveyController extends Controller
             return redirect()->back()->with('error', 'Failed to update survey. Please try again later.');
         }
     }
+
+
     public function destroy(Survey $survey)
     {
         $survey->delete();
