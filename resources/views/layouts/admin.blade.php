@@ -182,6 +182,23 @@
                 </a>
             </li>
 
+            {{-- income --}}
+            <li class="nav-item {{ Nav::isRoute('company-income') }}">
+                <a class="nav-link" href="{{ route('company-income.select-company') }}">
+                    <i class="fas fa-fw fa-building"></i>
+                    <span>{{ __('Reporting Company Income') }}</span>
+                </a>
+            </li>
+            {{-- outcome --}}
+            <li class="nav-item {{ Nav::isRoute('company-outcome') }}">
+                <a class="nav-link" href="{{ route('company-outcome.select-company') }}">
+                    <i class="fas fa-fw fa-money-bill-wave"></i>
+                    <span>{{ __('Reporting Company Outcome') }}</span>
+                </a>
+            </li>
+
+            
+
 
             <!-- Nav Item - About -->
             <!-- <li class="nav-item {{ Nav::isRoute('about') }}">

@@ -15,6 +15,10 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\MetricProjectController;
 use App\Http\Controllers\SurveyController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\CompanyIncomeController;
+use App\Http\Controllers\CompanyOutcomeController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -189,4 +193,26 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('events/{id}', [EventController::class, 'update'])->name('events.update');
     Route::delete('events/{id}', [EventController::class, 'destroy'])->name('events.destroy');
     Route::get('events/{id}/view', [EventController::class, 'view'])->name('events.view');
+
+    Route::get('/company-income/select-company', [CompanyIncomeController::class, 'selectCompany'])->name('company-income.select-company');
+    Route::get('/company-income', [CompanyIncomeController::class, 'index'])->name('company-income.index');
+    Route::get('/company-income/create/{company_id}', [CompanyIncomeController::class, 'create'])->name('company-income.create');
+    Route::post('/company-income/store', [CompanyIncomeController::class, 'store'])->name('company-income.store');
+    Route::get('/company-income/{income}/edit', [CompanyIncomeController::class, 'edit'])->name('company-income.edit');
+    Route::put('/company-income/{income}', [CompanyIncomeController::class, 'update'])->name('company-income.update');
+    Route::delete('/company-income/{income}', [CompanyIncomeController::class, 'destroy'])->name('company-income.destroy');
+    Route::get('/company-income/{income}', [CompanyIncomeController::class, 'show'])->name('company-income.show');
+
+    Route::get('/company-outcome/select-company', [CompanyOutcomeController::class, 'selectCompany'])->name('company-outcome.select-company');
+    Route::get('/company-outcome', [CompanyOutcomeController::class, 'index'])->name('company-outcome.index');
+    Route::get('/company-outcome/detail-outcome/{project_id}', [CompanyOutcomeController::class, 'detailOutcome'])->name('company-outcome.detail-outcome');
+    
+    Route::get('/company-outcome/create/{project_id}', [CompanyOutcomeController::class, 'create'])->name('company-outcome.create');
+    Route::post('/company-outcome/store', [CompanyOutcomeController::class, 'store'])->name('company-outcome.store');
+    Route::get('/company-outcome/{companyOutcome}', [CompanyOutcomeController::class, 'show'])->name('company-outcome.show');
+    Route::get('/company-outcome/{companyOutcome}/edit', [CompanyOutcomeController::class, 'edit'])->name('company-outcome.edit');
+    Route::put('/company-outcome/{companyOutcome}', [CompanyOutcomeController::class, 'update'])->name('company-outcome.update');
+    Route::delete('/company-outcome/{companyOutcome}', [CompanyOutcomeController::class, 'destroy'])->name('company-outcome.destroy');
+    
+    
 });

@@ -78,6 +78,8 @@ class ProjectController extends Controller
             'target_pelanggans.*.rentang_usia' => 'nullable|string',
             'target_pelanggans.*.deskripsi_pelanggan' => 'nullable|string',
         ]);
+        //tambahin ini di FE aja
+        $validatedData['status'] = 'Belum selesai';
 
         if ($request->hasFile('img')) {
             $imageName = time() . '.' . $request->img->extension();
