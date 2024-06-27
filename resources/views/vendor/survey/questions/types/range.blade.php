@@ -4,7 +4,7 @@
 
         <input type="range" class="form-control-range" name="{{ $question->key }}" id="{{ $question->key }}"
             min="{{ getRuleValue($question->rules, 'min') ?? 0 }}"
-            max="{{ getRuleValue($question->rules, 'max') ?? 10 }}"
+            max="{{ getRuleValue($question->rules, 'max') ?? 5 }}"
             step="{{ getRuleValue($question->rules, 'step') ?? 1 }}"
             value="{{ old($question->key, $value ?? (getRuleValue($question->rules, 'default') ?? '')) }}"
             {{ $disabled ?? false ? 'disabled' : '' }}>

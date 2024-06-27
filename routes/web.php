@@ -183,7 +183,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::delete('surveys/{survey}', [SurveyController::class, 'destroy'])->name('surveys.destroy');
     Route::get('surveys/{survey}/submit', [SurveyController::class, 'createEntry'])->name('surveys.entry');
     Route::post('surveys/{survey}', [SurveyController::class, 'submit'])->name('surveys.submit');
-
+    Route::get('surveys/{survey}/results', [SurveyController::class, 'results'])->name('surveys.results');
 
     Route::get('events', [EventController::class, 'index'])->name('events.index');
     Route::get('events/create', [EventController::class, 'create'])->name('events.create');
@@ -206,13 +206,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/company-outcome/select-company', [CompanyOutcomeController::class, 'selectCompany'])->name('company-outcome.select-company');
     Route::get('/company-outcome', [CompanyOutcomeController::class, 'index'])->name('company-outcome.index');
     Route::get('/company-outcome/detail-outcome/{project_id}', [CompanyOutcomeController::class, 'detailOutcome'])->name('company-outcome.detail-outcome');
-    
+
     Route::get('/company-outcome/create/{project_id}', [CompanyOutcomeController::class, 'create'])->name('company-outcome.create');
     Route::post('/company-outcome/store', [CompanyOutcomeController::class, 'store'])->name('company-outcome.store');
     Route::get('/company-outcome/{companyOutcome}', [CompanyOutcomeController::class, 'show'])->name('company-outcome.show');
     Route::get('/company-outcome/{companyOutcome}/edit', [CompanyOutcomeController::class, 'edit'])->name('company-outcome.edit');
     Route::put('/company-outcome/{companyOutcome}', [CompanyOutcomeController::class, 'update'])->name('company-outcome.update');
     Route::delete('/company-outcome/{companyOutcome}', [CompanyOutcomeController::class, 'destroy'])->name('company-outcome.destroy');
-    
-    
+
+
 });
