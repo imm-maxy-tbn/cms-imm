@@ -2,55 +2,44 @@
 
 @section('main-content')
 <div class="container">
-    <h1>Add New Company Outcome</h1>
+    <h1>Add New Company Income for {{ $company->nama }}</h1>
 
-    <form action="{{ route('company-outcome.store') }}" method="POST">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <form action="{{ route('company-income.store') }}" method="POST">
         @csrf
+        <input type="hidden" name="company_id" value="{{ $company->id }}">
+        
         <div class="form-group">
             <label for="date">Date</label>
-            <input type="date" class="form-control" id="date" name="date" value="{{ old('date') }}">
-            @error('date')
-                <div class="text-danger">{{ $message }}</div>
-            @enderror
+            <input type="date" name="date" id="date" class="form-control" value="{{ old('date') }}" required>
         </div>
-
         <div class="form-group">
-            <label for="jumlah_biaya">Jumlah Biaya</label>
-            <input type="text" class="form-control" id="jumlah_biaya" name="jumlah_biaya" value="{{ old('jumlah_biaya') }}">
-            @error('jumlah_biaya')
-                <div class="text-danger">{{ $message }}</div>
-            @enderror
+            <label for="pengirim">Sender</label>
+            <input type="text" name="pengirim" id="pengirim" class="form-control" value="{{ old('pengirim') }}" required>
         </div>
-
         <div class="form-group">
-            <label for="keterangan">Keterangan</label>
-            <textarea class="form-control" id="keterangan" name="keterangan">{{ old('keterangan') }}</textarea>
-            @error('keterangan')
-                <div class="text-danger">{{ $message }}</div>
-            @enderror
+            <label for="bank_asal">Source Bank</label>
+            <input type="text" name="bank_asal" id="bank_asal" class="form-control" value="{{ old('bank_asal') }}" required>
         </div>
-
         <div class="form-group">
-            <label for="bukti">Bukti</label>
-            <input type="text" class="form-control" id="bukti" name="bukti" value="{{ old('bukti') }}">
-            @error('bukti')
-                <div class="text-danger">{{ $message }}</div>
-            @enderror
+            <label for="bank_tujuan">Destination Bank</label>
+            <input type="text" name="bank_tujuan" id="bank_tujuan" class="form-control" value="{{ old('bank_tujuan') }}" required>
         </div>
-
         <div class="form-group">
-            <label for="project_id">Project</label>
-            <select class="form-control" id="project_id" name="project_id">
-                @foreach ($projects as $project)
-                    <option value="{{ $project->id }}" {{ old('project_id') == $project->id ? 'selected' : '' }}>{{ $project->nama }}</option>
-                @endforeach
-            </select>
-            @error('project_id')
-                <div class="text-danger">{{ $message }}</div>
-            @enderror
+            <label for="jumlah_hibah">Grant Amount</label>
+            <input type="number" name="jumlah_hibah" id="jumlah_hibah" class="form-control" value="{{ old('jumlah_hibah') }}" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Add Income</button>
     </form>
 </div>
 @endsection
