@@ -19,8 +19,12 @@
                 <input type="text" name="topic" id="topic" class="form-control" value="{{ $event->topic }}">
             </div>
             <div class="form-group">
-                <label for="img">Images:</label>
-                <input type="file" class="form-control-file" name="img"> <!-- Add name attribute -->
+                <label for="cover_img">Cover Image:</label>
+                <input type="file" class="form-control-file" name="cover_img">
+            </div>
+            <div class="form-group">
+                <label for="hero_img">Hero Image:</label>
+                <input type="file" class="form-control-file" name="hero_img"
             </div>
             <div class="form-group">
                 <label for="location">Location</label>

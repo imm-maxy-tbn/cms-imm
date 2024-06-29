@@ -10,7 +10,8 @@
                     <th>Title</th>
                     <th>Description</th>
                     <th>Topic</th>
-                    <th>Image</th>
+                    <th>Cover Image</th>
+                    <th>Hero Image</th>
                     <th>Location</th>
                     <th>Start</th>
                     <th>End</th>
@@ -26,10 +27,17 @@
                         <td>{{ $event->description }}</td>
                         <td>{{ $event->topic }}</td>
                         <td>
-                            @if ($event->img)
-                                <img src="{{ asset('images/' . $event->img) }}" height="50" width="50" alt="Event Image">
+                            @if ($event->cover_img)
+                                <img src="{{ asset('images/' . $event->cover_img) }}" height="50" width="50" alt="Event Cover Image">
                             @else
-                                <p>No image</p>
+                                <p>No cover image</p>
+                            @endif
+                        </td>
+                        <td>
+                            @if ($event->hero_img)
+                                <img src="{{ asset('images/' . $event->hero_img) }}" height="50" width="50" alt="Event Hero Image">
+                            @else
+                                <p>No hero image</p>
                             @endif
                         </td>
                         <td>{{ $event->location }}</td>

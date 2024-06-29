@@ -42,12 +42,16 @@ class EventController extends Controller
             'end' => 'required|date',
             'deadline' => 'required|date',
             'users' => 'array|exists:users,id',
-            'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000',
+            'cover_img' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000',
+            'hero_img' => 'required|image|mimes:jpeg,png,jpg,gif|max:10000',
         ]);
 
         // Handle file upload
-        $imageName = time() . '.' . $request->img->extension();
-        $request->img->move(public_path('images'), $imageName);
+        $coverImageName = time() . 'cover' . '.' . $request->cover_img->extension();
+        $request->cover_img->move(public_path('images'), $coverImageName);
+
+        $heroImageName = time() . 'hero' . '.' . $request->hero_img->extension();
+        $request->hero_img->move(public_path('images'), $heroImageName);
 
         // Create and save the event
         $event = new Event();
@@ -58,7 +62,8 @@ class EventController extends Controller
         $event->start = $validatedData['start'];
         $event->end = $validatedData['end'];
         $event->deadline = $validatedData['deadline'];
-        $event->img = $imageName;
+        $event->cover_img = $coverImageName;
+        $event->hero_img = $heroImageName;
 
         // Save the event and log its ID
         $event->save();
@@ -87,7 +92,8 @@ class EventController extends Controller
             'description' => 'required|string',
             'topic' => 'nullable|string|max:255',
             'location' => 'required|string|max:255',
-            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10000',
+            'cover_img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10000',
+            'hero_img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10000',
             'start' => 'required|date',
             'end' => 'required|date',
             'deadline' => 'required|date',
@@ -98,16 +104,28 @@ class EventController extends Controller
         $event->update($validatedData);
 
         // Handle image update if provided
-        if ($request->hasFile('img')) {
+        if ($request->hasFile('cover_img')) {
             // Delete old image if exists
-            if ($event->img && file_exists(public_path('images/' . $event->img))) {
-                unlink(public_path('images/' . $event->img));
+            if ($event->cover_img && file_exists(public_path('images/' . $event->cover_img))) {
+                unlink(public_path('images/' . $event->cover_img));
             }
 
             // Move and save new image
-            $imageName = time() . '.' . $request->img->extension();
-            $request->img->move(public_path('images'), $imageName);
-            $event->img = $imageName;
+            $coverImageName = time() . '.' . $request->cover_img->extension();
+            $request->cover_img->move(public_path('images'), $coverImageName);
+            $event->cover_img = $coverImageName;
+        }
+
+        if ($request->hasFile('hero_img')) {
+            // Delete old image if exists
+            if ($event->hero_img && file_exists(public_path('images/' . $event->hero_img))) {
+                unlink(public_path('images/' . $event->hero_img));
+            }
+
+            // Move and save new image
+            $heroImageName = time() . '.' . $request->hero_img->extension();
+            $request->hero_img->move(public_path('images'), $heroImageName);
+            $event->hero_img = $heroImageName;
         }
 
         // Sync users associated with the event

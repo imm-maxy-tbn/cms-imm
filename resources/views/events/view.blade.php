@@ -18,13 +18,24 @@
                     readonly>
             </div>
             <div class="form-group">
-                <label for="img">Images:</label>
-                <div id="img">
-                    @if ($event->img)
-                        <img src="{{ asset('images/' . $event->img) }}" height="50" width="50" alt="Event Image">
-                        <p>{{ basename($event->img) }}</p>
+                <label for="cover_img">Cover Image:</label>
+                <div id="cover_img">
+                    @if ($event->cover_img)
+                        <img src="{{ asset('images/' . $event->cover_img) }}" height="50" width="50" alt="Event Cover Image">
+                        <p>{{ basename($event->cover_img) }}</p>
                     @else
-                        <p>No image</p>
+                        <p>No cover image</p>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="hero_img">Hero Image:</label>
+                <div id="hero_img">
+                    @if ($event->hero_img)
+                        <img src="{{ asset('images/' . $event->hero_img) }}" height="50" width="50" alt="Event Cover Image">
+                        <p>{{ basename($event->hero_img) }}</p>
+                    @else
+                        <p>No hero image</p>
                     @endif
                 </div>
             </div>
