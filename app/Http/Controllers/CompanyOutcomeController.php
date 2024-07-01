@@ -59,11 +59,11 @@ class CompanyOutcomeController extends Controller
     }
     
 
-    public function create($project_id)
-    {
-        $project = Project::findOrFail($project_id);
-        return view('company_outcome.create', compact('project'));
-    }
+        public function create($project_id)
+        {
+            $project = Project::findOrFail($project_id);
+            return view('company_outcome.create', compact('project'));
+        }
     
     public function store(Request $request)
     {
