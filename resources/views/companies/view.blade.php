@@ -55,6 +55,10 @@
                 <label for="jumlah_karyawan">Jumlah Karyawan:</label>
                 <input type="text" class="form-control" id="jumlah_karyawan" name="jumlah_karyawan" value="{{ $company->jumlah_karyawan }}" readonly>
             </div>
+            <div class="form-group">
+                <label for="user_id">User:</label>
+                <input type="text" class="form-control" id="user_id" name="user_id" value="{{ $company->user->nama_depan }} {{ $company->user->nama_belakang }}" readonly>
+            </div>
 
             <a href="{{ route('companies.index') }}" class="btn btn-primary">Back</a>
         </div>

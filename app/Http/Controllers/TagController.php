@@ -28,15 +28,10 @@ class TagController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'img' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-
-        $imageName = time() . '.' . $request->img->extension();
-        $request->img->move(public_path('images'), $imageName);
 
         $tag = Tag::create([
             'nama' => $request->input('nama'),
-            'img' => $imageName, // Save image paths as a semicolon-separated string
         ]);
 
         return redirect()->route('tags.index')->with('success', 'Tag created successfully.');
@@ -99,20 +94,7 @@ class TagController extends Controller
 
         $request->validate([
             'nama' => 'required',
-            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Allow null for img
         ]);
-
-        // Jika ada file gambar yang diunggah
-        if ($request->hasFile('img')) {
-            // Hapus gambar lama jika ada
-            if ($tag->img) {
-                Storage::delete('images/' . $tag->img);
-            }
-            // Simpan gambar yang baru
-            $imageName = time() . '.' . $request->img->extension();
-            $request->img->move(public_path('images'), $imageName);
-            $tag->img = $imageName;
-        }
 
         // Update nama dan konten
         $tag->nama = $request->nama;

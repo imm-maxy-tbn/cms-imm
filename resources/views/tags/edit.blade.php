@@ -13,10 +13,6 @@
                     <label for="nama">Name:</label>
                     <input type="text" class="form-control" id="nama" name="nama" value="{{ $tag->nama }}" required>
                 </div>
-                <div class="form-group">
-                    <label for="img">Image:</label>
-                    <input type="file" class="form-control-file" id="img" name="img" >
-                </div>
                 <button type="submit" class="btn btn-primary">Update Tag</button>
             </form>
         </div>

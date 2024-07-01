@@ -49,20 +49,6 @@
                     <label for="user_id">Author:</label>
                     <input type="text" class="form-control" id="user_id" name="user_id" value="{{ $post->user->full_name }}" readonly>
                 </div>
-                <div class="form-group">
-                    <label for="category_id">Category:</label>
-                    <input type="text" class="form-control" id="category_id" name="category_id" value="{{ $post->category->name }}" readonly>
-                </div>
-                <div class="form-group">
-                    <label>Tags:</label><br>
-                    @foreach ($tags as $tag)
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="tag{{ $tag->id }}" value="{{ $tag->id }}" name="tags[]" @if(in_array($tag->id, $post->tags->pluck('id')->toArray())) checked @endif disabled>
-                        <label class="form-check-label" for="tag{{ $tag->id }}">{{ $tag->nama }}</label>
-                    </div>
-                    @endforeach
-                </div>
-                
                 <a type="button" class="btn btn-primary" href='{{ route('posts.index') }}'>Back</a>
             </form>
         </div>

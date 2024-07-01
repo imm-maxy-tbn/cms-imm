@@ -17,7 +17,8 @@ class Event extends Model
         'start',
         'end',
         'deadline',
-        'img',
+        'cover_img',
+        'hero_img',
     ];
 
     public function users()

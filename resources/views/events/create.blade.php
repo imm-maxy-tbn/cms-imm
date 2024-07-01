@@ -18,8 +18,12 @@
                 <input type="text" name="topic" id="topic" class="form-control">
             </div>
             <div class="form-group">
-                <label for="img">Images:</label>
-                <input type="file" name="img" class="form-control">
+                <label for="cover_img">Cover Image:</label>
+                <input type="file" name="cover_img" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="hero_img">Hero Image:</label>
+                <input type="file" name="hero_img" class="form-control">
             </div>
             <div class="form-group">
                 <label for="location">Location</label>

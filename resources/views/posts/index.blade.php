@@ -31,8 +31,6 @@
                             <th>Image</th>
                             <th>Content</th>
                             <th>Author</th>
-                            <th>Category</th>
-                            <th>Tags</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -45,12 +43,6 @@
                             </td>
                             <td>{!! $post->content !!}</td>
                             <td>{{ $post->user->full_name }}</td>
-                            <td>{{ $post->category->name }}</td>
-                            <td>
-                                @foreach ($post->tags as $tag)
-                                <span class="badge badge-primary">{{ $tag->nama }}</span>
-                                @endforeach
-                            </td>
                             <td>
                                 <a href="{{ route('posts.view', $post->id) }}" class="btn btn-sm btn-primary m-1" title="View">
                                     <i class="fas fa-info-circle" style="color: #ffffff;"></i>

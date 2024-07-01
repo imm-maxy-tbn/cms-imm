@@ -52,24 +52,6 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="category_id">Category:</label>
-                    <select class="form-control" id="category_id" name="category_id" required>
-                        <option value="">Select Category</option>
-                        @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Tags:</label><br>
-                    @foreach ($tags as $tag)
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="tag{{ $tag->id }}" value="{{ $tag->id }}" name="tags[]">
-                        <label class="form-check-label" for="tag{{ $tag->id }}">{{ $tag->nama }}</label>
-                    </div>
-                    @endforeach
-                </div>
                 <button type="submit" class="btn btn-primary">Create Post</button>
             </form>
         </div>

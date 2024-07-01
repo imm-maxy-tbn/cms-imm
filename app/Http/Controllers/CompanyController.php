@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Company;
+use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class CompanyController extends Controller
 {
@@ -26,12 +26,10 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('companies.create');
-    }
-    public function view($id)
-    {
-        $company = Company::findOrFail($id);
-        return view('companies.view', compact('company'));
+        // Ambil semua pengguna yang belum memiliki perusahaan
+        $users = User::whereDoesntHave('companies')->get();
+
+        return view('companies.create', compact('users'));
     }
 
     /**
@@ -53,9 +51,10 @@ class CompanyController extends Controller
             'provinsi' => 'required',
             'kabupaten' => 'required',
             'jumlah_karyawan' => 'required',
+            'user_id' => 'required|exists:users,id|not_in:'.implode(',', Company::pluck('user_id')->toArray()),
+        ], [
+            'user_id.not_in' => 'The selected user already has a company.'
         ]);
-
-        $validated['user_id'] = Auth::id();
 
         Company::create($validated);
 
@@ -83,7 +82,11 @@ class CompanyController extends Controller
     public function edit($id)
     {
         $company = Company::findOrFail($id);
-        return view('companies.edit', compact('company'));
+        
+        // Ambil semua pengguna yang belum memiliki perusahaan
+        $users = User::all();
+    
+        return view('companies.edit', compact('company', 'users'));
     }
 
     /**
@@ -114,6 +117,12 @@ class CompanyController extends Controller
         return redirect()->route('companies.index')->with('success', 'Company updated successfully.');
     }
 
+    public function view($id)
+    {
+        $company = Company::findOrFail($id);
+
+        return view('companies.view', compact('company'));
+    }
 
     /**
      * Remove the specified Company from storage.

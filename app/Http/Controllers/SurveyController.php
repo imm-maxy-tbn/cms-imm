@@ -153,4 +153,42 @@ class SurveyController extends Controller
         // Redirect to a confirmation page or back to the survey list with a success message
         return redirect()->route('surveys.index')->with('success', 'Your responses have been submitted successfully.');
     }
+
+    public function results(Survey $survey)
+{
+    $results = [];
+    $totalResponses = $survey->entries()->count();
+
+    foreach ($survey->sections as $section) {
+        $sectionResults = [];
+        foreach ($section->questions as $question) {
+            $answers = [];
+            if ($question->type === 'multiselect') {
+                foreach ($question->answers as $answer) {
+                    // Split each answer by comma and trim whitespace
+                    $splitAnswers = array_map('trim', explode(',', $answer->value));
+                    $answers = array_merge($answers, $splitAnswers);
+                }
+            } else {
+                // For other types (radio, text, number, etc.)
+                $answers = $question->answers()->pluck('value')->toArray();
+            }
+
+            $sectionResults[] = [
+                'question' => $question->content,
+                'type' => $question->type,
+                'options' => $question->options,
+                'answers' => $answers,
+            ];
+        }
+        $results[] = [
+            'section' => $section->name,
+            'questions' => $sectionResults
+        ];
+    }
+
+    return view('surveys.results', compact('survey', 'results', 'totalResponses'));
+}
+
+
 }

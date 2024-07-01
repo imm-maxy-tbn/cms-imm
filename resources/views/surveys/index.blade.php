@@ -34,6 +34,7 @@
                     <td>
                         <a href="{{ route('surveys.view', $survey->id) }}" class="btn btn-info">View</a>
                         <a href="{{ route('surveys.entry', $survey->id) }}" class="btn btn-info">Fill</a>
+                        <a href="{{ route('surveys.results', $survey->id) }}" class="btn btn-info">Result</a>
                         <a href="{{ route('surveys.edit', $survey->id) }}" class="btn btn-warning">Edit</a>
                         <form action="{{ route('surveys.destroy', $survey->id) }}" method="POST" style="display:inline-block;">
                             @csrf

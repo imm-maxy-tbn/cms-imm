@@ -13,7 +13,6 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Image</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -21,10 +20,6 @@
             @foreach ($tags as $tag)
             <tr>
                 <td>{{ $tag->nama }}</td>
-                <td>
-                    <img src="{{ asset('images/' . $tag->img) }}" height="50" width="50">
-                    
-                </td>
                 <td>
                     <a href="{{ route('tags.view', $tag->id) }}" class="btn btn-sm btn-primary"><i class="fas fa-info-circle" style="color: #ffffff;"></i></a>
                     <a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-sm btn-primary"><i class="fas fa-pencil-alt" style="color: #ffffff;"></i></a>

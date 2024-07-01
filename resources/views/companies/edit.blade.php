@@ -30,6 +30,16 @@
                     <input type="text" class="form-control" id="kabupaten" name="kabupaten" value="{{ $company->kabupaten }}" required>
                     <label for="jumlah_karyawan">Jumlah Karyawan:</label>
                     <input type="text" class="form-control" id="jumlah_karyawan" name="jumlah_karyawan" value="{{ $company->jumlah_karyawan }}" required>
+
+                    <!-- Dropdown for user_id -->
+                    <label for="user_id">User:</label>
+                    <select class="form-control" id="user_id" name="user_id">
+                        @foreach ($users as $user)
+                            <option value="{{ $user->id }}" @if($user->id === $company->user_id) selected @endif>
+                                {{ $user->nama_depan }} {{ $user->nama_belakang }}
+                            </option>
+                        @endforeach
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Update Company</button>
             </form>

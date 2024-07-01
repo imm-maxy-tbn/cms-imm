@@ -86,27 +86,11 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Pages -->
-            <li class="nav-item {{ Nav::isRoute('pages') }}">
-                <a class="nav-link" href="{{ route('pages.index') }}">
-                    <i class="fas fa-fw fa-file"></i>
-                    <span>{{ __('Pages') }}</span>
-                </a>
-            </li>
-
             <!-- Nav Item - Tags -->
             <li class="nav-item {{ Nav::isRoute('tags') }}">
                 <a class="nav-link" href="{{ route('tags.index') }}">
                     <i class="fas fa-fw fa-tags"></i>
                     <span>{{ __('Tags') }}</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Categories -->
-            <li class="nav-item {{ Nav::isRoute('categories') }}">
-                <a class="nav-link" href="{{ route('categories.index') }}">
-                    <i class="fas fa-fw fa-sitemap"></i>
-                    <span>{{ __('Categories') }}</span>
                 </a>
             </li>
 
