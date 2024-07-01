@@ -13,11 +13,6 @@ class Project extends Model
         return $this->belongsTo(Company::class);
     }
 
-    public function fundings()
-    {
-        return $this->hasMany(Funding::class);
-    }
-
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
