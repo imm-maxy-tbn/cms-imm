@@ -28,11 +28,7 @@
         <div class="card-body">
             <form action="{{ route('projects.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-
-                <div class="form-group">
-                    <label for="img">Gambar Project:</label>
-                    <input type="file" class="form-control-file" id="img" name="img">
-                </div>
+                    <input type="hidden" class="form-control-file" id="img" name="img">
 
                 <div class="form-group">
                     <label for="nama">Nama Project:</label>
