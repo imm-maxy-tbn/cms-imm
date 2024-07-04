@@ -14,6 +14,17 @@
             </div>
 
             <div class="form-group">
+                <label for="project_id">Select Project</label>
+                <select name="project_id" id="project_id" class="form-control" required>
+                    <option value="">-- Select Project --</option>
+                    @foreach ($projects as $project)
+                        <option value="{{ $project->id }}" {{ $survey->project_id == $project->id ? 'selected' : '' }}>
+                            {{ $project->nama }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="accept-guest-entries">Accept Guest Entries</label>
                 <select name="settings[accept-guest-entries]" id="accept-guest-entries" class="form-control">
                     <option value="true" {{ $survey->settings['accept-guest-entries'] ? 'selected' : '' }}>Yes</option>
@@ -23,35 +34,50 @@
 
             <div class="form-group">
                 <label for="limit-per-participant">Limit Per Participant</label>
-                <input type="number" name="settings[limit-per-participant]" id="limit-per-participant" class="form-control" value="{{ $survey->settings['limit-per-participant'] }}">
+                <input type="number" name="settings[limit-per-participant]" id="limit-per-participant" class="form-control"
+                    value="{{ $survey->settings['limit-per-participant'] }}">
             </div>
 
             <div id="sections-container">
-                @foreach($survey->sections as $sectionIndex => $section)
+                @foreach ($survey->sections as $sectionIndex => $section)
                     <div class="section-group">
                         <div class="form-group">
                             <label for="section-name">Section Name</label>
-                            <input type="text" name="sections[{{ $sectionIndex }}][name]" class="form-control section-name" value="{{ $section->name }}" required>
+                            <input type="text" name="sections[{{ $sectionIndex }}][name]"
+                                class="form-control section-name" value="{{ $section->name }}" required>
                         </div>
 
                         <div class="questions-container">
-                            @foreach($section->questions as $questionIndex => $question)
+                            @foreach ($section->questions as $questionIndex => $question)
                                 <div class="form-group question-group">
                                     <label for="question-content">Question</label>
-                                    <input type="text" name="sections[{{ $sectionIndex }}][questions][{{ $questionIndex }}][content]" class="form-control" value="{{ $question->content }}" required>
+                                    <input type="text"
+                                        name="sections[{{ $sectionIndex }}][questions][{{ $questionIndex }}][content]"
+                                        class="form-control" value="{{ $question->content }}" required>
 
                                     <label for="question-type">Type</label>
-                                    <select name="sections[{{ $sectionIndex }}][questions][{{ $questionIndex }}][type]" class="form-control question-type" required>
-                                        @foreach(['text', 'number', 'radio', 'multiselect', 'range'] as $type)
-                                            <option value="{{ $type }}" {{ $question->type == $type ? 'selected' : '' }}>{{ ucfirst($type) }}</option>
+                                    <select name="sections[{{ $sectionIndex }}][questions][{{ $questionIndex }}][type]"
+                                        class="form-control question-type" required>
+                                        @foreach (['text', 'number', 'radio', 'multiselect', 'range'] as $type)
+                                            <option value="{{ $type }}"
+                                                {{ $question->type == $type ? 'selected' : '' }}>{{ ucfirst($type) }}
+                                            </option>
                                         @endforeach
                                     </select>
 
                                     <label for="question-rules">Rules (comma-separated)</label>
-                                    <input type="text" name="sections[{{ $sectionIndex }}][questions][{{ $questionIndex }}][rules]" class="form-control" value="{{ implode(',', $question->rules) }}" placeholder="e.g. required, numeric, min:0">
+                                    <input type="text"
+                                        name="sections[{{ $sectionIndex }}][questions][{{ $questionIndex }}][rules]"
+                                        class="form-control" value="{{ implode(',', $question->rules) }}"
+                                        placeholder="e.g. required, numeric, min:0">
 
-                                    <label for="question-options">Options (comma-separated, for radio and multiselect)</label>
-                                    <input type="text" name="sections[{{ $sectionIndex }}][questions][{{ $questionIndex }}][options]" class="form-control question-options" value="{{ $question->options ? implode(',', $question->options) : '' }}" {{ in_array($question->type, ['radio', 'multiselect']) ? '' : 'disabled' }}>
+                                    <label for="question-options">Options (comma-separated, for radio and
+                                        multiselect)</label>
+                                    <input type="text"
+                                        name="sections[{{ $sectionIndex }}][questions][{{ $questionIndex }}][options]"
+                                        class="form-control question-options"
+                                        value="{{ $question->options ? implode(',', $question->options) : '' }}"
+                                        {{ in_array($question->type, ['radio', 'multiselect']) ? '' : 'disabled' }}>
                                 </div>
                             @endforeach
                         </div>
@@ -150,7 +176,8 @@
                 `;
                 container.insertAdjacentHTML('beforeend', sectionHtml);
 
-                const newSelectElement = container.querySelector(`.section-group:last-child .question-type`);
+                const newSelectElement = container.querySelector(
+                `.section-group:last-child .question-type`);
                 updateQuestionOptions(newSelectElement);
                 newSelectElement.addEventListener('change', function() {
                     updateQuestionOptions(newSelectElement);
@@ -186,7 +213,8 @@
                     `;
                     questionsContainer.insertAdjacentHTML('beforeend', questionHtml);
 
-                    const newSelectElement = questionsContainer.querySelector(`.question-group:last-child .question-type`);
+                    const newSelectElement = questionsContainer.querySelector(
+                        `.question-group:last-child .question-type`);
                     updateQuestionOptions(newSelectElement);
                     newSelectElement.addEventListener('change', function() {
                         updateQuestionOptions(newSelectElement);

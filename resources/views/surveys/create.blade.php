@@ -12,6 +12,16 @@
             </div>
 
             <div class="form-group">
+                <label for="project_id">Select Project</label>
+                <select name="project_id" id="project_id" class="form-control" required>
+                    <option value="">-- Select Project --</option>
+                    @foreach($projects as $project)
+                        <option value="{{ $project->id }}">{{ $project->nama }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="accept-guest-entries">Accept Guest Entries</label>
                 <select name="settings[accept-guest-entries]" id="accept-guest-entries" class="form-control">
                     <option value="true">Yes</option>

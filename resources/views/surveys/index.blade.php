@@ -8,6 +8,7 @@
         <thead>
             <tr>
                 <th>Name</th>
+                <th>Project Name</th>
                 <th>Questions</th>
                 <th>Actions</th>
             </tr>

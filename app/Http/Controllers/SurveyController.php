@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 use \Illuminate\Support\Facades\Log;
 use MattDaneshvar\Survey\Models\Survey;
 use MattDaneshvar\Survey\Models\Entry;
 use App\Models\User;
+use \Illuminate\Support\Facades\DB;
 
 class SurveyController extends Controller
 {
@@ -18,7 +20,8 @@ class SurveyController extends Controller
 
     public function create()
     {
-        return view('surveys.create');
+        $projects = Project::all();
+        return view('surveys.create', compact('projects'));
     }
 
     public function store(Request $request)
@@ -59,6 +62,8 @@ class SurveyController extends Controller
                 }
             }
 
+            DB::update('UPDATE surveys SET project_id = ? WHERE id = ?', [$request->project_id, $survey->id]);
+
             return redirect()->route('surveys.index')->with('success', 'Survey created successfully.');
         } catch (\Exception $e) {
             Log::error('Survey creation failed: ' . $e->getMessage());
@@ -70,13 +75,15 @@ class SurveyController extends Controller
     {
         $survey = Survey::with('sections.questions')->findOrFail($id);
         $lastEntry = Entry::where('participant_id', auth()->id())->latest()->first();
+        $projects = Project::all();
 
-        return view('surveys.view', compact('survey', 'lastEntry'));
+        return view('surveys.view', compact('survey', 'lastEntry', 'projects'));
     }
 
     public function edit(Survey $survey)
     {
-        return view('surveys.edit', compact('survey'));
+        $projects = Project::all();
+        return view('surveys.edit', compact('survey', 'projects'));
     }
 
     public function update(Request $request, Survey $survey)
@@ -122,6 +129,8 @@ class SurveyController extends Controller
                     );
                 }
             }
+
+            DB::update('UPDATE surveys SET project_id = ? WHERE id = ?', [$request->project_id, $survey->id]);
 
             return redirect()->route('surveys.index')->with('success', 'Survey updated successfully.');
         } catch (\Exception $e) {
