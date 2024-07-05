@@ -11,7 +11,6 @@ use App\Http\Controllers\SdgController;
 use App\Http\Controllers\IndicatorController;
 use App\Http\Controllers\MetricController;
 use App\Http\Controllers\ProjectController;
-// use App\Http\Controllers\MetricProjectController;
 use App\Http\Controllers\MetricProjectController;
 use App\Http\Controllers\SurveyController;
 use App\Http\Controllers\EventController;
@@ -35,7 +34,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::group(['middleware' => ['auth']], function () {
 
