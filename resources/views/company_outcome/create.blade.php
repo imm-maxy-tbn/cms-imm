@@ -21,7 +21,13 @@
                 <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
-
+        <div class="form-group">
+            <label for="category">Kategori</label>
+            <textarea class="form-control" id="category" name="category">{{ old('category') }}</textarea>
+            @error('category')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
+        </div>
         <div class="form-group">
             <label for="keterangan">Keterangan</label>
             <textarea class="form-control" id="keterangan" name="keterangan">{{ old('keterangan') }}</textarea>

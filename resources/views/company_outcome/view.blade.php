@@ -13,7 +13,10 @@
         <label for="jumlah_biaya">Jumlah Biaya:</label>
         <p>{{ $companyOutcome->jumlah_biaya }}</p>
     </div>
-
+    <div class="form-group">
+        <label for="category">Kategori:</label>
+        <p>{{ $companyOutcome->category }}</p>
+    </div>
     <div class="form-group">
         <label for="keterangan">Keterangan:</label>
         <p>{{ $companyOutcome->keterangan }}</p>

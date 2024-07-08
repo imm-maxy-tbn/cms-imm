@@ -18,6 +18,7 @@
                 <tr>
                     <th>Date</th>
                     <th>Jumlah Biaya</th>
+                    <th>Kategori</th>
                     <th>Keterangan</th>
                     <th>Bukti</th>
                     <th>Actions</th>
@@ -28,6 +29,7 @@
                 <tr>
                     <td>{{ $outcome->date }}</td>
                     <td>{{ $outcome->jumlah_biaya }}</td>
+                    <td>{{ $outcome->category }}</td>
                     <td>{{ $outcome->keterangan }}</td>
                     <td>{{ $outcome->bukti }}</td>
                     <td>

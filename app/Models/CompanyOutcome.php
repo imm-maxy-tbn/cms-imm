@@ -24,6 +24,7 @@ class CompanyOutcome extends Model
     protected $fillable = [
         'date',
         'jumlah_biaya',
+        'category',
         'keterangan',
         'bukti',
         'project_id',
