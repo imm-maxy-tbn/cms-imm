@@ -7,6 +7,8 @@ use App\Models\Project;
 use App\Models\Metric;
 use App\Models\MetricProject;
 use App\Charts\MonthlyReportChart;
+use App\Models\MatrixReport;
+
 
 
 class MetricProjectController extends Controller
