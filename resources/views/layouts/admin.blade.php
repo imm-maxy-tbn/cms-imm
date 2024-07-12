@@ -42,6 +42,13 @@
     <link href="{{ asset('img/favicon.png') }}" rel="icon" type="image/png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -54,8 +61,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
                 <div class="sidebar-brand-icon">
-                    <img src="{{ asset('images/imm.png') }}" alt="IMM"
-                        style="width: 50px; height: auto;">
+                    <img src="{{ asset('images/imm.png') }}" alt="IMM" style="width: 50px; height: auto;">
                 </div>
                 <div class="sidebar-brand-text mx-3">CMS <sup>IMM</sup></div>
             </a>
@@ -75,7 +81,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                {{ __('Settings') }}
+                {{ __('Features') }}
             </div>
 
             <!-- Nav Item - Profile -->

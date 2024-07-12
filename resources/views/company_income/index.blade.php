@@ -6,13 +6,13 @@
     @if ($selectedCompany)
         <a href="{{ route('company-income.create', ['company_id' => $selectedCompany->id]) }}" class="btn btn-primary mb-3">Add New Income</a>
     @endif
-    
+
     @if ($companyIncomes)
         @if ($companyIncomes->isEmpty())
             <p>No income found.</p>
         @else
             <!-- Display company income data -->
-            <table class="table">
+            <table id="incomes-table" class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -34,10 +34,10 @@
                             <td>
                                 {{-- View button --}}
                                 <a href="{{ route('company-income.show', $income->id) }}" class="btn btn-sm btn-info"><i class="fas fa-eye"></i></a>
-                                
+
                                 {{-- Edit button --}}
                                 <a href="{{ route('company-income.edit', $income->id) }}" class="btn btn-sm btn-primary"><i class="fas fa-pencil-alt"></i></a>
-                                
+
                                 {{-- Delete form --}}
                                 <form action="{{ route('company-income.destroy', $income->id) }}" method="POST" style="display: inline;">
                                     @csrf
@@ -56,4 +56,12 @@
         <p>No income data available.</p>
     @endif
 </div>
+
+<script>
+$(document).ready(function() {
+    $('#incomes-table').DataTable({
+        responsive: true
+    });
+});
+</script>
 @endsection

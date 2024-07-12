@@ -14,7 +14,15 @@ class SurveyController extends Controller
 {
     public function index()
     {
-        $surveys = Survey::all();
+        $surveysRaw = Survey::all();
+        $surveys = $surveysRaw->map(function($survey) {
+            $project = Project::find($survey->project_id);
+            return [
+                'survey' => $survey,
+                'project_name' => $project ? $project->nama : 'N/A'
+            ];
+        });
+
         return view('surveys.index', compact('surveys'));
     }
 

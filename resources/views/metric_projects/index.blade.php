@@ -6,7 +6,7 @@
 
         <h2>Initial Metrics</h2>
         @if ($initialMetricProjects->count())
-            <table class="table">
+            <table id="initial-metrics-table" class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Metric</th>
@@ -35,7 +35,7 @@
 
         <h2>Reports</h2>
         @if ($reportMetricProjects->count())
-            <table class="table">
+            <table id="reports-table" class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Metric</th>
@@ -55,10 +55,12 @@
                             <td>
                                 <a href="{{ route('metric-projects.edit', [$project->id, $report->id]) }}"
                                     class="btn btn-warning btn-sm">Edit</a>
-                                <form action="{{ route('metric-projects.destroy', [$project->id, $report->id]) }}" method="POST" class="d-inline">
+                                <form action="{{ route('metric-projects.destroy', [$project->id, $report->id]) }}"
+                                    method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this metric project?')">Delete</button>
+                                    <button type="submit" class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Are you sure you want to delete this metric project?')">Delete</button>
                                 </form>
                             </td>
                         </tr>
@@ -77,44 +79,56 @@
 @endsection
 
 @section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-{!! $chart->script() !!}
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var chart = {!! $chart->script() !!};
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    {!! $chart->script() !!}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chart = {!! $chart->script() !!};
 
-        chart.options = {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'top',
-                },
-                tooltip: {
-                    mode: 'index',
-                    intersect: false,
-                },
-            },
-            scales: {
-                x: {
-                    display: true,
-                    title: {
+            chart.options = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
                         display: true,
-                        text: 'Month/Year'
-                    }
+                        position: 'top',
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    },
                 },
-                y: {
-                    display: true,
-                    title: {
+                scales: {
+                    x: {
                         display: true,
-                        text: 'Total Value'
+                        title: {
+                            display: true,
+                            text: 'Month/Year'
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Total Value'
+                        }
                     }
                 }
-            }
-        };
+            };
 
-        chart.update();
-    });
-</script>
+            chart.update();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#initial-metrics-table').DataTable({
+                responsive: true
+            });
+        });
+        $(document).ready(function() {
+            $('#reports-table').DataTable({
+                responsive: true
+            });
+        });
+    </script>
 @endsection
