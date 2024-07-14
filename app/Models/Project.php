@@ -21,7 +21,7 @@ class Project extends Model
     }
     public function sdgs()
     {
-        return $this->belongsToMany(SDG::class)->with('indicators');
+        return $this->belongsToMany(Sdg::class)->with('indicators');
     }
 
     public function metrics()
