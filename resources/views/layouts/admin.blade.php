@@ -430,8 +430,8 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; <a href="https://github.com/aleckrh" target="_blank">Aleckrh</a>
-                            {{ now()->year }}</span>
+                        <span>Copyright &copy; <a href="https://tbnindonesia.org/">TBN Indonesia</a> x <a href="https://maxy.academy/">Maxy Academy</a> 2024
+                        </span>
                     </div>
                 </div>
             </footer>
